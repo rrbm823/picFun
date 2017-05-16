@@ -1,0 +1,42 @@
+{-# LANGUAGE DeriveGeneric #-}
+module Models where
+
+import GHC.Generics
+import Data.Aeson
+import Codec.Picture.Types
+
+data Tool = ZipImage | Wipe | Blend | Checkerboard deriving (Eq, Read, Show, Generic) --tbd implement more than zipimage
+data Switch = Off | On deriving (Eq, Read, Show, Generic)
+
+instance ToJSON Tool
+instance FromJSON Tool
+instance ToJSON Switch
+instance FromJSON Switch
+
+data ImgCommand = ImgCommand
+    { _name :: String,
+      _with :: ImgInput -> Invocation
+    } 
+
+type ImgInput = (DynamicImage, DynamicImage)
+
+data Invocation = Invocation
+    { _of :: ImgCommand,
+      _args :: ImgInput,
+      _exec :: DynamicImage
+    }
+
+parse :: [ImgCommand] -> String -> ImgInput -> Maybe Invocation
+parse legalCommands cmdName arguments =
+    (`_with` arguments) <$> find (\cmd -> _name cmd == cmdName) legalCommands
+    where
+      find :: (ImgCommand -> Bool) -> [ImgCommand] -> Maybe ImgCommand
+      find _ [] = Nothing
+      find b (x:xs)
+        | b x = Just x
+        | True = find b xs
+
+data Configuration = Configuration
+    { prompt :: String
+    , legalCommands :: [ImgCommand]
+    }

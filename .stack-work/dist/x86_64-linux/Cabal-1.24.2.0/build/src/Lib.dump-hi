@@ -1,0 +1,2034 @@
+
+==================== FINAL INTERFACE ====================
+2017-05-16 19:29:54.63256 UTC
+
+interface picFun-0.1.0.0-41oGHt6VUNM2sRBPQhbfR4:Lib 8002
+  interface hash: 8d55d651ce2317bdf0e42a8f74719242
+  ABI hash: 266072d2a08893307b4741c55763352a
+  export-list hash: c71981414b5276fbaee3983fd228265c
+  orphan hash: a6def08f88a84b6e8056c5fec441b38d
+  flag hash: ab396f11155bd696ab63895436e6f1df
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Lib.imagApp
+  Lib.zipSrv
+module dependencies: Api Htmls Models Pixels
+package dependencies: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed
+                      aeson-1.0.2.1@aeson-1.0.2.1-CYngHPh1vosBJovY7C9thn
+                      appar-0.1.4@appar-0.1.4-DGWHHt2WRn9FI49prcwO9
+                      array-0.5.1.1@array-0.5.1.1
+                      async-2.1.1@async-2.1.1-4n6HEMPJR2eJK0JpvCfuPK
+                      attoparsec-0.13.1.0@attoparsec-0.13.1.0-1ABl8gBrvGSCXKXEElG6rU
+                      auto-update-0.1.4@auto-update-0.1.4-EmUvNdmhEju51bHrtaEMpz
+                      base-4.9.1.0
+                      base-compat-0.9.2@base-compat-0.9.2-6QxKnlgzGYzLT4ZO71q1el
+                      base64-bytestring-1.0.0.1@base64-bytestring-1.0.0.1-4O9TExPPz6eI82Yj7L4SIj
+                      binary-0.8.3.0@binary-0.8.3.0
+                      blaze-builder-0.4.0.2@blaze-builder-0.4.0.2-CGB8BvrFgghHy5bLy0SFOg
+                      blaze-html-0.8.1.3@blaze-html-0.8.1.3-4x5sR7CihaZBuBa398ibiy
+                      blaze-markup-0.7.1.1@blaze-markup-0.7.1.1-7tIWNv8iALFJhJ4kVxNmNT
+                      byteorder-1.0.4@byteorder-1.0.4-9NlNHkBVdo7F1prFVKrkcH
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      case-insensitive-1.2.0.8@case-insensitive-1.2.0.8-336s2tfPdxOEPgnLH8r0bz
+                      containers-0.5.7.1@containers-0.5.7.1
+                      cryptonite-0.21@cryptonite-0.21-Er8yd96TMUKJhhoyDY0pav
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.3.0.0@directory-1.3.0.0
+                      dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD
+                      file-embed-0.0.10@file-embed-0.0.10-KWMmUDaNSRP7AxWSEHlrrK
+                      filepath-1.4.1.1@filepath-1.4.1.1
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.0@hashable-1.2.6.0-3EXxoqeEgbfAKr6aGkye6x
+                      http-api-data-0.3.5@http-api-data-0.3.5-I8V2cgXR5W924Ax42O3A11
+                      http-date-0.0.6.1@http-date-0.0.6.1-GjuZLg09ks27Bd9oI0ciJu
+                      http-media-0.6.4@http-media-0.6.4-Ic2rsgpbcUZCv89ocBCZpr
+                      http-types-0.9.1@http-types-0.9.1-5rMGX8lemrMDaQeDulF4OF
+                      http2-1.6.3@http2-1.6.3-82OptI2A5ESI6RhudSAT6 integer-gmp-1.0.0.1
+                      integer-logarithms-1.0.1@integer-logarithms-1.0.1-IEHCuEd5sG4JjSjlx7m5JF
+                      iproute-1.7.1@iproute-1.7.1-4HULutk0xITKNjI1pwYrD4
+                      memory-0.14.2@memory-0.14.2-CfVX41PhmpJKBOUPv4ybaa
+                      mime-types-0.1.0.7@mime-types-0.1.0.7-31dnC2ifQ9r5TApUZagLPk
+                      mmorph-1.0.9@mmorph-1.0.9-5bASEvmIkr5CpdAYXwPsn0
+                      mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      network-2.6.3.1@network-2.6.3.1-ABFtZSq90Z9BfMXNiqgBoe
+                      network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF
+                      parsec-3.1.11@parsec-3.1.11-113irVHGgd88sRnywByDNw
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH
+                      psqueues-0.2.2.3@psqueues-0.2.2.3-9nDehYbroydEusqdFJopTa
+                      random-1.1@random-1.1-9tceXaeYIMZ4JrKq20Egog
+                      scientific-0.3.4.10@scientific-0.3.4.10-70WEAestTPg2u2sFCYJUhG
+                      servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq
+                      servant-JuicyPixels-0.3.0.2@servant-JuicyPixels-0.3.0.2-KFDh0ZSrRqdHyQZspaSYy6
+                      servant-server-0.9.1.1@servant-server-0.9.1.1-FQ1NWT7Wr2yC5f3jkCvAai
+                      simple-sendfile-0.2.25@simple-sendfile-0.2.25-JJ9zm1wZxYIARxlVa3oQgs
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      streaming-commons-0.1.17@streaming-commons-0.1.17-Ec7F62APEFzLqTOvsWpyBa
+                      string-conversions-0.4.0.1@string-conversions-0.4.0.1-5bhARACLQyXG4DLNegoSj4
+                      tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt
+                      template-haskell-2.11.1.0
+                      text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
+                      th-lift-0.7.6@th-lift-0.7.6-BJcuQtn7dnPzL4YOk4wps
+                      th-lift-instances-0.1.11@th-lift-instances-0.1.11-C7WWQYsyhhMpc6laO6Bed
+                      time-1.6.0.1@time-1.6.0.1
+                      time-locale-compat-0.1.1.3@time-locale-compat-0.1.1.3-KZ1jqNx8uhlHjmuPPj6V1Y
+                      transformers-0.5.2.0@transformers-0.5.2.0 unix-2.7.2.1@unix-2.7.2.1
+                      unix-compat-0.4.3.1@unix-compat-0.4.3.1-Ausmw6d7KIwA7sl52mzqxC
+                      unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-1XEErQCPPPc2SEtcHHNx9o
+                      uri-bytestring-0.2.3.1@uri-bytestring-0.2.3.1-6LL9CpgznmMIcIWZQ2UZ46
+                      utf8-string-1.0.1.1@utf8-string-1.0.1.1-1DpjxLeTvGg7ttZZojxJR5
+                      uuid-types-1.0.3@uuid-types-1.0.3-29hQYgnErrj49JbrlmjGHl
+                      vault-0.3.0.6@vault-0.3.0.6-1vXP2sqILbxIC44bzfQYGg
+                      vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG
+                      wai-3.2.1.1@wai-3.2.1.1-9yigkTgtHNLHh2mXrnIXo
+                      wai-app-static-3.1.6.1@wai-app-static-3.1.6.1-2hcSbp6yMAsGQQTfre28LP
+                      warp-3.2.11.1@warp-3.2.11.1-DxTaqp5mZpf71E3TnvlUWY
+                      word8-0.1.2@word8-0.1.2-9WDPGCTpW7JJnsiAQavtd1
+                      zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp
+orphans: attoparsec-0.13.1.0@attoparsec-0.13.1.0-1ABl8gBrvGSCXKXEElG6rU:Data.Attoparsec.ByteString.Char8
+         attoparsec-0.13.1.0@attoparsec-0.13.1.0-1ABl8gBrvGSCXKXEElG6rU:Data.Attoparsec.Text.Internal
+         base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.6.0@hashable-1.2.6.0-3EXxoqeEgbfAKr6aGkye6x:Data.Hashable.Generic
+         network-2.6.3.1@network-2.6.3.1-ABFtZSq90Z9BfMXNiqgBoe:Network.Socket
+         picFun-0.1.0.0-41oGHt6VUNM2sRBPQhbfR4:Htmls
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
+         th-lift-0.7.6@th-lift-0.7.6-BJcuQtn7dnPzL4YOk4wps:Language.Haskell.TH.Lift
+         th-lift-instances-0.1.11@th-lift-instances-0.1.11-C7WWQYsyhhMpc6laO6Bed:Instances.TH.Lift
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed
+family instance modules: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.Picture.Tga
+                         JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.Picture.Tiff
+                         JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.Picture.Types
+                         attoparsec-0.13.1.0@attoparsec-0.13.1.0-1ABl8gBrvGSCXKXEElG6rU:Data.Attoparsec.Internal.Types
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD:Data.DList
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         http-api-data-0.3.5@http-api-data-0.3.5-I8V2cgXR5W924Ax42O3A11:Web.Internal.FormUrlEncoded
+                         iproute-1.7.1@iproute-1.7.1-4HULutk0xITKNjI1pwYrD4:Data.IP.Addr
+                         iproute-1.7.1@iproute-1.7.1-4HULutk0xITKNjI1pwYrD4:Data.IP.Range
+                         network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF:Network.URI
+                         picFun-0.1.0.0-41oGHt6VUNM2sRBPQhbfR4:Models
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH:Control.Monad.Primitive
+                         servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API.ContentTypes
+                         servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API.IsSecure
+                         servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API.Verbs
+                         servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.Utils.Links
+                         servant-server-0.9.1.1@servant-server-0.9.1.1-FQ1NWT7Wr2yC5f3jkCvAai:Servant.Server.Internal
+                         servant-server-0.9.1.1@servant-server-0.9.1.1-FQ1NWT7Wr2yC5f3jkCvAai:Servant.Server.Internal.BasicAuth
+                         tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt:Data.Tagged
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-1XEErQCPPPc2SEtcHHNx9o:Data.HashMap.Base
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-1XEErQCPPPc2SEtcHHNx9o:Data.HashSet
+                         uri-bytestring-0.2.3.1@uri-bytestring-0.2.3.1-6LL9CpgznmMIcIWZQ2UZ46:URI.ByteString.Types
+                         uuid-types-1.0.3@uuid-types-1.0.3-29hQYgnErrj49JbrlmjGHl:Data.UUID.Types.Internal
+                         uuid-types-1.0.3@uuid-types-1.0.3-29hQYgnErrj49JbrlmjGHl:Data.UUID.Types.Internal.Builder
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Primitive
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Storable
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed.Base
+                         zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.Zlib.Stream
+import  -/  JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.Picture c28c03ed1b5e2bad2d1a6a2be36f49e1
+import  -/  JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.Picture.Types 22b7a216fd591cfd9ca02dad94569487
+import  -/  base-4.9.1.0:Control.Monad a6784c5dab0d75c63dabec5a37843f98
+import  -/  base-4.9.1.0:Control.Monad.IO.Class 1a4384f66ee999caf5366398edb6ca7b
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Conc.Sync 8d0a228e5fc4d8c110495066f4d52ea1
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:Text.Read 75c59863e882ebaec4532e9465e2ee9b
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6:Control.Monad.Trans d69bc2e104a90fb918d853b240f7af2e
+import  -/  Api ce7fdd1260672a605e33088478081227
+  exports: 84e00d4c2d03e58015cd54523175d9a4
+  ImageAPI 807a17a2a9a10e5485519976eac461b6
+  imageApi 5efd59c6b0406cf621ac9398e7d5d6f0
+import  -/  Htmls 628a6e608f030e5f143ef969d904b116
+  exports: e9fbf2db5f3b48751cd0f7963f8c10a6
+import  -/  Models 45414748ce5dbed63e7834bae7ad0241
+  exports: bb6a71d68146e844a8e5d95f330b2975
+  ZipImage 0a43062219ccd6002b0a1d5336be8040
+import  -/  Pixels d0e5893ed86983a907c8015860bf69b0
+  exports: a2521e5ec9036f627085dc177a6dac7f
+  zipImages cecb5a8ea824497b2c98b04ecba3017d
+import  -/  servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API ea4c313cfea87bcfbf12f5ad55ca0674
+import  -/  servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API.Alternative 23b24c34dda253c03c99ee6490f6a518
+import  -/  servant-server-0.9.1.1@servant-server-0.9.1.1-FQ1NWT7Wr2yC5f3jkCvAai:Servant f16ad379d06ca393241deec48780d4ce
+import  -/  servant-server-0.9.1.1@servant-server-0.9.1.1-FQ1NWT7Wr2yC5f3jkCvAai:Servant.Server 6c78f2fd217ad1104fce5a8747d45e5e
+import  -/  servant-server-0.9.1.1@servant-server-0.9.1.1-FQ1NWT7Wr2yC5f3jkCvAai:Servant.Server.Internal 8016294a2c09ad55135b1e9e2607120d
+import  -/  stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Concurrent.STM 3662559905a40ae5adbc3e935ac706c8
+import  -/  stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Concurrent.STM.TVar 8271fdeaf6f41f205dbe31243cf91390
+import  -/  warp-3.2.11.1@warp-3.2.11.1-DxTaqp5mZpf71E3TnvlUWY:Network.Wai.Handler.Warp 6b4cd67732b77647b92c9f9152f22407
+import  -/  warp-3.2.11.1@warp-3.2.11.1-DxTaqp5mZpf71E3TnvlUWY:Network.Wai.Handler.Warp.Run 52f6140d106c325277d02cdea63693f7
+4786d9683e6d06d8eb27f3d59eaf4b08
+  $s$fAllCTRender:a ::
+    Servant.API.ContentTypes.AllCTRender
+      '[Servant.JuicyPixels.JPEG 100] Codec.Picture.Types.DynamicImage
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ '[Servant.JuicyPixels.JPEG 100]
+                  @ Codec.Picture.Types.DynamicImage
+                  (Servant.API.ContentTypes.$fAllCTRender:a_$cp1AllCTRender
+                     @ (Servant.JuicyPixels.JPEG 100)
+                     @ '[]
+                     @ Codec.Picture.Types.DynamicImage
+                     Lib.$s$fAllCTRender:a9
+                     Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
+                     Lib.$s$fAllCTRender:a1)
+                  (Servant.API.ContentTypes.$fAllCTRender:a_$chandleAcceptH
+                     @ (Servant.JuicyPixels.JPEG 100)
+                     @ '[]
+                     @ Codec.Picture.Types.DynamicImage
+                     Lib.$s$fAllCTRender:a9
+                     Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
+                     Lib.$s$fAllCTRender:a1) -}
+24a73650f71fb28f62b812f2f1edc945
+  $s$fAllCTRender:a1 ::
+    Servant.API.ContentTypes.AllMimeRender
+      '[Servant.JuicyPixels.JPEG 100] Codec.Picture.Types.DynamicImage
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a0 -}
+775959e0cb2ea5052637e71cba3e5912
+  $s$fAllCTRender:a10 ::
+    Data.Proxy.Proxy (Servant.JuicyPixels.JPEG 100)
+    -> Network.HTTP.Media.MediaType.Internal.MediaType
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (eta :: Data.Proxy.Proxy (Servant.JuicyPixels.JPEG 100)) ->
+                 Servant.JuicyPixels.$fAcceptTYPEJPEG1) -}
+d950a54fc939b2608afa2402c9aadf8b
+  $s$fAllCTRender:a11 ::
+    Servant.API.ContentTypes.AllCTRender
+      '[Servant.API.ContentTypes.JSON] GHC.Types.Bool
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ '[Servant.API.ContentTypes.JSON]
+                  @ GHC.Types.Bool
+                  (Servant.API.ContentTypes.$fAllCTRender:a_$cp1AllCTRender
+                     @ Servant.API.ContentTypes.JSON
+                     @ '[]
+                     @ GHC.Types.Bool
+                     Servant.API.ContentTypes.$fAcceptTYPEJSON_$ccontentType
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:Accept[0]
+                               <*>_N <Servant.API.ContentTypes.JSON>_N))
+                     Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
+                     Lib.$s$fAllCTRender:a12)
+                  (Servant.API.ContentTypes.$fAllCTRender:a_$chandleAcceptH
+                     @ Servant.API.ContentTypes.JSON
+                     @ '[]
+                     @ GHC.Types.Bool
+                     Servant.API.ContentTypes.$fAcceptTYPEJSON_$ccontentType
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:Accept[0]
+                               <*>_N <Servant.API.ContentTypes.JSON>_N))
+                     Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
+                     Lib.$s$fAllCTRender:a12) -}
+15fbba3ab6ddadd3110faa47353a17ab
+  $s$fAllCTRender:a12 ::
+    Servant.API.ContentTypes.AllMimeRender
+      '[Servant.API.ContentTypes.JSON] GHC.Types.Bool
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a1 -}
+6b8896f2d9bbff9698e413599ff9a464
+  $s$fAllCTRender:a13 ::
+    Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
+    -> GHC.Types.Bool
+    -> [(Network.HTTP.Media.MediaType.Internal.MediaType,
+         Data.ByteString.Lazy.Internal.ByteString)]
+  {- Arity: 2, Strictness: <L,A><L,U>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ (eta :: Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON])
+                   (eta1 :: GHC.Types.Bool) ->
+                 GHC.Types.:
+                   @ (Network.HTTP.Media.MediaType.Internal.MediaType,
+                      Data.ByteString.Lazy.Internal.ByteString)
+                   (Servant.API.ContentTypes.$fAcceptTYPEJSON1,
+                    Lib.$s$fAllCTRender:a_$sencode eta1)
+                   (GHC.Types.[]
+                      @ (Network.HTTP.Media.MediaType.Internal.MediaType,
+                         Data.ByteString.Lazy.Internal.ByteString))) -}
+31e6fa2a8a692d2dbb712c53cdd6a1c2
+  $s$fAllCTRender:a14 ::
+    Servant.API.ContentTypes.MimeRender
+      Servant.API.ContentTypes.JSON GHC.Types.Bool
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa -}
+1c594e475ebd1f35180fc26bface89db
+  $s$fAllCTRender:a15 ::
+    Servant.API.ContentTypes.AllCTRender '[Htmls.HTMLBlaze] Models.Tool
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ '[Htmls.HTMLBlaze]
+                  @ Models.Tool
+                  (Servant.API.ContentTypes.$fAllCTRender:a_$cp1AllCTRender
+                     @ Htmls.HTMLBlaze
+                     @ '[]
+                     @ Models.Tool
+                     Htmls.$fAcceptTYPEHTMLBlaze_$ccontentType
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:Accept[0]
+                               <*>_N <Htmls.HTMLBlaze>_N))
+                     Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
+                     Lib.$s$fAllCTRender:a16)
+                  (Servant.API.ContentTypes.$fAllCTRender:a_$chandleAcceptH
+                     @ Htmls.HTMLBlaze
+                     @ '[]
+                     @ Models.Tool
+                     Htmls.$fAcceptTYPEHTMLBlaze_$ccontentType
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:Accept[0]
+                               <*>_N <Htmls.HTMLBlaze>_N))
+                     Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
+                     Lib.$s$fAllCTRender:a16) -}
+660c65d50a381514267c03c0cc4b1769
+  $s$fAllCTRender:a16 ::
+    Servant.API.ContentTypes.AllMimeRender
+      '[Htmls.HTMLBlaze] Models.Tool
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a2 -}
+baf15a692b1a5510c33e0dd624e49280
+  $s$fAllCTRender:a17 ::
+    Data.Proxy.Proxy '[Htmls.HTMLBlaze]
+    -> Models.Tool
+    -> [(Network.HTTP.Media.MediaType.Internal.MediaType,
+         Data.ByteString.Lazy.Internal.ByteString)]
+  {- Arity: 2, Strictness: <L,A><L,1*U>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ (eta :: Data.Proxy.Proxy '[Htmls.HTMLBlaze])
+                   (eta1 :: Models.Tool) ->
+                 GHC.Types.:
+                   @ (Network.HTTP.Media.MediaType.Internal.MediaType,
+                      Data.ByteString.Lazy.Internal.ByteString)
+                   (Htmls.$fAcceptTYPEHTMLBlaze1,
+                    Data.ByteString.Builder.toLazyByteString
+                      (Htmls.$fMimeRenderTYPEHTMLBlazea_go3
+                         @ ()
+                         Htmls.$fMimeRenderTYPEHTMLBlazea1
+                           `cast`
+                         (Sym (Data.ByteString.Builder.Internal.N:Builder[0]))
+                         (Htmls.$fToMarkupTool_$ctoMarkup eta1)))
+                   (GHC.Types.[]
+                      @ (Network.HTTP.Media.MediaType.Internal.MediaType,
+                         Data.ByteString.Lazy.Internal.ByteString))) -}
+de015649491f69c8ad584bd5ff06328f
+  $s$fAllCTRender:a18 ::
+    Servant.API.ContentTypes.MimeRender Htmls.HTMLBlaze Models.Tool
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEHTMLBlazea -}
+daca7d260a7a369950e38706c855a881
+  $s$fAllCTRender:a2 ::
+    Data.Proxy.Proxy '[Servant.JuicyPixels.JPEG 100]
+    -> Codec.Picture.Types.DynamicImage
+    -> [(Network.HTTP.Media.MediaType.Internal.MediaType,
+         Data.ByteString.Lazy.Internal.ByteString)]
+  {- Arity: 2, Strictness: <L,A><L,1*U>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ (eta :: Data.Proxy.Proxy '[Servant.JuicyPixels.JPEG 100])
+                   (eta1 :: Codec.Picture.Types.DynamicImage) ->
+                 GHC.Types.:
+                   @ (Network.HTTP.Media.MediaType.Internal.MediaType,
+                      Data.ByteString.Lazy.Internal.ByteString)
+                   (Servant.JuicyPixels.$fAcceptTYPEJPEG1,
+                    Codec.Picture.Saving.imageToJpg (GHC.Types.I# 100#) eta1)
+                   (GHC.Types.[]
+                      @ (Network.HTTP.Media.MediaType.Internal.MediaType,
+                         Data.ByteString.Lazy.Internal.ByteString))) -}
+7776c3bcf82aa38f7ffa957aae42f3d4
+  $s$fAllCTRender:a3 ::
+    Servant.API.ContentTypes.MimeRender
+      (Servant.JuicyPixels.JPEG 100) Codec.Picture.Types.DynamicImage
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJPEGDynamicImage -}
+ef98a35dbe122781e8adac891bbd9f54
+  $s$fAllCTRender:a4 ::
+    Data.Proxy.Proxy (Servant.JuicyPixels.JPEG 100)
+    -> Codec.Picture.Types.DynamicImage
+    -> Data.ByteString.Lazy.Internal.ByteString
+  {- Arity: 2, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (eta :: Data.Proxy.Proxy (Servant.JuicyPixels.JPEG 100))
+                   (eta1 :: Codec.Picture.Types.DynamicImage) ->
+                 Codec.Picture.Saving.imageToJpg (GHC.Types.I# 100#) eta1) -}
+f657667d6082beb5b8d49f1fa93ac2fb
+  $s$fAllCTRender:a5 ::
+    'GHC.Types.True Data.Type.Equality.~ 'GHC.Types.True
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a6
+                  `cast`
+                (Sym (Data.Type.Equality.N:~[0]
+                          <GHC.Types.Bool>_N) <'GHC.Types.True>_N <'GHC.Types.True>_N) -}
+d0d2913621e2c8f1825df5c0c39c65ec
+  $s$fAllCTRender:a6 :: 'GHC.Types.True GHC.Types.~~ 'GHC.Types.True
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Eq#
+                   @ GHC.Types.Bool
+                   @ GHC.Types.Bool
+                   @ 'GHC.Types.True
+                   @ 'GHC.Types.True
+                   @~ <'GHC.Types.True>_N) -}
+ee1cc74f35d67e97ccb9f1d699c793fa
+  $s$fAllCTRender:a7 :: GHC.TypeLits.KnownNat 100
+  {- Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a8
+                  `cast`
+                (Trans
+                     (Sym (GHC.TypeLits.N:SNat[0] <100>_P))
+                     (Sym (GHC.TypeLits.N:KnownNat[0]) <100>_N)) -}
+825279fb2ebe6130567e1d9498bb1acc
+  $s$fAllCTRender:a8 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (100) -}
+a8f49cdfce35b5a3d8394d849462c5a6
+  $s$fAllCTRender:a9 ::
+    Servant.API.ContentTypes.Accept (Servant.JuicyPixels.JPEG 100)
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a10
+                  `cast`
+                (Sym (Servant.API.ContentTypes.N:Accept[0]
+                          <*>_N <Servant.JuicyPixels.JPEG 100>_N)) -}
+6d53b9a28c20eb54041fb393146dabf4
+  $s$fAllCTRender:a_$s$fAllMimeRender:a0 ::
+    Servant.API.ContentTypes.AllMimeRender
+      '[Servant.JuicyPixels.JPEG 100] Codec.Picture.Types.DynamicImage
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ '[Servant.JuicyPixels.JPEG 100]
+                  @ Codec.Picture.Types.DynamicImage
+                  (Servant.API.ContentTypes.$fAllMimeRender:a0_$cp1AllMimeRender
+                     @ (Servant.JuicyPixels.JPEG 100)
+                     @ Codec.Picture.Types.DynamicImage
+                     Lib.$s$fAllCTRender:a3)
+                  Lib.$s$fAllCTRender:a2 -}
+07a46fd437d90997efecdb707aec733f
+  $s$fAllCTRender:a_$s$fAllMimeRender:a1 ::
+    Servant.API.ContentTypes.AllMimeRender
+      '[Servant.API.ContentTypes.JSON] GHC.Types.Bool
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ '[Servant.API.ContentTypes.JSON]
+                  @ GHC.Types.Bool
+                  (Servant.API.ContentTypes.$fAllMimeRender:a0_$cp1AllMimeRender
+                     @ Servant.API.ContentTypes.JSON
+                     @ GHC.Types.Bool
+                     Lib.$s$fAllCTRender:a14)
+                  Lib.$s$fAllCTRender:a13 -}
+e1f225e349cbd676c33c25fa143b0529
+  $s$fAllCTRender:a_$s$fAllMimeRender:a2 ::
+    Servant.API.ContentTypes.AllMimeRender
+      '[Htmls.HTMLBlaze] Models.Tool
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ '[Htmls.HTMLBlaze]
+                  @ Models.Tool
+                  (Servant.API.ContentTypes.$fAllMimeRender:a0_$cp1AllMimeRender
+                     @ Htmls.HTMLBlaze
+                     @ Models.Tool
+                     Lib.$s$fAllCTRender:a18)
+                  Lib.$s$fAllCTRender:a17 -}
+f4e2b15f7cdfa0f4b5fd76d6c683993c
+  $s$fAllCTRender:a_$s$fMimeRenderTYPEHTMLBlazea ::
+    Servant.API.ContentTypes.MimeRender Htmls.HTMLBlaze Models.Tool
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ *
+                  @ Htmls.HTMLBlaze
+                  @ Models.Tool
+                  (Htmls.$fMimeRenderTYPEHTMLBlazea_$cp1MimeRender
+                     @ Models.Tool
+                     Htmls.$fToMarkupTool)
+                  (Htmls.$fMimeRenderTYPEHTMLBlazea_$cmimeRender
+                     @ Models.Tool
+                     Htmls.$fToMarkupTool) -}
+513b855f185f021ae038e6480c2273b4
+  $s$fAllCTRender:a_$s$fMimeRenderTYPEJPEGDynamicImage ::
+    Servant.API.ContentTypes.MimeRender
+      (Servant.JuicyPixels.JPEG 100) Codec.Picture.Types.DynamicImage
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ *
+                  @ (Servant.JuicyPixels.JPEG 100)
+                  @ Codec.Picture.Types.DynamicImage
+                  (Servant.JuicyPixels.$fMimeRenderTYPEJPEGDynamicImage_$cp1MimeRender
+                     @ 100
+                     Lib.$s$fAllCTRender:a7
+                     Lib.$s$fAllCTRender:a5
+                       `cast`
+                     ((Data.Type.Equality.~)
+                        <GHC.Types.Bool>_N
+                        (Sym (LeqDef (<100>_N, <100>_N)))
+                        <'GHC.Types.True>_N)_R)
+                  Lib.$s$fAllCTRender:a4 -}
+3a4a06650111b0cdfe398be7576dac23
+  $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa ::
+    Servant.API.ContentTypes.MimeRender
+      Servant.API.ContentTypes.JSON GHC.Types.Bool
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ *
+                  @ Servant.API.ContentTypes.JSON
+                  @ GHC.Types.Bool
+                  (Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cp1MimeRender
+                     @ GHC.Types.Bool
+                     Data.Aeson.Types.ToJSON.$fToJSONBool)
+                  Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender -}
+fd24d097d6845c0ba4e77e42e6bf4bd0
+  $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender ::
+    Data.Proxy.Proxy Servant.API.ContentTypes.JSON
+    -> GHC.Types.Bool -> Data.ByteString.Lazy.Internal.ByteString
+  {- Arity: 2, Strictness: <L,A><L,U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Data.Proxy.Proxy Servant.API.ContentTypes.JSON)
+                   (eta :: GHC.Types.Bool) ->
+                 Lib.$s$fAllCTRender:a_$sencode eta) -}
+842b8432c7e8808af9b84538b627ed83
+  $s$fAllCTRender:a_$sencode ::
+    GHC.Types.Bool -> Data.ByteString.Lazy.Internal.ByteString
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: GHC.Types.Bool) ->
+                 Data.ByteString.Builder.toLazyByteString
+                   (Data.Aeson.Encoding.Internal.bool eta)
+                     `cast`
+                   (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                        <Data.Aeson.Types.Internal.Value>_P)) -}
+6007ef739c1b0ad8754902bce29736fc
+  $s$fAllMimeUnrender:a ::
+    Servant.API.ContentTypes.AllMimeUnrender
+      '[Servant.JuicyPixels.JPEG 100] Codec.Picture.Types.DynamicImage
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ '[Servant.JuicyPixels.JPEG 100]
+                  @ Codec.Picture.Types.DynamicImage
+                  (Servant.API.ContentTypes.$fAllMimeUnrender:a_$cp1AllMimeUnrender
+                     @ (Servant.JuicyPixels.JPEG 100)
+                     @ Codec.Picture.Types.DynamicImage
+                     @ '[]
+                     Lib.$s$fAllMimeUnrender:a1
+                     (Servant.API.ContentTypes.$fAllMimeUnrender[]a
+                        @ Codec.Picture.Types.DynamicImage))
+                  (Servant.API.ContentTypes.$fAllMimeUnrender:a_$callMimeUnrender
+                     @ (Servant.JuicyPixels.JPEG 100)
+                     @ Codec.Picture.Types.DynamicImage
+                     @ '[]
+                     Lib.$s$fAllMimeUnrender:a1
+                     (Servant.API.ContentTypes.$fAllMimeUnrender[]a
+                        @ Codec.Picture.Types.DynamicImage)) -}
+b35e2ca7d4a4d80f70c2cdbeba3253b0
+  $s$fAllMimeUnrender:a1 ::
+    Servant.API.ContentTypes.MimeUnrender
+      (Servant.JuicyPixels.JPEG 100) Codec.Picture.Types.DynamicImage
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJPEGDynamicImage -}
+25c323f33f2ce03e5d1c9c60106d0152
+  $s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJPEGDynamicImage ::
+    Servant.API.ContentTypes.MimeUnrender
+      (Servant.JuicyPixels.JPEG 100) Codec.Picture.Types.DynamicImage
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ *
+                  @ (Servant.JuicyPixels.JPEG 100)
+                  @ Codec.Picture.Types.DynamicImage
+                  (Servant.JuicyPixels.$fMimeRenderTYPEJPEGDynamicImage_$cp1MimeRender
+                     @ 100
+                     Lib.$s$fAllCTRender:a7
+                     Lib.$s$fAllCTRender:a5
+                       `cast`
+                     ((Data.Type.Equality.~)
+                        <GHC.Types.Bool>_N
+                        (Sym (LeqDef (<100>_N, <100>_N)))
+                        <'GHC.Types.True>_N)_R)
+                  (Servant.JuicyPixels.$fMimeUnrenderTYPEJPEGDynamicImage_$cmimeUnrender
+                     @ 100
+                     Lib.$s$fAllCTRender:a7
+                     Lib.$s$fAllCTRender:a5
+                       `cast`
+                     ((Data.Type.Equality.~)
+                        <GHC.Types.Bool>_N
+                        (Sym (LeqDef (<100>_N, <100>_N)))
+                        <'GHC.Types.True>_N)_R) -}
+d7634b42e18a735e90ee40a9b4a4ebb8
+  $sserve2 ::
+    Data.Proxy.Proxy
+      (("postImg"
+        Servant.API.Sub.:> (Servant.API.Capture.Capture
+                              "true/false" GHC.Types.Bool
+                            Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                  '[Servant.JuicyPixels.JPEG 100]
+                                                  Codec.Picture.Types.DynamicImage
+                                                Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                     '[Servant.API.ContentTypes.JSON]
+                                                                     GHC.Types.Bool)))
+       Servant.API.Alternative.:<|> (("image"
+                                      Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                            "tool" GHC.Base.String
+                                                          Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                               '[Servant.JuicyPixels.JPEG
+                                                                                   100]
+                                                                               Codec.Picture.Types.DynamicImage))
+                                     Servant.API.Alternative.:<|> ("show"
+                                                                   Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                         "tool"
+                                                                                         GHC.Base.String
+                                                                                       Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                            '[Htmls.HTMLBlaze]
+                                                                                                            Models.Tool))))
+    -> Servant.Server.Internal.Context.Context '[]
+    -> Servant.Server.Internal.RoutingApplication.Delayed
+         env
+         (Servant.Server.Internal.Server
+            (("postImg"
+              Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                    "true/false" GHC.Types.Bool
+                                  Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                        '[Servant.JuicyPixels.JPEG 100]
+                                                        Codec.Picture.Types.DynamicImage
+                                                      Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                           '[Servant.API.ContentTypes.JSON]
+                                                                           GHC.Types.Bool)))
+             Servant.API.Alternative.:<|> (("image"
+                                            Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                  "tool" GHC.Base.String
+                                                                Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                     '[Servant.JuicyPixels.JPEG
+                                                                                         100]
+                                                                                     Codec.Picture.Types.DynamicImage))
+                                           Servant.API.Alternative.:<|> ("show"
+                                                                         Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                               "tool"
+                                                                                               GHC.Base.String
+                                                                                             Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                  '[Htmls.HTMLBlaze]
+                                                                                                                  Models.Tool)))))
+    -> Servant.Server.Internal.Router.Router env
+  {- Arity: 3, Strictness: <S,1*H><L,U><L,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ env
+                   (w :: Data.Proxy.Proxy
+                           (("postImg"
+                             Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                   "true/false" GHC.Types.Bool
+                                                 Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                                       '[Servant.JuicyPixels.JPEG
+                                                                           100]
+                                                                       Codec.Picture.Types.DynamicImage
+                                                                     Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                                          '[Servant.API.ContentTypes.JSON]
+                                                                                          GHC.Types.Bool)))
+                            Servant.API.Alternative.:<|> (("image"
+                                                           Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                 "tool"
+                                                                                 GHC.Base.String
+                                                                               Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                    '[Servant.JuicyPixels.JPEG
+                                                                                                        100]
+                                                                                                    Codec.Picture.Types.DynamicImage))
+                                                          Servant.API.Alternative.:<|> ("show"
+                                                                                        Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                              "tool"
+                                                                                                              GHC.Base.String
+                                                                                                            Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                 '[Htmls.HTMLBlaze]
+                                                                                                                                 Models.Tool)))))
+                   (w1 :: Servant.Server.Internal.Context.Context '[])
+                   (w2 :: Servant.Server.Internal.RoutingApplication.Delayed
+                            env
+                            (Servant.Server.Internal.Server
+                               (("postImg"
+                                 Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                       "true/false" GHC.Types.Bool
+                                                     Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                                           '[Servant.JuicyPixels.JPEG
+                                                                               100]
+                                                                           Codec.Picture.Types.DynamicImage
+                                                                         Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                                              '[Servant.API.ContentTypes.JSON]
+                                                                                              GHC.Types.Bool)))
+                                Servant.API.Alternative.:<|> (("image"
+                                                               Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                     "tool"
+                                                                                     GHC.Base.String
+                                                                                   Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                        '[Servant.JuicyPixels.JPEG
+                                                                                                            100]
+                                                                                                        Codec.Picture.Types.DynamicImage))
+                                                              Servant.API.Alternative.:<|> ("show"
+                                                                                            Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                  "tool"
+                                                                                                                  GHC.Base.String
+                                                                                                                Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                     '[Htmls.HTMLBlaze]
+                                                                                                                                     Models.Tool)))))) ->
+                 case w of w3 { Data.Proxy.Proxy ->
+                 Lib.$w$dHasServer
+                   @ env
+                   (Data.Proxy.Proxy
+                      @ *
+                      @ (("postImg"
+                          Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                "true/false" GHC.Types.Bool
+                                              Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                                    '[Servant.JuicyPixels.JPEG 100]
+                                                                    Codec.Picture.Types.DynamicImage
+                                                                  Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                                       '[Servant.API.ContentTypes.JSON]
+                                                                                       GHC.Types.Bool)))
+                         Servant.API.Alternative.:<|> (("image"
+                                                        Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                              "tool" GHC.Base.String
+                                                                            Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                 '[Servant.JuicyPixels.JPEG
+                                                                                                     100]
+                                                                                                 Codec.Picture.Types.DynamicImage))
+                                                       Servant.API.Alternative.:<|> ("show"
+                                                                                     Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                           "tool"
+                                                                                                           GHC.Base.String
+                                                                                                         Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                              '[Htmls.HTMLBlaze]
+                                                                                                                              Models.Tool)))))
+                   w1
+                   w2 }) -}
+7fd29664cc1e78e35eff2ca1f2cee822
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Lib.$trModule2 Lib.$trModule1) -}
+1c282282a0d4a1dc56bbf5d08a7abfc9
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Lib"#) -}
+42f59e96f3db526e2a8f5384d1762e5c
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "picFun-0.1.0.0-41oGHt6VUNM2sRBPQhbfR4"#) -}
+407d65a1579b9f05319cc1a86f9e9db1
+  $w$dHasServer ::
+    Data.Proxy.Proxy
+      (("postImg"
+        Servant.API.Sub.:> (Servant.API.Capture.Capture
+                              "true/false" GHC.Types.Bool
+                            Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                  '[Servant.JuicyPixels.JPEG 100]
+                                                  Codec.Picture.Types.DynamicImage
+                                                Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                     '[Servant.API.ContentTypes.JSON]
+                                                                     GHC.Types.Bool)))
+       Servant.API.Alternative.:<|> (("image"
+                                      Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                            "tool" GHC.Base.String
+                                                          Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                               '[Servant.JuicyPixels.JPEG
+                                                                                   100]
+                                                                               Codec.Picture.Types.DynamicImage))
+                                     Servant.API.Alternative.:<|> ("show"
+                                                                   Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                         "tool"
+                                                                                         GHC.Base.String
+                                                                                       Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                            '[Htmls.HTMLBlaze]
+                                                                                                            Models.Tool))))
+    -> Servant.Server.Internal.Context.Context '[]
+    -> Servant.Server.Internal.RoutingApplication.Delayed
+         env
+         (Servant.Server.Internal.Server
+            (("postImg"
+              Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                    "true/false" GHC.Types.Bool
+                                  Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                        '[Servant.JuicyPixels.JPEG 100]
+                                                        Codec.Picture.Types.DynamicImage
+                                                      Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                           '[Servant.API.ContentTypes.JSON]
+                                                                           GHC.Types.Bool)))
+             Servant.API.Alternative.:<|> (("image"
+                                            Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                  "tool" GHC.Base.String
+                                                                Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                     '[Servant.JuicyPixels.JPEG
+                                                                                         100]
+                                                                                     Codec.Picture.Types.DynamicImage))
+                                           Servant.API.Alternative.:<|> ("show"
+                                                                         Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                               "tool"
+                                                                                               GHC.Base.String
+                                                                                             Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                  '[Htmls.HTMLBlaze]
+                                                                                                                  Models.Tool)))))
+    -> Servant.Server.Internal.Router.Router env
+  {- Arity: 3, Strictness: <S,1*H><L,U><L,U>, Inline: [0] -}
+bf80abea3d13bab4614bf092746da5f0
+  $wzipSrv ::
+    GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage
+    -> GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage
+    -> (# GHC.Types.Bool
+          -> Codec.Picture.Types.DynamicImage
+          -> Control.Monad.Trans.Except.ExceptT
+               Servant.Server.Internal.ServantErr.ServantErr
+               GHC.Types.IO
+               GHC.Types.Bool,
+          (GHC.Base.String
+           -> Control.Monad.Trans.Except.ExceptT
+                Servant.Server.Internal.ServantErr.ServantErr
+                GHC.Types.IO
+                Codec.Picture.Types.DynamicImage)
+          Servant.API.Alternative.:<|> (GHC.Base.String
+                                        -> Control.Monad.Trans.Except.ExceptT
+                                             Servant.Server.Internal.ServantErr.ServantErr
+                                             GHC.Types.IO
+                                             Models.Tool) #)
+  {- Arity: 2, Strictness: <L,U(U)><L,U(U)>, Inline: [0],
+     Unfolding: (\ (w :: GHC.Conc.Sync.TVar
+                           Codec.Picture.Types.DynamicImage)
+                   (w1 :: GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage) ->
+                 (# (\ (e :: GHC.Types.Bool)
+                       (p :: Codec.Picture.Types.DynamicImage)
+                       (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case e of wild {
+                       GHC.Types.False
+                       -> case GHC.Prim.atomically#
+                                 @ GHC.Types.Bool
+                                 (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                  case w1 of wild1 { GHC.Conc.Sync.TVar tvar# ->
+                                  case GHC.Prim.readTVar#
+                                         @ GHC.Prim.RealWorld
+                                         @ Codec.Picture.Types.DynamicImage
+                                         tvar#
+                                         s of ds1 { (#,#) ipv ipv1 ->
+                                  case GHC.Prim.writeTVar#
+                                         @ GHC.Prim.RealWorld
+                                         @ Codec.Picture.Types.DynamicImage
+                                         tvar#
+                                         p
+                                         ipv of s2# { DEFAULT ->
+                                  case GHC.Prim.readTVar#
+                                         @ GHC.Prim.RealWorld
+                                         @ Codec.Picture.Types.DynamicImage
+                                         tvar#
+                                         s2# of ds2 { (#,#) ipv2 ipv3 ->
+                                  (# ipv2, GHC.Types.False #) } } } })
+                                 eta of ds1 { (#,#) ipv ipv1 ->
+                          (# ipv,
+                             Data.Either.Right
+                               @ Servant.Server.Internal.ServantErr.ServantErr
+                               @ GHC.Types.Bool
+                               ipv1 #) }
+                       GHC.Types.True
+                       -> case GHC.Prim.atomically#
+                                 @ GHC.Types.Bool
+                                 (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                  case w of wild1 { GHC.Conc.Sync.TVar tvar# ->
+                                  case GHC.Prim.readTVar#
+                                         @ GHC.Prim.RealWorld
+                                         @ Codec.Picture.Types.DynamicImage
+                                         tvar#
+                                         s of ds1 { (#,#) ipv ipv1 ->
+                                  case GHC.Prim.writeTVar#
+                                         @ GHC.Prim.RealWorld
+                                         @ Codec.Picture.Types.DynamicImage
+                                         tvar#
+                                         p
+                                         ipv of s2# { DEFAULT ->
+                                  case GHC.Prim.readTVar#
+                                         @ GHC.Prim.RealWorld
+                                         @ Codec.Picture.Types.DynamicImage
+                                         tvar#
+                                         s2# of ds2 { (#,#) ipv2 ipv3 ->
+                                  (# ipv2, GHC.Types.True #) } } } })
+                                 eta of ds1 { (#,#) ipv ipv1 ->
+                          (# ipv,
+                             Data.Either.Right
+                               @ Servant.Server.Internal.ServantErr.ServantErr
+                               @ GHC.Types.Bool
+                               ipv1 #) } })
+                      `cast`
+                    (<GHC.Types.Bool>_R
+                     ->_R <Codec.Picture.Types.DynamicImage>_R
+                     ->_R Trans
+                              (Sym (GHC.Types.N:IO[0]
+                                        <Data.Either.Either
+                                           Servant.Server.Internal.ServantErr.ServantErr
+                                           GHC.Types.Bool>_R))
+                              (Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                        <Servant.Server.Internal.ServantErr.ServantErr>_N
+                                        <GHC.Types.IO>_R
+                                        <GHC.Types.Bool>_N))),
+                    Servant.API.Alternative.:<|>
+                      @ (GHC.Base.String
+                         -> Control.Monad.Trans.Except.ExceptT
+                              Servant.Server.Internal.ServantErr.ServantErr
+                              GHC.Types.IO
+                              Codec.Picture.Types.DynamicImage)
+                      @ (GHC.Base.String
+                         -> Control.Monad.Trans.Except.ExceptT
+                              Servant.Server.Internal.ServantErr.ServantErr
+                              GHC.Types.IO
+                              Models.Tool)
+                      (\ (r :: GHC.Base.String)
+                         (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                       case Text.Read.readEither6
+                              @ Models.Tool
+                              (Text.ParserCombinators.ReadP.run
+                                 @ Models.Tool
+                                 Lib.imagApp5
+                                 r) of wild {
+                         []
+                         -> case Lib.imagApp8
+                            ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                      Data.Either.Either
+                                        Servant.Server.Internal.ServantErr.ServantErr
+                                        Codec.Picture.Types.DynamicImage #)
+                            of {}
+                         : x ds
+                         -> case ds of wild1 {
+                              []
+                              -> case x of wild2 {
+                                   DEFAULT
+                                   -> case Lib.imagApp7
+                                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                Data.Either.Either
+                                                  Servant.Server.Internal.ServantErr.ServantErr
+                                                  Codec.Picture.Types.DynamicImage #)
+                                      of {}
+                                   Models.ZipImage
+                                   -> case w of wild3 { GHC.Conc.Sync.TVar tvar# ->
+                                      case GHC.Prim.readTVarIO#
+                                             @ GHC.Prim.RealWorld
+                                             @ Codec.Picture.Types.DynamicImage
+                                             tvar#
+                                             eta of ds1 { (#,#) ipv ipv1 ->
+                                      case w1 of wild4 { GHC.Conc.Sync.TVar tvar#1 ->
+                                      case GHC.Prim.readTVarIO#
+                                             @ GHC.Prim.RealWorld
+                                             @ Codec.Picture.Types.DynamicImage
+                                             tvar#1
+                                             ipv of ds2 { (#,#) ipv2 ipv3 ->
+                                      (# ipv2,
+                                         Data.Either.Right
+                                           @ Servant.Server.Internal.ServantErr.ServantErr
+                                           @ Codec.Picture.Types.DynamicImage
+                                           (Codec.Picture.Types.ImageRGB8
+                                              (case Codec.Picture.convertRGB8
+                                                      ipv1 of ww { Codec.Picture.Types.Image ww1 ww2 ww3 ->
+                                               case Codec.Picture.convertRGB8
+                                                      ipv3 of ww4 { Codec.Picture.Types.Image ww5 ww6 ww7 ->
+                                               case Pixels.$wzipImages
+                                                      @ Codec.Picture.Types.PixelRGB8
+                                                      Codec.Picture.Types.$fPixelPixelRGB8
+                                                      ww1
+                                                      ww2
+                                                      ww3
+                                                      ww5
+                                                      ww6
+                                                      ww7 of ww8 { (#,,#) ww9 ww10 ww11 ->
+                                               Codec.Picture.Types.Image
+                                                 @ Codec.Picture.Types.PixelRGB8
+                                                 ww9
+                                                 ww10
+                                                 ww11 } } })) #) } } } } }
+                              : ipv ipv1
+                              -> case Lib.imagApp6
+                                 ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                           Data.Either.Either
+                                             Servant.Server.Internal.ServantErr.ServantErr
+                                             Codec.Picture.Types.DynamicImage #)
+                                 of {} } })
+                        `cast`
+                      (<GHC.Base.String>_R
+                       ->_R Trans
+                                (Sym (GHC.Types.N:IO[0]
+                                          <Data.Either.Either
+                                             Servant.Server.Internal.ServantErr.ServantErr
+                                             Codec.Picture.Types.DynamicImage>_R))
+                                (Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                          <Servant.Server.Internal.ServantErr.ServantErr>_N
+                                          <GHC.Types.IO>_R
+                                          <Codec.Picture.Types.DynamicImage>_N)))
+                      Lib.imagApp2
+                        `cast`
+                      (<GHC.Base.String>_R
+                       ->_R Trans
+                                (Sym (GHC.Types.N:IO[0]
+                                          <Data.Either.Either
+                                             Servant.Server.Internal.ServantErr.ServantErr
+                                             Models.Tool>_R))
+                                (Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                          <Servant.Server.Internal.ServantErr.ServantErr>_N
+                                          <GHC.Types.IO>_R
+                                          <Models.Tool>_N))) #)) -}
+05f7f17cc43a47baef0cc51689f37275
+  imagApp :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Lib.imagApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+388c369ee22f20cbdbf9929db30c8632
+  imagApp1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.atomically#
+                        @ (GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage)
+                        Lib.imagApp15
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.Prim.atomically#
+                        @ (GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage)
+                        Lib.imagApp10
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 Network.Wai.Handler.Warp.Run.$wrunSettings
+                   Lib.imagApp9
+                   Network.Wai.Handler.Warp.Settings.defaultSettings16
+                   Network.Wai.Handler.Warp.Settings.defaultOnException1
+                     `cast`
+                   (<GHC.Base.Maybe Network.Wai.Internal.Request>_R
+                    ->_R <GHC.Exception.SomeException>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultOnExceptionResponse
+                   Network.Wai.Handler.Warp.Settings.defaultSettings14
+                     `cast`
+                   (<Network.Socket.Types.SockAddr>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings13
+                     `cast`
+                   (<Network.Socket.Types.SockAddr>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings12
+                   (GHC.Base.Nothing @ Network.Wai.Handler.Warp.Timeout.Manager)
+                   Network.Wai.Handler.Warp.Settings.defaultSettings11
+                   Network.Wai.Handler.Warp.Settings.defaultSettings11
+                   Network.Wai.Handler.Warp.Settings.defaultSettings9
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings10
+                     `cast`
+                   (<(forall a. GHC.Types.IO a -> GHC.Types.IO a)
+                     -> GHC.Types.IO ()>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   GHC.Types.False
+                   Network.Wai.Handler.Warp.Settings.defaultSettings8
+                     `cast`
+                   (<GHC.Types.IO ()>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings6
+                   Network.Wai.Handler.Warp.Settings.defaultSettings4
+                   Network.Wai.Handler.Warp.Settings.ProxyProtocolNone
+                   Network.Wai.Handler.Warp.Settings.defaultSettings3
+                   GHC.Types.True
+                   Network.Wai.Handler.Warp.Settings.defaultSettings2
+                     `cast`
+                   (<Network.Wai.Internal.Request>_R
+                    ->_R <Network.HTTP.Types.Status.Status>_R
+                    ->_R <GHC.Base.Maybe GHC.Integer.Type.Integer>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings1
+                     `cast`
+                   (<Network.Wai.Internal.Request>_R
+                    ->_R <Data.ByteString.Internal.ByteString>_R
+                    ->_R <GHC.Integer.Type.Integer>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   (Servant.Server.serveWithContext
+                      @ Api.ImageAPI
+                      @ '[]
+                      Lib.$sserve2
+                        `cast`
+                      (Sym (Servant.Server.Internal.N:HasServer[0]
+                                <*>_N
+                                <("postImg"
+                                  Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                        "true/false" GHC.Types.Bool
+                                                      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                                            '[Servant.JuicyPixels.JPEG
+                                                                                100]
+                                                                            Codec.Picture.Types.DynamicImage
+                                                                          Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                                               '[Servant.API.ContentTypes.JSON]
+                                                                                               GHC.Types.Bool)))
+                                 Servant.API.Alternative.:<|> (("image"
+                                                                Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                      "tool"
+                                                                                      GHC.Base.String
+                                                                                    Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                         '[Servant.JuicyPixels.JPEG
+                                                                                                             100]
+                                                                                                         Codec.Picture.Types.DynamicImage))
+                                                               Servant.API.Alternative.:<|> ("show"
+                                                                                             Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                   "tool"
+                                                                                                                   GHC.Base.String
+                                                                                                                 Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                      '[Htmls.HTMLBlaze]
+                                                                                                                                      Models.Tool)))>_N
+                                <'[]>_N))
+                      (Data.Proxy.Proxy @ * @ Api.ImageAPI)
+                      Servant.Server.Internal.Context.$WEmptyContext
+                      (case Lib.$wzipSrv ipv1 ipv3 of ww { (#,#) ww1 ww2 ->
+                       (Servant.API.Alternative.:<|>
+                          @ (GHC.Types.Bool
+                             -> Codec.Picture.Types.DynamicImage
+                             -> Control.Monad.Trans.Except.ExceptT
+                                  Servant.Server.Internal.ServantErr.ServantErr
+                                  GHC.Types.IO
+                                  GHC.Types.Bool)
+                          @ ((GHC.Base.String
+                              -> Control.Monad.Trans.Except.ExceptT
+                                   Servant.Server.Internal.ServantErr.ServantErr
+                                   GHC.Types.IO
+                                   Codec.Picture.Types.DynamicImage)
+                             Servant.API.Alternative.:<|> (GHC.Base.String
+                                                           -> Control.Monad.Trans.Except.ExceptT
+                                                                Servant.Server.Internal.ServantErr.ServantErr
+                                                                GHC.Types.IO
+                                                                Models.Tool))
+                          ww1
+                          ww2)
+                         `cast`
+                       (Trans
+                            (Trans
+                                 (<GHC.Types.Bool>_R
+                                  ->_R Trans
+                                           (<Codec.Picture.Types.DynamicImage>_R
+                                            ->_R Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
+                                                               <Network.HTTP.Types.Method.StdMethod>_N
+                                                               <GHC.Types.Bool>_N
+                                                               <'[Servant.API.ContentTypes.JSON]>_N
+                                                               <200>_N
+                                                               <'Network.HTTP.Types.Method.POST>_N
+                                                               <Control.Monad.Trans.Except.ExceptT
+                                                                  Servant.Server.Internal.ServantErr.ServantErr
+                                                                  GHC.Types.IO>_N)))
+                                           (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m5[0]
+                                                          <*>_N
+                                                          <Codec.Picture.Types.DynamicImage>_N
+                                                          <'[Servant.JuicyPixels.JPEG 100]>_N
+                                                          <Servant.API.Verbs.Verb
+                                                             'Network.HTTP.Types.Method.POST
+                                                             200
+                                                             '[Servant.API.ContentTypes.JSON]
+                                                             GHC.Types.Bool>_N
+                                                          <Control.Monad.Trans.Except.ExceptT
+                                                             Servant.Server.Internal.ServantErr.ServantErr
+                                                             GHC.Types.IO>_N))))
+                                 (Trans
+                                      (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m11[0]
+                                                     <*>_N
+                                                     <GHC.Types.Bool>_N
+                                                     <"true/false">_N
+                                                     <Servant.API.ReqBody.ReqBody
+                                                        '[Servant.JuicyPixels.JPEG 100]
+                                                        Codec.Picture.Types.DynamicImage
+                                                      Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                           '[Servant.API.ContentTypes.JSON]
+                                                                           GHC.Types.Bool>_N
+                                                     <Control.Monad.Trans.Except.ExceptT
+                                                        Servant.Server.Internal.ServantErr.ServantErr
+                                                        GHC.Types.IO>_N)))
+                                      (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
+                                                     <*>_N
+                                                     <Servant.API.Capture.Capture
+                                                        "true/false" GHC.Types.Bool
+                                                      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                                            '[Servant.JuicyPixels.JPEG
+                                                                                100]
+                                                                            Codec.Picture.Types.DynamicImage
+                                                                          Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                                               '[Servant.API.ContentTypes.JSON]
+                                                                                               GHC.Types.Bool)>_N
+                                                     <"postImg">_N
+                                                     <Control.Monad.Trans.Except.ExceptT
+                                                        Servant.Server.Internal.ServantErr.ServantErr
+                                                        GHC.Types.IO>_N))))
+                             Servant.API.Alternative.:<|> Trans
+                                                              (Trans
+                                                                   (<[GHC.Types.Char]>_R
+                                                                    ->_R Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
+                                                                                       <Network.HTTP.Types.Method.StdMethod>_N
+                                                                                       <Codec.Picture.Types.DynamicImage>_N
+                                                                                       <'[Servant.JuicyPixels.JPEG
+                                                                                            100]>_N
+                                                                                       <200>_N
+                                                                                       <'Network.HTTP.Types.Method.GET>_N
+                                                                                       <Control.Monad.Trans.Except.ExceptT
+                                                                                          Servant.Server.Internal.ServantErr.ServantErr
+                                                                                          GHC.Types.IO>_N)))
+                                                                   (Trans
+                                                                        (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m11[0]
+                                                                                       <*>_N
+                                                                                       <[GHC.Types.Char]>_N
+                                                                                       <"tool">_N
+                                                                                       <Servant.API.Verbs.Verb
+                                                                                          'Network.HTTP.Types.Method.GET
+                                                                                          200
+                                                                                          '[Servant.JuicyPixels.JPEG
+                                                                                              100]
+                                                                                          Codec.Picture.Types.DynamicImage>_N
+                                                                                       <Control.Monad.Trans.Except.ExceptT
+                                                                                          Servant.Server.Internal.ServantErr.ServantErr
+                                                                                          GHC.Types.IO>_N)))
+                                                                        (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
+                                                                                       <*>_N
+                                                                                       <Servant.API.Capture.Capture
+                                                                                          "tool"
+                                                                                          GHC.Base.String
+                                                                                        Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                             '[Servant.JuicyPixels.JPEG
+                                                                                                                 100]
+                                                                                                             Codec.Picture.Types.DynamicImage>_N
+                                                                                       <"image">_N
+                                                                                       <Control.Monad.Trans.Except.ExceptT
+                                                                                          Servant.Server.Internal.ServantErr.ServantErr
+                                                                                          GHC.Types.IO>_N))))
+                                                               Servant.API.Alternative.:<|> Trans
+                                                                                                (<[GHC.Types.Char]>_R
+                                                                                                 ->_R Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
+                                                                                                                    <Network.HTTP.Types.Method.StdMethod>_N
+                                                                                                                    <Models.Tool>_N
+                                                                                                                    <'[Htmls.HTMLBlaze]>_N
+                                                                                                                    <200>_N
+                                                                                                                    <'Network.HTTP.Types.Method.GET>_N
+                                                                                                                    <Control.Monad.Trans.Except.ExceptT
+                                                                                                                       Servant.Server.Internal.ServantErr.ServantErr
+                                                                                                                       GHC.Types.IO>_N)))
+                                                                                                (Trans
+                                                                                                     (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m11[0]
+                                                                                                                    <*>_N
+                                                                                                                    <[GHC.Types.Char]>_N
+                                                                                                                    <"tool">_N
+                                                                                                                    <Servant.API.Verbs.Verb
+                                                                                                                       'Network.HTTP.Types.Method.GET
+                                                                                                                       200
+                                                                                                                       '[Htmls.HTMLBlaze]
+                                                                                                                       Models.Tool>_N
+                                                                                                                    <Control.Monad.Trans.Except.ExceptT
+                                                                                                                       Servant.Server.Internal.ServantErr.ServantErr
+                                                                                                                       GHC.Types.IO>_N)))
+                                                                                                     (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
+                                                                                                                    <*>_N
+                                                                                                                    <Servant.API.Capture.Capture
+                                                                                                                       "tool"
+                                                                                                                       GHC.Base.String
+                                                                                                                     Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                          '[Htmls.HTMLBlaze]
+                                                                                                                                          Models.Tool>_N
+                                                                                                                    <"show">_N
+                                                                                                                    <Control.Monad.Trans.Except.ExceptT
+                                                                                                                       Servant.Server.Internal.ServantErr.ServantErr
+                                                                                                                       GHC.Types.IO>_N)))))_R
+                                                              (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:<|>m[0]
+                                                                             <"show"
+                                                                              Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                    "tool"
+                                                                                                    GHC.Base.String
+                                                                                                  Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                       '[Htmls.HTMLBlaze]
+                                                                                                                       Models.Tool)>_N
+                                                                             <"image"
+                                                                              Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                    "tool"
+                                                                                                    GHC.Base.String
+                                                                                                  Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                       '[Servant.JuicyPixels.JPEG
+                                                                                                                           100]
+                                                                                                                       Codec.Picture.Types.DynamicImage)>_N
+                                                                             <Control.Monad.Trans.Except.ExceptT
+                                                                                Servant.Server.Internal.ServantErr.ServantErr
+                                                                                GHC.Types.IO>_N))))_R
+                            (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:<|>m[0]
+                                           <("image"
+                                             Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                   "tool" GHC.Base.String
+                                                                 Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                      '[Servant.JuicyPixels.JPEG
+                                                                                          100]
+                                                                                      Codec.Picture.Types.DynamicImage))
+                                            Servant.API.Alternative.:<|> ("show"
+                                                                          Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                "tool"
+                                                                                                GHC.Base.String
+                                                                                              Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                   '[Htmls.HTMLBlaze]
+                                                                                                                   Models.Tool))>_N
+                                           <"postImg"
+                                            Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                  "true/false" GHC.Types.Bool
+                                                                Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                                                      '[Servant.JuicyPixels.JPEG
+                                                                                          100]
+                                                                                      Codec.Picture.Types.DynamicImage
+                                                                                    Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                                                         '[Servant.API.ContentTypes.JSON]
+                                                                                                         GHC.Types.Bool))>_N
+                                           <Control.Monad.Trans.Except.ExceptT
+                                              Servant.Server.Internal.ServantErr.ServantErr
+                                              GHC.Types.IO>_N)))) }))
+                   ipv2 } }) -}
+a79330c07ad247a88cbb529441a92f69
+  imagApp10 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage #)
+  {- Arity: 1,
+     Unfolding: (\ (s1# :: GHC.Prim.State#
+                             GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newTVar#
+                        @ Codec.Picture.Types.DynamicImage
+                        @ GHC.Prim.RealWorld
+                        Lib.imagApp11
+                        s1# of ds { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    GHC.Conc.Sync.TVar @ Codec.Picture.Types.DynamicImage ipv1 #) }) -}
+16ebdee22a567d7d787796c455d7ce44
+  imagApp11 :: Codec.Picture.Types.DynamicImage
+  {- Unfolding: (Codec.Picture.Types.ImageRGB8 Lib.imagApp12) -}
+8b9ba48ee521d09df79352951a944b97
+  imagApp12 ::
+    Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ (Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8)
+                        Lib.imagApp13 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+e4f2cc6e84151c498cff462f82fa3fa6
+  imagApp13 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8 #)
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newPinnedByteArray#
+                        @ GHC.Prim.RealWorld
+                        270000#
+                        s1 of ds { (#,#) ipv ipv1 ->
+                 let {
+                   ipv2 :: GHC.Prim.Addr#
+                   = GHC.Prim.byteArrayContents#
+                       ipv1
+                         `cast`
+                       (UnsafeCo representational (GHC.Prim.MutableByteArray#
+                                                     GHC.Prim.RealWorld) GHC.Prim.ByteArray#)
+                 } in
+                 case {__pkg_ccall primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH hsprimitive_memset_Word8 GHC.Prim.Addr#
+                                                                                                                      -> GHC.Prim.Int#
+                                                                                                                      -> GHC.Prim.Word#
+                                                                                                                      -> GHC.Prim.Word#
+                                                                                                                      -> GHC.Prim.State#
+                                                                                                                           GHC.Prim.RealWorld
+                                                                                                                      -> (# GHC.Prim.State#
+                                                                                                                              GHC.Prim.RealWorld #)}
+                        ipv2
+                        0#
+                        270000##
+                        0##
+                        ipv of wild { Unit# ds8 ->
+                 let {
+                   ipv3 :: GHC.ForeignPtr.ForeignPtrContents
+                   = GHC.ForeignPtr.PlainPtr ipv1
+                 } in
+                 case GHC.Prim.touch#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ GHC.ForeignPtr.ForeignPtrContents
+                        ipv3
+                        ds8 of s' { DEFAULT ->
+                 letrec {
+                   $wlineGenerator :: GHC.Types.Int
+                                      -> GHC.Prim.Int#
+                                      -> GHC.Prim.State# GHC.Prim.RealWorld
+                                      -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     {- Arity: 3, Strictness: <L,1*U(U)><S,U><S,U>, Inline: [0] -}
+                   = \ (w :: GHC.Types.Int)
+                       (ww :: GHC.Prim.Int#)
+                       (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.>=# ww 300#) of wild1 {
+                       GHC.Types.False
+                       -> case w of ww1 { GHC.Types.I# ww2 ->
+                          letrec {
+                            $wcolumn :: GHC.Prim.Int#
+                                        -> GHC.Prim.Int#
+                                        -> GHC.Prim.State# GHC.Prim.RealWorld
+                                        -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                              {- Arity: 3, Strictness: <L,U><S,U><S,U>, Inline: [0] -}
+                            = \ (ww3 :: GHC.Prim.Int#)
+                                (ww4 :: GHC.Prim.Int#)
+                                (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                              case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.>=# ww4 300#) of wild2 {
+                                GHC.Types.False
+                                -> case GHC.Prim.writeWord8OffAddr#
+                                          @ GHC.Prim.RealWorld
+                                          ipv2
+                                          ww3
+                                          0##
+                                          w2 of s2 { DEFAULT ->
+                                   case GHC.Prim.touch#
+                                          @ 'GHC.Types.PtrRepLifted
+                                          @ GHC.ForeignPtr.ForeignPtrContents
+                                          ipv3
+                                          s2 of s'1 { DEFAULT ->
+                                   case GHC.Prim.writeWord8OffAddr#
+                                          @ GHC.Prim.RealWorld
+                                          ipv2
+                                          (GHC.Prim.+# ww3 1#)
+                                          0##
+                                          s'1 of s4 { DEFAULT ->
+                                   case GHC.Prim.touch#
+                                          @ 'GHC.Types.PtrRepLifted
+                                          @ GHC.ForeignPtr.ForeignPtrContents
+                                          ipv3
+                                          s4 of s'2 { DEFAULT ->
+                                   case GHC.Prim.writeWord8OffAddr#
+                                          @ GHC.Prim.RealWorld
+                                          ipv2
+                                          (GHC.Prim.+# ww3 2#)
+                                          0##
+                                          s'2 of s5 { DEFAULT ->
+                                   case GHC.Prim.touch#
+                                          @ 'GHC.Types.PtrRepLifted
+                                          @ GHC.ForeignPtr.ForeignPtrContents
+                                          ipv3
+                                          s5 of s'3 { DEFAULT ->
+                                   $wcolumn
+                                     (GHC.Prim.+# ww3 3#)
+                                     (GHC.Prim.+# ww4 1#)
+                                     s'3 } } } } } }
+                                GHC.Types.True
+                                -> $wlineGenerator (GHC.Types.I# ww3) (GHC.Prim.+# ww 1#) w2 }
+                          } in
+                          $wcolumn ww2 0# w1 }
+                       GHC.Types.True -> (# w1, GHC.Tuple.() #) }
+                 } in
+                 case $wlineGenerator
+                        Lib.imagApp14
+                        0#
+                        s' of ds1 { (#,#) ipv4 ipv5 ->
+                 (# ipv4,
+                    Codec.Picture.Types.Image
+                      @ Codec.Picture.Types.PixelRGB8
+                      300#
+                      300#
+                      (Data.Vector.Storable.Vector
+                         @ (Codec.Picture.Types.PixelBaseComponent
+                              Codec.Picture.Types.PixelRGB8)
+                         270000#
+                         ipv2
+                         ipv3) #) } } } }) -}
+df7cf0d2df9d03ddeca64fb8093de4b1
+  imagApp14 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+7ce56cb5a94a33df5877226cb2fba3a7
+  imagApp15 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage #)
+  {- Arity: 1,
+     Unfolding: (\ (s1# :: GHC.Prim.State#
+                             GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newTVar#
+                        @ Codec.Picture.Types.DynamicImage
+                        @ GHC.Prim.RealWorld
+                        Lib.imagApp16
+                        s1# of ds { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    GHC.Conc.Sync.TVar @ Codec.Picture.Types.DynamicImage ipv1 #) }) -}
+cfdb51f6ce5669bdb3518973928e7d5c
+  imagApp16 :: Codec.Picture.Types.DynamicImage
+  {- Unfolding: (Codec.Picture.Types.ImageRGB8 Lib.imagApp17) -}
+ef4814e0ea6a2630e4689eaf79639cb9
+  imagApp17 ::
+    Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ (Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8)
+                        Lib.imagApp18 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+079f5a4287a6e2e780d74f4ac1dd2675
+  imagApp18 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8 #)
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newPinnedByteArray#
+                        @ GHC.Prim.RealWorld
+                        270000#
+                        s1 of ds { (#,#) ipv ipv1 ->
+                 let {
+                   ipv2 :: GHC.Prim.Addr#
+                   = GHC.Prim.byteArrayContents#
+                       ipv1
+                         `cast`
+                       (UnsafeCo representational (GHC.Prim.MutableByteArray#
+                                                     GHC.Prim.RealWorld) GHC.Prim.ByteArray#)
+                 } in
+                 case {__pkg_ccall primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH hsprimitive_memset_Word8 GHC.Prim.Addr#
+                                                                                                                      -> GHC.Prim.Int#
+                                                                                                                      -> GHC.Prim.Word#
+                                                                                                                      -> GHC.Prim.Word#
+                                                                                                                      -> GHC.Prim.State#
+                                                                                                                           GHC.Prim.RealWorld
+                                                                                                                      -> (# GHC.Prim.State#
+                                                                                                                              GHC.Prim.RealWorld #)}
+                        ipv2
+                        0#
+                        270000##
+                        0##
+                        ipv of wild { Unit# ds8 ->
+                 let {
+                   ipv3 :: GHC.ForeignPtr.ForeignPtrContents
+                   = GHC.ForeignPtr.PlainPtr ipv1
+                 } in
+                 case GHC.Prim.touch#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ GHC.ForeignPtr.ForeignPtrContents
+                        ipv3
+                        ds8 of s' { DEFAULT ->
+                 letrec {
+                   $wlineGenerator :: GHC.Types.Int
+                                      -> GHC.Prim.Int#
+                                      -> GHC.Prim.State# GHC.Prim.RealWorld
+                                      -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     {- Arity: 3, Strictness: <L,1*U(U)><S,U><S,U>, Inline: [0] -}
+                   = \ (w :: GHC.Types.Int)
+                       (ww :: GHC.Prim.Int#)
+                       (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.>=# ww 300#) of wild1 {
+                       GHC.Types.False
+                       -> case w of ww1 { GHC.Types.I# ww2 ->
+                          letrec {
+                            $wcolumn :: GHC.Prim.Int#
+                                        -> GHC.Prim.Int#
+                                        -> GHC.Prim.State# GHC.Prim.RealWorld
+                                        -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                              {- Arity: 3, Strictness: <L,U><S,U><S,U>, Inline: [0] -}
+                            = \ (ww3 :: GHC.Prim.Int#)
+                                (ww4 :: GHC.Prim.Int#)
+                                (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                              case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.>=# ww4 300#) of wild2 {
+                                GHC.Types.False
+                                -> case GHC.Prim.writeWord8OffAddr#
+                                          @ GHC.Prim.RealWorld
+                                          ipv2
+                                          ww3
+                                          0##
+                                          w2 of s2 { DEFAULT ->
+                                   case GHC.Prim.touch#
+                                          @ 'GHC.Types.PtrRepLifted
+                                          @ GHC.ForeignPtr.ForeignPtrContents
+                                          ipv3
+                                          s2 of s'1 { DEFAULT ->
+                                   case GHC.Prim.writeWord8OffAddr#
+                                          @ GHC.Prim.RealWorld
+                                          ipv2
+                                          (GHC.Prim.+# ww3 1#)
+                                          200##
+                                          s'1 of s4 { DEFAULT ->
+                                   case GHC.Prim.touch#
+                                          @ 'GHC.Types.PtrRepLifted
+                                          @ GHC.ForeignPtr.ForeignPtrContents
+                                          ipv3
+                                          s4 of s'2 { DEFAULT ->
+                                   case GHC.Prim.writeWord8OffAddr#
+                                          @ GHC.Prim.RealWorld
+                                          ipv2
+                                          (GHC.Prim.+# ww3 2#)
+                                          0##
+                                          s'2 of s5 { DEFAULT ->
+                                   case GHC.Prim.touch#
+                                          @ 'GHC.Types.PtrRepLifted
+                                          @ GHC.ForeignPtr.ForeignPtrContents
+                                          ipv3
+                                          s5 of s'3 { DEFAULT ->
+                                   $wcolumn
+                                     (GHC.Prim.+# ww3 3#)
+                                     (GHC.Prim.+# ww4 1#)
+                                     s'3 } } } } } }
+                                GHC.Types.True
+                                -> $wlineGenerator (GHC.Types.I# ww3) (GHC.Prim.+# ww 1#) w2 }
+                          } in
+                          $wcolumn ww2 0# w1 }
+                       GHC.Types.True -> (# w1, GHC.Tuple.() #) }
+                 } in
+                 case $wlineGenerator
+                        Lib.imagApp14
+                        0#
+                        s' of ds1 { (#,#) ipv4 ipv5 ->
+                 (# ipv4,
+                    Codec.Picture.Types.Image
+                      @ Codec.Picture.Types.PixelRGB8
+                      300#
+                      300#
+                      (Data.Vector.Storable.Vector
+                         @ (Codec.Picture.Types.PixelBaseComponent
+                              Codec.Picture.Types.PixelRGB8)
+                         270000#
+                         ipv2
+                         ipv3) #) } } } }) -}
+e421da8759a5d759e0baecb482af1bf0
+  imagApp2 ::
+    GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Either.Either
+            Servant.Server.Internal.ServantErr.ServantErr Models.Tool #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: (\ (x :: GHC.Base.String)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# s,
+                    Data.Either.Right
+                      @ Servant.Server.Internal.ServantErr.ServantErr
+                      @ Models.Tool
+                      (case Text.Read.readEither6
+                              @ Models.Tool
+                              (Text.ParserCombinators.ReadP.run
+                                 @ Models.Tool
+                                 Lib.imagApp5
+                                 x) of wild {
+                         [] -> Lib.imagApp4
+                         : x1 ds
+                         -> case ds of wild1 {
+                              [] -> x1 : ipv ipv1 -> Lib.imagApp3 } }) #)) -}
+a64774e570f6729e89a5cc365860e486
+  imagApp3 :: Models.Tool
+  {- Strictness: x -}
+955fe53fedeac13a9b7fa3467e67d18f
+  imagApp4 :: Models.Tool
+  {- Strictness: x -}
+2dcb797646afe3505dc09daaac3a8f98
+  imagApp5 :: Text.ParserCombinators.ReadP.P Models.Tool
+  {- Unfolding: ((GHC.Read.parens1
+                    @ Models.Tool
+                    Models.$fReadTool3
+                      `cast`
+                    (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                              <Models.Tool>_R))
+                    Text.ParserCombinators.ReadPrec.minPrec)
+                   `cast`
+                 (Text.ParserCombinators.ReadP.N:ReadP[0] <Models.Tool>_R)
+                   @ Models.Tool
+                   (Text.Read.readEither5 @ Models.Tool)) -}
+826ea74659b881ff561304d87a826857
+  imagApp6 :: Models.Tool
+  {- Strictness: x -}
+418fd7b81f0ac57e667bbc1487c98bb5
+  imagApp7 ::
+    Control.Monad.Trans.Except.ExceptT
+      Servant.Server.Internal.ServantErr.ServantErr
+      GHC.Types.IO
+      Codec.Picture.Types.DynamicImage
+  {- Strictness: x -}
+301ecc00dfb95760d005021b8d8fa31a
+  imagApp8 :: Models.Tool
+  {- Strictness: x -}
+3168e8bba3162182e2f5ba8b5c3d6eb4
+  imagApp9 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 8080#) -}
+5613a018a0d4497fcc9af04d9d7e2895
+  zipSrv ::
+    GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage
+    -> GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage
+    -> Servant.Server.Internal.Server Api.ImageAPI
+  {- Arity: 2, Strictness: <L,U(U)><L,U(U)>m,
+     Unfolding: InlineRule (0, True, True)
+                Lib.zipSrv1
+                  `cast`
+                (<GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage>_R
+                 ->_R <GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage>_R
+                 ->_R Trans
+                          (Trans
+                               (<GHC.Types.Bool>_R
+                                ->_R Trans
+                                         (<Codec.Picture.Types.DynamicImage>_R
+                                          ->_R Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
+                                                             <Network.HTTP.Types.Method.StdMethod>_N
+                                                             <GHC.Types.Bool>_N
+                                                             <'[Servant.API.ContentTypes.JSON]>_N
+                                                             <200>_N
+                                                             <'Network.HTTP.Types.Method.POST>_N
+                                                             <Control.Monad.Trans.Except.ExceptT
+                                                                Servant.Server.Internal.ServantErr.ServantErr
+                                                                GHC.Types.IO>_N)))
+                                         (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m5[0]
+                                                        <*>_N
+                                                        <Codec.Picture.Types.DynamicImage>_N
+                                                        <'[Servant.JuicyPixels.JPEG 100]>_N
+                                                        <Servant.API.Verbs.Verb
+                                                           'Network.HTTP.Types.Method.POST
+                                                           200
+                                                           '[Servant.API.ContentTypes.JSON]
+                                                           GHC.Types.Bool>_N
+                                                        <Control.Monad.Trans.Except.ExceptT
+                                                           Servant.Server.Internal.ServantErr.ServantErr
+                                                           GHC.Types.IO>_N))))
+                               (Trans
+                                    (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m11[0]
+                                                   <*>_N
+                                                   <GHC.Types.Bool>_N
+                                                   <"true/false">_N
+                                                   <Servant.API.ReqBody.ReqBody
+                                                      '[Servant.JuicyPixels.JPEG 100]
+                                                      Codec.Picture.Types.DynamicImage
+                                                    Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                         '[Servant.API.ContentTypes.JSON]
+                                                                         GHC.Types.Bool>_N
+                                                   <Control.Monad.Trans.Except.ExceptT
+                                                      Servant.Server.Internal.ServantErr.ServantErr
+                                                      GHC.Types.IO>_N)))
+                                    (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
+                                                   <*>_N
+                                                   <Servant.API.Capture.Capture
+                                                      "true/false" GHC.Types.Bool
+                                                    Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                                          '[Servant.JuicyPixels.JPEG
+                                                                              100]
+                                                                          Codec.Picture.Types.DynamicImage
+                                                                        Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                                             '[Servant.API.ContentTypes.JSON]
+                                                                                             GHC.Types.Bool)>_N
+                                                   <"postImg">_N
+                                                   <Control.Monad.Trans.Except.ExceptT
+                                                      Servant.Server.Internal.ServantErr.ServantErr
+                                                      GHC.Types.IO>_N))))
+                           Servant.API.Alternative.:<|> Trans
+                                                            (Trans
+                                                                 (<[GHC.Types.Char]>_R
+                                                                  ->_R Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
+                                                                                     <Network.HTTP.Types.Method.StdMethod>_N
+                                                                                     <Codec.Picture.Types.DynamicImage>_N
+                                                                                     <'[Servant.JuicyPixels.JPEG
+                                                                                          100]>_N
+                                                                                     <200>_N
+                                                                                     <'Network.HTTP.Types.Method.GET>_N
+                                                                                     <Control.Monad.Trans.Except.ExceptT
+                                                                                        Servant.Server.Internal.ServantErr.ServantErr
+                                                                                        GHC.Types.IO>_N)))
+                                                                 (Trans
+                                                                      (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m11[0]
+                                                                                     <*>_N
+                                                                                     <[GHC.Types.Char]>_N
+                                                                                     <"tool">_N
+                                                                                     <Servant.API.Verbs.Verb
+                                                                                        'Network.HTTP.Types.Method.GET
+                                                                                        200
+                                                                                        '[Servant.JuicyPixels.JPEG
+                                                                                            100]
+                                                                                        Codec.Picture.Types.DynamicImage>_N
+                                                                                     <Control.Monad.Trans.Except.ExceptT
+                                                                                        Servant.Server.Internal.ServantErr.ServantErr
+                                                                                        GHC.Types.IO>_N)))
+                                                                      (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
+                                                                                     <*>_N
+                                                                                     <Servant.API.Capture.Capture
+                                                                                        "tool"
+                                                                                        GHC.Base.String
+                                                                                      Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                           '[Servant.JuicyPixels.JPEG
+                                                                                                               100]
+                                                                                                           Codec.Picture.Types.DynamicImage>_N
+                                                                                     <"image">_N
+                                                                                     <Control.Monad.Trans.Except.ExceptT
+                                                                                        Servant.Server.Internal.ServantErr.ServantErr
+                                                                                        GHC.Types.IO>_N))))
+                                                             Servant.API.Alternative.:<|> Trans
+                                                                                              (<[GHC.Types.Char]>_R
+                                                                                               ->_R Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
+                                                                                                                  <Network.HTTP.Types.Method.StdMethod>_N
+                                                                                                                  <Models.Tool>_N
+                                                                                                                  <'[Htmls.HTMLBlaze]>_N
+                                                                                                                  <200>_N
+                                                                                                                  <'Network.HTTP.Types.Method.GET>_N
+                                                                                                                  <Control.Monad.Trans.Except.ExceptT
+                                                                                                                     Servant.Server.Internal.ServantErr.ServantErr
+                                                                                                                     GHC.Types.IO>_N)))
+                                                                                              (Trans
+                                                                                                   (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m11[0]
+                                                                                                                  <*>_N
+                                                                                                                  <[GHC.Types.Char]>_N
+                                                                                                                  <"tool">_N
+                                                                                                                  <Servant.API.Verbs.Verb
+                                                                                                                     'Network.HTTP.Types.Method.GET
+                                                                                                                     200
+                                                                                                                     '[Htmls.HTMLBlaze]
+                                                                                                                     Models.Tool>_N
+                                                                                                                  <Control.Monad.Trans.Except.ExceptT
+                                                                                                                     Servant.Server.Internal.ServantErr.ServantErr
+                                                                                                                     GHC.Types.IO>_N)))
+                                                                                                   (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
+                                                                                                                  <*>_N
+                                                                                                                  <Servant.API.Capture.Capture
+                                                                                                                     "tool"
+                                                                                                                     GHC.Base.String
+                                                                                                                   Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                        '[Htmls.HTMLBlaze]
+                                                                                                                                        Models.Tool>_N
+                                                                                                                  <"show">_N
+                                                                                                                  <Control.Monad.Trans.Except.ExceptT
+                                                                                                                     Servant.Server.Internal.ServantErr.ServantErr
+                                                                                                                     GHC.Types.IO>_N)))))_R
+                                                            (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:<|>m[0]
+                                                                           <"show"
+                                                                            Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                  "tool"
+                                                                                                  GHC.Base.String
+                                                                                                Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                     '[Htmls.HTMLBlaze]
+                                                                                                                     Models.Tool)>_N
+                                                                           <"image"
+                                                                            Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                  "tool"
+                                                                                                  GHC.Base.String
+                                                                                                Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                     '[Servant.JuicyPixels.JPEG
+                                                                                                                         100]
+                                                                                                                     Codec.Picture.Types.DynamicImage)>_N
+                                                                           <Control.Monad.Trans.Except.ExceptT
+                                                                              Servant.Server.Internal.ServantErr.ServantErr
+                                                                              GHC.Types.IO>_N))))_R
+                          (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:<|>m[0]
+                                         <("image"
+                                           Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                 "tool" GHC.Base.String
+                                                               Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                    '[Servant.JuicyPixels.JPEG
+                                                                                        100]
+                                                                                    Codec.Picture.Types.DynamicImage))
+                                          Servant.API.Alternative.:<|> ("show"
+                                                                        Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                              "tool"
+                                                                                              GHC.Base.String
+                                                                                            Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                 '[Htmls.HTMLBlaze]
+                                                                                                                 Models.Tool))>_N
+                                         <"postImg"
+                                          Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                "true/false" GHC.Types.Bool
+                                                              Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                                                    '[Servant.JuicyPixels.JPEG
+                                                                                        100]
+                                                                                    Codec.Picture.Types.DynamicImage
+                                                                                  Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                                                       '[Servant.API.ContentTypes.JSON]
+                                                                                                       GHC.Types.Bool))>_N
+                                         <Control.Monad.Trans.Except.ExceptT
+                                            Servant.Server.Internal.ServantErr.ServantErr
+                                            GHC.Types.IO>_N)))) -}
+4849626186c667300576e60bda064e59
+  zipSrv1 ::
+    GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage
+    -> GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage
+    -> (GHC.Types.Bool
+        -> Codec.Picture.Types.DynamicImage
+        -> Control.Monad.Trans.Except.ExceptT
+             Servant.Server.Internal.ServantErr.ServantErr
+             GHC.Types.IO
+             GHC.Types.Bool)
+       Servant.API.Alternative.:<|> ((GHC.Base.String
+                                      -> Control.Monad.Trans.Except.ExceptT
+                                           Servant.Server.Internal.ServantErr.ServantErr
+                                           GHC.Types.IO
+                                           Codec.Picture.Types.DynamicImage)
+                                     Servant.API.Alternative.:<|> (GHC.Base.String
+                                                                   -> Control.Monad.Trans.Except.ExceptT
+                                                                        Servant.Server.Internal.ServantErr.ServantErr
+                                                                        GHC.Types.IO
+                                                                        Models.Tool))
+  {- Arity: 2, Strictness: <L,U(U)><L,U(U)>m, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage)
+                   (w1 :: GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage) ->
+                 case Lib.$wzipSrv w w1 of ww { (#,#) ww1 ww2 ->
+                 Servant.API.Alternative.:<|>
+                   @ (GHC.Types.Bool
+                      -> Codec.Picture.Types.DynamicImage
+                      -> Control.Monad.Trans.Except.ExceptT
+                           Servant.Server.Internal.ServantErr.ServantErr
+                           GHC.Types.IO
+                           GHC.Types.Bool)
+                   @ ((GHC.Base.String
+                       -> Control.Monad.Trans.Except.ExceptT
+                            Servant.Server.Internal.ServantErr.ServantErr
+                            GHC.Types.IO
+                            Codec.Picture.Types.DynamicImage)
+                      Servant.API.Alternative.:<|> (GHC.Base.String
+                                                    -> Control.Monad.Trans.Except.ExceptT
+                                                         Servant.Server.Internal.ServantErr.ServantErr
+                                                         GHC.Types.IO
+                                                         Models.Tool))
+                   ww1
+                   ww2 }) -}
+"SPEC/Lib $fAllCTRender:a @ (JPEG 100) @ '[] @ DynamicImage" [ALWAYS] forall ($dAllMimeRender :: Servant.API.ContentTypes.AllMimeRender
+                                                                                                   '[Servant.JuicyPixels.JPEG
+                                                                                                       100]
+                                                                                                   Codec.Picture.Types.DynamicImage)
+                                                                             ($dAllMime :: Servant.API.ContentTypes.AllMime
+                                                                                             '[])
+                                                                             ($dAccept :: Servant.API.ContentTypes.Accept
+                                                                                            (Servant.JuicyPixels.JPEG
+                                                                                               100))
+  Servant.API.ContentTypes.$fAllCTRender:a @ (Servant.JuicyPixels.JPEG
+                                                100)
+                                           @ '[]
+                                           @ Codec.Picture.Types.DynamicImage
+                                           $dAccept
+                                           $dAllMime
+                                           $dAllMimeRender
+  = Lib.$s$fAllCTRender:a
+"SPEC/Lib $fAllCTRender:a @ HTMLBlaze @ '[] @ Tool" [ALWAYS] forall ($dAllMimeRender :: Servant.API.ContentTypes.AllMimeRender
+                                                                                          '[Htmls.HTMLBlaze]
+                                                                                          Models.Tool)
+                                                                    ($dAllMime :: Servant.API.ContentTypes.AllMime
+                                                                                    '[])
+                                                                    ($dAccept :: Servant.API.ContentTypes.Accept
+                                                                                   Htmls.HTMLBlaze)
+  Servant.API.ContentTypes.$fAllCTRender:a @ Htmls.HTMLBlaze
+                                           @ '[]
+                                           @ Models.Tool
+                                           $dAccept
+                                           $dAllMime
+                                           $dAllMimeRender
+  = Lib.$s$fAllCTRender:a15
+"SPEC/Lib $fAllCTRender:a @ JSON @ '[] @ Bool" [ALWAYS] forall ($dAllMimeRender :: Servant.API.ContentTypes.AllMimeRender
+                                                                                     '[Servant.API.ContentTypes.JSON]
+                                                                                     GHC.Types.Bool)
+                                                               ($dAllMime :: Servant.API.ContentTypes.AllMime
+                                                                               '[])
+                                                               ($dAccept :: Servant.API.ContentTypes.Accept
+                                                                              Servant.API.ContentTypes.JSON)
+  Servant.API.ContentTypes.$fAllCTRender:a @ Servant.API.ContentTypes.JSON
+                                           @ '[]
+                                           @ GHC.Types.Bool
+                                           $dAccept
+                                           $dAllMime
+                                           $dAllMimeRender
+  = Lib.$s$fAllCTRender:a11
+"SPEC/Lib $fAllMimeRender:a0 @ (JPEG 100) @ DynamicImage" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
+                                                                                             (Servant.JuicyPixels.JPEG
+                                                                                                100)
+                                                                                             Codec.Picture.Types.DynamicImage)
+  Servant.API.ContentTypes.$fAllMimeRender:a0 @ (Servant.JuicyPixels.JPEG
+                                                   100)
+                                              @ Codec.Picture.Types.DynamicImage
+                                              $dMimeRender
+  = Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a0
+"SPEC/Lib $fAllMimeRender:a0 @ HTMLBlaze @ Tool" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
+                                                                                    Htmls.HTMLBlaze
+                                                                                    Models.Tool)
+  Servant.API.ContentTypes.$fAllMimeRender:a0 @ Htmls.HTMLBlaze
+                                              @ Models.Tool
+                                              $dMimeRender
+  = Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a2
+"SPEC/Lib $fAllMimeRender:a0 @ JSON @ Bool" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
+                                                                               Servant.API.ContentTypes.JSON
+                                                                               GHC.Types.Bool)
+  Servant.API.ContentTypes.$fAllMimeRender:a0 @ Servant.API.ContentTypes.JSON
+                                              @ GHC.Types.Bool
+                                              $dMimeRender
+  = Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a1
+"SPEC/Lib $fAllMimeUnrender:a @ (JPEG 100) @ DynamicImage @ '[]" [ALWAYS] forall ($dAllMimeUnrender :: Servant.API.ContentTypes.AllMimeUnrender
+                                                                                                         '[]
+                                                                                                         Codec.Picture.Types.DynamicImage)
+                                                                                 ($dMimeUnrender :: Servant.API.ContentTypes.MimeUnrender
+                                                                                                      (Servant.JuicyPixels.JPEG
+                                                                                                         100)
+                                                                                                      Codec.Picture.Types.DynamicImage)
+  Servant.API.ContentTypes.$fAllMimeUnrender:a @ (Servant.JuicyPixels.JPEG
+                                                    100)
+                                               @ Codec.Picture.Types.DynamicImage
+                                               @ '[]
+                                               $dMimeUnrender
+                                               $dAllMimeUnrender
+  = Lib.$s$fAllMimeUnrender:a
+"SPEC/Lib $fMimeRenderTYPEHTMLBlazea @ Tool" [ALWAYS] forall ($dToMarkup :: Text.Blaze.ToMarkup
+                                                                              Models.Tool)
+  Htmls.$fMimeRenderTYPEHTMLBlazea @ Models.Tool $dToMarkup
+  = Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEHTMLBlazea
+"SPEC/Lib $fMimeRenderTYPEJPEGDynamicImage @ 100" [ALWAYS] forall ($d~ :: 100
+                                                                          GHC.TypeLits.<= 100)
+                                                                  ($dKnownNat1 :: GHC.TypeLits.KnownNat
+                                                                                    100)
+  Servant.JuicyPixels.$fMimeRenderTYPEJPEGDynamicImage @ 100
+                                                       $dKnownNat1
+                                                       $d~
+  = Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJPEGDynamicImage
+"SPEC/Lib $fMimeRenderTYPEJSONa @ Bool" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.ToJSON.ToJSON
+                                                                       GHC.Types.Bool)
+  Servant.API.ContentTypes.$fMimeRenderTYPEJSONa @ GHC.Types.Bool
+                                                 $dToJSON
+  = Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa
+"SPEC/Lib $fMimeRenderTYPEJSONa_$cmimeRender @ Bool" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.ToJSON.ToJSON
+                                                                                    GHC.Types.Bool)
+  Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cmimeRender @ GHC.Types.Bool
+                                                              $dToJSON
+  = Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender
+"SPEC/Lib $fMimeUnrenderTYPEJPEGDynamicImage @ 100" [ALWAYS] forall ($d~ :: 100
+                                                                            GHC.TypeLits.<= 100)
+                                                                    ($dKnownNat1 :: GHC.TypeLits.KnownNat
+                                                                                      100)
+  Servant.JuicyPixels.$fMimeUnrenderTYPEJPEGDynamicImage @ 100
+                                                         $dKnownNat1
+                                                         $d~
+  = Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJPEGDynamicImage
+"SPEC/Lib encode @ Bool" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.ToJSON.ToJSON
+                                                        GHC.Types.Bool)
+  Data.Aeson.encode @ GHC.Types.Bool $dToJSON
+  = Lib.$s$fAllCTRender:a_$sencode
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
