@@ -1,8 +1,0 @@
-module Cmd where
-import Models
-import Pixels
-
-zippingCommand =
-    ImgCommand "zip" $ \args ->
-        Invocation sortingCommand args $
-            unwords (sort (words args))
