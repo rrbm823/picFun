@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/home/lamb/Documents/picFun/.stack-work/install/x86_64-linux/lts-8.6/8.0.2/bin"
-libdir     = "/home/lamb/Documents/picFun/.stack-work/install/x86_64-linux/lts-8.6/8.0.2/lib/x86_64-linux-ghc-8.0.2/picFun-0.1.0.0-41oGHt6VUNM2sRBPQhbfR4"
+libdir     = "/home/lamb/Documents/picFun/.stack-work/install/x86_64-linux/lts-8.6/8.0.2/lib/x86_64-linux-ghc-8.0.2/picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk"
 dynlibdir  = "/home/lamb/Documents/picFun/.stack-work/install/x86_64-linux/lts-8.6/8.0.2/lib/x86_64-linux-ghc-8.0.2"
 datadir    = "/home/lamb/Documents/picFun/.stack-work/install/x86_64-linux/lts-8.6/8.0.2/share/x86_64-linux-ghc-8.0.2/picFun-0.1.0.0"
 libexecdir = "/home/lamb/Documents/picFun/.stack-work/install/x86_64-linux/lts-8.6/8.0.2/libexec"

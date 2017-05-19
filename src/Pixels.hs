@@ -3,6 +3,7 @@
 {-# LANGUAGE Rank2Types #-}
 module Pixels where
 
+import Grid
 import Servant.JuicyPixels
 import Codec.Picture
 import qualified Data.ByteString.Lazy as LB
@@ -25,7 +26,10 @@ brightnessRGB8 add = pixelMap brightFunction
            brightFunction (PixelRGB8 r g b) =
                    PixelRGB8 (up r) (up g) (up b)
 
+spiral ts = [ (z * sqrt t * cos t, z * sqrt t * sin t) | z <- [1,-1], t <- ts  ]
 
+--sprlImages :: Pixel a => Image a -> Image a -> Image a
+--sprlImages i1@(Image g1 h1 d1) i2@(Image g2 h2 d2) =
 
 zipImages :: Pixel a => Image a -> Image a -> Image a
 zipImages i1@(Image g1 h1 d1) i2@(Image g2 h2 d2) = let
@@ -75,3 +79,6 @@ dynCrop w h = dynamicPixelMap $ cropImage w h
 
 cropImage :: Pixel a => Int -> Int -> Image a -> Image a
 cropImage e1 e2 img = generateImage (\x y -> pixelAt img x y) e1 e2
+
+cropImageOffset :: Pixel a => Int -> Int -> Int -> Int -> Image a -> Image a
+cropImageOffset e1 e2 o1 o2 img = generateImage (\x y -> pixelAt img (x + o1) (y + o2)) e1 e2

@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-16 19:31:47.425772 UTC
+2017-05-19 17:35:10.675182 UTC
 
 interface main@main:Main 8002
-  interface hash: 3401c7b895a18746b99fc7201a0e9e48
-  ABI hash: f4e08956c8f231738f5e45f0326dd7d6
-  export-list hash: 7533b0d1e0831d9462a0f47eb418e701
+  interface hash: d39e22964cbf110dfd4b1c6b9eb413d9
+  ABI hash: 3bcbaeca96254b65f6fbd460490aa742
+  export-list hash: 7893f28010ba902b5ecab0c14caeb505
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 2f09387325aab7617e6b60fcceee4574
   sig of: Nothing
@@ -31,6 +31,7 @@ package dependencies: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMK
                       byteorder-1.0.4@byteorder-1.0.4-9NlNHkBVdo7F1prFVKrkcH
                       bytestring-0.10.8.1@bytestring-0.10.8.1
                       case-insensitive-1.2.0.8@case-insensitive-1.2.0.8-336s2tfPdxOEPgnLH8r0bz
+                      comonad-5@comonad-5-BYydH82fZIS1vK4HJ9v9HH
                       containers-0.5.7.1@containers-0.5.7.1
                       cryptonite-0.21@cryptonite-0.21-Er8yd96TMUKJhhoyDY0pav
                       deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.3.0.0@directory-1.3.0.0
@@ -47,13 +48,15 @@ package dependencies: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMK
                       integer-logarithms-1.0.1@integer-logarithms-1.0.1-IEHCuEd5sG4JjSjlx7m5JF
                       iproute-1.7.1@iproute-1.7.1-4HULutk0xITKNjI1pwYrD4
                       memory-0.14.2@memory-0.14.2-CfVX41PhmpJKBOUPv4ybaa
+                      microlens-0.4.8.0@microlens-0.4.8.0-5PXN9DedWooJg6UJ24ter0
+                      microlens-th-0.4.1.1@microlens-th-0.4.1.1-26cEGwGOrIB7ilX0jLiOT0
                       mime-types-0.1.0.7@mime-types-0.1.0.7-31dnC2ifQ9r5TApUZagLPk
                       mmorph-1.0.9@mmorph-1.0.9-5bASEvmIkr5CpdAYXwPsn0
                       mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
                       network-2.6.3.1@network-2.6.3.1-ABFtZSq90Z9BfMXNiqgBoe
                       network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF
                       parsec-3.1.11@parsec-3.1.11-113irVHGgd88sRnywByDNw
-                      picFun-0.1.0.0@picFun-0.1.0.0-41oGHt6VUNM2sRBPQhbfR4
+                      picFun-0.1.0.0@picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk
                       pretty-1.1.3.3@pretty-1.1.3.3
                       primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH
                       psqueues-0.2.2.3@psqueues-0.2.2.3-9nDehYbroydEusqdFJopTa
@@ -93,7 +96,7 @@ orphans: attoparsec-0.13.1.0@attoparsec-0.13.1.0-1ABl8gBrvGSCXKXEElG6rU:Data.Att
          bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
          hashable-1.2.6.0@hashable-1.2.6.0-3EXxoqeEgbfAKr6aGkye6x:Data.Hashable.Generic
          network-2.6.3.1@network-2.6.3.1-ABFtZSq90Z9BfMXNiqgBoe:Network.Socket
-         picFun-0.1.0.0@picFun-0.1.0.0-41oGHt6VUNM2sRBPQhbfR4:Htmls
+         picFun-0.1.0.0@picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Htmls
          stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
@@ -129,8 +132,10 @@ family instance modules: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOs
                          http-api-data-0.3.5@http-api-data-0.3.5-I8V2cgXR5W924Ax42O3A11:Web.Internal.FormUrlEncoded
                          iproute-1.7.1@iproute-1.7.1-4HULutk0xITKNjI1pwYrD4:Data.IP.Addr
                          iproute-1.7.1@iproute-1.7.1-4HULutk0xITKNjI1pwYrD4:Data.IP.Range
+                         microlens-0.4.8.0@microlens-0.4.8.0-5PXN9DedWooJg6UJ24ter0:Lens.Micro.Internal
                          network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF:Network.URI
-                         picFun-0.1.0.0@picFun-0.1.0.0-41oGHt6VUNM2sRBPQhbfR4:Models
+                         picFun-0.1.0.0@picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Grid
+                         picFun-0.1.0.0@picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Models
                          pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
                          pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
                          primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH:Control.Monad.Primitive
@@ -157,7 +162,7 @@ family instance modules: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOs
                          zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.Zlib.Stream
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
-import  -/  picFun-0.1.0.0@picFun-0.1.0.0-41oGHt6VUNM2sRBPQhbfR4:Lib 266072d2a08893307b4741c55763352a
+import  -/  picFun-0.1.0.0@picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Lib a8cd360cc50307c65f39092124c040b5
 d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -170,12 +175,12 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-55dd3cbd615a6c1b23e0064aeb7f46b4
+359b8035e2eae11116b9f69e3b84d4bb
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.imagApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-869912f416650faecd841e28126b11e3
+8bf262cce9cc8c57b28e3fe4dd249fad
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)

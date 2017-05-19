@@ -56,6 +56,20 @@
   (major1) == 0 && (major2) <  10 || \
   (major1) == 0 && (major2) == 10 && (minor) <= 8)
 
+/* package comonad-5 */
+#define VERSION_comonad "5"
+#define MIN_VERSION_comonad(major1,major2,minor) (\
+  (major1) <  5 || \
+  (major1) == 5 && (major2) <  0 || \
+  (major1) == 5 && (major2) == 0 && (minor) <= 0)
+
+/* package containers-0.5.7.1 */
+#define VERSION_containers "0.5.7.1"
+#define MIN_VERSION_containers(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  5 || \
+  (major1) == 0 && (major2) == 5 && (minor) <= 7)
+
 /* package directory-1.3.0.0 */
 #define VERSION_directory "1.3.0.0"
 #define MIN_VERSION_directory(major1,major2,minor) (\
@@ -69,6 +83,27 @@
   (major1) <  0 || \
   (major1) == 0 && (major2) <  6 || \
   (major1) == 0 && (major2) == 6 && (minor) <= 4)
+
+/* package microlens-0.4.8.0 */
+#define VERSION_microlens "0.4.8.0"
+#define MIN_VERSION_microlens(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  4 || \
+  (major1) == 0 && (major2) == 4 && (minor) <= 8)
+
+/* package microlens-platform-0.3.8.0 */
+#define VERSION_microlens_platform "0.3.8.0"
+#define MIN_VERSION_microlens_platform(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  3 || \
+  (major1) == 0 && (major2) == 3 && (minor) <= 8)
+
+/* package microlens-th-0.4.1.1 */
+#define VERSION_microlens_th "0.4.1.1"
+#define MIN_VERSION_microlens_th(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  4 || \
+  (major1) == 0 && (major2) == 4 && (minor) <= 1)
 
 /* package monad-logger-0.3.21 */
 #define VERSION_monad_logger "0.3.21"
@@ -196,7 +231,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "picFun-0.1.0.0-41oGHt6VUNM2sRBPQhbfR4"
+#define CURRENT_COMPONENT_ID "picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk"
 
-#define CURRENT_PACKAGE_KEY "picFun-0.1.0.0-41oGHt6VUNM2sRBPQhbfR4"
+#define CURRENT_PACKAGE_KEY "picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk"
 

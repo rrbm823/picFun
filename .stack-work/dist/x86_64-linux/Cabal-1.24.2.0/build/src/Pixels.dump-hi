@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-16 19:29:51.139356 UTC
+2017-05-19 17:35:07.533934 UTC
 
-interface picFun-0.1.0.0-41oGHt6VUNM2sRBPQhbfR4:Pixels 8002
-  interface hash: 5a6cae7a9287ac270b8a18aaadc8378a
-  ABI hash: d0e5893ed86983a907c8015860bf69b0
-  export-list hash: a2521e5ec9036f627085dc177a6dac7f
+interface picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Pixels 8002
+  interface hash: 958ca8801855d51699dc168457518d25
+  ABI hash: e5ca4a220428cbadb1737c5877c4f0dc
+  export-list hash: 0af780d19df55599d689bceab63c9327
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 1629a6b3a1be45bac89f3b20e82b5009
   sig of: Nothing
@@ -15,13 +15,15 @@ exports:
   Pixels.b
   Pixels.brightnessRGB8
   Pixels.cropImage
+  Pixels.cropImageOffset
   Pixels.dynCrop
   Pixels.dynamicPixelMap
   Pixels.dynamicPixelMap2
   Pixels.imag
   Pixels.r
+  Pixels.spiral
   Pixels.zipImages
-module dependencies:
+module dependencies: Grid
 package dependencies: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed
                       aeson-1.0.2.1@aeson-1.0.2.1-CYngHPh1vosBJovY7C9thn
                       array-0.5.1.1@array-0.5.1.1
@@ -32,6 +34,7 @@ package dependencies: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMK
                       blaze-builder-0.4.0.2@blaze-builder-0.4.0.2-CGB8BvrFgghHy5bLy0SFOg
                       bytestring-0.10.8.1@bytestring-0.10.8.1
                       case-insensitive-1.2.0.8@case-insensitive-1.2.0.8-336s2tfPdxOEPgnLH8r0bz
+                      comonad-5@comonad-5-BYydH82fZIS1vK4HJ9v9HH
                       containers-0.5.7.1@containers-0.5.7.1
                       deepseq-1.4.2.0@deepseq-1.4.2.0
                       dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD
@@ -42,6 +45,8 @@ package dependencies: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMK
                       http-types-0.9.1@http-types-0.9.1-5rMGX8lemrMDaQeDulF4OF
                       integer-gmp-1.0.0.1
                       integer-logarithms-1.0.1@integer-logarithms-1.0.1-IEHCuEd5sG4JjSjlx7m5JF
+                      microlens-0.4.8.0@microlens-0.4.8.0-5PXN9DedWooJg6UJ24ter0
+                      microlens-th-0.4.1.1@microlens-th-0.4.1.1-26cEGwGOrIB7ilX0jLiOT0
                       mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
                       network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF
                       parsec-3.1.11@parsec-3.1.11-113irVHGgd88sRnywByDNw
@@ -105,7 +110,9 @@ family instance modules: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOs
                          dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD:Data.DList
                          ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
                          http-api-data-0.3.5@http-api-data-0.3.5-I8V2cgXR5W924Ax42O3A11:Web.Internal.FormUrlEncoded
+                         microlens-0.4.8.0@microlens-0.4.8.0-5PXN9DedWooJg6UJ24ter0:Lens.Micro.Internal
                          network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF:Network.URI
+                         picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Grid
                          pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
                          pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
                          primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH:Control.Monad.Primitive
@@ -134,30 +141,33 @@ import  -/  JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.
 import  -/  base-4.9.1.0:Data.Either 20b09ef8d0a5b74fdec011c40c1587f5
 import  -/  base-4.9.1.0:Data.Tuple 7dc4bbb45d2e69c991ffac438beeca11
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Float 33e2b9ffe427edd6a5c2fd6a3b26703c
 import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
 import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Lazy 208431757121593b5ca64b062df0cfbd
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  Grid 0da2fedca5e6afc1593d07529d87605d
+  exports: 1607b49331cc8d6b2e41c0393a027a6e
 import  -/  servant-JuicyPixels-0.3.0.2@servant-JuicyPixels-0.3.0.2-KFDh0ZSrRqdHyQZspaSYy6:Servant.JuicyPixels 8b5d4bad3818d21fd79b30ab2960a0f1
 import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Storable 6efee64e1486b549434fd0e1352e7839
-e7f5d8053cd6acdc0720391bae8dfeed
+31f4b8a1c6ea205ae0c2ad3da0b107d7
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    Pixels.$trModule2
                    Pixels.$trModule1) -}
-24324a25c8bd571cb54d8cbaeb2369c8
+f02fbf68b3ff685f0a5009b4d8618b85
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Pixels"#) -}
-b7978faee77775c41e034aad2c39dabb
+b78afe589cb238e46629bf6cd40f488d
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "picFun-0.1.0.0-41oGHt6VUNM2sRBPQhbfR4"#) -}
-5b6573a2d9beb1aca409ee8bc5cac514
+                   "picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk"#) -}
+489b5ed54688f27a742024dfd73a4d21
   $w$scropImage ::
     GHC.Prim.Int#
     -> GHC.Prim.Int#
@@ -165,7 +175,7 @@ b7978faee77775c41e034aad2c39dabb
     -> Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
   {- Arity: 3, Strictness: <S,U><S,U><L,U(U,A,U(U,U,U))>,
      Inline: [0] -}
-0f33d095b9a1115e5ac9660064e2cb0e
+3aff4eb2898c30924b1e0bec917254ff
   $w$szipImages ::
     GHC.Prim.Int#
     -> GHC.Prim.Int#
@@ -184,7 +194,7 @@ b7978faee77775c41e034aad2c39dabb
   {- Arity: 6,
      Strictness: <S,U><S,U><L,U(U,U,U)><S,U><S,U><L,U(U,U,U)>,
      Inline: [0] -}
-b0a90d09ebc284a638e7605209f310c3
+e916d123f44e85ff25323e73c33f8dd2
   $wcropImage ::
     Codec.Picture.Types.Pixel a =>
     GHC.Prim.Int#
@@ -194,7 +204,19 @@ b0a90d09ebc284a638e7605209f310c3
   {- Arity: 4,
      Strictness: <S(SLLLLLC(S(S))LLLLLLLLL),U(1*U,A,A,A,A,A,1*C1(U(U)),A,A,A,C(C1(C1(U))),A,A,A,A,C(C1(C1(C1(U)))))><S,U><S,U><L,U>,
      Inline: [0] -}
-3f167b73ba13c4a1ff0f075ff0d946c9
+fda89d100a910e7d70a740386a4c8c70
+  $wcropImageOffset ::
+    Codec.Picture.Types.Pixel a =>
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Codec.Picture.Types.Image a
+    -> Codec.Picture.Types.Image a
+  {- Arity: 6,
+     Strictness: <S(SLLLLLC(S(S))LLLLLLLLL),U(1*U,A,A,A,A,A,1*C1(U(U)),A,A,A,C(C1(C1(U))),A,A,A,A,C(C1(C1(C1(U)))))><S,U><S,U><L,U(U)><L,U(U)><L,U>,
+     Inline: [0] -}
+97390f7927e90306f4ef69e3bc482fc1
   $wzipImages ::
     Codec.Picture.Types.Pixel a =>
     GHC.Prim.Int#
@@ -211,7 +233,7 @@ b0a90d09ebc284a638e7605209f310c3
   {- Arity: 7,
      Strictness: <L,U(U,A,A,A,A,A,C(U(U)),A,A,A,C(C1(C1(U))),A,A,A,A,C(C1(C1(C1(U)))))><S,U><S,U><L,U><S,U><S,U><L,U>,
      Inline: [0] -}
-c425bf6fe7726b109cc536d120c6cb2c
+73ab5ec7e2801d3cb2eede9440af07bf
   b ::
     GHC.Types.IO
       (Data.Either.Either
@@ -223,18 +245,18 @@ c425bf6fe7726b109cc536d120c6cb2c
                 (Sym (GHC.Types.N:IO[0]
                           <Data.Either.Either
                              GHC.Base.String Codec.Picture.Types.DynamicImage>_R)) -}
-9ed692795e2e010c984d8776560c9a29
+f6ae7429ec54053b434895bad81f4c0b
   b1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Either.Either
             GHC.Base.String Codec.Picture.Types.DynamicImage #)
   {- Arity: 1, Unfolding: (Codec.Picture.readImage1 Pixels.b2) -}
-e20b18ce3c32d8ce97913b85991287bc
+22b68dba1f02e64f906fff90b60992aa
   b2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "/home/lamb/Pictures/conspiracy.jpg"#) -}
-a18dcbed1c0338257871cffbbdc54dca
+f8d90adc2ce9792044e9b305a5511960
   brightnessRGB8 ::
     GHC.Types.Int
     -> Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
@@ -264,7 +286,7 @@ a18dcbed1c0338257871cffbbdc54dca
                    ww5
                    ww6
                    ww7 } }) -}
-707d9f6e2e7bc28aab1ff8981cb1a892
+aca3fad61d07e125ab49676ee315ec77
   cropImage ::
     Codec.Picture.Types.Pixel a =>
     GHC.Types.Int
@@ -283,7 +305,30 @@ a18dcbed1c0338257871cffbbdc54dca
                  case w1 of ww { GHC.Types.I# ww1 ->
                  case w2 of ww2 { GHC.Types.I# ww3 ->
                  Pixels.$wcropImage @ a w ww1 ww3 w3 } }) -}
-41ccb6ce9e811b8af21131b4bbb424da
+d9b897cc99da6d738fc2a806b08d2473
+  cropImageOffset ::
+    Codec.Picture.Types.Pixel a =>
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Codec.Picture.Types.Image a
+    -> Codec.Picture.Types.Image a
+  {- Arity: 6,
+     Strictness: <S(SLLLLLC(S(S))LLLLLLLLL),U(1*U,A,A,A,A,A,1*C1(U(U)),A,A,A,C(C1(C1(U))),A,A,A,A,C(C1(C1(C1(U)))))><S(S),1*U(U)><S(S),1*U(U)><L,U(U)><L,U(U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (6, True, False)
+                (\ @ a
+                   (w :: Codec.Picture.Types.Pixel a)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: GHC.Types.Int)
+                   (w4 :: GHC.Types.Int)
+                   (w5 :: Codec.Picture.Types.Image a) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 case w2 of ww2 { GHC.Types.I# ww3 ->
+                 Pixels.$wcropImageOffset @ a w ww1 ww3 w3 w4 w5 } }) -}
+77005bb45210a2e77897ecd327188dd0
   cropImage_$scropImage ::
     GHC.Types.Int
     -> GHC.Types.Int
@@ -299,14 +344,14 @@ a18dcbed1c0338257871cffbbdc54dca
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { GHC.Types.I# ww3 ->
                  Pixels.$w$scropImage ww1 ww3 w2 } }) -}
-91bb0fe2fea4ebd92e87255d4ee8dd6b
+6ddcb798df8e8c25ff30e6e671bdcc59
   dynCrop ::
     GHC.Types.Int
     -> GHC.Types.Int
     -> Codec.Picture.Types.DynamicImage
     -> Codec.Picture.Types.DynamicImage
   {- Arity: 3, Strictness: <L,1*U(U)><L,1*U(U)><S,1*U> -}
-45d3fd104ab62828cac1bf8542d3f96c
+49e32662fe6a9175274535f515fca407
   dynamicPixelMap ::
     (forall pixel.
      Codec.Picture.Types.Pixel pixel =>
@@ -380,7 +425,7 @@ a18dcbed1c0338257871cffbbdc54dca
                         (f @ Codec.Picture.Types.PixelCMYK16
                            Codec.Picture.Types.$fPixelPixelCMYK16
                            i) }) -}
-8aea27da04ade618e7e3ec53066a3122
+54998346c8b23f702b96fe4bd7f62388
   dynamicPixelMap2 ::
     (forall pixel.
      Codec.Picture.Types.Pixel pixel =>
@@ -391,14 +436,14 @@ a18dcbed1c0338257871cffbbdc54dca
     -> Codec.Picture.Types.DynamicImage
     -> Codec.Picture.Types.DynamicImage
   {- Arity: 3, Strictness: <L,1*C1(C1(C1(U)))><S,1*U><S,1*U> -}
-4113f231352d25a6e0f695e4b4aff4de
+c4ced8ae892c9b0b94298b42e3cbbcf1
   imag :: GHC.IO.FilePath -> GHC.Types.IO ()
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Pixels.imag1
                   `cast`
                 (<GHC.IO.FilePath>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-5aae7d0c9e2220131b7aa7457d60e7fe
+b904b9b73e1b027928dd2d61c84a698b
   imag1 ::
     GHC.IO.FilePath
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -462,14 +507,14 @@ a18dcbed1c0338257871cffbbdc54dca
                         ipv
                         (case y of wild1 { (,) x ds2 ->
                          Codec.Picture.convertRGB8 x }) } }) -}
-a074a0d149ec4b132796113a8cf641cd
+3d8b5623f0be27cb36945f79d3f63856
   imag2 :: Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
   {- Unfolding: (Codec.Picture.Types.Image
                    @ Codec.Picture.Types.PixelRGB8
                    0#
                    0#
                    Pixels.imag3) -}
-cced271c63d1134f48e9ab58224fe5d0
+6ea56dc7d8152973d474a899be65fe9b
   imag3 ::
     Data.Vector.Storable.Vector
       (Codec.Picture.Types.PixelBaseComponent
@@ -483,7 +528,7 @@ cced271c63d1134f48e9ab58224fe5d0
                  (Data.Vector.Storable.Vector
                     <GHC.Word.Word8, Codec.Picture.Types.PixelBaseComponent
                                        Codec.Picture.Types.PixelRGB8>)_R }) -}
-42979f47b397755ee3c0fa7e3d5373d3
+a389947c10382b8a8c22f70813aa4392
   imag4 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -505,11 +550,11 @@ cced271c63d1134f48e9ab58224fe5d0
                          (UnsafeCo representational (GHC.Prim.MutableByteArray#
                                                        GHC.Prim.RealWorld) GHC.Prim.ByteArray#))
                       (GHC.ForeignPtr.PlainPtr ipv1) #) }) -}
-5184cf65b7828b5e8461bb66a0554f44
+c6d05c4b9c80fabce37e3262bbba21a3
   imag5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "/home/lamb/Pictures/bobby.jpeg"#) -}
-a6b4f52431a457a1159c1032fa528886
+da97838ca64aa3a03b47a8b88b9e099f
   r ::
     GHC.Types.IO
       (Data.Either.Either
@@ -521,7 +566,7 @@ a6b4f52431a457a1159c1032fa528886
                 (Sym (GHC.Types.N:IO[0]
                           <Data.Either.Either
                              GHC.Base.String Codec.Picture.Types.DynamicImage>_R)) -}
-cb8aa4ae1fc5af85a419181d64f48d50
+d5759c93a4d74ceed291ac60cfbd4f14
   r1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -547,7 +592,56 @@ cb8aa4ae1fc5af85a419181d64f48d50
                               @ Codec.Picture.Types.DynamicImage
                               @ Codec.Picture.Metadata.Metadatas
                               y) } #) }) -}
-cecb5a8ea824497b2c98b04ecba3017d
+6d652ce870c23b05ab62b974b568e941
+  spiral :: GHC.Float.Floating t => [t] -> [(t, t)]
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(1*U,A,A,A,C(U),A,A,C(U),C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U>,
+     Unfolding: (\ @ t
+                   ($dFloating :: GHC.Float.Floating t)
+                   (eta :: [t]) ->
+                 let {
+                   $dNum :: GHC.Real.Fractional t
+                   = GHC.Float.$p1Floating @ t $dFloating
+                 } in
+                 let {
+                   $dNum1 :: GHC.Num.Num t = GHC.Real.$p1Fractional @ t $dNum
+                 } in
+                 let {
+                   c :: t -> [(t, t)] -> [(t, t)]
+                     {- Arity: 2, Strictness: <L,U><L,U> -}
+                   = \ (ds :: t) (ds1 :: [(t, t)])[OneShot] ->
+                     letrec {
+                       go :: [t] -> [(t, t)] {- Arity: 1, Strictness: <S,1*U> -}
+                       = \ (ds2 :: [t]) ->
+                         case ds2 of wild {
+                           [] -> ds1
+                           : y ys
+                           -> GHC.Types.:
+                                @ (t, t)
+                                (GHC.Num.*
+                                   @ t
+                                   $dNum1
+                                   (GHC.Num.* @ t $dNum1 ds (GHC.Float.sqrt @ t $dFloating y))
+                                   (GHC.Float.cos @ t $dFloating y),
+                                 GHC.Num.*
+                                   @ t
+                                   $dNum1
+                                   (GHC.Num.* @ t $dNum1 ds (GHC.Float.sqrt @ t $dFloating y))
+                                   (GHC.Float.sin @ t $dFloating y))
+                                (go ys) }
+                     } in
+                     go eta
+                 } in
+                 c (GHC.Num.fromInteger @ t $dNum1 Pixels.spiral1)
+                   (c (GHC.Num.negate
+                         @ t
+                         $dNum1
+                         (GHC.Num.fromInteger @ t $dNum1 Pixels.spiral1))
+                      (GHC.Types.[] @ (t, t)))) -}
+0419498e503fe8ffe1ee0b2e5633df36
+  spiral1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1) -}
+e71d25af7b9ea7b6b57a82a5ea147244
   zipImages ::
     Codec.Picture.Types.Pixel a =>
     Codec.Picture.Types.Image a
