@@ -27,3 +27,7 @@ cabal.sandbox.config
 .stack-work/
 cabal.project.local
 .HTF/
+*.png
+*.gif
+*.jpeg
+*.jpg
