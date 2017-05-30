@@ -34,17 +34,14 @@ zipSrv i1 i2 = postImg :<|> display :<|> (return . read)
        ZipImage -> liftIO $ do
          leftImg <- readTVarIO i1
          rightImg <- readTVarIO i2
-         return $ ImageRGB8 $ zipImages (convertRGB8 leftImg) (convertRGB8 rightImg) 
-
-    {--       
-process :: Configuration -> String -> String
-process config input =
-    let
-        cmdName : arguments = words input
-        parsed = parse (legalCommands config) cmdName $ concat arguments
-    in
-        case parsed of
-            Just cmd ->
-            Nothing ->
-                "Unrecognised command."
- --}
+         return $ ImageRGB8 $ zipImages (convertRGB8 leftImg) (convertRGB8 rightImg)
+       Spiral -> liftIO $ do
+         leftImg <- readTVarIO i1
+         rightImg <- readTVarIO i2
+         imgResult <- sprlImages (convertRGB8 leftImg) (convertRGB8 rightImg)
+         return $ ImageRGB8 imgResult
+       Frame -> liftIO $ do
+         leftImg <- readTVarIO i1
+         rightImg <- readTVarIO i2
+         imgResult <- imageInImage (convertRGB8 leftImg) (convertRGB8 rightImg) 
+         return $ ImageRGB8 imgResult

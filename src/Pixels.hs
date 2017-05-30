@@ -6,31 +6,114 @@ module Pixels where
 import Grid
 import Servant.JuicyPixels
 import Codec.Picture
+import Codec.Picture.Types
+import Data.List (sortBy, span)
+import Data.Ord
 import qualified Data.ByteString.Lazy as LB
 import qualified Data.Vector.Storable as V
 
-imag o = do
-  b1 <- either (const $ return $ Image 0 0 mempty) (return . convertRGB8) =<< r
-  b2 <- either (const $ return $ Image 0 0 mempty) (return . convertRGB8) =<< b
-  writePng o $ zipImages b2 b1
-
-r :: IO (Either String DynamicImage)
-r = readImageWithMetadata "/home/lamb/Pictures/bobby.jpeg" >>= return . fmap fst
-
-b :: IO (Either String DynamicImage)
-b = readImage "/home/lamb/Pictures/conspiracy.jpg"
+b p = do
+  j <- readImage p
+  case j of
+    Left _ -> return g
+    Right i -> return $ convertRGB8 i
+    
+g = generateImage (const.const $ PixelRGB8 133 150 250) 1000 1000
+h = generateImage (const.const $ PixelRGB8 200 0 100) 1000 1000 
 
 brightnessRGB8 :: Int -> Image PixelRGB8 -> Image PixelRGB8
 brightnessRGB8 add = pixelMap brightFunction
      where up v = fromIntegral (fromIntegral v + add)
            brightFunction (PixelRGB8 r g b) =
                    PixelRGB8 (up r) (up g) (up b)
+                   
+spiral_part :: (Ord t, Floating t) => [(t,t)] -> [(t,t)] -> (Int, Int) -> Bool 
+spiral_part fn fp (x,y) = closest_n > closest_p
+  where
+    closest_n = e_dist_int (0,0) $ head $ sortBy (comparing $ e_dist_int (x,y)) fn --inefficient sorting!
+    closest_p = e_dist_int (0,0) $ head $ sortBy (comparing $ e_dist_int (x,y)) fp
 
-spiral ts = [ (z * sqrt t * cos t, z * sqrt t * sin t) | z <- [1,-1], t <- ts  ]
+spiral_check :: (Enum t, Ord t, Floating t) => (t,t) -> Bool
+spiral_check c = let
+  (r1,theta0) = toPolarPos c;
+  r_sp_p = [ sqrt $ t + n*pi | n <- [0,2..], t <- [theta0]];
+  r_sp_n = [ sqrt $ t + n*pi | n <- [1,3..], t <- [theta0]];
+  (rp1, rn1) = case inf ((<r1).fst) $ zip (r_sp_p) (r_sp_n) of
+    Nothing -> (0,0)
+    Just j -> j
+  (rp2, rn2) = case inf ((<r1).snd) $ zip (r_sp_p) (r_sp_n) of
+    Nothing -> (0,0)
+    Just j -> j
+  in r1 < rn1 -- thats not right
 
---sprlImages :: Pixel a => Image a -> Image a -> Image a
---sprlImages i1@(Image g1 h1 d1) i2@(Image g2 h2 d2) =
+inf :: (a -> Bool) -> [a] -> Maybe a
+inf b as = lastMaybe $ fst $ span b as-- infimum of a sequence based on a conditional b
 
+sup :: (a -> Bool) -> [a] -> Maybe a
+sup b as = headMaybe $ snd $ span b as-- supremum of a sequence based on a conditional b
+
+headMaybe :: [a] -> Maybe a
+headMaybe [] = Nothing
+headMaybe xs = Just $ head xs
+
+lastMaybe :: [a] -> Maybe a
+lastMaybe [] = Nothing
+lastMaybe xs = Just $ last xs
+
+f_spiral_n ts = [ (z * sqrt t * cos t, z * sqrt t * sin t) | z <- [-1], t <- ts  ]
+f_spiral_p ts = [ (z * sqrt t * cos t, z * sqrt t * sin t) | z <- [1], t <- ts  ]
+
+r_spiral_n ts = [ (z * sqrt t, t) | z <- [-1], t <- ts ]
+r_spiral_p ts = [ (z * sqrt t, t) | z <- [1], t <- ts ]
+
+e_dist_int :: Num t => (Int, Int) -> (t,t) -> t
+e_dist_int (x2',y2') (x1,y1)  = let x2 = fromIntegral x2'; y2 = fromIntegral y2' in (x2-x1)*(x2-x1) + (y2-y1)*(y2-y1)
+
+e_dist (x2,y2) (x1,y1)  = (x2-x1)*(x2-x1) + (y2-y1)*(y2-y1)
+
+toPolarPos x = let (r,p) = toPolar x in
+  if p < 0 then (r,p + 2*pi) else (r,p)
+                              
+toPolar (x,y) = (sqrt (x*x + y*y) , atan_ y x) where
+  atan_ j i
+    | i > 0 = atan (j / i)
+    | i == 0 && j > 0 = pi / 2
+    | i == 0 && j < 0 = - pi / 2
+    | i == 0 && j == 0 = 0 / 0 
+    | j < 0 = atan (j / i) - pi
+    | j >= 0 = atan (j / i) + pi
+
+toCart (r,theta) = (r*cos(theta), r*sin(theta))
+
+sprlImages :: Pixel a => Image a -> Image a -> IO (Image a)
+sprlImages i1@(Image g1 h1 d1) i2@(Image g2 h2 d2) = let
+  gmin = min g1 g2
+  hmin = min h1 h2
+  gminF = fromIntegral gmin :: Float
+  hminF = fromIntegral hmin :: Float
+  c1 = cropImage gmin hmin i1
+  c2 = cropImage gmin hmin i2
+  in do
+     c1' <- thawImage c1
+     let sp = (\(a,b) -> (round a + gmin `div` 2, round b + hmin `div` 2)) <$> f_spiral_n [0..gminF*gminF] ++ f_spiral_p [0..gminF*gminF]
+     mapM_ (\(a,b) -> writePixel c1' a b $ pixelAt c2 a b) $ filter (\(a,b) -> a >= 0 && b >= 0 && a < gmin && b < hmin) sp
+     freezeImage c1'
+  
+imageInImage :: Pixel a => Image a -> Image a -> IO (Image a)
+imageInImage img1@(Image e f _) img2@(Image g h _)
+  | e >= g && f >= h = makeFrame img1 img2 $ frame g h e f
+  | e >= g && f < h = makeFrame img1 (cropImage g f img2) $ frame g f e f
+  | e < g && f >= h = makeFrame (cropImage e h img1) img2 $ frame e f e h  
+  | True = makeFrame img2 img1 $ frame e f g h
+
+makeFrame :: Pixel a => Image a -> Image a -> [(Int,Int)] -> IO (Image a)
+makeFrame i1 i2 box = do
+        i <- thawImage i1
+        mapM (\(x,y) -> writePixel i x y $ pixelAt i2 (x - (fst $ head box)) (y - (snd $ head box))) box
+        freezeImage i
+
+frame i1 i2 g1 g2 = let width_margin = (g1 - i1) `div` 2; height_margin = (g2 - i2) `div` 2; in [(a,b) | a <- [width_margin .. i1 + width_margin - 1], b <- [height_margin .. i2 + height_margin - 1]]
+     
 zipImages :: Pixel a => Image a -> Image a -> Image a
 zipImages i1@(Image g1 h1 d1) i2@(Image g2 h2 d2) = let
   gmin = min g1 g2
@@ -39,46 +122,15 @@ zipImages i1@(Image g1 h1 d1) i2@(Image g2 h2 d2) = let
   (Image _ _ c2) = cropImage gmin hmin i2
   in (Image gmin hmin $ V.izipWith (\i x y -> if odd i then x else y) c1 c2 )
 
-dynamicPixelMap :: (forall pixel . (Pixel pixel) => Image pixel -> Image pixel) -> DynamicImage -> DynamicImage
-dynamicPixelMap f = aux
-  where
-    aux (ImageY8    i) = ImageY8 (f i)
-    aux (ImageY16   i) = ImageY16 (f i)
-    aux (ImageYF    i) = ImageYF (f i)
-    aux (ImageYA8   i) = ImageYA8 (f i)
-    aux (ImageYA16  i) = ImageYA16 (f i)
-    aux (ImageRGB8  i) = ImageRGB8 (f i)
-    aux (ImageRGB16 i) = ImageRGB16 (f i)
-    aux (ImageRGBF  i) = ImageRGBF (f i)
-    aux (ImageRGBA8 i) = ImageRGBA8 (f i)
-    aux (ImageRGBA16 i) = ImageRGBA16 (f i)
-    aux (ImageYCbCr8 i) = ImageYCbCr8 (f i)
-    aux (ImageCMYK8 i) = ImageCMYK8 (f i)
-    aux (ImageCMYK16 i) = ImageCMYK16 (f i)
-
-dynamicPixelMap2 :: (forall pixel . (Pixel pixel) => Image pixel -> Image pixel -> Image pixel) -> DynamicImage -> DynamicImage ->  DynamicImage
-dynamicPixelMap2 f = aux
-  where
-    aux (ImageY8 j) (ImageY8    i) = ImageY8 (f j i)
-    aux (ImageY16 j) (ImageY16   i) = ImageY16 (f j i)
-    aux (ImageYF j) (ImageYF    i) = ImageYF (f j i)
-    aux (ImageYA8 j) (ImageYA8   i) = ImageYA8 (f j i)
-    aux (ImageYA16 j) (ImageYA16  i) = ImageYA16 (f j i)
-    aux (ImageRGB8 j) (ImageRGB8  i) = ImageRGB8 (f j i)
-    aux (ImageRGB16 j) (ImageRGB16 i) = ImageRGB16 (f j i)
-    aux (ImageRGBF j) (ImageRGBF  i) = ImageRGBF (f j i)
-    aux (ImageRGBA8 j) (ImageRGBA8 i) = ImageRGBA8 (f j i)
-    aux (ImageRGBA16 j) (ImageRGBA16 i) = ImageRGBA16 (f j i)
-    aux (ImageYCbCr8 j) (ImageYCbCr8 i) = ImageYCbCr8 (f j i)
-    aux (ImageCMYK8 j) (ImageCMYK8 i) = ImageCMYK8 (f j i)
-    aux (ImageCMYK16 j) (ImageCMYK16 i) = ImageCMYK16 (f j i)
-
-
 dynCrop :: Int -> Int -> DynamicImage -> DynamicImage
 dynCrop w h = dynamicPixelMap $ cropImage w h
 
 cropImage :: Pixel a => Int -> Int -> Image a -> Image a
-cropImage e1 e2 img = generateImage (\x y -> pixelAt img x y) e1 e2
+cropImage e f img@(Image g h _)
+  | e >= g && f >= h = img
+  | e >= g = generateImage (\x y -> pixelAt img x y) g f
+  | f >= h = generateImage (\x y -> pixelAt img x y) e h  
+  | True = generateImage (\x y -> pixelAt img x y) e f
 
 cropImageOffset :: Pixel a => Int -> Int -> Int -> Int -> Image a -> Image a
 cropImageOffset e1 e2 o1 o2 img = generateImage (\x y -> pixelAt img (x + o1) (y + o2)) e1 e2

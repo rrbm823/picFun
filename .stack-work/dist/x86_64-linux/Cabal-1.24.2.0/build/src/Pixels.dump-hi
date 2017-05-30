@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-19 17:35:07.533934 UTC
+2017-05-30 18:57:10.982939 UTC
 
 interface picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Pixels 8002
-  interface hash: 958ca8801855d51699dc168457518d25
-  ABI hash: e5ca4a220428cbadb1737c5877c4f0dc
-  export-list hash: 0af780d19df55599d689bceab63c9327
+  interface hash: 8ea99f0f170628aeee8dfcc5e15af10e
+  ABI hash: 9280ecad36564478e8c9d4e9d4bc076e
+  export-list hash: e815c9682fdde12bd3b31a042522bcff
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 1629a6b3a1be45bac89f3b20e82b5009
   sig of: Nothing
@@ -17,11 +17,27 @@ exports:
   Pixels.cropImage
   Pixels.cropImageOffset
   Pixels.dynCrop
-  Pixels.dynamicPixelMap
-  Pixels.dynamicPixelMap2
-  Pixels.imag
-  Pixels.r
-  Pixels.spiral
+  Pixels.e_dist
+  Pixels.e_dist_int
+  Pixels.f_spiral_n
+  Pixels.f_spiral_p
+  Pixels.frame
+  Pixels.g
+  Pixels.h
+  Pixels.headMaybe
+  Pixels.imageInImage
+  Pixels.inf
+  Pixels.lastMaybe
+  Pixels.makeFrame
+  Pixels.r_spiral_n
+  Pixels.r_spiral_p
+  Pixels.spiral_check
+  Pixels.spiral_part
+  Pixels.sprlImages
+  Pixels.sup
+  Pixels.toCart
+  Pixels.toPolar
+  Pixels.toPolarPos
   Pixels.zipImages
 module dependencies: Grid
 package dependencies: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed
@@ -136,20 +152,27 @@ family instance modules: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOs
                          vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed.Base
                          zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.Zlib.Stream
 import  -/  JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.Picture c28c03ed1b5e2bad2d1a6a2be36f49e1
-import  -/  JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.Picture.Png.Export 831ef4caae88c5878061bb9afbbaf2f7
 import  -/  JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.Picture.Types 22b7a216fd591cfd9ca02dad94569487
 import  -/  base-4.9.1.0:Data.Either 20b09ef8d0a5b74fdec011c40c1587f5
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c
+import  -/  base-4.9.1.0:Data.List 07ae2acca6538aa0800bd0a993ac6ac1
+import  -/  base-4.9.1.0:Data.OldList 27987919d8da2f92e3f472ca81f730f8
+import  -/  base-4.9.1.0:Data.Ord 7fde5c9d64d4c27431689be19182758a
+import  -/  base-4.9.1.0:Data.Traversable 556020d7cf3c4a34a774600512918a37
 import  -/  base-4.9.1.0:Data.Tuple 7dc4bbb45d2e69c991ffac438beeca11
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Enum 3811281f7b5f26da514529cf3ed44009
 import  -/  base-4.9.1.0:GHC.Float 33e2b9ffe427edd6a5c2fd6a3b26703c
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
 import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
 import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Lazy 208431757121593b5ca64b062df0cfbd
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
-import  -/  Grid 0da2fedca5e6afc1593d07529d87605d
-  exports: 1607b49331cc8d6b2e41c0393a027a6e
+import  -/  Grid 78bf6f1388c27e51d1db14fb9c119034
+  exports: f168d16018acef190802174e76b1c003
 import  -/  servant-JuicyPixels-0.3.0.2@servant-JuicyPixels-0.3.0.2-KFDh0ZSrRqdHyQZspaSYy6:Servant.JuicyPixels 8b5d4bad3818d21fd79b30ab2960a0f1
 import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Storable 6efee64e1486b549434fd0e1352e7839
 31f4b8a1c6ea205ae0c2ad3da0b107d7
@@ -167,42 +190,77 @@ b78afe589cb238e46629bf6cd40f488d
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk"#) -}
-489b5ed54688f27a742024dfd73a4d21
-  $w$scropImage ::
+de0c3a90f5518ee2b7488556bc88cac6
+  $w$sframe ::
     GHC.Prim.Int#
+    -> GHC.Types.Int
     -> GHC.Prim.Int#
-    -> Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
-    -> Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
-  {- Arity: 3, Strictness: <S,U><S,U><L,U(U,A,U(U,U,U))>,
-     Inline: [0] -}
-3aff4eb2898c30924b1e0bec917254ff
-  $w$szipImages ::
-    GHC.Prim.Int#
-    -> GHC.Prim.Int#
-    -> Data.Vector.Storable.Vector
-         (Codec.Picture.Types.PixelBaseComponent
-            Codec.Picture.Types.PixelRGB8)
-    -> GHC.Prim.Int#
-    -> GHC.Prim.Int#
-    -> Data.Vector.Storable.Vector
-         (Codec.Picture.Types.PixelBaseComponent
-            Codec.Picture.Types.PixelRGB8)
-    -> (# GHC.Prim.Int#, GHC.Prim.Int#,
-          Data.Vector.Storable.Vector
-            (Codec.Picture.Types.PixelBaseComponent
-               Codec.Picture.Types.PixelRGB8) #)
-  {- Arity: 6,
-     Strictness: <S,U><S,U><L,U(U,U,U)><S,U><S,U><L,U(U,U,U)>,
-     Inline: [0] -}
-e916d123f44e85ff25323e73c33f8dd2
+    -> GHC.Types.Int
+    -> [(GHC.Types.Int, GHC.Types.Int)]
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,U><L,1*U(U)><S,U><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: GHC.Types.Int)
+                   (ww1 :: GHC.Prim.Int#)
+                   (w1 :: GHC.Types.Int) ->
+                 case GHC.Classes.divInt#
+                        (GHC.Prim.-# ww1 ww)
+                        2# of ww4 { DEFAULT ->
+                 let {
+                   y :: GHC.Prim.Int# = GHC.Prim.-# (GHC.Prim.+# ww ww4) 1#
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.># ww4 y) of wild {
+                   GHC.Types.False
+                   -> case w1 of wild1 { GHC.Types.I# x ->
+                      case w of wild2 { GHC.Types.I# y1 ->
+                      case GHC.Classes.divInt# (GHC.Prim.-# x y1) 2# of ww2 { DEFAULT ->
+                      let {
+                        lvl56 :: [GHC.Types.Int]
+                        = GHC.Enum.eftInt ww2 (GHC.Prim.-# (GHC.Prim.+# y1 ww2) 1#)
+                      } in
+                      letrec {
+                        go :: GHC.Prim.Int# -> [(GHC.Types.Int, GHC.Types.Int)]
+                          {- Arity: 1, Strictness: <L,U> -}
+                        = \ (x1 :: GHC.Prim.Int#) ->
+                          let {
+                            ds :: GHC.Types.Int {- Strictness: m -} = GHC.Types.I# x1
+                          } in
+                          let {
+                            z :: [(GHC.Types.Int, GHC.Types.Int)]
+                            = case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.==# x1 y) of wild3 {
+                                GHC.Types.False -> go (GHC.Prim.+# x1 1#)
+                                GHC.Types.True -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int) }
+                          } in
+                          letrec {
+                            go1 :: [GHC.Types.Int] -> [(GHC.Types.Int, GHC.Types.Int)]
+                              {- Arity: 1, Strictness: <S,1*U> -}
+                            = \ (ds1 :: [GHC.Types.Int]) ->
+                              case ds1 of wild3 {
+                                [] -> z
+                                : y2 ys
+                                -> GHC.Types.: @ (GHC.Types.Int, GHC.Types.Int) (ds, y2) (go1 ys) }
+                          } in
+                          go1 lvl56
+                      } in
+                      go ww4 } } }
+                   GHC.Types.True
+                   -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int) } }) -}
+ec395dc32c9f2e15bed82405b70ba9ba
   $wcropImage ::
     Codec.Picture.Types.Pixel a =>
     GHC.Prim.Int#
     -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Vector.Storable.Vector
+         (Codec.Picture.Types.PixelBaseComponent a)
     -> Codec.Picture.Types.Image a
-    -> Codec.Picture.Types.Image a
-  {- Arity: 4,
-     Strictness: <S(SLLLLLC(S(S))LLLLLLLLL),U(1*U,A,A,A,A,A,1*C1(U(U)),A,A,A,C(C1(C1(U))),A,A,A,A,C(C1(C1(C1(U)))))><S,U><S,U><L,U>,
+  {- Arity: 6,
+     Strictness: <L,U(1*U,A,A,A,A,A,1*C1(U(U)),A,A,A,C(C1(C1(U))),A,A,A,A,C(C1(C1(C1(U)))))><S,U><S,U><S,U><L,U><L,U>,
      Inline: [0] -}
 fda89d100a910e7d70a740386a4c8c70
   $wcropImageOffset ::
@@ -216,6 +274,327 @@ fda89d100a910e7d70a740386a4c8c70
   {- Arity: 6,
      Strictness: <S(SLLLLLC(S(S))LLLLLLLLL),U(1*U,A,A,A,A,A,1*C1(U(U)),A,A,A,C(C1(C1(U))),A,A,A,A,C(C1(C1(C1(U)))))><S,U><S,U><L,U(U)><L,U(U)><L,U>,
      Inline: [0] -}
+c9901d4790b1569a0d9248210ae563e8
+  $we_dist :: GHC.Num.Num a => a -> a -> a -> a -> a
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <S(C(C(S))LLLLLL),U(1*C1(C1(U)),C(C1(U)),C(C1(U)),A,A,A,A)><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a) ->
+                 GHC.Num.+
+                   @ a
+                   w
+                   (GHC.Num.* @ a w (GHC.Num.- @ a w ww ww2) (GHC.Num.- @ a w ww ww2))
+                   (GHC.Num.*
+                      @ a
+                      w
+                      (GHC.Num.- @ a w ww1 ww3)
+                      (GHC.Num.- @ a w ww1 ww3))) -}
+b798cd2e61b97fe7c1a651eabf909aea
+  $we_dist_int ::
+    GHC.Num.Num t => GHC.Types.Int -> GHC.Types.Int -> t -> t -> t
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <S(C(C(S))LLLLLL),U(1*C1(C1(U)),C(C1(U)),C(C1(U)),A,A,A,C(U))><L,1*U(U)><L,1*U(U)><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ t
+                   (w :: GHC.Num.Num t)
+                   (ww :: GHC.Types.Int)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: t)
+                   (ww3 :: t) ->
+                 GHC.Num.+
+                   @ t
+                   w
+                   (let {
+                      x2 :: t
+                      = GHC.Num.fromInteger
+                          @ t
+                          w
+                          (case ww of wild { GHC.Types.I# i ->
+                           GHC.Integer.Type.smallInteger i })
+                    } in
+                    GHC.Num.* @ t w (GHC.Num.- @ t w x2 ww2) (GHC.Num.- @ t w x2 ww2))
+                   (let {
+                      y2 :: t
+                      = GHC.Num.fromInteger
+                          @ t
+                          w
+                          (case ww1 of wild { GHC.Types.I# i ->
+                           GHC.Integer.Type.smallInteger i })
+                    } in
+                    GHC.Num.*
+                      @ t
+                      w
+                      (GHC.Num.- @ t w y2 ww3)
+                      (GHC.Num.- @ t w y2 ww3))) -}
+587f30dbe373578dd589934db179a980
+  $wimageInImage ::
+    Codec.Picture.Types.Pixel a =>
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Vector.Storable.Vector
+         (Codec.Picture.Types.PixelBaseComponent a)
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Vector.Storable.Vector
+         (Codec.Picture.Types.PixelBaseComponent a)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Codec.Picture.Types.Image a #)
+  {- Arity: 8,
+     Strictness: <L,U(U,A,A,A,A,A,C(U(U)),A,A,A,C(C1(C1(U))),A,C(C1(C1(C1(C1(U))))),A,A,C(C1(C1(C1(U)))))><S,U><L,U><L,U(U,U,U)><S,U><L,U><L,U(U,U,U)><S,U>,
+     Inline: [0] -}
+9e4b8fcdc6e5a60d5d88a52feadf1b4d
+  $wmakeFrame ::
+    Codec.Picture.Types.Pixel a =>
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Vector.Storable.Vector
+         (Codec.Picture.Types.PixelBaseComponent a)
+    -> Codec.Picture.Types.Image a
+    -> [(GHC.Types.Int, GHC.Types.Int)]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Codec.Picture.Types.Image a #)
+  {- Arity: 7,
+     Strictness: <L,U(1*U,A,A,A,A,A,A,A,A,A,C(C1(C1(U))),A,C(C1(C1(C1(C1(U))))),A,A,A)><S,U><S,U><L,U(U,U,U)><L,U><L,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: Codec.Picture.Types.Pixel a)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: Data.Vector.Storable.Vector
+                             (Codec.Picture.Types.PixelBaseComponent a))
+                   (w1 :: Codec.Picture.Types.Image a)
+                   (w2 :: [(GHC.Types.Int, GHC.Types.Int)])
+                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 let {
+                   $dStorable :: Foreign.Storable.Storable
+                                   (Codec.Picture.Types.PixelBaseComponent a)
+                   = Codec.Picture.Types.$p1Pixel @ a w
+                 } in
+                 case (Codec.Picture.Types.$wthawImage
+                         @ a
+                         @ GHC.Types.IO
+                         $dStorable
+                         Control.Monad.Primitive.$fPrimMonadIO
+                         ww
+                         ww1
+                         ww2)
+                        `cast`
+                      (GHC.Types.N:IO[0]
+                           (Codec.Picture.Types.MutableImage
+                              <Control.Monad.Primitive.PrimState
+                                 GHC.Types.IO, GHC.Prim.RealWorld>
+                              <a>_N)_R)
+                        w3 of ds1 { (#,#) ipv ipv1 ->
+                 letrec {
+                   go :: [(GHC.Types.Int, GHC.Types.Int)]
+                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                         -> (# GHC.Prim.State# GHC.Prim.RealWorld, [()] #)
+                     {- Arity: 2, Strictness: <S,1*U><S,U> -}
+                   = \ (ds :: [(GHC.Types.Int, GHC.Types.Int)])
+                       (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case ds of wild {
+                       [] -> (# eta, GHC.Types.[] @ () #)
+                       : y ys
+                       -> case y of wild1 { (,) x y1 ->
+                          case (Codec.Picture.Types.writePixel
+                                  @ a
+                                  w
+                                  @ GHC.Types.IO
+                                  Control.Monad.Primitive.$fPrimMonadIO
+                                  ipv1
+                                    `cast`
+                                  (Codec.Picture.Types.MutableImage
+                                     <GHC.Prim.RealWorld, Control.Monad.Primitive.PrimState
+                                                            GHC.Types.IO>
+                                     <a>_N)_R
+                                  x
+                                  y1
+                                  (Codec.Picture.Types.pixelAt
+                                     @ a
+                                     w
+                                     w1
+                                     (case x of wild2 { GHC.Types.I# x1 ->
+                                      case w2 of wild3 {
+                                        [] -> case GHC.List.badHead ret_ty GHC.Types.Int of {}
+                                        : x2 ds2
+                                        -> case x2 of wild4 { (,) x3 ds3 ->
+                                           case x3 of wild5 { GHC.Types.I# y2 ->
+                                           GHC.Types.I# (GHC.Prim.-# x1 y2) } } } })
+                                     (case y1 of wild2 { GHC.Types.I# x1 ->
+                                      case w2 of wild3 {
+                                        [] -> case GHC.List.badHead ret_ty GHC.Types.Int of {}
+                                        : x2 ds2
+                                        -> case x2 of wild4 { (,) ds3 y2 ->
+                                           case y2 of wild5 { GHC.Types.I# y3 ->
+                                           GHC.Types.I# (GHC.Prim.-# x1 y3) } } } })))
+                                 `cast`
+                               (GHC.Types.N:IO[0] <()>_R)
+                                 eta of ds2 { (#,#) ipv2 ipv3 ->
+                          case go ys ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                          (# ipv4, GHC.Types.: @ () ipv3 ipv5 #) } } } }
+                 } in
+                 case go w2 ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case ipv1
+                        `cast`
+                      (Codec.Picture.Types.MutableImage
+                         <GHC.Prim.RealWorld, Control.Monad.Primitive.PrimState
+                                                GHC.Types.IO>
+                         <a>_N)_R of ww3 { Codec.Picture.Types.MutableImage ww4 ww5 ww6 ->
+                 (Codec.Picture.Types.$wfreezeImage
+                    @ a
+                    @ GHC.Types.IO
+                    $dStorable
+                    Control.Monad.Primitive.$fPrimMonadIO
+                    ww4
+                    ww5
+                    ww6)
+                   `cast`
+                 (GHC.Types.N:IO[0] <Codec.Picture.Types.Image a>_R)
+                   ipv2 } } }) -}
+499bfa3b159b5f1fe7aa53dffbc6bf75
+  $wspiral_part ::
+    (GHC.Classes.Ord t, GHC.Float.Floating t) =>
+    [(t, t)]
+    -> [(t, t)] -> GHC.Types.Int -> GHC.Types.Int -> GHC.Types.Bool
+  {- Arity: 6,
+     Strictness: <S(LLLLC(C(S))LLL),U(A,C(C1(U)),A,A,1*C1(C1(U)),A,A,A)><L,1*U(1*U,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><L,1*U><L,1*U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ t
+                   (w :: GHC.Classes.Ord t)
+                   (w1 :: GHC.Float.Floating t)
+                   (w2 :: [(t, t)])
+                   (w3 :: [(t, t)])
+                   (ww :: GHC.Types.Int)
+                   (ww1 :: GHC.Types.Int) ->
+                 let {
+                   $dFractional :: GHC.Real.Fractional t
+                   = GHC.Float.$p1Floating @ t w1
+                 } in
+                 let {
+                   $dNum :: GHC.Num.Num t = GHC.Real.$p1Fractional @ t $dFractional
+                 } in
+                 GHC.Classes.>
+                   @ t
+                   w
+                   (case Data.OldList.sortBy
+                           @ (t, t)
+                           (\ (x :: (t, t)) (y :: (t, t))[OneShot] ->
+                            GHC.Classes.compare
+                              @ t
+                              w
+                              (case x of ww2 { (,) ww3 ww4 ->
+                               Pixels.$we_dist_int @ t $dNum ww ww1 ww3 ww4 })
+                              (case y of ww2 { (,) ww3 ww4 ->
+                               Pixels.$we_dist_int @ t $dNum ww ww1 ww3 ww4 }))
+                           w2 of wild {
+                      [] -> case GHC.List.badHead ret_ty t of {}
+                      : x ds1
+                      -> case x of ww2 { (,) ww3 ww4 ->
+                         Pixels.$we_dist_int @ t $dNum Pixels.g2 Pixels.g2 ww3 ww4 } })
+                   (case Data.OldList.sortBy
+                           @ (t, t)
+                           (\ (x :: (t, t)) (y :: (t, t))[OneShot] ->
+                            GHC.Classes.compare
+                              @ t
+                              w
+                              (case x of ww2 { (,) ww3 ww4 ->
+                               Pixels.$we_dist_int @ t $dNum ww ww1 ww3 ww4 })
+                              (case y of ww2 { (,) ww3 ww4 ->
+                               Pixels.$we_dist_int @ t $dNum ww ww1 ww3 ww4 }))
+                           w3 of wild {
+                      [] -> case GHC.List.badHead ret_ty t of {}
+                      : x ds1
+                      -> case x of ww2 { (,) ww3 ww4 ->
+                         Pixels.$we_dist_int @ t $dNum Pixels.g2 Pixels.g2 ww3 ww4 } })) -}
+e3f36ecfd7ec25e2a83b9a3cb6976913
+  $wsprlImages ::
+    Codec.Picture.Types.Pixel a =>
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Vector.Storable.Vector
+         (Codec.Picture.Types.PixelBaseComponent a)
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Vector.Storable.Vector
+         (Codec.Picture.Types.PixelBaseComponent a)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Codec.Picture.Types.Image a #)
+  {- Arity: 8,
+     Strictness: <L,U(U,A,A,A,A,A,C(U(U)),A,A,A,C(C1(C1(U))),A,C(C1(C1(C1(C1(U))))),A,A,C(C1(C1(C1(U)))))><S,U><S,U><L,U><S,U><S,U><L,U><S,U>,
+     Inline: [0] -}
+05c322bb3b67ffa1c940e453cdc2c6fc
+  $wtoCart :: GHC.Float.Floating t => t -> t -> (# t, t #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(1*U,A,A,A,A,A,A,1*C1(U),1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ t
+                   (w :: GHC.Float.Floating t)
+                   (ww :: t)
+                   (ww1 :: t) ->
+                 let {
+                   $dNum :: GHC.Real.Fractional t = GHC.Float.$p1Floating @ t w
+                 } in
+                 let {
+                   $dNum1 :: GHC.Num.Num t = GHC.Real.$p1Fractional @ t $dNum
+                 } in
+                 (# GHC.Num.* @ t $dNum1 ww (GHC.Float.cos @ t w ww1),
+                    GHC.Num.* @ t $dNum1 ww (GHC.Float.sin @ t w ww1) #)) -}
+ecde5a7e72f86fb8e4baff19dd2946f5
+  $wtoPolar ::
+    (GHC.Classes.Ord t, GHC.Float.Floating t) => t -> t -> (# t, t #)
+  {- Arity: 4,
+     Strictness: <L,U(1*U,A,C(C1(U)),A,C(C1(U)),1*C1(C1(U)),A,A)><L,U(U,1*U,A,A,1*C1(U),A,A,A,A,A,A,A,1*C1(U),A,A,A,A,A,A,A,A,A,A)><L,U><L,U>,
+     Inline: [0] -}
+4fbaa50e8baa4a27c3a733c64236a2e0
+  $wtoPolarPos ::
+    (GHC.Float.Floating t, GHC.Classes.Ord t) => (t, t) -> (# t, t #)
+  {- Arity: 3,
+     Strictness: <L,U(U,U,A,A,C(U),A,A,A,A,A,A,A,C(U),A,A,A,A,A,A,A,A,A,A)><S(LLC(C(S))LLLLL),U(U,A,C(C1(U)),A,C(C1(U)),C(C1(U)),A,A)><L,1*U(U,U)>,
+     Inline: [0],
+     Unfolding: (\ @ t
+                   (w :: GHC.Float.Floating t)
+                   (w1 :: GHC.Classes.Ord t)
+                   (w2 :: (t, t)) ->
+                 let {
+                   $dNum :: GHC.Real.Fractional t = GHC.Float.$p1Floating @ t w
+                 } in
+                 let {
+                   $dNum1 :: GHC.Num.Num t = GHC.Real.$p1Fractional @ t $dNum
+                 } in
+                 let {
+                   ds :: (t, t)
+                   = case w2 of ww { (,) ww1 ww2 ->
+                     case Pixels.$wtoPolar @ t w1 w ww1 ww2 of ww3 { (#,#) ww4 ww5 ->
+                     (ww4, ww5) } }
+                 } in
+                 let {
+                   p :: t = case ds of wild { (,) r p1 -> p1 }
+                 } in
+                 case GHC.Classes.<
+                        @ t
+                        w1
+                        p
+                        (GHC.Num.fromInteger @ t $dNum1 Pixels.toPolarPos2) of wild {
+                   GHC.Types.False -> (# case ds of wild1 { (,) r p1 -> r }, p #)
+                   GHC.Types.True
+                   -> (# case ds of wild1 { (,) r p1 -> r },
+                         GHC.Num.+
+                           @ t
+                           $dNum1
+                           p
+                           (GHC.Num.*
+                              @ t
+                              $dNum1
+                              (GHC.Num.fromInteger @ t $dNum1 Pixels.toPolarPos1)
+                              (GHC.Float.pi @ t w)) #) }) -}
 97390f7927e90306f4ef69e3bc482fc1
   $wzipImages ::
     Codec.Picture.Types.Pixel a =>
@@ -233,29 +612,33 @@ fda89d100a910e7d70a740386a4c8c70
   {- Arity: 7,
      Strictness: <L,U(U,A,A,A,A,A,C(U(U)),A,A,A,C(C1(C1(U))),A,A,A,A,C(C1(C1(C1(U)))))><S,U><S,U><L,U><S,U><S,U><L,U>,
      Inline: [0] -}
-73ab5ec7e2801d3cb2eede9440af07bf
+413b594a835acdab01289eb46b1f4ac1
   b ::
-    GHC.Types.IO
-      (Data.Either.Either
-         GHC.Base.String Codec.Picture.Types.DynamicImage)
-  {- Arity: 1,
+    GHC.IO.FilePath
+    -> GHC.Types.IO
+         (Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8)
+  {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Pixels.b1
                   `cast`
-                (Sym (GHC.Types.N:IO[0]
-                          <Data.Either.Either
-                             GHC.Base.String Codec.Picture.Types.DynamicImage>_R)) -}
-f6ae7429ec54053b434895bad81f4c0b
+                (<GHC.IO.FilePath>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8>_R)) -}
+ce572f2d899e010a34d267607202c95c
   b1 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
+    GHC.IO.FilePath
+    -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Either.Either
-            GHC.Base.String Codec.Picture.Types.DynamicImage #)
-  {- Arity: 1, Unfolding: (Codec.Picture.readImage1 Pixels.b2) -}
-22b68dba1f02e64f906fff90b60992aa
-  b2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString#
-                   "/home/lamb/Pictures/conspiracy.jpg"#) -}
+          Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8 #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (p :: GHC.IO.FilePath)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Codec.Picture.readImage1 p eta of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild {
+                   Data.Either.Left ds -> (# ipv, Pixels.g #)
+                   Data.Either.Right i
+                   -> (# ipv, Codec.Picture.convertRGB8 i #) } }) -}
 f8d90adc2ce9792044e9b305a5511960
   brightnessRGB8 ::
     GHC.Types.Int
@@ -286,7 +669,7 @@ f8d90adc2ce9792044e9b305a5511960
                    ww5
                    ww6
                    ww7 } }) -}
-aca3fad61d07e125ab49676ee315ec77
+f765b642f02969ab6e8ea20bea1817c2
   cropImage ::
     Codec.Picture.Types.Pixel a =>
     GHC.Types.Int
@@ -294,7 +677,7 @@ aca3fad61d07e125ab49676ee315ec77
     -> Codec.Picture.Types.Image a
     -> Codec.Picture.Types.Image a
   {- Arity: 4,
-     Strictness: <S(SLLLLLC(S(S))LLLLLLLLL),U(1*U,A,A,A,A,A,1*C1(U(U)),A,A,A,C(C1(C1(U))),A,A,A,A,C(C1(C1(C1(U)))))><S(S),1*U(U)><S(S),1*U(U)><L,U>,
+     Strictness: <L,U(1*U,A,A,A,A,A,1*C1(U(U)),A,A,A,C(C1(C1(U))),A,A,A,A,C(C1(C1(C1(U)))))><S(S),1*U(U)><S(S),U(U)><S(SLL),1*U(U,U,U)>,
      Inline: INLINE[0],
      Unfolding: InlineRule (4, True, False)
                 (\ @ a
@@ -304,7 +687,8 @@ aca3fad61d07e125ab49676ee315ec77
                    (w3 :: Codec.Picture.Types.Image a) ->
                  case w1 of ww { GHC.Types.I# ww1 ->
                  case w2 of ww2 { GHC.Types.I# ww3 ->
-                 Pixels.$wcropImage @ a w ww1 ww3 w3 } }) -}
+                 case w3 of ww4 { Codec.Picture.Types.Image ww5 ww6 ww7 ->
+                 Pixels.$wcropImage @ a w ww1 ww3 ww5 ww6 ww7 } } }) -}
 d9b897cc99da6d738fc2a806b08d2473
   cropImageOffset ::
     Codec.Picture.Types.Pixel a =>
@@ -328,274 +712,41 @@ d9b897cc99da6d738fc2a806b08d2473
                  case w1 of ww { GHC.Types.I# ww1 ->
                  case w2 of ww2 { GHC.Types.I# ww3 ->
                  Pixels.$wcropImageOffset @ a w ww1 ww3 w3 w4 w5 } }) -}
-77005bb45210a2e77897ecd327188dd0
-  cropImage_$scropImage ::
-    GHC.Types.Int
-    -> GHC.Types.Int
-    -> Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
-    -> Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
-  {- Arity: 3,
-     Strictness: <S(S),1*U(U)><S(S),1*U(U)><L,U(U,A,U(U,U,U))>,
-     Inline: INLINE[0],
-     Unfolding: InlineRule (3, True, False)
-                (\ (w :: GHC.Types.Int)
-                   (w1 :: GHC.Types.Int)
-                   (w2 :: Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8) ->
-                 case w of ww { GHC.Types.I# ww1 ->
-                 case w1 of ww2 { GHC.Types.I# ww3 ->
-                 Pixels.$w$scropImage ww1 ww3 w2 } }) -}
-6ddcb798df8e8c25ff30e6e671bdcc59
+6607137b47dd437e8ff86acea7fbf365
   dynCrop ::
     GHC.Types.Int
     -> GHC.Types.Int
     -> Codec.Picture.Types.DynamicImage
     -> Codec.Picture.Types.DynamicImage
-  {- Arity: 3, Strictness: <L,1*U(U)><L,1*U(U)><S,1*U> -}
-49e32662fe6a9175274535f515fca407
-  dynamicPixelMap ::
-    (forall pixel.
-     Codec.Picture.Types.Pixel pixel =>
-     Codec.Picture.Types.Image pixel -> Codec.Picture.Types.Image pixel)
-    -> Codec.Picture.Types.DynamicImage
-    -> Codec.Picture.Types.DynamicImage
-  {- Arity: 2, Strictness: <L,1*C1(C1(U))><S,1*U>,
-     Unfolding: (\ (f :: forall pixel.
-                         Codec.Picture.Types.Pixel pixel =>
-                         Codec.Picture.Types.Image pixel -> Codec.Picture.Types.Image pixel)
-                   (ds :: Codec.Picture.Types.DynamicImage) ->
-                 case ds of wild {
-                   Codec.Picture.Types.ImageY8 i
-                   -> Codec.Picture.Types.ImageY8
-                        (f @ Codec.Picture.Types.Pixel8 Codec.Picture.Types.$fPixelWord8 i)
-                   Codec.Picture.Types.ImageY16 i
-                   -> Codec.Picture.Types.ImageY16
-                        (f @ Codec.Picture.Types.Pixel16
-                           Codec.Picture.Types.$fPixelWord16
-                           i)
-                   Codec.Picture.Types.ImageYF i
-                   -> Codec.Picture.Types.ImageYF
-                        (f @ Codec.Picture.Types.PixelF Codec.Picture.Types.$fPixelFloat i)
-                   Codec.Picture.Types.ImageYA8 i
-                   -> Codec.Picture.Types.ImageYA8
-                        (f @ Codec.Picture.Types.PixelYA8
-                           Codec.Picture.Types.$fPixelPixelYA8
-                           i)
-                   Codec.Picture.Types.ImageYA16 i
-                   -> Codec.Picture.Types.ImageYA16
-                        (f @ Codec.Picture.Types.PixelYA16
-                           Codec.Picture.Types.$fPixelPixelYA16
-                           i)
-                   Codec.Picture.Types.ImageRGB8 i
-                   -> Codec.Picture.Types.ImageRGB8
-                        (f @ Codec.Picture.Types.PixelRGB8
-                           Codec.Picture.Types.$fPixelPixelRGB8
-                           i)
-                   Codec.Picture.Types.ImageRGB16 i
-                   -> Codec.Picture.Types.ImageRGB16
-                        (f @ Codec.Picture.Types.PixelRGB16
-                           Codec.Picture.Types.$fPixelPixelRGB16
-                           i)
-                   Codec.Picture.Types.ImageRGBF i
-                   -> Codec.Picture.Types.ImageRGBF
-                        (f @ Codec.Picture.Types.PixelRGBF
-                           Codec.Picture.Types.$fPixelPixelRGBF
-                           i)
-                   Codec.Picture.Types.ImageRGBA8 i
-                   -> Codec.Picture.Types.ImageRGBA8
-                        (f @ Codec.Picture.Types.PixelRGBA8
-                           Codec.Picture.Types.$fPixelPixelRGBA8
-                           i)
-                   Codec.Picture.Types.ImageRGBA16 i
-                   -> Codec.Picture.Types.ImageRGBA16
-                        (f @ Codec.Picture.Types.PixelRGBA16
-                           Codec.Picture.Types.$fPixelPixelRGBA16
-                           i)
-                   Codec.Picture.Types.ImageYCbCr8 i
-                   -> Codec.Picture.Types.ImageYCbCr8
-                        (f @ Codec.Picture.Types.PixelYCbCr8
-                           Codec.Picture.Types.$fPixelPixelYCbCr8
-                           i)
-                   Codec.Picture.Types.ImageCMYK8 i
-                   -> Codec.Picture.Types.ImageCMYK8
-                        (f @ Codec.Picture.Types.PixelCMYK8
-                           Codec.Picture.Types.$fPixelPixelCMYK8
-                           i)
-                   Codec.Picture.Types.ImageCMYK16 i
-                   -> Codec.Picture.Types.ImageCMYK16
-                        (f @ Codec.Picture.Types.PixelCMYK16
-                           Codec.Picture.Types.$fPixelPixelCMYK16
-                           i) }) -}
-54998346c8b23f702b96fe4bd7f62388
-  dynamicPixelMap2 ::
-    (forall pixel.
-     Codec.Picture.Types.Pixel pixel =>
-     Codec.Picture.Types.Image pixel
-     -> Codec.Picture.Types.Image pixel
-     -> Codec.Picture.Types.Image pixel)
-    -> Codec.Picture.Types.DynamicImage
-    -> Codec.Picture.Types.DynamicImage
-    -> Codec.Picture.Types.DynamicImage
-  {- Arity: 3, Strictness: <L,1*C1(C1(C1(U)))><S,1*U><S,1*U> -}
-c4ced8ae892c9b0b94298b42e3cbbcf1
-  imag :: GHC.IO.FilePath -> GHC.Types.IO ()
-  {- Arity: 2, Strictness: <L,U><S,U>,
-     Unfolding: InlineRule (0, True, True)
-                Pixels.imag1
-                  `cast`
-                (<GHC.IO.FilePath>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-b904b9b73e1b027928dd2d61c84a698b
-  imag1 ::
-    GHC.IO.FilePath
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 2, Strictness: <L,U><S,U>,
-     Unfolding: (\ (o :: GHC.IO.FilePath)
-                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case Codec.Picture.readImageWithMetadata1
-                        Pixels.imag5
-                        s of ds1 { (#,#) ipv ipv1 ->
-                 let {
-                   $j :: GHC.Prim.State# GHC.Prim.RealWorld
-                         -> Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
-                         -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-                     {- Arity: 2, Strictness: <S,U><L,1*U(U,U,U(U,U,U))> -}
-                   = \ (ipv2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot]
-                       (ipv3 :: Codec.Picture.Types.Image
-                                  Codec.Picture.Types.PixelRGB8)[OneShot] ->
-                     case Codec.Picture.readImage1
-                            Pixels.b2
-                            ipv2 of ds2 { (#,#) ipv4 ipv5 ->
-                     let {
-                       $j1 :: GHC.Prim.State# GHC.Prim.RealWorld
-                              -> Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
-                              -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-                         {- Arity: 2, Strictness: <S,U><L,1*U(U,U,U(U,U,U))> -}
-                       = \ (ipv6 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot]
-                           (ipv7 :: Codec.Picture.Types.Image
-                                      Codec.Picture.Types.PixelRGB8)[OneShot] ->
-                         Data.ByteString.Lazy.writeFile1
-                           o
-                           (case ipv7 of ww { Codec.Picture.Types.Image ww1 ww2 ww3 ->
-                            case ipv3 of ww4 { Codec.Picture.Types.Image ww5 ww6 ww7 ->
-                            case Pixels.$w$szipImages
-                                   ww1
-                                   ww2
-                                   ww3
-                                   ww5
-                                   ww6
-                                   ww7 of ww8 { (#,,#) ww9 ww10 ww11 ->
-                            Codec.Picture.Png.Export.$w$sgenericEncodePng
-                              (GHC.Base.Nothing @ Codec.Picture.Types.Palette)
-                              Codec.Picture.Png.Type.PngTrueColour
-                              (GHC.Types.[]
-                                 @ (Codec.Picture.Metadata.Elem Codec.Picture.Metadata.Keys))
-                                `cast`
-                              (Sym (Codec.Picture.Metadata.N:Metadatas[0]))
-                              ww9
-                              ww10
-                              ww11 } } })
-                           ipv6
-                     } in
-                     case ipv5 of wild {
-                       Data.Either.Left x -> $j1 ipv4 Pixels.imag2
-                       Data.Either.Right y -> $j1 ipv4 (Codec.Picture.convertRGB8 y) } }
-                 } in
-                 case ipv1 of wild {
-                   Data.Either.Left x -> $j ipv Pixels.imag2
-                   Data.Either.Right y
-                   -> $j
-                        ipv
-                        (case y of wild1 { (,) x ds2 ->
-                         Codec.Picture.convertRGB8 x }) } }) -}
-3d8b5623f0be27cb36945f79d3f63856
-  imag2 :: Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
-  {- Unfolding: (Codec.Picture.Types.Image
-                   @ Codec.Picture.Types.PixelRGB8
-                   0#
-                   0#
-                   Pixels.imag3) -}
-6ea56dc7d8152973d474a899be65fe9b
-  imag3 ::
-    Data.Vector.Storable.Vector
-      (Codec.Picture.Types.PixelBaseComponent
-         Codec.Picture.Types.PixelRGB8)
-  {- Unfolding: (case GHC.Magic.runRW#
-                        @ 'GHC.Types.PtrRepLifted
-                        @ (Data.Vector.Storable.Vector GHC.Word.Word8)
-                        Pixels.imag4 of ds1 { (#,#) ipv1 ipv2 ->
-                 ipv2
-                   `cast`
-                 (Data.Vector.Storable.Vector
-                    <GHC.Word.Word8, Codec.Picture.Types.PixelBaseComponent
-                                       Codec.Picture.Types.PixelRGB8>)_R }) -}
-a389947c10382b8a8c22f70813aa4392
-  imag4 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Vector.Storable.Vector GHC.Word.Word8 #)
-  {- Arity: 1, HasNoCafRefs,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newPinnedByteArray#
-                        @ GHC.Prim.RealWorld
-                        0#
-                        s1 of ds { (#,#) ipv ipv1 ->
-                 (# ipv,
-                    Data.Vector.Storable.Vector
-                      @ GHC.Word.Word8
-                      0#
-                      (GHC.Prim.byteArrayContents#
-                         ipv1
-                           `cast`
-                         (UnsafeCo representational (GHC.Prim.MutableByteArray#
-                                                       GHC.Prim.RealWorld) GHC.Prim.ByteArray#))
-                      (GHC.ForeignPtr.PlainPtr ipv1) #) }) -}
-c6d05c4b9c80fabce37e3262bbba21a3
-  imag5 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString#
-                   "/home/lamb/Pictures/bobby.jpeg"#) -}
-da97838ca64aa3a03b47a8b88b9e099f
-  r ::
-    GHC.Types.IO
-      (Data.Either.Either
-         GHC.Base.String Codec.Picture.Types.DynamicImage)
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: InlineRule (0, True, True)
-                Pixels.r1
-                  `cast`
-                (Sym (GHC.Types.N:IO[0]
-                          <Data.Either.Either
-                             GHC.Base.String Codec.Picture.Types.DynamicImage>_R)) -}
-d5759c93a4d74ceed291ac60cfbd4f14
-  r1 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Either.Either
-            GHC.Base.String Codec.Picture.Types.DynamicImage #)
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case Codec.Picture.readImageWithMetadata1
-                        Pixels.imag5
-                        s of ds1 { (#,#) ipv ipv1 ->
-                 (# ipv,
-                    case ipv1 of wild {
-                      Data.Either.Left x
-                      -> Data.Either.Left
-                           @ [GHC.Types.Char]
-                           @ Codec.Picture.Types.DynamicImage
-                           x
-                      Data.Either.Right y
-                      -> Data.Either.Right
-                           @ [GHC.Types.Char]
-                           @ Codec.Picture.Types.DynamicImage
-                           (Data.Tuple.fst
-                              @ Codec.Picture.Types.DynamicImage
-                              @ Codec.Picture.Metadata.Metadatas
-                              y) } #) }) -}
-6d652ce870c23b05ab62b974b568e941
-  spiral :: GHC.Float.Floating t => [t] -> [(t, t)]
+  {- Arity: 3, Strictness: <L,1*U(U)><L,U(U)><S,1*U> -}
+b998bf88290732cb1a123944410afee1
+  e_dist :: GHC.Num.Num a => (a, a) -> (a, a) -> a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))LLLLLL),U(1*C1(C1(U)),C(C1(U)),C(C1(U)),A,A,A,A)><S,1*U(U,U)><S,1*U(U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a (w :: GHC.Num.Num a) (w1 :: (a, a)) (w2 :: (a, a)) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 case w2 of ww3 { (,) ww4 ww5 ->
+                 Pixels.$we_dist @ a w ww1 ww2 ww4 ww5 } }) -}
+961998bec4dc68b564e27421cc2b8ccb
+  e_dist_int ::
+    GHC.Num.Num t => (GHC.Types.Int, GHC.Types.Int) -> (t, t) -> t
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))LLLLLL),U(1*C1(C1(U)),C(C1(U)),C(C1(U)),A,A,A,C(U))><S,1*U(1*U(U),1*U(U))><S,1*U(U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ t
+                   (w :: GHC.Num.Num t)
+                   (w1 :: (GHC.Types.Int, GHC.Types.Int))
+                   (w2 :: (t, t)) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 case w2 of ww3 { (,) ww4 ww5 ->
+                 Pixels.$we_dist_int @ t w ww1 ww2 ww4 ww5 } }) -}
+2765c3460450a99a929fd42aeda974c1
+  f_spiral_n :: GHC.Float.Floating t => [t] -> [(t, t)]
   {- Arity: 2, HasNoCafRefs,
-     Strictness: <L,U(1*U,A,A,A,C(U),A,A,C(U),C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U>,
+     Strictness: <L,U(1*U,A,A,A,C(U),A,A,C(U),C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,1*U>,
      Unfolding: (\ @ t
                    ($dFloating :: GHC.Float.Floating t)
                    (eta :: [t]) ->
@@ -607,40 +758,629 @@ d5759c93a4d74ceed291ac60cfbd4f14
                    $dNum1 :: GHC.Num.Num t = GHC.Real.$p1Fractional @ t $dNum
                  } in
                  let {
-                   c :: t -> [(t, t)] -> [(t, t)]
-                     {- Arity: 2, Strictness: <L,U><L,U> -}
-                   = \ (ds :: t) (ds1 :: [(t, t)])[OneShot] ->
-                     letrec {
-                       go :: [t] -> [(t, t)] {- Arity: 1, Strictness: <S,1*U> -}
-                       = \ (ds2 :: [t]) ->
-                         case ds2 of wild {
-                           [] -> ds1
-                           : y ys
-                           -> GHC.Types.:
-                                @ (t, t)
-                                (GHC.Num.*
-                                   @ t
-                                   $dNum1
-                                   (GHC.Num.* @ t $dNum1 ds (GHC.Float.sqrt @ t $dFloating y))
-                                   (GHC.Float.cos @ t $dFloating y),
-                                 GHC.Num.*
-                                   @ t
-                                   $dNum1
-                                   (GHC.Num.* @ t $dNum1 ds (GHC.Float.sqrt @ t $dFloating y))
-                                   (GHC.Float.sin @ t $dFloating y))
-                                (go ys) }
-                     } in
-                     go eta
+                   ds :: t
+                   = GHC.Num.negate
+                       @ t
+                       $dNum1
+                       (GHC.Num.fromInteger @ t $dNum1 Pixels.f_spiral_n1)
                  } in
-                 c (GHC.Num.fromInteger @ t $dNum1 Pixels.spiral1)
-                   (c (GHC.Num.negate
-                         @ t
-                         $dNum1
-                         (GHC.Num.fromInteger @ t $dNum1 Pixels.spiral1))
-                      (GHC.Types.[] @ (t, t)))) -}
-0419498e503fe8ffe1ee0b2e5633df36
-  spiral1 :: GHC.Integer.Type.Integer
+                 letrec {
+                   go :: [t] -> [(t, t)] {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds1 :: [t]) ->
+                     case ds1 of wild {
+                       [] -> GHC.Types.[] @ (t, t)
+                       : y ys
+                       -> GHC.Types.:
+                            @ (t, t)
+                            (GHC.Num.*
+                               @ t
+                               $dNum1
+                               (GHC.Num.* @ t $dNum1 ds (GHC.Float.sqrt @ t $dFloating y))
+                               (GHC.Float.cos @ t $dFloating y),
+                             GHC.Num.*
+                               @ t
+                               $dNum1
+                               (GHC.Num.* @ t $dNum1 ds (GHC.Float.sqrt @ t $dFloating y))
+                               (GHC.Float.sin @ t $dFloating y))
+                            (go ys) }
+                 } in
+                 go eta) -}
+8a6d965ff51f5c82a365030d11cd76c0
+  f_spiral_n1 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (1) -}
+5d556ac9fe4e01d57fab67e40edcc984
+  f_spiral_n_go ::
+    [GHC.Types.Float] -> [(GHC.Types.Float, GHC.Types.Float)]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+d34109c29426e848cae107dfe23870b2
+  f_spiral_p :: GHC.Float.Floating t => [t] -> [(t, t)]
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(1*U,A,A,A,C(U),A,A,C(U),C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,1*U>,
+     Unfolding: (\ @ t
+                   ($dFloating :: GHC.Float.Floating t)
+                   (eta :: [t]) ->
+                 let {
+                   $dNum :: GHC.Real.Fractional t
+                   = GHC.Float.$p1Floating @ t $dFloating
+                 } in
+                 let {
+                   $dNum1 :: GHC.Num.Num t = GHC.Real.$p1Fractional @ t $dNum
+                 } in
+                 let {
+                   ds :: t = GHC.Num.fromInteger @ t $dNum1 Pixels.f_spiral_n1
+                 } in
+                 letrec {
+                   go :: [t] -> [(t, t)] {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds1 :: [t]) ->
+                     case ds1 of wild {
+                       [] -> GHC.Types.[] @ (t, t)
+                       : y ys
+                       -> GHC.Types.:
+                            @ (t, t)
+                            (GHC.Num.*
+                               @ t
+                               $dNum1
+                               (GHC.Num.* @ t $dNum1 ds (GHC.Float.sqrt @ t $dFloating y))
+                               (GHC.Float.cos @ t $dFloating y),
+                             GHC.Num.*
+                               @ t
+                               $dNum1
+                               (GHC.Num.* @ t $dNum1 ds (GHC.Float.sqrt @ t $dFloating y))
+                               (GHC.Float.sin @ t $dFloating y))
+                            (go ys) }
+                 } in
+                 go eta) -}
+7793e27da1c2dbf2186f36e6c0715746
+  f_spiral_p_go ::
+    [GHC.Types.Float] -> [(GHC.Types.Float, GHC.Types.Float)]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+b4d9c390b7f6337e98b5a0abcc4a72bd
+  frame ::
+    (GHC.Real.Integral t1, GHC.Real.Integral t) =>
+    t1 -> t -> t1 -> t -> [(t1, t)]
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <S(LS(LLLLLLC(C(S))L)LLLLLLL),U(1*U,1*U(A,A,A,A,A,A,1*C1(C1(U)),A),A,A,1*C1(C1(U)),A,A,A,A)><L,U(1*U,1*U(A,A,A,A,A,A,1*C1(C1(U)),A),A,A,1*C1(C1(U)),A,A,A,A)><L,U><L,U><L,U><L,U> -}
+6c7418802c1158a8578499ea15a3081d
+  g :: Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ (Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8)
+                        Pixels.g1 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+a06b066e8ddb9901e38ec580fa945ad5
+  g1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8 #)
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newPinnedByteArray#
+                        @ GHC.Prim.RealWorld
+                        3000000#
+                        s1 of ds { (#,#) ipv ipv1 ->
+                 let {
+                   ipv2 :: GHC.Prim.Addr#
+                   = GHC.Prim.byteArrayContents#
+                       ipv1
+                         `cast`
+                       (UnsafeCo representational (GHC.Prim.MutableByteArray#
+                                                     GHC.Prim.RealWorld) GHC.Prim.ByteArray#)
+                 } in
+                 case {__pkg_ccall primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH hsprimitive_memset_Word8 GHC.Prim.Addr#
+                                                                                                                      -> GHC.Prim.Int#
+                                                                                                                      -> GHC.Prim.Word#
+                                                                                                                      -> GHC.Prim.Word#
+                                                                                                                      -> GHC.Prim.State#
+                                                                                                                           GHC.Prim.RealWorld
+                                                                                                                      -> (# GHC.Prim.State#
+                                                                                                                              GHC.Prim.RealWorld #)}
+                        ipv2
+                        0#
+                        3000000##
+                        0##
+                        ipv of wild { Unit# ds8 ->
+                 let {
+                   ipv3 :: GHC.ForeignPtr.ForeignPtrContents
+                   = GHC.ForeignPtr.PlainPtr ipv1
+                 } in
+                 case GHC.Prim.touch#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ GHC.ForeignPtr.ForeignPtrContents
+                        ipv3
+                        ds8 of s' { DEFAULT ->
+                 letrec {
+                   $wlineGenerator :: GHC.Types.Int
+                                      -> GHC.Prim.Int#
+                                      -> GHC.Prim.State# GHC.Prim.RealWorld
+                                      -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     {- Arity: 3, Strictness: <L,1*U(U)><S,U><S,U>, Inline: [0] -}
+                   = \ (w :: GHC.Types.Int)
+                       (ww :: GHC.Prim.Int#)
+                       (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.>=# ww 1000#) of wild1 {
+                       GHC.Types.False
+                       -> case w of ww1 { GHC.Types.I# ww2 ->
+                          letrec {
+                            $wcolumn :: GHC.Prim.Int#
+                                        -> GHC.Prim.Int#
+                                        -> GHC.Prim.State# GHC.Prim.RealWorld
+                                        -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                              {- Arity: 3, Strictness: <L,U><S,U><S,U>, Inline: [0] -}
+                            = \ (ww3 :: GHC.Prim.Int#)
+                                (ww4 :: GHC.Prim.Int#)
+                                (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                              case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.>=# ww4 1000#) of wild2 {
+                                GHC.Types.False
+                                -> case GHC.Prim.writeWord8OffAddr#
+                                          @ GHC.Prim.RealWorld
+                                          ipv2
+                                          ww3
+                                          133##
+                                          w2 of s2 { DEFAULT ->
+                                   case GHC.Prim.touch#
+                                          @ 'GHC.Types.PtrRepLifted
+                                          @ GHC.ForeignPtr.ForeignPtrContents
+                                          ipv3
+                                          s2 of s'1 { DEFAULT ->
+                                   case GHC.Prim.writeWord8OffAddr#
+                                          @ GHC.Prim.RealWorld
+                                          ipv2
+                                          (GHC.Prim.+# ww3 1#)
+                                          150##
+                                          s'1 of s4 { DEFAULT ->
+                                   case GHC.Prim.touch#
+                                          @ 'GHC.Types.PtrRepLifted
+                                          @ GHC.ForeignPtr.ForeignPtrContents
+                                          ipv3
+                                          s4 of s'2 { DEFAULT ->
+                                   case GHC.Prim.writeWord8OffAddr#
+                                          @ GHC.Prim.RealWorld
+                                          ipv2
+                                          (GHC.Prim.+# ww3 2#)
+                                          250##
+                                          s'2 of s5 { DEFAULT ->
+                                   case GHC.Prim.touch#
+                                          @ 'GHC.Types.PtrRepLifted
+                                          @ GHC.ForeignPtr.ForeignPtrContents
+                                          ipv3
+                                          s5 of s'3 { DEFAULT ->
+                                   $wcolumn
+                                     (GHC.Prim.+# ww3 3#)
+                                     (GHC.Prim.+# ww4 1#)
+                                     s'3 } } } } } }
+                                GHC.Types.True
+                                -> $wlineGenerator (GHC.Types.I# ww3) (GHC.Prim.+# ww 1#) w2 }
+                          } in
+                          $wcolumn ww2 0# w1 }
+                       GHC.Types.True -> (# w1, GHC.Tuple.() #) }
+                 } in
+                 case $wlineGenerator Pixels.g2 0# s' of ds1 { (#,#) ipv4 ipv5 ->
+                 (# ipv4,
+                    Codec.Picture.Types.Image
+                      @ Codec.Picture.Types.PixelRGB8
+                      1000#
+                      1000#
+                      (Data.Vector.Storable.Vector
+                         @ (Codec.Picture.Types.PixelBaseComponent
+                              Codec.Picture.Types.PixelRGB8)
+                         3000000#
+                         ipv2
+                         ipv3) #) } } } }) -}
+39517ee1bfba15d2ce4b763c9c06c14a
+  g2 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 0#) -}
+bc466f37bd21ca943bd8868c0edbf9e4
+  h :: Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ (Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8)
+                        Pixels.h1 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+d2d7e7c8f62892db462c2ff558d297e6
+  h1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8 #)
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newPinnedByteArray#
+                        @ GHC.Prim.RealWorld
+                        3000000#
+                        s1 of ds { (#,#) ipv ipv1 ->
+                 let {
+                   ipv2 :: GHC.Prim.Addr#
+                   = GHC.Prim.byteArrayContents#
+                       ipv1
+                         `cast`
+                       (UnsafeCo representational (GHC.Prim.MutableByteArray#
+                                                     GHC.Prim.RealWorld) GHC.Prim.ByteArray#)
+                 } in
+                 case {__pkg_ccall primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH hsprimitive_memset_Word8 GHC.Prim.Addr#
+                                                                                                                      -> GHC.Prim.Int#
+                                                                                                                      -> GHC.Prim.Word#
+                                                                                                                      -> GHC.Prim.Word#
+                                                                                                                      -> GHC.Prim.State#
+                                                                                                                           GHC.Prim.RealWorld
+                                                                                                                      -> (# GHC.Prim.State#
+                                                                                                                              GHC.Prim.RealWorld #)}
+                        ipv2
+                        0#
+                        3000000##
+                        0##
+                        ipv of wild { Unit# ds8 ->
+                 let {
+                   ipv3 :: GHC.ForeignPtr.ForeignPtrContents
+                   = GHC.ForeignPtr.PlainPtr ipv1
+                 } in
+                 case GHC.Prim.touch#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ GHC.ForeignPtr.ForeignPtrContents
+                        ipv3
+                        ds8 of s' { DEFAULT ->
+                 letrec {
+                   $wlineGenerator :: GHC.Types.Int
+                                      -> GHC.Prim.Int#
+                                      -> GHC.Prim.State# GHC.Prim.RealWorld
+                                      -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     {- Arity: 3, Strictness: <L,1*U(U)><S,U><S,U>, Inline: [0] -}
+                   = \ (w :: GHC.Types.Int)
+                       (ww :: GHC.Prim.Int#)
+                       (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.>=# ww 1000#) of wild1 {
+                       GHC.Types.False
+                       -> case w of ww1 { GHC.Types.I# ww2 ->
+                          letrec {
+                            $wcolumn :: GHC.Prim.Int#
+                                        -> GHC.Prim.Int#
+                                        -> GHC.Prim.State# GHC.Prim.RealWorld
+                                        -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                              {- Arity: 3, Strictness: <L,U><S,U><S,U>, Inline: [0] -}
+                            = \ (ww3 :: GHC.Prim.Int#)
+                                (ww4 :: GHC.Prim.Int#)
+                                (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                              case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.>=# ww4 1000#) of wild2 {
+                                GHC.Types.False
+                                -> case GHC.Prim.writeWord8OffAddr#
+                                          @ GHC.Prim.RealWorld
+                                          ipv2
+                                          ww3
+                                          200##
+                                          w2 of s2 { DEFAULT ->
+                                   case GHC.Prim.touch#
+                                          @ 'GHC.Types.PtrRepLifted
+                                          @ GHC.ForeignPtr.ForeignPtrContents
+                                          ipv3
+                                          s2 of s'1 { DEFAULT ->
+                                   case GHC.Prim.writeWord8OffAddr#
+                                          @ GHC.Prim.RealWorld
+                                          ipv2
+                                          (GHC.Prim.+# ww3 1#)
+                                          0##
+                                          s'1 of s4 { DEFAULT ->
+                                   case GHC.Prim.touch#
+                                          @ 'GHC.Types.PtrRepLifted
+                                          @ GHC.ForeignPtr.ForeignPtrContents
+                                          ipv3
+                                          s4 of s'2 { DEFAULT ->
+                                   case GHC.Prim.writeWord8OffAddr#
+                                          @ GHC.Prim.RealWorld
+                                          ipv2
+                                          (GHC.Prim.+# ww3 2#)
+                                          100##
+                                          s'2 of s5 { DEFAULT ->
+                                   case GHC.Prim.touch#
+                                          @ 'GHC.Types.PtrRepLifted
+                                          @ GHC.ForeignPtr.ForeignPtrContents
+                                          ipv3
+                                          s5 of s'3 { DEFAULT ->
+                                   $wcolumn
+                                     (GHC.Prim.+# ww3 3#)
+                                     (GHC.Prim.+# ww4 1#)
+                                     s'3 } } } } } }
+                                GHC.Types.True
+                                -> $wlineGenerator (GHC.Types.I# ww3) (GHC.Prim.+# ww 1#) w2 }
+                          } in
+                          $wcolumn ww2 0# w1 }
+                       GHC.Types.True -> (# w1, GHC.Tuple.() #) }
+                 } in
+                 case $wlineGenerator Pixels.g2 0# s' of ds1 { (#,#) ipv4 ipv5 ->
+                 (# ipv4,
+                    Codec.Picture.Types.Image
+                      @ Codec.Picture.Types.PixelRGB8
+                      1000#
+                      1000#
+                      (Data.Vector.Storable.Vector
+                         @ (Codec.Picture.Types.PixelBaseComponent
+                              Codec.Picture.Types.PixelRGB8)
+                         3000000#
+                         ipv2
+                         ipv3) #) } } } }) -}
+6e655b73abdccb659e2f2161e030b92a
+  headMaybe :: [a] -> GHC.Base.Maybe a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (ds :: [a]) ->
+                 case ds of wild {
+                   [] -> GHC.Base.Nothing @ a
+                   : ipv ipv1 -> GHC.Base.Just @ a ipv }) -}
+385d9bb1fab60edb5d2a477dee163f36
+  imageInImage ::
+    Codec.Picture.Types.Pixel a =>
+    Codec.Picture.Types.Image a
+    -> Codec.Picture.Types.Image a
+    -> GHC.Types.IO (Codec.Picture.Types.Image a)
+  {- Arity: 4,
+     Strictness: <L,U(U,A,A,A,A,A,C(U(U)),A,A,A,C(C1(C1(U))),A,C(C1(C1(C1(C1(U))))),A,A,C(C1(C1(C1(U)))))><S(SLL),1*U(U,U,U(U,U,U))><S(SLL),1*U(U,U,U(U,U,U))><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Pixels.imageInImage1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Codec.Picture.Types.Pixel a>_R
+                 ->_R <Codec.Picture.Types.Image a>_R
+                 ->_R <Codec.Picture.Types.Image a>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <Codec.Picture.Types.Image a>_R)) -}
+b7cd0f37ec072529244ea344ea3f7b3e
+  imageInImage1 ::
+    Codec.Picture.Types.Pixel a =>
+    Codec.Picture.Types.Image a
+    -> Codec.Picture.Types.Image a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Codec.Picture.Types.Image a #)
+  {- Arity: 4,
+     Strictness: <L,U(U,A,A,A,A,A,C(U(U)),A,A,A,C(C1(C1(U))),A,C(C1(C1(C1(C1(U))))),A,A,C(C1(C1(C1(U)))))><S(SLL),1*U(U,U,U(U,U,U))><S(SLL),1*U(U,U,U(U,U,U))><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   (w :: Codec.Picture.Types.Pixel a)
+                   (w1 :: Codec.Picture.Types.Image a)
+                   (w2 :: Codec.Picture.Types.Image a)
+                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w1 of ww { Codec.Picture.Types.Image ww1 ww2 ww3 ->
+                 case w2 of ww4 { Codec.Picture.Types.Image ww5 ww6 ww7 ->
+                 Pixels.$wimageInImage @ a w ww1 ww2 ww3 ww5 ww6 ww7 w3 } }) -}
+17e9ebdd973b03997553b387633a70b6
+  inf :: (a -> GHC.Types.Bool) -> [a] -> GHC.Base.Maybe a
+  {- Arity: 2, Strictness: <L,C(U)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a (b2 :: a -> GHC.Types.Bool) (as :: [a]) ->
+                 case GHC.List.$wspan @ a b2 as of ww { (#,#) ww1 ww2 ->
+                 Pixels.lastMaybe @ a ww1 }) -}
+b3cfa17f05807ed44ba38a28ab8dedff
+  lastMaybe :: [a] -> GHC.Base.Maybe a
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ a (ds :: [a]) ->
+                 case ds of wild {
+                   [] -> GHC.Base.Nothing @ a
+                   : ipv ipv1
+                   -> GHC.Base.Just
+                        @ a
+                        (Pixels.lastMaybe1 @ a wild (GHC.List.lastError @ a)) }) -}
+894c516984ceb3c30628462e14bfd4df
+  lastMaybe1 :: [a] -> a -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U> -}
+f2262866aeb71b351ea3bd5cc494d349
+  makeFrame ::
+    Codec.Picture.Types.Pixel a =>
+    Codec.Picture.Types.Image a
+    -> Codec.Picture.Types.Image a
+    -> [(GHC.Types.Int, GHC.Types.Int)]
+    -> GHC.Types.IO (Codec.Picture.Types.Image a)
+  {- Arity: 5,
+     Strictness: <L,U(1*U,A,A,A,A,A,A,A,A,A,C(C1(C1(U))),A,C(C1(C1(C1(C1(U))))),A,A,A)><S(SSL),1*U(U,U,U(U,U,U))><L,U><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Pixels.makeFrame1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Codec.Picture.Types.Pixel a>_R
+                 ->_R <Codec.Picture.Types.Image a>_R
+                 ->_R <Codec.Picture.Types.Image a>_R
+                 ->_R <[(GHC.Types.Int, GHC.Types.Int)]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <Codec.Picture.Types.Image a>_R)) -}
+fb43e6463c4ee15e9e9cdcdd0b06737f
+  makeFrame1 ::
+    Codec.Picture.Types.Pixel a =>
+    Codec.Picture.Types.Image a
+    -> Codec.Picture.Types.Image a
+    -> [(GHC.Types.Int, GHC.Types.Int)]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Codec.Picture.Types.Image a #)
+  {- Arity: 5,
+     Strictness: <L,U(1*U,A,A,A,A,A,A,A,A,A,C(C1(C1(U))),A,C(C1(C1(C1(C1(U))))),A,A,A)><S(SSL),1*U(U,U,U(U,U,U))><L,U><L,U><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (5, True, False)
+                (\ @ a
+                   (w :: Codec.Picture.Types.Pixel a)
+                   (w1 :: Codec.Picture.Types.Image a)
+                   (w2 :: Codec.Picture.Types.Image a)
+                   (w3 :: [(GHC.Types.Int, GHC.Types.Int)])
+                   (w4 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w1 of ww { Codec.Picture.Types.Image ww1 ww2 ww3 ->
+                 Pixels.$wmakeFrame @ a w ww1 ww2 ww3 w2 w3 w4 }) -}
+5f2a0951c17b09f6927e3baee0d5635d
+  r_spiral_n :: GHC.Float.Floating t => [t] -> [(t, t)]
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(1*U,A,A,A,C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,1*U>,
+     Unfolding: (\ @ t
+                   ($dFloating :: GHC.Float.Floating t)
+                   (eta :: [t]) ->
+                 let {
+                   $dNum :: GHC.Real.Fractional t
+                   = GHC.Float.$p1Floating @ t $dFloating
+                 } in
+                 let {
+                   $dNum1 :: GHC.Num.Num t = GHC.Real.$p1Fractional @ t $dNum
+                 } in
+                 let {
+                   ds :: t
+                   = GHC.Num.negate
+                       @ t
+                       $dNum1
+                       (GHC.Num.fromInteger @ t $dNum1 Pixels.f_spiral_n1)
+                 } in
+                 letrec {
+                   go :: [t] -> [(t, t)] {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds1 :: [t]) ->
+                     case ds1 of wild {
+                       [] -> GHC.Types.[] @ (t, t)
+                       : y ys
+                       -> GHC.Types.:
+                            @ (t, t)
+                            (GHC.Num.* @ t $dNum1 ds (GHC.Float.sqrt @ t $dFloating y), y)
+                            (go ys) }
+                 } in
+                 go eta) -}
+d49ff195f691c94db26e656676235024
+  r_spiral_p :: GHC.Float.Floating t => [t] -> [(t, t)]
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(1*U,A,A,A,C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,1*U>,
+     Unfolding: (\ @ t
+                   ($dFloating :: GHC.Float.Floating t)
+                   (eta :: [t]) ->
+                 let {
+                   $dNum :: GHC.Real.Fractional t
+                   = GHC.Float.$p1Floating @ t $dFloating
+                 } in
+                 let {
+                   $dNum1 :: GHC.Num.Num t = GHC.Real.$p1Fractional @ t $dNum
+                 } in
+                 let {
+                   ds :: t = GHC.Num.fromInteger @ t $dNum1 Pixels.f_spiral_n1
+                 } in
+                 letrec {
+                   go :: [t] -> [(t, t)] {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds1 :: [t]) ->
+                     case ds1 of wild {
+                       [] -> GHC.Types.[] @ (t, t)
+                       : y ys
+                       -> GHC.Types.:
+                            @ (t, t)
+                            (GHC.Num.* @ t $dNum1 ds (GHC.Float.sqrt @ t $dFloating y), y)
+                            (go ys) }
+                 } in
+                 go eta) -}
+665e148559d81599a9090f784d592699
+  spiral_check ::
+    (GHC.Enum.Enum t, GHC.Classes.Ord t, GHC.Float.Floating t) =>
+    (t, t) -> GHC.Types.Bool
+  {- Arity: 4,
+     Strictness: <L,U(A,A,A,A,A,C(C1(U)),A,A)><S(LLC(C(S))LLLLL),U(U,A,C(C1(U)),A,C(C1(U)),C(C1(U)),A,A)><L,U(U,U,A,A,U,A,A,A,A,A,A,A,C(U),A,A,A,A,A,A,A,A,A,A)><L,1*U(U,U)> -}
+d5d5ba1373347bade176e7a3cccfffda
+  spiral_part ::
+    (GHC.Classes.Ord t, GHC.Float.Floating t) =>
+    [(t, t)]
+    -> [(t, t)] -> (GHC.Types.Int, GHC.Types.Int) -> GHC.Types.Bool
+  {- Arity: 5,
+     Strictness: <S(LLLLC(C(S))LLL),U(A,C(C1(U)),A,A,1*C1(C1(U)),A,A,A)><L,1*U(1*U,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><L,1*U><L,1*U><S,1*U(U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (5, True, False)
+                (\ @ t
+                   (w :: GHC.Classes.Ord t)
+                   (w1 :: GHC.Float.Floating t)
+                   (w2 :: [(t, t)])
+                   (w3 :: [(t, t)])
+                   (w4 :: (GHC.Types.Int, GHC.Types.Int)) ->
+                 case w4 of ww { (,) ww1 ww2 ->
+                 Pixels.$wspiral_part @ t w w1 w2 w3 ww1 ww2 }) -}
+733c1e797d483d988c593dbabb29b315
+  sprlImages ::
+    Codec.Picture.Types.Pixel a =>
+    Codec.Picture.Types.Image a
+    -> Codec.Picture.Types.Image a
+    -> GHC.Types.IO (Codec.Picture.Types.Image a)
+  {- Arity: 4,
+     Strictness: <L,U(U,A,A,A,A,A,C(U(U)),A,A,A,C(C1(C1(U))),A,C(C1(C1(C1(C1(U))))),A,A,C(C1(C1(C1(U)))))><S(SSL),1*U(U,U,U)><S(SSL),1*U(U,U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Pixels.sprlImages1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Codec.Picture.Types.Pixel a>_R
+                 ->_R <Codec.Picture.Types.Image a>_R
+                 ->_R <Codec.Picture.Types.Image a>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <Codec.Picture.Types.Image a>_R)) -}
+40d8f17da04d0ff7bf4d6bb117a13537
+  sprlImages1 ::
+    Codec.Picture.Types.Pixel a =>
+    Codec.Picture.Types.Image a
+    -> Codec.Picture.Types.Image a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Codec.Picture.Types.Image a #)
+  {- Arity: 4,
+     Strictness: <L,U(U,A,A,A,A,A,C(U(U)),A,A,A,C(C1(C1(U))),A,C(C1(C1(C1(C1(U))))),A,A,C(C1(C1(C1(U)))))><S(SSL),1*U(U,U,U)><S(SSL),1*U(U,U,U)><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   (w :: Codec.Picture.Types.Pixel a)
+                   (w1 :: Codec.Picture.Types.Image a)
+                   (w2 :: Codec.Picture.Types.Image a)
+                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w1 of ww { Codec.Picture.Types.Image ww1 ww2 ww3 ->
+                 case w2 of ww4 { Codec.Picture.Types.Image ww5 ww6 ww7 ->
+                 Pixels.$wsprlImages @ a w ww1 ww2 ww3 ww5 ww6 ww7 w3 } }) -}
+9d9956ab76aea6ecec0a9eab3f28f28e
+  sup :: (a -> GHC.Types.Bool) -> [a] -> GHC.Base.Maybe a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a (b2 :: a -> GHC.Types.Bool) (as :: [a]) ->
+                 case GHC.List.$wspan @ a b2 as of ww { (#,#) ww1 ww2 ->
+                 case ww2 of wild {
+                   [] -> GHC.Base.Nothing @ a
+                   : ipv ipv1 -> GHC.Base.Just @ a ipv } }) -}
+3f30b9d48abd4b68c9e5a85391506c93
+  toCart :: GHC.Float.Floating t => (t, t) -> (t, t)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(1*U,A,A,A,A,A,A,1*C1(U),1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,1*U(U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ t (w :: GHC.Float.Floating t) (w1 :: (t, t)) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 case Pixels.$wtoCart @ t w ww1 ww2 of ww3 { (#,#) ww4 ww5 ->
+                 (ww4, ww5) } }) -}
+0c327e20616ab993b1898fd69554e976
+  toPolar ::
+    (GHC.Classes.Ord t, GHC.Float.Floating t) => (t, t) -> (t, t)
+  {- Arity: 3,
+     Strictness: <L,U(1*U,A,C(C1(U)),A,C(C1(U)),1*C1(C1(U)),A,A)><L,U(U,1*U,A,A,1*C1(U),A,A,A,A,A,A,A,1*C1(U),A,A,A,A,A,A,A,A,A,A)><S,1*U(U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ t
+                   (w :: GHC.Classes.Ord t)
+                   (w1 :: GHC.Float.Floating t)
+                   (w2 :: (t, t)) ->
+                 case w2 of ww { (,) ww1 ww2 ->
+                 case Pixels.$wtoPolar @ t w w1 ww1 ww2 of ww3 { (#,#) ww4 ww5 ->
+                 (ww4, ww5) } }) -}
+796c126b8c2c670a08444eacb4871ab3
+  toPolarPos ::
+    (GHC.Float.Floating t, GHC.Classes.Ord t) => (t, t) -> (t, t)
+  {- Arity: 3,
+     Strictness: <L,U(U,U,A,A,C(U),A,A,A,A,A,A,A,C(U),A,A,A,A,A,A,A,A,A,A)><S(LLC(C(S))LLLLL),U(U,A,C(C1(U)),A,C(C1(U)),C(C1(U)),A,A)><L,1*U(U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ t
+                   (w :: GHC.Float.Floating t)
+                   (w1 :: GHC.Classes.Ord t)
+                   (w2 :: (t, t)) ->
+                 case Pixels.$wtoPolarPos @ t w w1 w2 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+7b720708bb1319bcacb596b6d67bae8a
+  toPolarPos1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (2) -}
+f8aa4800bc59257bc72208a84186ec4c
+  toPolarPos2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
 e71d25af7b9ea7b6b57a82a5ea147244
   zipImages ::
     Codec.Picture.Types.Pixel a =>
@@ -666,10 +1406,6 @@ e71d25af7b9ea7b6b57a82a5ea147244
                         ww6
                         ww7 of ww8 { (#,,#) ww9 ww10 ww11 ->
                  Codec.Picture.Types.Image @ a ww9 ww10 ww11 } } }) -}
-"SPEC cropImage @ PixelRGB8" [ALWAYS] forall ($dPixel :: Codec.Picture.Types.Pixel
-                                                           Codec.Picture.Types.PixelRGB8)
-  Pixels.cropImage @ Codec.Picture.Types.PixelRGB8 $dPixel
-  = Pixels.cropImage_$scropImage
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

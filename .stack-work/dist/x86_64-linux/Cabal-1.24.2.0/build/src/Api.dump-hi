@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-19 02:57:14.478066 UTC
+2017-05-25 21:41:16.43885 UTC
 
 interface picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Api 8002
-  interface hash: 02e752a9a428e9b02e8e5908e8300603
-  ABI hash: ecf9e09a628a366c749df626748cbd15
-  export-list hash: 6e7c46b8dc625bba3e33b2147a56b9d4
+  interface hash: 6166967800e2817953b2250c1f62746f
+  ABI hash: d56792a22e7da97e5410829dada34b19
+  export-list hash: 2418294c7dae57e34d04183075077be0
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: f358ba08f3764a2defef0682f557f343
   sig of: Nothing
@@ -129,12 +129,12 @@ import  -/  JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.
 import  -/  base-4.9.1.0:Data.Proxy d7f87a37cf7ec5ca87c59c8d2859031f
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
-import  -/  Htmls 3b84d227f03439e7beeea40d93a58826
-  exports: 12b242809ba45dd4b1edf682944cb2c5
+import  -/  Htmls 5cc60e164c0b79a7291b833ddffe2c16
+  exports: c3f37b069a7cee912af8b3c217331b34
   HTMLBlaze dcf0c3556f1dc5d5f3110238bb6e4e98
-import  -/  Models 6fb98ae4892d0d0e62b287528f2bf53e
-  exports: aeb6a5dcc2fbf532117c982464a08afc
-  Tool 3691ed8b5e249ec582535ba8aa70b6ee
+import  -/  Models a583d3d139141f01a428355c3be9e3e0
+  exports: 649c66b751c1cc1240dccaa93aa3621e
+  Tool fad96378789a8d19005dcb78b174623e
 import  -/  servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API ea4c313cfea87bcfbf12f5ad55ca0674
 import  -/  servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API.Alternative 23b24c34dda253c03c99ee6490f6a518
 import  -/  servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API.Capture 2a727c94fad9a3319e7ee886e834a4f3
@@ -157,7 +157,7 @@ import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text 9ba4693a1
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk"#) -}
-e182ed4a9fed67699fdd8528f23a4f9a
+23f33b03db14ee3994185b0296a859da
   type ImageAPI =
     ("postImg"
      Servant.API.Sub.:> (Servant.API.Capture.Capture
@@ -182,7 +182,7 @@ e182ed4a9fed67699fdd8528f23a4f9a
                                                                                     Servant.API.Sub.:> Servant.API.Verbs.Get
                                                                                                          '[Htmls.HTMLBlaze]
                                                                                                          Models.Tool)))
-a97ca637226ff42ecb168bce18a42a76
+c3e6cafcf65b722293a130f9568e6d82
   imageApi :: Data.Proxy.Proxy Api.ImageAPI
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)

@@ -26,7 +26,7 @@ type Board = ZZ St
 type Cell = (Int, Int)
 
 -- | Possible cell states
-data St = Alive | Dead
+data St = Off | On
   deriving (Eq)
 
 -- | One dimensional finite list with cursor context

@@ -1,18 +1,18 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-19 02:57:13.337937 UTC
+2017-05-25 21:41:12.173887 UTC
 
 interface picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Models [family instance module] 8002
-  interface hash: a297068e311e6610751af3deff2388a3
-  ABI hash: 6fb98ae4892d0d0e62b287528f2bf53e
-  export-list hash: aeb6a5dcc2fbf532117c982464a08afc
-  orphan hash: 20e3076ce9868f63935e252e4af36136
+  interface hash: e3034a86da4075684aedb728c2921331
+  ABI hash: a583d3d139141f01a428355c3be9e3e0
+  export-list hash: 649c66b751c1cc1240dccaa93aa3621e
+  orphan hash: 5526e2ed010f4f8fc202360455fa68c4
   flag hash: 937ef6b8624e64106bbd92a8cb3b4bef
   sig of: Nothing
   used TH splices: False
   where
 exports:
-  Models.Tool{Models.Blend Models.Checkerboard Models.Wipe Models.ZipImage}
+  Models.Tool{Models.Checkerboard Models.Frame Models.Spiral Models.ZipImage}
 module dependencies:
 package dependencies: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed
                       aeson-1.0.2.1@aeson-1.0.2.1-CYngHPh1vosBJovY7C9thn
@@ -94,13 +94,13 @@ import  -/  base-4.9.1.0:GHC.Read b6821365d2d5fa2155c9e910160e7f57
 import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fEqTool :: GHC.Classes.Eq Models.Tool
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ Models.Tool Models.$fEqTool_$c== Models.$fEqTool_$c/= -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fEqTool_$c/= :: Models.Tool -> Models.Tool -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
      Unfolding: (\ (a :: Models.Tool) (b :: Models.Tool) ->
@@ -108,17 +108,17 @@ import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
                    Models.ZipImage
                    -> case b of wild1 {
                         DEFAULT -> GHC.Types.True Models.ZipImage -> GHC.Types.False }
-                   Models.Wipe
+                   Models.Spiral
                    -> case b of wild1 {
-                        DEFAULT -> GHC.Types.True Models.Wipe -> GHC.Types.False }
-                   Models.Blend
+                        DEFAULT -> GHC.Types.True Models.Spiral -> GHC.Types.False }
+                   Models.Frame
                    -> case b of wild1 {
-                        DEFAULT -> GHC.Types.True Models.Blend -> GHC.Types.False }
+                        DEFAULT -> GHC.Types.True Models.Frame -> GHC.Types.False }
                    Models.Checkerboard
                    -> case b of wild1 {
                         DEFAULT -> GHC.Types.True
                         Models.Checkerboard -> GHC.Types.False } }) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fEqTool_$c== :: Models.Tool -> Models.Tool -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
      Unfolding: (\ (ds :: Models.Tool) (ds1 :: Models.Tool) ->
@@ -126,17 +126,17 @@ import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
                    Models.ZipImage
                    -> case ds1 of wild1 {
                         DEFAULT -> GHC.Types.False Models.ZipImage -> GHC.Types.True }
-                   Models.Wipe
+                   Models.Spiral
                    -> case ds1 of wild1 {
-                        DEFAULT -> GHC.Types.False Models.Wipe -> GHC.Types.True }
-                   Models.Blend
+                        DEFAULT -> GHC.Types.False Models.Spiral -> GHC.Types.True }
+                   Models.Frame
                    -> case ds1 of wild1 {
-                        DEFAULT -> GHC.Types.False Models.Blend -> GHC.Types.True }
+                        DEFAULT -> GHC.Types.False Models.Frame -> GHC.Types.True }
                    Models.Checkerboard
                    -> case ds1 of wild1 {
                         DEFAULT -> GHC.Types.False
                         Models.Checkerboard -> GHC.Types.True } }) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fFromJSONTool :: Data.Aeson.Types.FromJSON.FromJSON Models.Tool
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -144,7 +144,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
                   @ Models.Tool
                   Models.$fFromJSONTool_$cparseJSON
                   Models.$fFromJSONTool_$cparseJSONList -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fFromJSONTool1 ::
     [Data.Aeson.Types.Internal.Parser Models.Tool]
     -> forall (f :: * -> *) r.
@@ -153,7 +153,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
        -> Data.Aeson.Types.Internal.Success [Models.Tool] f r
        -> f r
   {- Arity: 4, HasNoCafRefs, Strictness: <S,1*U><L,U><L,U><L,C(U)> -}
-ec6c2201553551fb4f39a44aa98fad97
+1f2edbe480777a496c56e82115ec04dc
   $fFromJSONTool10 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -170,11 +170,11 @@ ec6c2201553551fb4f39a44aa98fad97
                   GHC.Generics.U1
                 GHC.Generics.:+: GHC.Generics.C1
                                    ('GHC.Generics.MetaCons
-                                      "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                      "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                    GHC.Generics.U1)
                (GHC.Generics.C1
                   ('GHC.Generics.MetaCons
-                     "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                     "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                   GHC.Generics.U1
                 GHC.Generics.:+: GHC.Generics.C1
                                    ('GHC.Generics.MetaCons
@@ -190,11 +190,11 @@ ec6c2201553551fb4f39a44aa98fad97
                         GHC.Generics.U1
                       GHC.Generics.:+: GHC.Generics.C1
                                          ('GHC.Generics.MetaCons
-                                            "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                            "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                          GHC.Generics.U1)
                    @ (GHC.Generics.C1
                         ('GHC.Generics.MetaCons
-                           "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                           "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                         GHC.Generics.U1
                       GHC.Generics.:+: GHC.Generics.C1
                                          ('GHC.Generics.MetaCons
@@ -212,7 +212,7 @@ ec6c2201553551fb4f39a44aa98fad97
                               GHC.Generics.:+: GHC.Generics.M1
                                                  GHC.Generics.C
                                                  ('GHC.Generics.MetaCons
-                                                    "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                    "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                  GHC.Generics.U1>_N))
                    Models.$fFromJSONTool11
                      `cast`
@@ -221,7 +221,7 @@ ec6c2201553551fb4f39a44aa98fad97
                              <GHC.Generics.M1
                                 GHC.Generics.C
                                 ('GHC.Generics.MetaCons
-                                   "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                   "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                 GHC.Generics.U1
                               GHC.Generics.:+: GHC.Generics.M1
                                                  GHC.Generics.C
@@ -230,7 +230,7 @@ ec6c2201553551fb4f39a44aa98fad97
                                                     'GHC.Generics.PrefixI
                                                     'GHC.Types.False)
                                                  GHC.Generics.U1>_N))) -}
-a7f0f788709972972255d275f6e49ac1
+73a224d2a2955569bf3dcb6a2bd5d361
   $fFromJSONTool11 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -244,7 +244,7 @@ a7f0f788709972972255d275f6e49ac1
                (GHC.Generics.M1
                   GHC.Generics.C
                   ('GHC.Generics.MetaCons
-                     "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                     "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                   GHC.Generics.U1)
                (GHC.Generics.M1
                   GHC.Generics.C
@@ -258,7 +258,7 @@ a7f0f788709972972255d275f6e49ac1
                    @ (GHC.Generics.M1
                         GHC.Generics.C
                         ('GHC.Generics.MetaCons
-                           "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                           "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                         GHC.Generics.U1)
                    @ (GHC.Generics.M1
                         GHC.Generics.C
@@ -271,7 +271,7 @@ a7f0f788709972972255d275f6e49ac1
                              <Data.Aeson.Types.Generic.Zero>_N
                              <GHC.Generics.C1
                                 ('GHC.Generics.MetaCons
-                                   "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                   "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                 GHC.Generics.U1>_N))
                    Models.$fFromJSONTool12
                      `cast`
@@ -351,7 +351,7 @@ a7f0f788709972972255d275f6e49ac1
                    (eta2 :: Data.Aeson.Types.Internal.Success
                               (GHC.Generics.U1 a) f r) ->
                  eta2 (GHC.Generics.U1 @ a)) -}
-e9a145c2952fb2def1016f79b78b9cc6
+d8b7645a0ed3b26eec67e2b6c510a21c
   $fFromJSONTool14 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -363,7 +363,7 @@ e9a145c2952fb2def1016f79b78b9cc6
          (Data.Aeson.Types.Internal.Parser
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
-                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                GHC.Generics.U1
                a))
   {- Arity: 5,
@@ -393,7 +393,7 @@ e9a145c2952fb2def1016f79b78b9cc6
                    ww8
                    ww9
                    ww10 } }) -}
-0708a8d8733b776f9eb00a486941e614
+d78f57f8259d047611e29b08069c742f
   $fFromJSONTool15 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -412,7 +412,7 @@ e9a145c2952fb2def1016f79b78b9cc6
                (GHC.Generics.M1
                   GHC.Generics.C
                   ('GHC.Generics.MetaCons
-                     "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                     "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                   GHC.Generics.U1)
                a1))
   {- Arity: 5,
@@ -426,7 +426,7 @@ e9a145c2952fb2def1016f79b78b9cc6
                    @ (GHC.Generics.M1
                         GHC.Generics.C
                         ('GHC.Generics.MetaCons
-                           "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                           "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                         GHC.Generics.U1)
                    Models.$fFromJSONTool17
                      `cast`
@@ -442,9 +442,9 @@ e9a145c2952fb2def1016f79b78b9cc6
                              <Data.Aeson.Types.Generic.Zero>_N
                              <GHC.Generics.C1
                                 ('GHC.Generics.MetaCons
-                                   "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                   "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                 GHC.Generics.U1>_N))) -}
-a36e32734e323de6ec4680068a058afb
+5c087d4b78f37f66e39cefc11f0006f0
   $fFromJSONTool16 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -456,7 +456,7 @@ a36e32734e323de6ec4680068a058afb
          (Data.Aeson.Types.Internal.Parser
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
-                  "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                  "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                GHC.Generics.U1
                a))
   {- Arity: 5,
@@ -528,7 +528,7 @@ a36e32734e323de6ec4680068a058afb
                    ww8
                    ww9
                    ww10 } }) -}
-1ac87bf266e78b11f433683f898e6429
+967aee4b57a3a947509724da4199967e
   $fFromJSONTool18 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -543,11 +543,11 @@ a36e32734e323de6ec4680068a058afb
                   GHC.Generics.U1
                 GHC.Generics.:+: GHC.Generics.C1
                                    ('GHC.Generics.MetaCons
-                                      "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                      "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                    GHC.Generics.U1)
                (GHC.Generics.C1
                   ('GHC.Generics.MetaCons
-                     "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                     "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                   GHC.Generics.U1
                 GHC.Generics.:+: GHC.Generics.C1
                                    ('GHC.Generics.MetaCons
@@ -563,11 +563,11 @@ a36e32734e323de6ec4680068a058afb
                         GHC.Generics.U1
                       GHC.Generics.:+: GHC.Generics.C1
                                          ('GHC.Generics.MetaCons
-                                            "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                            "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                          GHC.Generics.U1)
                    @ (GHC.Generics.C1
                         ('GHC.Generics.MetaCons
-                           "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                           "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                         GHC.Generics.U1
                       GHC.Generics.:+: GHC.Generics.C1
                                          ('GHC.Generics.MetaCons
@@ -585,7 +585,7 @@ a36e32734e323de6ec4680068a058afb
                               GHC.Generics.:+: GHC.Generics.M1
                                                  GHC.Generics.C
                                                  ('GHC.Generics.MetaCons
-                                                    "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                    "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                  GHC.Generics.U1>_N))
                    Models.$fFromJSONTool19
                      `cast`
@@ -594,7 +594,7 @@ a36e32734e323de6ec4680068a058afb
                              <GHC.Generics.M1
                                 GHC.Generics.C
                                 ('GHC.Generics.MetaCons
-                                   "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                   "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                 GHC.Generics.U1
                               GHC.Generics.:+: GHC.Generics.M1
                                                  GHC.Generics.C
@@ -603,7 +603,7 @@ a36e32734e323de6ec4680068a058afb
                                                     'GHC.Generics.PrefixI
                                                     'GHC.Types.False)
                                                  GHC.Generics.U1>_N))) -}
-01c5f861c767662a17e3179fcf2ee8ac
+bb7aaecbb8b16fa43be2e115503cb270
   $fFromJSONTool19 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -615,7 +615,7 @@ a36e32734e323de6ec4680068a058afb
                (GHC.Generics.M1
                   GHC.Generics.C
                   ('GHC.Generics.MetaCons
-                     "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                     "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                   GHC.Generics.U1)
                (GHC.Generics.M1
                   GHC.Generics.C
@@ -629,7 +629,7 @@ a36e32734e323de6ec4680068a058afb
                    @ (GHC.Generics.M1
                         GHC.Generics.C
                         ('GHC.Generics.MetaCons
-                           "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                           "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                         GHC.Generics.U1)
                    @ (GHC.Generics.M1
                         GHC.Generics.C
@@ -642,7 +642,7 @@ a36e32734e323de6ec4680068a058afb
                              <Data.Aeson.Types.Generic.Zero>_N
                              <GHC.Generics.C1
                                 ('GHC.Generics.MetaCons
-                                   "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                   "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                 GHC.Generics.U1>_N))
                    Models.$fFromJSONTool20
                      `cast`
@@ -714,7 +714,7 @@ f4e1a7819ac7c27a266017dbe4e89f35
                    @ Data.Aeson.Types.Generic.Zero
                    @ a
                    v } }) -}
-521f88ef1927af8e72679cd3561aee43
+631a2c39b5a6ab1809f7e41dd7339593
   $fFromJSONTool22 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -724,7 +724,7 @@ f4e1a7819ac7c27a266017dbe4e89f35
          (Data.Aeson.Types.Internal.Parser
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
-                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                GHC.Generics.U1
                a1))
   {- Arity: 3,
@@ -752,7 +752,7 @@ f4e1a7819ac7c27a266017dbe4e89f35
                    ww12
                    ww13
                    ww9 } } }) -}
-27b95eddf57aa12c3d2982b9b75b6fcf
+db113f0baa5a31f6cf464a4a647719f6
   $fFromJSONTool23 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -769,7 +769,7 @@ f4e1a7819ac7c27a266017dbe4e89f35
                (GHC.Generics.M1
                   GHC.Generics.C
                   ('GHC.Generics.MetaCons
-                     "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                     "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                   GHC.Generics.U1)
                a1))
   {- Arity: 3,
@@ -783,7 +783,7 @@ f4e1a7819ac7c27a266017dbe4e89f35
                    @ (GHC.Generics.M1
                         GHC.Generics.C
                         ('GHC.Generics.MetaCons
-                           "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                           "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                         GHC.Generics.U1)
                    Models.$fFromJSONTool25
                      `cast`
@@ -799,9 +799,9 @@ f4e1a7819ac7c27a266017dbe4e89f35
                              <Data.Aeson.Types.Generic.Zero>_N
                              <GHC.Generics.C1
                                 ('GHC.Generics.MetaCons
-                                   "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                   "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                 GHC.Generics.U1>_N))) -}
-2d6530fdc6095298b3b974c0b34bccab
+6ccfe355af52d6564a1f0117fdc7d34e
   $fFromJSONTool24 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -811,7 +811,7 @@ f4e1a7819ac7c27a266017dbe4e89f35
          (Data.Aeson.Types.Internal.Parser
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
-                  "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                  "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                GHC.Generics.U1
                a1))
   {- Arity: 3,
@@ -877,7 +877,7 @@ f4e1a7819ac7c27a266017dbe4e89f35
                    ww12
                    ww13
                    ww9 } } }) -}
-0f2fa873d1ac49d48a57a75037d44c43
+42f48ecdfa244d04aabbd890476e8f88
   $fFromJSONTool26 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Text.Internal.Text
@@ -889,11 +889,11 @@ f4e1a7819ac7c27a266017dbe4e89f35
                GHC.Generics.U1
              GHC.Generics.:+: GHC.Generics.C1
                                 ('GHC.Generics.MetaCons
-                                   "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                   "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                 GHC.Generics.U1)
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
-                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                GHC.Generics.U1
              GHC.Generics.:+: GHC.Generics.C1
                                 ('GHC.Generics.MetaCons
@@ -910,7 +910,7 @@ f4e1a7819ac7c27a266017dbe4e89f35
                  case w of ww { Data.Aeson.Types.Internal.Options ww1 ww2 ww3 ww4 ww5 ww6 ->
                  case w1 of ww7 { Data.Text.Internal.Text ww8 ww9 ww10 ->
                  Models.$w$dSumFromString @ a1 ww2 ww8 ww9 ww10 } }) -}
-aa1b179809ccaaa7b055ddf9fc0433ee
+ffb06c1338216d70778e6c0fa34fc400
   $fFromJSONTool3 ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser
@@ -927,11 +927,11 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                 GHC.Generics.U1
               GHC.Generics.:+: GHC.Generics.C1
                                  ('GHC.Generics.MetaCons
-                                    "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                    "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                  GHC.Generics.U1)
              GHC.Generics.:+: (GHC.Generics.C1
                                  ('GHC.Generics.MetaCons
-                                    "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                    "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                  GHC.Generics.U1
                                GHC.Generics.:+: GHC.Generics.C1
                                                   ('GHC.Generics.MetaCons
@@ -944,7 +944,7 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                    @ GHC.Prim.Any
                    Data.Aeson.Types.Internal.defaultOptions
                    (Data.Aeson.Types.FromJSON.$WNoFromArgs @ GHC.Prim.Any)) -}
-2f633deaafc9436a0093b9be4dda6aa2
+ef78a67f366ff97e28c391f5fdc72356
   $fFromJSONTool4 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -964,11 +964,11 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                 GHC.Generics.U1
               GHC.Generics.:+: GHC.Generics.C1
                                  ('GHC.Generics.MetaCons
-                                    "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                    "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                  GHC.Generics.U1)
              GHC.Generics.:+: (GHC.Generics.C1
                                  ('GHC.Generics.MetaCons
-                                    "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                    "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                  GHC.Generics.U1
                                GHC.Generics.:+: GHC.Generics.C1
                                                   ('GHC.Generics.MetaCons
@@ -994,13 +994,13 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                                       GHC.Generics.U1
                                     GHC.Generics.:+: GHC.Generics.C1
                                                        ('GHC.Generics.MetaCons
-                                                          "Wipe"
+                                                          "Spiral"
                                                           'GHC.Generics.PrefixI
                                                           'GHC.Types.False)
                                                        GHC.Generics.U1)
                                    (GHC.Generics.C1
                                       ('GHC.Generics.MetaCons
-                                         "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                         "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                       GHC.Generics.U1
                                     GHC.Generics.:+: GHC.Generics.C1
                                                        ('GHC.Generics.MetaCons
@@ -1017,11 +1017,11 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                             GHC.Generics.U1
                           GHC.Generics.:+: GHC.Generics.C1
                                              ('GHC.Generics.MetaCons
-                                                "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                              GHC.Generics.U1)
                        @ (GHC.Generics.C1
                             ('GHC.Generics.MetaCons
-                               "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                               "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                             GHC.Generics.U1
                           GHC.Generics.:+: GHC.Generics.C1
                                              ('GHC.Generics.MetaCons
@@ -1040,13 +1040,13 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                                      GHC.Generics.U1
                                    GHC.Generics.:+: GHC.Generics.C1
                                                       ('GHC.Generics.MetaCons
-                                                         "Wipe"
+                                                         "Spiral"
                                                          'GHC.Generics.PrefixI
                                                          'GHC.Types.False)
                                                       GHC.Generics.U1)
                                   GHC.Generics.:+: (GHC.Generics.C1
                                                       ('GHC.Generics.MetaCons
-                                                         "Blend"
+                                                         "Frame"
                                                          'GHC.Generics.PrefixI
                                                          'GHC.Types.False)
                                                       GHC.Generics.U1
@@ -1066,13 +1066,13 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                                      GHC.Generics.U1
                                    GHC.Generics.:+: GHC.Generics.C1
                                                       ('GHC.Generics.MetaCons
-                                                         "Wipe"
+                                                         "Spiral"
                                                          'GHC.Generics.PrefixI
                                                          'GHC.Types.False)
                                                       GHC.Generics.U1)
                                   GHC.Generics.:+: (GHC.Generics.C1
                                                       ('GHC.Generics.MetaCons
-                                                         "Blend"
+                                                         "Frame"
                                                          'GHC.Generics.PrefixI
                                                          'GHC.Types.False)
                                                       GHC.Generics.U1
@@ -1092,13 +1092,13 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                                      GHC.Generics.U1
                                    GHC.Generics.:+: GHC.Generics.C1
                                                       ('GHC.Generics.MetaCons
-                                                         "Wipe"
+                                                         "Spiral"
                                                          'GHC.Generics.PrefixI
                                                          'GHC.Types.False)
                                                       GHC.Generics.U1)
                                   GHC.Generics.:+: (GHC.Generics.C1
                                                       ('GHC.Generics.MetaCons
-                                                         "Blend"
+                                                         "Frame"
                                                          'GHC.Generics.PrefixI
                                                          'GHC.Types.False)
                                                       GHC.Generics.U1
@@ -1118,13 +1118,13 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                                      GHC.Generics.U1
                                    GHC.Generics.:+: GHC.Generics.C1
                                                       ('GHC.Generics.MetaCons
-                                                         "Wipe"
+                                                         "Spiral"
                                                          'GHC.Generics.PrefixI
                                                          'GHC.Types.False)
                                                       GHC.Generics.U1)
                                   GHC.Generics.:+: (GHC.Generics.C1
                                                       ('GHC.Generics.MetaCons
-                                                         "Blend"
+                                                         "Frame"
                                                          'GHC.Generics.PrefixI
                                                          'GHC.Types.False)
                                                       GHC.Generics.U1
@@ -1155,13 +1155,13 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                                    GHC.Generics.U1
                                  GHC.Generics.:+: GHC.Generics.C1
                                                     ('GHC.Generics.MetaCons
-                                                       "Wipe"
+                                                       "Spiral"
                                                        'GHC.Generics.PrefixI
                                                        'GHC.Types.False)
                                                     GHC.Generics.U1)
                                 (GHC.Generics.C1
                                    ('GHC.Generics.MetaCons
-                                      "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                      "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                    GHC.Generics.U1
                                  GHC.Generics.:+: GHC.Generics.C1
                                                     ('GHC.Generics.MetaCons
@@ -1190,13 +1190,13 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                                     GHC.Generics.U1
                                   GHC.Generics.:+: GHC.Generics.C1
                                                      ('GHC.Generics.MetaCons
-                                                        "Wipe"
+                                                        "Spiral"
                                                         'GHC.Generics.PrefixI
                                                         'GHC.Types.False)
                                                      GHC.Generics.U1)
                                  GHC.Generics.:+: (GHC.Generics.C1
                                                      ('GHC.Generics.MetaCons
-                                                        "Blend"
+                                                        "Frame"
                                                         'GHC.Generics.PrefixI
                                                         'GHC.Types.False)
                                                      GHC.Generics.U1
@@ -1222,13 +1222,13 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                                      GHC.Generics.U1
                                    GHC.Generics.:+: GHC.Generics.C1
                                                       ('GHC.Generics.MetaCons
-                                                         "Wipe"
+                                                         "Spiral"
                                                          'GHC.Generics.PrefixI
                                                          'GHC.Types.False)
                                                       GHC.Generics.U1)
                                   (GHC.Generics.C1
                                      ('GHC.Generics.MetaCons
-                                        "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                        "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                      GHC.Generics.U1
                                    GHC.Generics.:+: GHC.Generics.C1
                                                       ('GHC.Generics.MetaCons
@@ -1245,11 +1245,13 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                                   GHC.Generics.U1
                                 GHC.Generics.:+: GHC.Generics.C1
                                                    ('GHC.Generics.MetaCons
-                                                      "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                      "Spiral"
+                                                      'GHC.Generics.PrefixI
+                                                      'GHC.Types.False)
                                                    GHC.Generics.U1)
                                (GHC.Generics.C1
                                   ('GHC.Generics.MetaCons
-                                     "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                     "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                   GHC.Generics.U1
                                 GHC.Generics.:+: GHC.Generics.C1
                                                    ('GHC.Generics.MetaCons
@@ -1269,13 +1271,13 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                                    GHC.Generics.U1
                                  GHC.Generics.:+: GHC.Generics.C1
                                                     ('GHC.Generics.MetaCons
-                                                       "Wipe"
+                                                       "Spiral"
                                                        'GHC.Generics.PrefixI
                                                        'GHC.Types.False)
                                                     GHC.Generics.U1)
                                 (GHC.Generics.C1
                                    ('GHC.Generics.MetaCons
-                                      "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                      "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                    GHC.Generics.U1
                                  GHC.Generics.:+: GHC.Generics.C1
                                                     ('GHC.Generics.MetaCons
@@ -1300,13 +1302,13 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                                      GHC.Generics.U1
                                    GHC.Generics.:+: GHC.Generics.C1
                                                       ('GHC.Generics.MetaCons
-                                                         "Wipe"
+                                                         "Spiral"
                                                          'GHC.Generics.PrefixI
                                                          'GHC.Types.False)
                                                       GHC.Generics.U1)
                                   GHC.Generics.:+: (GHC.Generics.C1
                                                       ('GHC.Generics.MetaCons
-                                                         "Blend"
+                                                         "Frame"
                                                          'GHC.Generics.PrefixI
                                                          'GHC.Types.False)
                                                       GHC.Generics.U1
@@ -1331,11 +1333,13 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                                   GHC.Generics.U1
                                 GHC.Generics.:+: GHC.Generics.C1
                                                    ('GHC.Generics.MetaCons
-                                                      "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                      "Spiral"
+                                                      'GHC.Generics.PrefixI
+                                                      'GHC.Types.False)
                                                    GHC.Generics.U1)
                                GHC.Generics.:+: (GHC.Generics.C1
                                                    ('GHC.Generics.MetaCons
-                                                      "Blend"
+                                                      "Frame"
                                                       'GHC.Generics.PrefixI
                                                       'GHC.Types.False)
                                                    GHC.Generics.U1
@@ -1346,7 +1350,7 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                                                                        'GHC.Types.False)
                                                                     GHC.Generics.U1))
                               a1>_R))) -}
-0fc7f481fbc370b2d7df28bc287fd36c
+4d23fcff2786cfcece97728c2f6a486b
   $fFromJSONTool5 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -1360,11 +1364,11 @@ aa1b179809ccaaa7b055ddf9fc0433ee
                GHC.Generics.U1
              GHC.Generics.:+: GHC.Generics.C1
                                 ('GHC.Generics.MetaCons
-                                   "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                   "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                 GHC.Generics.U1)
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
-                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                GHC.Generics.U1
              GHC.Generics.:+: GHC.Generics.C1
                                 ('GHC.Generics.MetaCons
@@ -1383,16 +1387,16 @@ aa1b179809ccaaa7b055ddf9fc0433ee
 e0fdb45870d480ec6b82e7ee0a331f34
   $fFromJSONTool6 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Checkerboard"#) -}
-e9bf91259d7e2edb674e08dae5761f7f
+dc063f99b972a3486ac006277c00f1eb
   $fFromJSONTool7 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Blend"#) -}
-54bd21eace2bb74b90855e4231a348ac
+  {- Unfolding: (GHC.CString.unpackCString# "Frame"#) -}
+0a9e54f83852e2e92d7a89f2aa91c190
   $fFromJSONTool8 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Wipe"#) -}
+  {- Unfolding: (GHC.CString.unpackCString# "Spiral"#) -}
 1c8245630ad3ac396df0d1598a170526
   $fFromJSONTool9 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "ZipImage"#) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fFromJSONTool_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser Models.Tool
@@ -1413,11 +1417,13 @@ e9bf91259d7e2edb674e08dae5761f7f
                                  GHC.Generics.U1
                                GHC.Generics.:+: GHC.Generics.C1
                                                   ('GHC.Generics.MetaCons
-                                                     "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                     "Spiral"
+                                                     'GHC.Generics.PrefixI
+                                                     'GHC.Types.False)
                                                   GHC.Generics.U1)
                               GHC.Generics.:+: (GHC.Generics.C1
                                                   ('GHC.Generics.MetaCons
-                                                     "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                     "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                   GHC.Generics.U1
                                                 GHC.Generics.:+: GHC.Generics.C1
                                                                    ('GHC.Generics.MetaCons
@@ -1444,7 +1450,7 @@ e9bf91259d7e2edb674e08dae5761f7f
                      ks (Models.$fFromJSONTool_$cto @ GHC.Prim.Any a1)))
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0] <Models.Tool>_R))) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fFromJSONTool_$cparseJSONList ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser [Models.Tool]
@@ -1481,7 +1487,7 @@ e9bf91259d7e2edb674e08dae5761f7f
                         `cast`
                       (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                                 <[Models.Tool]>_R)) } }) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fFromJSONTool_$cto ::
     GHC.Generics.Rep Models.Tool x -> Models.Tool
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
@@ -1505,14 +1511,14 @@ e9bf91259d7e2edb674e08dae5761f7f
                                   GHC.Generics.:+: GHC.Generics.M1
                                                      GHC.Generics.C
                                                      ('GHC.Generics.MetaCons
-                                                        "Wipe"
+                                                        "Spiral"
                                                         'GHC.Generics.PrefixI
                                                         'GHC.Types.False)
                                                      GHC.Generics.U1)
                                  GHC.Generics.:+: (GHC.Generics.M1
                                                      GHC.Generics.C
                                                      ('GHC.Generics.MetaCons
-                                                        "Blend"
+                                                        "Frame"
                                                         'GHC.Generics.PrefixI
                                                         'GHC.Types.False)
                                                      GHC.Generics.U1
@@ -1527,10 +1533,11 @@ e9bf91259d7e2edb674e08dae5761f7f
                    -> case ds1 of wild1 {
                         GHC.Generics.L1 ds2
                         -> case ds2 of tpl { DEFAULT -> Models.ZipImage }
-                        GHC.Generics.R1 ds2 -> case ds2 of tpl { DEFAULT -> Models.Wipe } }
+                        GHC.Generics.R1 ds2
+                        -> case ds2 of tpl { DEFAULT -> Models.Spiral } }
                    GHC.Generics.R1 ds1
                    -> case ds1 of wild1 {
-                        GHC.Generics.L1 ds2 -> case ds2 of tpl { DEFAULT -> Models.Blend }
+                        GHC.Generics.L1 ds2 -> case ds2 of tpl { DEFAULT -> Models.Frame }
                         GHC.Generics.R1 ds2
                         -> case ds2 of tpl { DEFAULT -> Models.Checkerboard } } }) -}
 028c7e607a41189cbdf89f65c7f0b75a
@@ -1588,25 +1595,25 @@ e9bf91259d7e2edb674e08dae5761f7f
                      GHC.Generics.$WSFalse
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.False>_N)) -}
-7225fc5d619b678eb60f898bf3651a05
+67fa6fedd967d012e03c4eff8dd5fad4
   $fFromJSONTool_$s$fConstructorMetaMetaCons1 ::
     GHC.Generics.Constructor
       ('GHC.Generics.MetaCons
-         "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+         "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ GHC.Generics.Meta
                   @ ('GHC.Generics.MetaCons
-                       "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                       "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                   (GHC.Generics.$fConstructorMetaMetaCons_$cconName
-                     @ "Blend"
+                     @ "Frame"
                      @ 'GHC.Generics.PrefixI
                      @ 'GHC.Types.False
                      Models.$fFromJSONTool7
                        `cast`
                      (Trans
-                          (Sym (GHC.TypeLits.N:SSymbol[0] <"Blend">_P))
-                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"Blend">_N))
+                          (Sym (GHC.TypeLits.N:SSymbol[0] <"Frame">_P))
+                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"Frame">_N))
                      GHC.Generics.$WSPrefix
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.FixityI>_N <'GHC.Generics.PrefixI>_N)
@@ -1614,14 +1621,14 @@ e9bf91259d7e2edb674e08dae5761f7f
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.False>_N))
                   (GHC.Generics.$fConstructorMetaMetaCons_$cconFixity
-                     @ "Blend"
+                     @ "Frame"
                      @ 'GHC.Generics.PrefixI
                      @ 'GHC.Types.False
                      Models.$fFromJSONTool7
                        `cast`
                      (Trans
-                          (Sym (GHC.TypeLits.N:SSymbol[0] <"Blend">_P))
-                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"Blend">_N))
+                          (Sym (GHC.TypeLits.N:SSymbol[0] <"Frame">_P))
+                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"Frame">_N))
                      GHC.Generics.$WSPrefix
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.FixityI>_N <'GHC.Generics.PrefixI>_N)
@@ -1629,39 +1636,39 @@ e9bf91259d7e2edb674e08dae5761f7f
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.False>_N))
                   (GHC.Generics.$fConstructorMetaMetaCons_$cconIsRecord
-                     @ "Blend"
+                     @ "Frame"
                      @ 'GHC.Generics.PrefixI
                      @ 'GHC.Types.False
                      Models.$fFromJSONTool7
                        `cast`
                      (Trans
-                          (Sym (GHC.TypeLits.N:SSymbol[0] <"Blend">_P))
-                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"Blend">_N))
+                          (Sym (GHC.TypeLits.N:SSymbol[0] <"Frame">_P))
+                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"Frame">_N))
                      GHC.Generics.$WSPrefix
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.FixityI>_N <'GHC.Generics.PrefixI>_N)
                      GHC.Generics.$WSFalse
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.False>_N)) -}
-ff13153caf6bd734df4de58997fffd34
+69a9526ae209efb8f28579263b560f29
   $fFromJSONTool_$s$fConstructorMetaMetaCons2 ::
     GHC.Generics.Constructor
       ('GHC.Generics.MetaCons
-         "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+         "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ GHC.Generics.Meta
                   @ ('GHC.Generics.MetaCons
-                       "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                       "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                   (GHC.Generics.$fConstructorMetaMetaCons_$cconName
-                     @ "Wipe"
+                     @ "Spiral"
                      @ 'GHC.Generics.PrefixI
                      @ 'GHC.Types.False
                      Models.$fFromJSONTool8
                        `cast`
                      (Trans
-                          (Sym (GHC.TypeLits.N:SSymbol[0] <"Wipe">_P))
-                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"Wipe">_N))
+                          (Sym (GHC.TypeLits.N:SSymbol[0] <"Spiral">_P))
+                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"Spiral">_N))
                      GHC.Generics.$WSPrefix
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.FixityI>_N <'GHC.Generics.PrefixI>_N)
@@ -1669,14 +1676,14 @@ ff13153caf6bd734df4de58997fffd34
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.False>_N))
                   (GHC.Generics.$fConstructorMetaMetaCons_$cconFixity
-                     @ "Wipe"
+                     @ "Spiral"
                      @ 'GHC.Generics.PrefixI
                      @ 'GHC.Types.False
                      Models.$fFromJSONTool8
                        `cast`
                      (Trans
-                          (Sym (GHC.TypeLits.N:SSymbol[0] <"Wipe">_P))
-                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"Wipe">_N))
+                          (Sym (GHC.TypeLits.N:SSymbol[0] <"Spiral">_P))
+                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"Spiral">_N))
                      GHC.Generics.$WSPrefix
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.FixityI>_N <'GHC.Generics.PrefixI>_N)
@@ -1684,14 +1691,14 @@ ff13153caf6bd734df4de58997fffd34
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.False>_N))
                   (GHC.Generics.$fConstructorMetaMetaCons_$cconIsRecord
-                     @ "Wipe"
+                     @ "Spiral"
                      @ 'GHC.Generics.PrefixI
                      @ 'GHC.Types.False
                      Models.$fFromJSONTool8
                        `cast`
                      (Trans
-                          (Sym (GHC.TypeLits.N:SSymbol[0] <"Wipe">_P))
-                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"Wipe">_N))
+                          (Sym (GHC.TypeLits.N:SSymbol[0] <"Spiral">_P))
+                          (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"Spiral">_N))
                      GHC.Generics.$WSPrefix
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.FixityI>_N <'GHC.Generics.PrefixI>_N)
@@ -1753,13 +1760,13 @@ ff13153caf6bd734df4de58997fffd34
                      GHC.Generics.$WSFalse
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.False>_N)) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fFromJSONTool_go ::
     GHC.Prim.Int#
     -> [Data.Aeson.Types.Internal.Value]
     -> [Data.Aeson.Types.Internal.Parser Models.Tool]
   {- Arity: 2, Strictness: <L,U><S,1*U> -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fGenericTool :: GHC.Generics.Generic Models.Tool
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -1767,7 +1774,7 @@ ff13153caf6bd734df4de58997fffd34
                   @ Models.Tool
                   Models.$fGenericTool_$cfrom
                   Models.$fFromJSONTool_$cto -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fGenericTool1 ::
     Models.Tool
     -> (GHC.Generics.:+:)
@@ -1779,12 +1786,12 @@ ff13153caf6bd734df4de58997fffd34
           GHC.Generics.:+: GHC.Generics.M1
                              GHC.Generics.C
                              ('GHC.Generics.MetaCons
-                                "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                              GHC.Generics.U1)
          (GHC.Generics.M1
             GHC.Generics.C
             ('GHC.Generics.MetaCons
-               "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+               "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
             GHC.Generics.U1
           GHC.Generics.:+: GHC.Generics.M1
                              GHC.Generics.C
@@ -1797,10 +1804,10 @@ ff13153caf6bd734df4de58997fffd34
                 (\ @ x (x1 :: Models.Tool) ->
                  case x1 of wild {
                    Models.ZipImage -> Models.$fGenericTool8 @ x
-                   Models.Wipe -> Models.$fGenericTool6 @ x
-                   Models.Blend -> Models.$fGenericTool4 @ x
+                   Models.Spiral -> Models.$fGenericTool6 @ x
+                   Models.Frame -> Models.$fGenericTool4 @ x
                    Models.Checkerboard -> Models.$fGenericTool2 @ x }) -}
-43e6b03e64452f544816fa6c0d127708
+a332fff03ff40b0c2b93652efe740131
   $fGenericTool2 ::
     (GHC.Generics.:+:)
       (GHC.Generics.M1
@@ -1811,12 +1818,12 @@ ff13153caf6bd734df4de58997fffd34
        GHC.Generics.:+: GHC.Generics.M1
                           GHC.Generics.C
                           ('GHC.Generics.MetaCons
-                             "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                             "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                           GHC.Generics.U1)
       (GHC.Generics.M1
          GHC.Generics.C
          ('GHC.Generics.MetaCons
-            "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+            "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
          GHC.Generics.U1
        GHC.Generics.:+: GHC.Generics.M1
                           GHC.Generics.C
@@ -1835,12 +1842,12 @@ ff13153caf6bd734df4de58997fffd34
                       GHC.Generics.:+: GHC.Generics.M1
                                          GHC.Generics.C
                                          ('GHC.Generics.MetaCons
-                                            "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                            "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                          GHC.Generics.U1)
                    @ (GHC.Generics.M1
                         GHC.Generics.C
                         ('GHC.Generics.MetaCons
-                           "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                           "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                         GHC.Generics.U1
                       GHC.Generics.:+: GHC.Generics.M1
                                          GHC.Generics.C
@@ -1849,13 +1856,13 @@ ff13153caf6bd734df4de58997fffd34
                                          GHC.Generics.U1)
                    @ x
                    (Models.$fGenericTool3 @ x)) -}
-99cc63776b3ddea8b9eeec52cabf0d13
+3dc803d6f586d903299e26a8f1835e59
   $fGenericTool3 ::
     (GHC.Generics.:+:)
       (GHC.Generics.M1
          GHC.Generics.C
          ('GHC.Generics.MetaCons
-            "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+            "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
          GHC.Generics.U1)
       (GHC.Generics.M1
          GHC.Generics.C
@@ -1869,7 +1876,7 @@ ff13153caf6bd734df4de58997fffd34
                    @ (GHC.Generics.M1
                         GHC.Generics.C
                         ('GHC.Generics.MetaCons
-                           "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                           "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                         GHC.Generics.U1)
                    @ (GHC.Generics.M1
                         GHC.Generics.C
@@ -1884,7 +1891,7 @@ ff13153caf6bd734df4de58997fffd34
                              <'GHC.Generics.MetaCons
                                 "Checkerboard" 'GHC.Generics.PrefixI 'GHC.Types.False>_P
                              <GHC.Generics.U1>_R) <x>_N)) -}
-300b6fc40494fe918f6d71a9648ad642
+1abf2c39f2917d6bec06d3d74da95e90
   $fGenericTool4 ::
     (GHC.Generics.:+:)
       (GHC.Generics.M1
@@ -1895,12 +1902,12 @@ ff13153caf6bd734df4de58997fffd34
        GHC.Generics.:+: GHC.Generics.M1
                           GHC.Generics.C
                           ('GHC.Generics.MetaCons
-                             "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                             "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                           GHC.Generics.U1)
       (GHC.Generics.M1
          GHC.Generics.C
          ('GHC.Generics.MetaCons
-            "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+            "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
          GHC.Generics.U1
        GHC.Generics.:+: GHC.Generics.M1
                           GHC.Generics.C
@@ -1919,12 +1926,12 @@ ff13153caf6bd734df4de58997fffd34
                       GHC.Generics.:+: GHC.Generics.M1
                                          GHC.Generics.C
                                          ('GHC.Generics.MetaCons
-                                            "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                            "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                          GHC.Generics.U1)
                    @ (GHC.Generics.M1
                         GHC.Generics.C
                         ('GHC.Generics.MetaCons
-                           "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                           "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                         GHC.Generics.U1
                       GHC.Generics.:+: GHC.Generics.M1
                                          GHC.Generics.C
@@ -1933,13 +1940,13 @@ ff13153caf6bd734df4de58997fffd34
                                          GHC.Generics.U1)
                    @ x
                    (Models.$fGenericTool5 @ x)) -}
-7e85e38dfed96f086b980a1e4adc7607
+eb34f0d0a63ebcb90c6db21298b5fb28
   $fGenericTool5 ::
     (GHC.Generics.:+:)
       (GHC.Generics.M1
          GHC.Generics.C
          ('GHC.Generics.MetaCons
-            "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+            "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
          GHC.Generics.U1)
       (GHC.Generics.M1
          GHC.Generics.C
@@ -1953,7 +1960,7 @@ ff13153caf6bd734df4de58997fffd34
                    @ (GHC.Generics.M1
                         GHC.Generics.C
                         ('GHC.Generics.MetaCons
-                           "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                           "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                         GHC.Generics.U1)
                    @ (GHC.Generics.M1
                         GHC.Generics.C
@@ -1966,9 +1973,9 @@ ff13153caf6bd734df4de58997fffd34
                    (Sym (GHC.Generics.N:M1[0]
                              <GHC.Generics.C>_P
                              <'GHC.Generics.MetaCons
-                                "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False>_P
+                                "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False>_P
                              <GHC.Generics.U1>_R) <x>_N)) -}
-c5fbe765da8b423e70c9f023f8aede06
+88e1dd30dfd0b4e07e574a688ba8a531
   $fGenericTool6 ::
     (GHC.Generics.:+:)
       (GHC.Generics.M1
@@ -1979,12 +1986,12 @@ c5fbe765da8b423e70c9f023f8aede06
        GHC.Generics.:+: GHC.Generics.M1
                           GHC.Generics.C
                           ('GHC.Generics.MetaCons
-                             "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                             "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                           GHC.Generics.U1)
       (GHC.Generics.M1
          GHC.Generics.C
          ('GHC.Generics.MetaCons
-            "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+            "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
          GHC.Generics.U1
        GHC.Generics.:+: GHC.Generics.M1
                           GHC.Generics.C
@@ -2003,12 +2010,12 @@ c5fbe765da8b423e70c9f023f8aede06
                       GHC.Generics.:+: GHC.Generics.M1
                                          GHC.Generics.C
                                          ('GHC.Generics.MetaCons
-                                            "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                            "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                          GHC.Generics.U1)
                    @ (GHC.Generics.M1
                         GHC.Generics.C
                         ('GHC.Generics.MetaCons
-                           "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                           "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                         GHC.Generics.U1
                       GHC.Generics.:+: GHC.Generics.M1
                                          GHC.Generics.C
@@ -2017,7 +2024,7 @@ c5fbe765da8b423e70c9f023f8aede06
                                          GHC.Generics.U1)
                    @ x
                    (Models.$fGenericTool7 @ x)) -}
-d42ea3684e3e24263ce02174ca43303a
+f5d02af9bacbd265d32fcc5a0e438e4c
   $fGenericTool7 ::
     (GHC.Generics.:+:)
       (GHC.Generics.M1
@@ -2028,7 +2035,7 @@ d42ea3684e3e24263ce02174ca43303a
       (GHC.Generics.M1
          GHC.Generics.C
          ('GHC.Generics.MetaCons
-            "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+            "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
          GHC.Generics.U1)
       x
   {- HasNoCafRefs, Strictness: m2,
@@ -2042,7 +2049,7 @@ d42ea3684e3e24263ce02174ca43303a
                    @ (GHC.Generics.M1
                         GHC.Generics.C
                         ('GHC.Generics.MetaCons
-                           "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                           "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                         GHC.Generics.U1)
                    @ x
                    (GHC.Generics.U1 @ x)
@@ -2050,9 +2057,9 @@ d42ea3684e3e24263ce02174ca43303a
                    (Sym (GHC.Generics.N:M1[0]
                              <GHC.Generics.C>_P
                              <'GHC.Generics.MetaCons
-                                "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False>_P
+                                "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False>_P
                              <GHC.Generics.U1>_R) <x>_N)) -}
-7dcbe9c6bff148ee171fb625f2aae234
+db19923ebcb55b5c0146af1b26316002
   $fGenericTool8 ::
     (GHC.Generics.:+:)
       (GHC.Generics.M1
@@ -2063,12 +2070,12 @@ d42ea3684e3e24263ce02174ca43303a
        GHC.Generics.:+: GHC.Generics.M1
                           GHC.Generics.C
                           ('GHC.Generics.MetaCons
-                             "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                             "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                           GHC.Generics.U1)
       (GHC.Generics.M1
          GHC.Generics.C
          ('GHC.Generics.MetaCons
-            "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+            "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
          GHC.Generics.U1
        GHC.Generics.:+: GHC.Generics.M1
                           GHC.Generics.C
@@ -2087,12 +2094,12 @@ d42ea3684e3e24263ce02174ca43303a
                       GHC.Generics.:+: GHC.Generics.M1
                                          GHC.Generics.C
                                          ('GHC.Generics.MetaCons
-                                            "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                            "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                          GHC.Generics.U1)
                    @ (GHC.Generics.M1
                         GHC.Generics.C
                         ('GHC.Generics.MetaCons
-                           "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                           "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                         GHC.Generics.U1
                       GHC.Generics.:+: GHC.Generics.M1
                                          GHC.Generics.C
@@ -2101,7 +2108,7 @@ d42ea3684e3e24263ce02174ca43303a
                                          GHC.Generics.U1)
                    @ x
                    (Models.$fGenericTool9 @ x)) -}
-97537ee188eea40362ba391b7d9e1453
+12eec10ac3d951f5caaeb966eeb65636
   $fGenericTool9 ::
     (GHC.Generics.:+:)
       (GHC.Generics.M1
@@ -2112,7 +2119,7 @@ d42ea3684e3e24263ce02174ca43303a
       (GHC.Generics.M1
          GHC.Generics.C
          ('GHC.Generics.MetaCons
-            "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+            "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
          GHC.Generics.U1)
       x
   {- HasNoCafRefs, Strictness: m1,
@@ -2126,7 +2133,7 @@ d42ea3684e3e24263ce02174ca43303a
                    @ (GHC.Generics.M1
                         GHC.Generics.C
                         ('GHC.Generics.MetaCons
-                           "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                           "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                         GHC.Generics.U1)
                    @ x
                    (GHC.Generics.U1 @ x)
@@ -2136,7 +2143,7 @@ d42ea3684e3e24263ce02174ca43303a
                              <'GHC.Generics.MetaCons
                                 "ZipImage" 'GHC.Generics.PrefixI 'GHC.Types.False>_P
                              <GHC.Generics.U1>_R) <x>_N)) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fGenericTool_$cfrom ::
     Models.Tool -> GHC.Generics.Rep Models.Tool x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
@@ -2161,14 +2168,14 @@ d42ea3684e3e24263ce02174ca43303a
                                       GHC.Generics.:+: GHC.Generics.M1
                                                          GHC.Generics.C
                                                          ('GHC.Generics.MetaCons
-                                                            "Wipe"
+                                                            "Spiral"
                                                             'GHC.Generics.PrefixI
                                                             'GHC.Types.False)
                                                          GHC.Generics.U1)
                                      GHC.Generics.:+: (GHC.Generics.M1
                                                          GHC.Generics.C
                                                          ('GHC.Generics.MetaCons
-                                                            "Blend"
+                                                            "Frame"
                                                             'GHC.Generics.PrefixI
                                                             'GHC.Types.False)
                                                          GHC.Generics.U1
@@ -2180,7 +2187,7 @@ d42ea3684e3e24263ce02174ca43303a
                                                                              'GHC.Types.False)
                                                                           GHC.Generics.U1)>_R))
                           (Sub (Sym (Models.Rep_Tool[0]))) <x>_N) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool :: GHC.Read.Read Models.Tool
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -2190,7 +2197,7 @@ d42ea3684e3e24263ce02174ca43303a
                   Models.$fReadTool_$creadList
                   Models.$fReadTool_$creadPrec
                   Models.$fReadTool_$creadListPrec -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool1 ::
     Text.ParserCombinators.ReadPrec.Prec
     -> forall b.
@@ -2210,7 +2217,7 @@ d42ea3684e3e24263ce02174ca43303a
                    eta
                    @ b
                    eta1) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool10 ::
     ([GHC.Types.Char],
      Text.ParserCombinators.ReadPrec.ReadPrec Models.Tool)
@@ -2223,7 +2230,7 @@ d42ea3684e3e24263ce02174ca43303a
                         ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0] <Models.Tool>_R))
                        (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
                                  <Models.Tool>_R))))) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool11 ::
     Text.ParserCombinators.ReadPrec.Prec
     -> forall b.
@@ -2234,8 +2241,8 @@ d42ea3684e3e24263ce02174ca43303a
                 (\ (ds :: Text.ParserCombinators.ReadPrec.Prec)
                    @ b
                    (eta :: Models.Tool -> Text.ParserCombinators.ReadP.P b) ->
-                 eta Models.Blend) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+                 eta Models.Frame) -}
+fad96378789a8d19005dcb78b174623e
   $fReadTool12 ::
     ([GHC.Types.Char],
      Text.ParserCombinators.ReadPrec.ReadPrec Models.Tool)
@@ -2248,7 +2255,7 @@ d42ea3684e3e24263ce02174ca43303a
                         ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0] <Models.Tool>_R))
                        (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
                                  <Models.Tool>_R))))) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool13 ::
     Text.ParserCombinators.ReadPrec.Prec
     -> forall b.
@@ -2259,8 +2266,8 @@ d42ea3684e3e24263ce02174ca43303a
                 (\ (ds :: Text.ParserCombinators.ReadPrec.Prec)
                    @ b
                    (eta :: Models.Tool -> Text.ParserCombinators.ReadP.P b) ->
-                 eta Models.Wipe) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+                 eta Models.Spiral) -}
+fad96378789a8d19005dcb78b174623e
   $fReadTool14 ::
     ([GHC.Types.Char],
      Text.ParserCombinators.ReadPrec.ReadPrec Models.Tool)
@@ -2273,7 +2280,7 @@ d42ea3684e3e24263ce02174ca43303a
                         ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0] <Models.Tool>_R))
                        (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
                                  <Models.Tool>_R))))) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool15 ::
     Text.ParserCombinators.ReadPrec.Prec
     -> forall b.
@@ -2285,7 +2292,7 @@ d42ea3684e3e24263ce02174ca43303a
                    @ b
                    (eta :: Models.Tool -> Text.ParserCombinators.ReadP.P b) ->
                  eta Models.ZipImage) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool16 :: Text.ParserCombinators.ReadP.P [Models.Tool]
   {- Unfolding: (GHC.Read.list1
                    @ Models.Tool
@@ -2297,7 +2304,7 @@ d42ea3684e3e24263ce02174ca43303a
                    @ [Models.Tool]
                    (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
                       @ [Models.Tool])) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool2 ::
     Text.ParserCombinators.ReadPrec.Prec
     -> Text.ParserCombinators.ReadP.ReadP Models.Tool
@@ -2308,7 +2315,7 @@ d42ea3684e3e24263ce02174ca43303a
                      `cast`
                    (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
                              <Models.Tool>_R))) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool3 ::
     Text.ParserCombinators.ReadPrec.Prec
     -> Text.ParserCombinators.ReadP.ReadP Models.Tool
@@ -2316,7 +2323,7 @@ d42ea3684e3e24263ce02174ca43303a
      Unfolding: InlineRule (1, True, False)
                 (\ (eta :: Text.ParserCombinators.ReadPrec.Prec) ->
                  GHC.Read.choose2 @ Models.Tool Models.$fReadTool4 eta) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool4 ::
     [(GHC.Base.String,
       Text.ParserCombinators.ReadPrec.ReadPrec Models.Tool)]
@@ -2326,7 +2333,7 @@ d42ea3684e3e24263ce02174ca43303a
                       Text.ParserCombinators.ReadPrec.ReadPrec Models.Tool)
                    Models.$fReadTool14
                    Models.$fReadTool5) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool5 ::
     [(GHC.Base.String,
       Text.ParserCombinators.ReadPrec.ReadPrec Models.Tool)]
@@ -2336,7 +2343,7 @@ d42ea3684e3e24263ce02174ca43303a
                       Text.ParserCombinators.ReadPrec.ReadPrec Models.Tool)
                    Models.$fReadTool12
                    Models.$fReadTool6) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool6 ::
     [(GHC.Base.String,
       Text.ParserCombinators.ReadPrec.ReadPrec Models.Tool)]
@@ -2346,7 +2353,7 @@ d42ea3684e3e24263ce02174ca43303a
                       Text.ParserCombinators.ReadPrec.ReadPrec Models.Tool)
                    Models.$fReadTool10
                    Models.$fReadTool7) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool7 ::
     [(GHC.Base.String,
       Text.ParserCombinators.ReadPrec.ReadPrec Models.Tool)]
@@ -2358,7 +2365,7 @@ d42ea3684e3e24263ce02174ca43303a
                    (GHC.Types.[]
                       @ (GHC.Base.String,
                          Text.ParserCombinators.ReadPrec.ReadPrec Models.Tool))) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool8 ::
     ([GHC.Types.Char],
      Text.ParserCombinators.ReadPrec.ReadPrec Models.Tool)
@@ -2371,7 +2378,7 @@ d42ea3684e3e24263ce02174ca43303a
                         ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0] <Models.Tool>_R))
                        (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
                                  <Models.Tool>_R))))) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool9 ::
     Text.ParserCombinators.ReadPrec.Prec
     -> forall b.
@@ -2383,14 +2390,14 @@ d42ea3684e3e24263ce02174ca43303a
                    @ b
                    (eta :: Models.Tool -> Text.ParserCombinators.ReadP.P b) ->
                  eta Models.Checkerboard) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool_$creadList ::
     Text.ParserCombinators.ReadP.ReadS [Models.Tool]
   {- Arity: 1,
      Unfolding: (Text.ParserCombinators.ReadP.run
                    @ [Models.Tool]
                    Models.$fReadTool16) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool_$creadListPrec ::
     Text.ParserCombinators.ReadPrec.ReadPrec [Models.Tool]
   {- Arity: 2, Strictness: <L,U><L,U>,
@@ -2403,7 +2410,7 @@ d42ea3684e3e24263ce02174ca43303a
                                     <[Models.Tool]>_R))
                      (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
                                <[Models.Tool]>_R))) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool_$creadPrec ::
     Text.ParserCombinators.ReadPrec.ReadPrec Models.Tool
   {- Arity: 1,
@@ -2412,7 +2419,7 @@ d42ea3684e3e24263ce02174ca43303a
                   `cast`
                 (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
                           <Models.Tool>_R)) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fReadTool_$creadsPrec ::
     GHC.Types.Int -> Text.ParserCombinators.ReadP.ReadS Models.Tool
   {- Arity: 1, Strictness: <L,U>,
@@ -2432,7 +2439,7 @@ d42ea3684e3e24263ce02174ca43303a
                       @ Models.Tool
                       (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
                          @ Models.Tool))) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fShowTool :: GHC.Show.Show Models.Tool
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -2441,7 +2448,7 @@ d42ea3684e3e24263ce02174ca43303a
                   Models.$fShowTool_$cshowsPrec
                   Models.$fShowTool_$cshow
                   Models.$fShowTool_$cshowList -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fShowTool_$cshow :: Models.Tool -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -2450,13 +2457,13 @@ d42ea3684e3e24263ce02174ca43303a
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fShowTool_$cshowList :: [Models.Tool] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ Models.Tool
                    Models.$w$cshowsPrec) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fShowTool_$cshowsPrec ::
     GHC.Types.Int -> Models.Tool -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: INLINE[0],
@@ -2465,7 +2472,7 @@ d42ea3684e3e24263ce02174ca43303a
                    (w1 :: Models.Tool)
                    (w2 :: GHC.Base.String) ->
                  Models.$w$cshowsPrec w1 w2) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fToJSONTool :: Data.Aeson.Types.ToJSON.ToJSON Models.Tool
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -2475,7 +2482,7 @@ d42ea3684e3e24263ce02174ca43303a
                   Models.$fToJSONTool_$ctoEncoding
                   Models.$fToJSONTool_$ctoJSONList
                   Models.$fToJSONTool_$ctoEncodingList -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fToJSONTool1 ::
     Models.Tool
     -> Data.Tagged.Tagged
@@ -2523,7 +2530,7 @@ d42ea3684e3e24263ce02174ca43303a
                                   <GHC.Generics.U1>_N
                                   <Data.Aeson.Types.Generic.False>_N)))
                    Models.$fFromJSONTool_$s$fConstructorMetaMetaCons3) -}
-77846abf34d845dafb3a476d0b42dcba
+f3285535dd966415e5490b81e01ab48c
   $fToJSONTool11 ::
     (GHC.Generics.:+:)
       (GHC.Generics.C1
@@ -2532,11 +2539,11 @@ d42ea3684e3e24263ce02174ca43303a
          GHC.Generics.U1
        GHC.Generics.:+: GHC.Generics.C1
                           ('GHC.Generics.MetaCons
-                             "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                             "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                           GHC.Generics.U1)
       (GHC.Generics.C1
          ('GHC.Generics.MetaCons
-            "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+            "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
          GHC.Generics.U1
        GHC.Generics.:+: GHC.Generics.C1
                           ('GHC.Generics.MetaCons
@@ -2554,11 +2561,11 @@ d42ea3684e3e24263ce02174ca43303a
                                GHC.Generics.U1
                              GHC.Generics.:+: GHC.Generics.C1
                                                 ('GHC.Generics.MetaCons
-                                                   "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                   "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                 GHC.Generics.U1)
                             (GHC.Generics.C1
                                ('GHC.Generics.MetaCons
-                                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                GHC.Generics.U1
                              GHC.Generics.:+: GHC.Generics.C1
                                                 ('GHC.Generics.MetaCons
@@ -2576,7 +2583,7 @@ d42ea3684e3e24263ce02174ca43303a
                    -> case x of wild1 {
                         GHC.Generics.L1 x1 -> Models.$fFromJSONTool7
                         GHC.Generics.R1 x1 -> Models.$fFromJSONTool6 } }) -}
-8d3a94d40c681c2c1f829a90daf1ca65
+c3dc4b562d5ef7861b259035fbf4c0a0
   $fToJSONTool2 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.ToJSON.ToArgs
@@ -2588,11 +2595,11 @@ d42ea3684e3e24263ce02174ca43303a
             GHC.Generics.U1
           GHC.Generics.:+: GHC.Generics.C1
                              ('GHC.Generics.MetaCons
-                                "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                              GHC.Generics.U1)
          (GHC.Generics.C1
             ('GHC.Generics.MetaCons
-               "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+               "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
             GHC.Generics.U1
           GHC.Generics.:+: GHC.Generics.C1
                              ('GHC.Generics.MetaCons
@@ -2615,11 +2622,11 @@ d42ea3684e3e24263ce02174ca43303a
                                GHC.Generics.U1
                              GHC.Generics.:+: GHC.Generics.C1
                                                 ('GHC.Generics.MetaCons
-                                                   "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                   "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                 GHC.Generics.U1)
                             (GHC.Generics.C1
                                ('GHC.Generics.MetaCons
-                                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                GHC.Generics.U1
                              GHC.Generics.:+: GHC.Generics.C1
                                                 ('GHC.Generics.MetaCons
@@ -2631,7 +2638,7 @@ d42ea3684e3e24263ce02174ca43303a
                  case w of ww { Data.Aeson.Types.Internal.Options ww1 ww2 ww3 ww4 ww5 ww6 ->
                  case Models.$w$dUntaggedValueObj @ a1 ww2 w2 of ww7 { Unit# ww8 ->
                  Data.Aeson.Types.Internal.String ww8 } }) -}
-1d763b9e58e96a7eddc1ea1649309133
+789d3e26577ea6d929a63c4df76934fa
   $fToJSONTool3 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.ToJSON.ToArgs
@@ -2643,11 +2650,11 @@ d42ea3684e3e24263ce02174ca43303a
             GHC.Generics.U1
           GHC.Generics.:+: GHC.Generics.C1
                              ('GHC.Generics.MetaCons
-                                "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                              GHC.Generics.U1)
          (GHC.Generics.C1
             ('GHC.Generics.MetaCons
-               "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+               "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
             GHC.Generics.U1
           GHC.Generics.:+: GHC.Generics.C1
                              ('GHC.Generics.MetaCons
@@ -2667,11 +2674,11 @@ d42ea3684e3e24263ce02174ca43303a
                                GHC.Generics.U1
                              GHC.Generics.:+: GHC.Generics.C1
                                                 ('GHC.Generics.MetaCons
-                                                   "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                   "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                 GHC.Generics.U1)
                             (GHC.Generics.C1
                                ('GHC.Generics.MetaCons
-                                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                GHC.Generics.U1
                              GHC.Generics.:+: GHC.Generics.C1
                                                 ('GHC.Generics.MetaCons
@@ -2703,7 +2710,7 @@ d42ea3684e3e24263ce02174ca43303a
                              @ Data.Aeson.Types.Generic.Zero
                              @ GHC.Generics.U1
                              @ ('GHC.Generics.MetaCons
-                                  "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                  "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                              Models.$fToJSONTool4
                                `cast`
                              (Sym (Data.Aeson.Types.ToJSON.N:ConsToJSON[0]
@@ -2720,7 +2727,7 @@ d42ea3684e3e24263ce02174ca43303a
                              @ Data.Aeson.Types.Generic.Zero
                              @ GHC.Generics.U1
                              @ ('GHC.Generics.MetaCons
-                                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                              Models.$fToJSONTool4
                                `cast`
                              (Sym (Data.Aeson.Types.ToJSON.N:ConsToJSON[0]
@@ -2760,7 +2767,7 @@ d42ea3684e3e24263ce02174ca43303a
                                Data.Aeson.Types.Internal.Value Data.Aeson.Types.Generic.Zero a)
                    (eta :: GHC.Generics.U1 a) ->
                  Data.Aeson.Types.Internal.emptyArray) -}
-78b5d35d9e0a77187ea6679e5e07ca79
+7aa23c364c2ee848164e306f9b7e053d
   $fToJSONTool5 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.ToJSON.ToArgs
@@ -2772,11 +2779,11 @@ d42ea3684e3e24263ce02174ca43303a
             GHC.Generics.U1
           GHC.Generics.:+: GHC.Generics.C1
                              ('GHC.Generics.MetaCons
-                                "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                              GHC.Generics.U1)
          (GHC.Generics.C1
             ('GHC.Generics.MetaCons
-               "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+               "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
             GHC.Generics.U1
           GHC.Generics.:+: GHC.Generics.C1
                              ('GHC.Generics.MetaCons
@@ -2796,11 +2803,11 @@ d42ea3684e3e24263ce02174ca43303a
                                GHC.Generics.U1
                              GHC.Generics.:+: GHC.Generics.C1
                                                 ('GHC.Generics.MetaCons
-                                                   "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                   "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                 GHC.Generics.U1)
                             (GHC.Generics.C1
                                ('GHC.Generics.MetaCons
-                                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                GHC.Generics.U1
                              GHC.Generics.:+: GHC.Generics.C1
                                                 ('GHC.Generics.MetaCons
@@ -2832,7 +2839,7 @@ d42ea3684e3e24263ce02174ca43303a
                              @ Data.Aeson.Types.Generic.Zero
                              @ GHC.Generics.U1
                              @ ('GHC.Generics.MetaCons
-                                  "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                  "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                              Models.$fToJSONTool4
                                `cast`
                              (Sym (Data.Aeson.Types.ToJSON.N:ConsToJSON[0]
@@ -2849,7 +2856,7 @@ d42ea3684e3e24263ce02174ca43303a
                              @ Data.Aeson.Types.Generic.Zero
                              @ GHC.Generics.U1
                              @ ('GHC.Generics.MetaCons
-                                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                              Models.$fToJSONTool4
                                `cast`
                              (Sym (Data.Aeson.Types.ToJSON.N:ConsToJSON[0]
@@ -2874,7 +2881,7 @@ d42ea3684e3e24263ce02174ca43303a
                              opts
                              targs
                              x1 } }) -}
-288a279cbef6a87cc6b02ef845437350
+3f54b7641fb7fb2c7b42444f3d7ab898
   $fToJSONTool6 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.ToJSON.ToArgs
@@ -2888,11 +2895,11 @@ d42ea3684e3e24263ce02174ca43303a
             GHC.Generics.U1
           GHC.Generics.:+: GHC.Generics.C1
                              ('GHC.Generics.MetaCons
-                                "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                              GHC.Generics.U1)
          (GHC.Generics.C1
             ('GHC.Generics.MetaCons
-               "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+               "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
             GHC.Generics.U1
           GHC.Generics.:+: GHC.Generics.C1
                              ('GHC.Generics.MetaCons
@@ -2914,11 +2921,11 @@ d42ea3684e3e24263ce02174ca43303a
                                GHC.Generics.U1
                              GHC.Generics.:+: GHC.Generics.C1
                                                 ('GHC.Generics.MetaCons
-                                                   "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                   "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                 GHC.Generics.U1)
                             (GHC.Generics.C1
                                ('GHC.Generics.MetaCons
-                                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                GHC.Generics.U1
                              GHC.Generics.:+: GHC.Generics.C1
                                                 ('GHC.Generics.MetaCons
@@ -2939,7 +2946,7 @@ d42ea3684e3e24263ce02174ca43303a
                         @ (GHC.Generics.M1
                              GHC.Generics.C
                              ('GHC.Generics.MetaCons
-                                "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                              GHC.Generics.U1)
                         Models.$fToJSONTool10
                           `cast`
@@ -2955,7 +2962,7 @@ d42ea3684e3e24263ce02174ca43303a
                                   <Data.Aeson.Types.Generic.Zero>_N
                                   <GHC.Generics.C1
                                      ('GHC.Generics.MetaCons
-                                        "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                        "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                      GHC.Generics.U1>_N))
                         @ a1
                         opts
@@ -2969,7 +2976,7 @@ d42ea3684e3e24263ce02174ca43303a
                         @ (GHC.Generics.M1
                              GHC.Generics.C
                              ('GHC.Generics.MetaCons
-                                "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                              GHC.Generics.U1)
                         @ (GHC.Generics.M1
                              GHC.Generics.C
@@ -2982,7 +2989,7 @@ d42ea3684e3e24263ce02174ca43303a
                                   <Data.Aeson.Types.Generic.Zero>_N
                                   <GHC.Generics.C1
                                      ('GHC.Generics.MetaCons
-                                        "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                        "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                      GHC.Generics.U1>_N))
                         Models.$fToJSONTool7
                           `cast`
@@ -3037,7 +3044,7 @@ d42ea3684e3e24263ce02174ca43303a
                                   <GHC.Generics.U1>_N
                                   <Data.Aeson.Types.Generic.False>_N)))
                    Models.$fFromJSONTool_$s$fConstructorMetaMetaCons) -}
-ff158c9e50b5bb9e330860edd00ecea9
+db6963279c0b5e25268305f70fbab045
   $fToJSONTool8 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.ToJSON.ToArgs
@@ -3046,7 +3053,7 @@ ff158c9e50b5bb9e330860edd00ecea9
     -> GHC.Base.String
     -> GHC.Generics.C1
          ('GHC.Generics.MetaCons
-            "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+            "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
          GHC.Generics.U1
          a1
     -> [Data.Aeson.Types.Internal.Pair]
@@ -3055,7 +3062,7 @@ ff158c9e50b5bb9e330860edd00ecea9
                    @ Data.Aeson.Types.Generic.False
                    @ Data.Aeson.Types.Generic.Zero
                    @ ('GHC.Generics.MetaCons
-                        "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                        "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                    (Data.Aeson.Types.ToJSON.$fTaggedObjectPairs'TYPEarityU1False1
                       @ Data.Aeson.Types.Generic.Zero)
                      `cast`
@@ -3076,7 +3083,7 @@ ff158c9e50b5bb9e330860edd00ecea9
                                   <GHC.Generics.U1>_N
                                   <Data.Aeson.Types.Generic.False>_N)))
                    Models.$fFromJSONTool_$s$fConstructorMetaMetaCons1) -}
-86a505d6cb3574e020b4d5b81a2b5f39
+2e77ac7607b08947cc6c3e86d51f42b2
   $fToJSONTool9 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.ToJSON.ToArgs
@@ -3085,7 +3092,7 @@ ff158c9e50b5bb9e330860edd00ecea9
     -> GHC.Base.String
     -> GHC.Generics.C1
          ('GHC.Generics.MetaCons
-            "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+            "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
          GHC.Generics.U1
          a1
     -> [Data.Aeson.Types.Internal.Pair]
@@ -3094,7 +3101,7 @@ ff158c9e50b5bb9e330860edd00ecea9
                    @ Data.Aeson.Types.Generic.False
                    @ Data.Aeson.Types.Generic.Zero
                    @ ('GHC.Generics.MetaCons
-                        "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                        "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                    (Data.Aeson.Types.ToJSON.$fTaggedObjectPairs'TYPEarityU1False1
                       @ Data.Aeson.Types.Generic.Zero)
                      `cast`
@@ -3115,7 +3122,7 @@ ff158c9e50b5bb9e330860edd00ecea9
                                   <GHC.Generics.U1>_N
                                   <Data.Aeson.Types.Generic.False>_N)))
                    Models.$fFromJSONTool_$s$fConstructorMetaMetaCons2) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fToJSONTool_$ctoEncoding ::
     Models.Tool -> Data.Aeson.Encoding.Internal.Encoding
   {- Arity: 1, Strictness: <L,1*U>, Inline: INLINE (sat-args=0),
@@ -3123,7 +3130,7 @@ ff158c9e50b5bb9e330860edd00ecea9
                 (\ (eta :: Models.Tool) ->
                  Data.Aeson.Encoding.Internal.value
                    (Models.$fToJSONTool_$ctoJSON eta)) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fToJSONTool_$ctoEncodingList ::
     [Models.Tool] -> Data.Aeson.Encoding.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U>, Inline: INLINE (sat-args=0),
@@ -3188,7 +3195,7 @@ ff158c9e50b5bb9e330860edd00ecea9
                         `cast`
                       (Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
                                 <Data.Aeson.Types.Internal.Value>_P)) }) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fToJSONTool_$ctoJSON ::
     Models.Tool -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <L,1*U>,
@@ -3200,7 +3207,7 @@ ff158c9e50b5bb9e330860edd00ecea9
                           <*>_N
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $fToJSONTool_$ctoJSONList ::
     [Models.Tool] -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U>m2, Inline: INLINE (sat-args=0),
@@ -3237,7 +3244,7 @@ ff158c9e50b5bb9e330860edd00ecea9
                                     n
                                     eta)))) of dt1 { Data.Vector.Vector ipv ipv1 ipv2 ->
                  Data.Aeson.Types.Internal.Array dt1 }) -}
-7f8464aa9f8621d224ad0ebbb53a46b4
+a134532e99b7b2ee51d2a427ecb275be
   $fToJSONTool_g ::
     (GHC.Generics.:+:)
       (GHC.Generics.C1
@@ -3246,11 +3253,11 @@ ff158c9e50b5bb9e330860edd00ecea9
          GHC.Generics.U1
        GHC.Generics.:+: GHC.Generics.C1
                           ('GHC.Generics.MetaCons
-                             "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                             "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                           GHC.Generics.U1)
       (GHC.Generics.C1
          ('GHC.Generics.MetaCons
-            "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+            "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
          GHC.Generics.U1
        GHC.Generics.:+: GHC.Generics.C1
                           ('GHC.Generics.MetaCons
@@ -3266,11 +3273,11 @@ ff158c9e50b5bb9e330860edd00ecea9
                          GHC.Generics.U1
                        GHC.Generics.:+: GHC.Generics.C1
                                           ('GHC.Generics.MetaCons
-                                             "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                             "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                           GHC.Generics.U1)
                       GHC.Generics.:+: (GHC.Generics.C1
                                           ('GHC.Generics.MetaCons
-                                             "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                             "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                           GHC.Generics.U1
                                         GHC.Generics.:+: GHC.Generics.C1
                                                            ('GHC.Generics.MetaCons
@@ -3289,11 +3296,13 @@ ff158c9e50b5bb9e330860edd00ecea9
                                  GHC.Generics.U1
                                GHC.Generics.:+: GHC.Generics.C1
                                                   ('GHC.Generics.MetaCons
-                                                     "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                     "Spiral"
+                                                     'GHC.Generics.PrefixI
+                                                     'GHC.Types.False)
                                                   GHC.Generics.U1)
                               GHC.Generics.:+: (GHC.Generics.C1
                                                   ('GHC.Generics.MetaCons
-                                                     "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                     "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                   GHC.Generics.U1
                                                 GHC.Generics.:+: GHC.Generics.C1
                                                                    ('GHC.Generics.MetaCons
@@ -3311,11 +3320,13 @@ ff158c9e50b5bb9e330860edd00ecea9
                                  GHC.Generics.U1
                                GHC.Generics.:+: GHC.Generics.C1
                                                   ('GHC.Generics.MetaCons
-                                                     "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                     "Spiral"
+                                                     'GHC.Generics.PrefixI
+                                                     'GHC.Types.False)
                                                   GHC.Generics.U1)
                               GHC.Generics.:+: (GHC.Generics.C1
                                                   ('GHC.Generics.MetaCons
-                                                     "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                     "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                   GHC.Generics.U1
                                                 GHC.Generics.:+: GHC.Generics.C1
                                                                    ('GHC.Generics.MetaCons
@@ -3333,11 +3344,13 @@ ff158c9e50b5bb9e330860edd00ecea9
                                  GHC.Generics.U1
                                GHC.Generics.:+: GHC.Generics.C1
                                                   ('GHC.Generics.MetaCons
-                                                     "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                     "Spiral"
+                                                     'GHC.Generics.PrefixI
+                                                     'GHC.Types.False)
                                                   GHC.Generics.U1)
                               GHC.Generics.:+: (GHC.Generics.C1
                                                   ('GHC.Generics.MetaCons
-                                                     "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                     "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                   GHC.Generics.U1
                                                 GHC.Generics.:+: GHC.Generics.C1
                                                                    ('GHC.Generics.MetaCons
@@ -3355,11 +3368,13 @@ ff158c9e50b5bb9e330860edd00ecea9
                                  GHC.Generics.U1
                                GHC.Generics.:+: GHC.Generics.C1
                                                   ('GHC.Generics.MetaCons
-                                                     "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                     "Spiral"
+                                                     'GHC.Generics.PrefixI
+                                                     'GHC.Types.False)
                                                   GHC.Generics.U1)
                               GHC.Generics.:+: (GHC.Generics.C1
                                                   ('GHC.Generics.MetaCons
-                                                     "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                     "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                   GHC.Generics.U1
                                                 GHC.Generics.:+: GHC.Generics.C1
                                                                    ('GHC.Generics.MetaCons
@@ -3377,11 +3392,13 @@ ff158c9e50b5bb9e330860edd00ecea9
                                  GHC.Generics.U1
                                GHC.Generics.:+: GHC.Generics.C1
                                                   ('GHC.Generics.MetaCons
-                                                     "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                     "Spiral"
+                                                     'GHC.Generics.PrefixI
+                                                     'GHC.Types.False)
                                                   GHC.Generics.U1)
                               GHC.Generics.:+: (GHC.Generics.C1
                                                   ('GHC.Generics.MetaCons
-                                                     "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                     "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                   GHC.Generics.U1
                                                 GHC.Generics.:+: GHC.Generics.C1
                                                                    ('GHC.Generics.MetaCons
@@ -3399,18 +3416,6 @@ ff158c9e50b5bb9e330860edd00ecea9
                    (Data.Aeson.Types.ToJSON.$WNoToArgs
                       @ Data.Aeson.Types.Internal.Value
                       @ GHC.Prim.Any)) -}
-4e8fce6b4de6a6ca607aacabe8f87bed
-  $tc'Blend :: GHC.Types.TyCon
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: (GHC.Types.TyCon
-                   1448303529500719907##
-                   12960515589121567459##
-                   Models.$trModule
-                   Models.$tc'Blend1) -}
-2c0c84aa75e68f0d20daac9f5616b1cc
-  $tc'Blend1 :: GHC.Types.TrName
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS "'Blend"#) -}
 70b1eca62bfcc3cee2ec9144a31ed362
   $tc'Checkerboard :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -3423,18 +3428,30 @@ ff158c9e50b5bb9e330860edd00ecea9
   $tc'Checkerboard1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'Checkerboard"#) -}
-fcc87ee52f08b7bbbb31a4adcb536ca8
-  $tc'Wipe :: GHC.Types.TyCon
+bb03e1be153afd9accdfcbb06a39bc5b
+  $tc'Frame :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   9937227686273356984##
-                   8232716072994685295##
+                   408713878935565628##
+                   7319955983570769227##
                    Models.$trModule
-                   Models.$tc'Wipe1) -}
-6966fcb6de5499838f49cf6f4376b1bd
-  $tc'Wipe1 :: GHC.Types.TrName
+                   Models.$tc'Frame1) -}
+03bdfcea179bcdf5b984db9342daf75b
+  $tc'Frame1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS "'Wipe"#) -}
+     Unfolding: (GHC.Types.TrNameS "'Frame"#) -}
+d6f2ef1c5e86be33ee42b9782dca14f9
+  $tc'Spiral :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14776753393774864497##
+                   8531516787970820306##
+                   Models.$trModule
+                   Models.$tc'Spiral1) -}
+57abfa333fd16fbae65455ac19b9052b
+  $tc'Spiral1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Spiral"#) -}
 806a75b44bf66b7196d44267c2d72795
   $tc'ZipImage :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -3474,16 +3491,16 @@ b060f163272cd7f5b1248354c957d30a
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk"#) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   $w$cshowsPrec :: Models.Tool -> GHC.Base.String -> GHC.Base.String
   {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
      Unfolding: (\ (w :: Models.Tool) (w1 :: GHC.Base.String) ->
                  case w of wild {
                    Models.ZipImage
                    -> GHC.Base.++ @ GHC.Types.Char Models.$fFromJSONTool9 w1
-                   Models.Wipe
+                   Models.Spiral
                    -> GHC.Base.++ @ GHC.Types.Char Models.$fFromJSONTool8 w1
-                   Models.Blend
+                   Models.Frame
                    -> GHC.Base.++ @ GHC.Types.Char Models.$fFromJSONTool7 w1
                    Models.Checkerboard
                    -> GHC.Base.++ @ GHC.Types.Char Models.$fFromJSONTool6 w1 }) -}
@@ -3546,7 +3563,7 @@ b060f163272cd7f5b1248354c957d30a
                    ww7
                    ww8
                    ww9) -}
-dd5a1380a61a2aa7241bc07252cd1ed2
+895c5eb64d4cfda116cfcc9b1b7c8efe
   $w$dFromPair1 ::
     (GHC.Base.String -> GHC.Base.String)
     -> (GHC.Base.String -> GHC.Base.String)
@@ -3564,7 +3581,7 @@ dd5a1380a61a2aa7241bc07252cd1ed2
          (Data.Aeson.Types.Internal.Parser
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
-                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                GHC.Generics.U1
                a1))
   {- Arity: 11,
@@ -3585,7 +3602,7 @@ dd5a1380a61a2aa7241bc07252cd1ed2
                    (ww9 :: Data.Aeson.Types.Internal.Value) ->
                  Data.Aeson.Types.FromJSON.$w$cparsePair
                    @ ('GHC.Generics.MetaCons
-                        "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                        "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                    @ Data.Aeson.Types.Generic.Zero
                    @ GHC.Generics.U1
                    Models.$fFromJSONTool_$s$fConstructorMetaMetaCons1
@@ -3605,7 +3622,7 @@ dd5a1380a61a2aa7241bc07252cd1ed2
                    ww7
                    ww8
                    ww9) -}
-24832d6c7f42616e793781ef38ef1204
+040b4f4af5fef4c3ee56e418bac6176c
   $w$dFromPair2 ::
     (GHC.Base.String -> GHC.Base.String)
     -> (GHC.Base.String -> GHC.Base.String)
@@ -3623,7 +3640,7 @@ dd5a1380a61a2aa7241bc07252cd1ed2
          (Data.Aeson.Types.Internal.Parser
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
-                  "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                  "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                GHC.Generics.U1
                a1))
   {- Arity: 11,
@@ -3644,7 +3661,7 @@ dd5a1380a61a2aa7241bc07252cd1ed2
                    (ww9 :: Data.Aeson.Types.Internal.Value) ->
                  Data.Aeson.Types.FromJSON.$w$cparsePair
                    @ ('GHC.Generics.MetaCons
-                        "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                        "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                    @ Data.Aeson.Types.Generic.Zero
                    @ GHC.Generics.U1
                    Models.$fFromJSONTool_$s$fConstructorMetaMetaCons2
@@ -3794,7 +3811,7 @@ dde1fe220f4833067e38e6de94af96d9
                    ww6
                    ww7
                    ww8) -}
-71556548ad36f15e4ca9a3553320b7dc
+e434e10125677785c48f8d9badd9f720
   $w$dFromTaggedObject1 ::
     (GHC.Base.String -> GHC.Base.String)
     -> (GHC.Base.String -> GHC.Base.String)
@@ -3813,7 +3830,7 @@ dde1fe220f4833067e38e6de94af96d9
          (Data.Aeson.Types.Internal.Parser
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
-                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                GHC.Generics.U1
                a))
   {- Arity: 12,
@@ -3837,7 +3854,7 @@ dde1fe220f4833067e38e6de94af96d9
                    @ Data.Aeson.Types.Generic.Zero
                    @ GHC.Generics.U1
                    @ ('GHC.Generics.MetaCons
-                        "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                        "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                    Models.$fFromJSONTool13
                      `cast`
                    (Trans
@@ -3865,7 +3882,7 @@ dde1fe220f4833067e38e6de94af96d9
                    ww6
                    ww7
                    ww8) -}
-acec2116d1be02d1348c9f53253e5976
+38bfc745a0c01c76a987d31da32e5deb
   $w$dFromTaggedObject2 ::
     (GHC.Base.String -> GHC.Base.String)
     -> (GHC.Base.String -> GHC.Base.String)
@@ -3884,7 +3901,7 @@ acec2116d1be02d1348c9f53253e5976
          (Data.Aeson.Types.Internal.Parser
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
-                  "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                  "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                GHC.Generics.U1
                a))
   {- Arity: 12,
@@ -3908,7 +3925,7 @@ acec2116d1be02d1348c9f53253e5976
                    @ Data.Aeson.Types.Generic.Zero
                    @ GHC.Generics.U1
                    @ ('GHC.Generics.MetaCons
-                        "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                        "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                    Models.$fFromJSONTool13
                      `cast`
                    (Trans
@@ -4007,7 +4024,7 @@ acec2116d1be02d1348c9f53253e5976
                    ww6
                    ww7
                    ww8) -}
-8fcc9fc6c4725c5641460c9d3e72f9b3
+d37e192e65806235bd104a5f4266ee8e
   $w$dFromUntaggedValue ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
@@ -4019,11 +4036,11 @@ acec2116d1be02d1348c9f53253e5976
                GHC.Generics.U1
              GHC.Generics.:+: GHC.Generics.C1
                                 ('GHC.Generics.MetaCons
-                                   "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                   "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                 GHC.Generics.U1)
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
-                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                GHC.Generics.U1
              GHC.Generics.:+: GHC.Generics.C1
                                 ('GHC.Generics.MetaCons
@@ -4056,12 +4073,12 @@ acec2116d1be02d1348c9f53253e5976
                            (GHC.Generics.M1
                               GHC.Generics.C
                               ('GHC.Generics.MetaCons
-                                 "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                 "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                               GHC.Generics.U1
                               a1)
                    = Data.Aeson.Types.FromJSON.$w$cparseUntaggedValue
                        @ ('GHC.Generics.MetaCons
-                            "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                            "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                        @ Data.Aeson.Types.Generic.Zero
                        Models.$fFromJSONTool_$s$fConstructorMetaMetaCons2
                        @ a1
@@ -4073,12 +4090,12 @@ acec2116d1be02d1348c9f53253e5976
                            (GHC.Generics.M1
                               GHC.Generics.C
                               ('GHC.Generics.MetaCons
-                                 "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                 "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                               GHC.Generics.U1
                               a1)
                    = Data.Aeson.Types.FromJSON.$w$cparseUntaggedValue
                        @ ('GHC.Generics.MetaCons
-                            "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                            "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                        @ Data.Aeson.Types.Generic.Zero
                        Models.$fFromJSONTool_$s$fConstructorMetaMetaCons1
                        @ a1
@@ -4114,13 +4131,13 @@ acec2116d1be02d1348c9f53253e5976
                                    GHC.Generics.U1
                                  GHC.Generics.:+: GHC.Generics.C1
                                                     ('GHC.Generics.MetaCons
-                                                       "Wipe"
+                                                       "Spiral"
                                                        'GHC.Generics.PrefixI
                                                        'GHC.Types.False)
                                                     GHC.Generics.U1)
                                 (GHC.Generics.C1
                                    ('GHC.Generics.MetaCons
-                                      "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                      "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                    GHC.Generics.U1
                                  GHC.Generics.:+: GHC.Generics.C1
                                                     ('GHC.Generics.MetaCons
@@ -4166,13 +4183,13 @@ acec2116d1be02d1348c9f53253e5976
                                            GHC.Generics.U1
                                          GHC.Generics.:+: GHC.Generics.C1
                                                             ('GHC.Generics.MetaCons
-                                                               "Wipe"
+                                                               "Spiral"
                                                                'GHC.Generics.PrefixI
                                                                'GHC.Types.False)
                                                             GHC.Generics.U1)
                                       @ (GHC.Generics.C1
                                            ('GHC.Generics.MetaCons
-                                              "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                              "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                            GHC.Generics.U1
                                          GHC.Generics.:+: GHC.Generics.C1
                                                             ('GHC.Generics.MetaCons
@@ -4185,7 +4202,7 @@ acec2116d1be02d1348c9f53253e5976
                                          @ (GHC.Generics.M1
                                               GHC.Generics.C
                                               ('GHC.Generics.MetaCons
-                                                 "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                 "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                               GHC.Generics.U1)
                                          @ (GHC.Generics.M1
                                               GHC.Generics.C
@@ -4203,7 +4220,7 @@ acec2116d1be02d1348c9f53253e5976
                                <GHC.Generics.M1
                                   GHC.Generics.C
                                   ('GHC.Generics.MetaCons
-                                     "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                     "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                   GHC.Generics.U1
                                   a1>_R)
                             @ f
@@ -4215,7 +4232,7 @@ acec2116d1be02d1348c9f53253e5976
                             (\ (a2 :: GHC.Generics.M1
                                         GHC.Generics.C
                                         ('GHC.Generics.MetaCons
-                                           "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                           "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                         GHC.Generics.U1
                                         a1) ->
                              ks
@@ -4226,13 +4243,13 @@ acec2116d1be02d1348c9f53253e5976
                                        GHC.Generics.U1
                                      GHC.Generics.:+: GHC.Generics.C1
                                                         ('GHC.Generics.MetaCons
-                                                           "Wipe"
+                                                           "Spiral"
                                                            'GHC.Generics.PrefixI
                                                            'GHC.Types.False)
                                                         GHC.Generics.U1)
                                   @ (GHC.Generics.C1
                                        ('GHC.Generics.MetaCons
-                                          "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                          "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                        GHC.Generics.U1
                                      GHC.Generics.:+: GHC.Generics.C1
                                                         ('GHC.Generics.MetaCons
@@ -4245,7 +4262,7 @@ acec2116d1be02d1348c9f53253e5976
                                      @ (GHC.Generics.M1
                                           GHC.Generics.C
                                           ('GHC.Generics.MetaCons
-                                             "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                             "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                           GHC.Generics.U1)
                                      @ (GHC.Generics.M1
                                           GHC.Generics.C
@@ -4261,7 +4278,7 @@ acec2116d1be02d1348c9f53253e5976
                            <GHC.Generics.M1
                               GHC.Generics.C
                               ('GHC.Generics.MetaCons
-                                 "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                 "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                               GHC.Generics.U1
                               a1>_R)
                         @ f
@@ -4273,7 +4290,7 @@ acec2116d1be02d1348c9f53253e5976
                         (\ (a2 :: GHC.Generics.M1
                                     GHC.Generics.C
                                     ('GHC.Generics.MetaCons
-                                       "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                       "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                     GHC.Generics.U1
                                     a1) ->
                          ks
@@ -4284,13 +4301,13 @@ acec2116d1be02d1348c9f53253e5976
                                    GHC.Generics.U1
                                  GHC.Generics.:+: GHC.Generics.C1
                                                     ('GHC.Generics.MetaCons
-                                                       "Wipe"
+                                                       "Spiral"
                                                        'GHC.Generics.PrefixI
                                                        'GHC.Types.False)
                                                     GHC.Generics.U1)
                               @ (GHC.Generics.C1
                                    ('GHC.Generics.MetaCons
-                                      "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                      "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                    GHC.Generics.U1
                                  GHC.Generics.:+: GHC.Generics.C1
                                                     ('GHC.Generics.MetaCons
@@ -4308,7 +4325,7 @@ acec2116d1be02d1348c9f53253e5976
                                  @ (GHC.Generics.M1
                                       GHC.Generics.C
                                       ('GHC.Generics.MetaCons
-                                         "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                         "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                       GHC.Generics.U1)
                                  @ a1
                                  a2)))
@@ -4341,11 +4358,11 @@ acec2116d1be02d1348c9f53253e5976
                                GHC.Generics.U1
                              GHC.Generics.:+: GHC.Generics.C1
                                                 ('GHC.Generics.MetaCons
-                                                   "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                   "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                 GHC.Generics.U1)
                           @ (GHC.Generics.C1
                                ('GHC.Generics.MetaCons
-                                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                GHC.Generics.U1
                              GHC.Generics.:+: GHC.Generics.C1
                                                 ('GHC.Generics.MetaCons
@@ -4363,7 +4380,7 @@ acec2116d1be02d1348c9f53253e5976
                              @ (GHC.Generics.M1
                                   GHC.Generics.C
                                   ('GHC.Generics.MetaCons
-                                     "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                     "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                   GHC.Generics.U1)
                              @ a1
                              a2))))
@@ -4376,11 +4393,13 @@ acec2116d1be02d1348c9f53253e5976
                                  GHC.Generics.U1
                                GHC.Generics.:+: GHC.Generics.C1
                                                   ('GHC.Generics.MetaCons
-                                                     "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                     "Spiral"
+                                                     'GHC.Generics.PrefixI
+                                                     'GHC.Types.False)
                                                   GHC.Generics.U1)
                               (GHC.Generics.C1
                                  ('GHC.Generics.MetaCons
-                                    "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                    "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                  GHC.Generics.U1
                                GHC.Generics.:+: GHC.Generics.C1
                                                   ('GHC.Generics.MetaCons
@@ -4389,7 +4408,7 @@ acec2116d1be02d1348c9f53253e5976
                                                      'GHC.Types.False)
                                                   GHC.Generics.U1)
                               a1>_R))) -}
-40ade589f99bc2e2d4bf547aa54fc8a6
+8cb283596430e2001850d05d4f20a513
   $w$dSumFromString ::
     (GHC.Base.String -> GHC.Base.String)
     -> GHC.Prim.ByteArray#
@@ -4403,11 +4422,11 @@ acec2116d1be02d1348c9f53253e5976
                GHC.Generics.U1
              GHC.Generics.:+: GHC.Generics.C1
                                 ('GHC.Generics.MetaCons
-                                   "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                   "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                 GHC.Generics.U1)
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
-                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                GHC.Generics.U1
              GHC.Generics.:+: GHC.Generics.C1
                                 ('GHC.Generics.MetaCons
@@ -4432,7 +4451,7 @@ acec2116d1be02d1348c9f53253e5976
                    GHC.Base.Nothing
                    -> case Data.Aeson.Types.FromJSON.$w$cparseSumFromString
                              @ ('GHC.Generics.MetaCons
-                                  "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                  "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                              Models.$fFromJSONTool_$s$fConstructorMetaMetaCons2
                              @ a1
                              ww
@@ -4442,7 +4461,7 @@ acec2116d1be02d1348c9f53253e5976
                         GHC.Base.Nothing
                         -> case Data.Aeson.Types.FromJSON.$w$cparseSumFromString
                                   @ ('GHC.Generics.MetaCons
-                                       "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                       "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                   Models.$fFromJSONTool_$s$fConstructorMetaMetaCons1
                                   @ a1
                                   ww
@@ -4468,13 +4487,13 @@ acec2116d1be02d1348c9f53253e5976
                                                GHC.Generics.U1
                                              GHC.Generics.:+: GHC.Generics.C1
                                                                 ('GHC.Generics.MetaCons
-                                                                   "Wipe"
+                                                                   "Spiral"
                                                                    'GHC.Generics.PrefixI
                                                                    'GHC.Types.False)
                                                                 GHC.Generics.U1)
                                             (GHC.Generics.C1
                                                ('GHC.Generics.MetaCons
-                                                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                GHC.Generics.U1
                                              GHC.Generics.:+: GHC.Generics.C1
                                                                 ('GHC.Generics.MetaCons
@@ -4492,13 +4511,13 @@ acec2116d1be02d1348c9f53253e5976
                                                GHC.Generics.U1
                                              GHC.Generics.:+: GHC.Generics.C1
                                                                 ('GHC.Generics.MetaCons
-                                                                   "Wipe"
+                                                                   "Spiral"
                                                                    'GHC.Generics.PrefixI
                                                                    'GHC.Types.False)
                                                                 GHC.Generics.U1)
                                             (GHC.Generics.C1
                                                ('GHC.Generics.MetaCons
-                                                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                GHC.Generics.U1
                                              GHC.Generics.:+: GHC.Generics.C1
                                                                 ('GHC.Generics.MetaCons
@@ -4514,13 +4533,13 @@ acec2116d1be02d1348c9f53253e5976
                                                GHC.Generics.U1
                                              GHC.Generics.:+: GHC.Generics.C1
                                                                 ('GHC.Generics.MetaCons
-                                                                   "Wipe"
+                                                                   "Spiral"
                                                                    'GHC.Generics.PrefixI
                                                                    'GHC.Types.False)
                                                                 GHC.Generics.U1)
                                           @ (GHC.Generics.C1
                                                ('GHC.Generics.MetaCons
-                                                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                GHC.Generics.U1
                                              GHC.Generics.:+: GHC.Generics.C1
                                                                 ('GHC.Generics.MetaCons
@@ -4533,7 +4552,7 @@ acec2116d1be02d1348c9f53253e5976
                                              @ (GHC.Generics.M1
                                                   GHC.Generics.C
                                                   ('GHC.Generics.MetaCons
-                                                     "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                     "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                   GHC.Generics.U1)
                                              @ (GHC.Generics.M1
                                                   GHC.Generics.C
@@ -4553,13 +4572,13 @@ acec2116d1be02d1348c9f53253e5976
                                           GHC.Generics.U1
                                         GHC.Generics.:+: GHC.Generics.C1
                                                            ('GHC.Generics.MetaCons
-                                                              "Wipe"
+                                                              "Spiral"
                                                               'GHC.Generics.PrefixI
                                                               'GHC.Types.False)
                                                            GHC.Generics.U1)
                                        (GHC.Generics.C1
                                           ('GHC.Generics.MetaCons
-                                             "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                             "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                           GHC.Generics.U1
                                         GHC.Generics.:+: GHC.Generics.C1
                                                            ('GHC.Generics.MetaCons
@@ -4575,13 +4594,13 @@ acec2116d1be02d1348c9f53253e5976
                                           GHC.Generics.U1
                                         GHC.Generics.:+: GHC.Generics.C1
                                                            ('GHC.Generics.MetaCons
-                                                              "Wipe"
+                                                              "Spiral"
                                                               'GHC.Generics.PrefixI
                                                               'GHC.Types.False)
                                                            GHC.Generics.U1)
                                      @ (GHC.Generics.C1
                                           ('GHC.Generics.MetaCons
-                                             "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                             "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                           GHC.Generics.U1
                                         GHC.Generics.:+: GHC.Generics.C1
                                                            ('GHC.Generics.MetaCons
@@ -4594,7 +4613,7 @@ acec2116d1be02d1348c9f53253e5976
                                         @ (GHC.Generics.M1
                                              GHC.Generics.C
                                              ('GHC.Generics.MetaCons
-                                                "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                              GHC.Generics.U1)
                                         @ (GHC.Generics.M1
                                              GHC.Generics.C
@@ -4614,13 +4633,13 @@ acec2116d1be02d1348c9f53253e5976
                                      GHC.Generics.U1
                                    GHC.Generics.:+: GHC.Generics.C1
                                                       ('GHC.Generics.MetaCons
-                                                         "Wipe"
+                                                         "Spiral"
                                                          'GHC.Generics.PrefixI
                                                          'GHC.Types.False)
                                                       GHC.Generics.U1)
                                   (GHC.Generics.C1
                                      ('GHC.Generics.MetaCons
-                                        "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                        "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                      GHC.Generics.U1
                                    GHC.Generics.:+: GHC.Generics.C1
                                                       ('GHC.Generics.MetaCons
@@ -4636,13 +4655,13 @@ acec2116d1be02d1348c9f53253e5976
                                      GHC.Generics.U1
                                    GHC.Generics.:+: GHC.Generics.C1
                                                       ('GHC.Generics.MetaCons
-                                                         "Wipe"
+                                                         "Spiral"
                                                          'GHC.Generics.PrefixI
                                                          'GHC.Types.False)
                                                       GHC.Generics.U1)
                                 @ (GHC.Generics.C1
                                      ('GHC.Generics.MetaCons
-                                        "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                        "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                      GHC.Generics.U1
                                    GHC.Generics.:+: GHC.Generics.C1
                                                       ('GHC.Generics.MetaCons
@@ -4660,7 +4679,7 @@ acec2116d1be02d1348c9f53253e5976
                                    @ (GHC.Generics.M1
                                         GHC.Generics.C
                                         ('GHC.Generics.MetaCons
-                                           "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                           "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                         GHC.Generics.U1)
                                    @ a1
                                    x)) }
@@ -4673,11 +4692,11 @@ acec2116d1be02d1348c9f53253e5976
                                 GHC.Generics.U1
                               GHC.Generics.:+: GHC.Generics.C1
                                                  ('GHC.Generics.MetaCons
-                                                    "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                    "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                  GHC.Generics.U1)
                              (GHC.Generics.C1
                                 ('GHC.Generics.MetaCons
-                                   "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                   "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                 GHC.Generics.U1
                               GHC.Generics.:+: GHC.Generics.C1
                                                  ('GHC.Generics.MetaCons
@@ -4693,11 +4712,11 @@ acec2116d1be02d1348c9f53253e5976
                                 GHC.Generics.U1
                               GHC.Generics.:+: GHC.Generics.C1
                                                  ('GHC.Generics.MetaCons
-                                                    "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                    "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                  GHC.Generics.U1)
                            @ (GHC.Generics.C1
                                 ('GHC.Generics.MetaCons
-                                   "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                   "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                 GHC.Generics.U1
                               GHC.Generics.:+: GHC.Generics.C1
                                                  ('GHC.Generics.MetaCons
@@ -4715,11 +4734,11 @@ acec2116d1be02d1348c9f53253e5976
                               @ (GHC.Generics.M1
                                    GHC.Generics.C
                                    ('GHC.Generics.MetaCons
-                                      "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                      "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                    GHC.Generics.U1)
                               @ a1
                               x)) }) -}
-d83997f78b7066577450c746e42796b9
+e31b8746fa75566c6d7f1a3c3f7402a5
   $w$dUntaggedValueObj ::
     (GHC.Base.String -> GHC.Base.String)
     -> (GHC.Generics.:+:)
@@ -4729,11 +4748,11 @@ d83997f78b7066577450c746e42796b9
             GHC.Generics.U1
           GHC.Generics.:+: GHC.Generics.C1
                              ('GHC.Generics.MetaCons
-                                "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                              GHC.Generics.U1)
          (GHC.Generics.C1
             ('GHC.Generics.MetaCons
-               "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+               "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
             GHC.Generics.U1
           GHC.Generics.:+: GHC.Generics.C1
                              ('GHC.Generics.MetaCons
@@ -4751,11 +4770,11 @@ d83997f78b7066577450c746e42796b9
                               GHC.Generics.U1
                             GHC.Generics.:+: GHC.Generics.C1
                                                ('GHC.Generics.MetaCons
-                                                  "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                                  "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                                GHC.Generics.U1)
                            (GHC.Generics.C1
                               ('GHC.Generics.MetaCons
-                                 "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                 "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                               GHC.Generics.U1
                             GHC.Generics.:+: GHC.Generics.C1
                                                ('GHC.Generics.MetaCons
@@ -4778,7 +4797,7 @@ d83997f78b7066577450c746e42796b9
                         GHC.Generics.R1 x1
                         -> Data.Aeson.Types.ToJSON.$w$cuntaggedValueObj
                              @ ('GHC.Generics.MetaCons
-                                  "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                  "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                              @ Data.Aeson.Types.Generic.Zero
                              Models.$fFromJSONTool_$s$fConstructorMetaMetaCons2
                              @ a1
@@ -4788,7 +4807,7 @@ d83997f78b7066577450c746e42796b9
                         GHC.Generics.L1 x1
                         -> Data.Aeson.Types.ToJSON.$w$cuntaggedValueObj
                              @ ('GHC.Generics.MetaCons
-                                  "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                  "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                              @ Data.Aeson.Types.Generic.Zero
                              Models.$fFromJSONTool_$s$fConstructorMetaMetaCons1
                              @ a1
@@ -4801,7 +4820,7 @@ d83997f78b7066577450c746e42796b9
                              Models.$fFromJSONTool_$s$fConstructorMetaMetaCons
                              @ a1
                              ww } }) -}
-3691ed8b5e249ec582535ba8aa70b6ee
+fad96378789a8d19005dcb78b174623e
   axiom Rep_Tool::
       GHC.Generics.Rep Models.Tool
         = GHC.Generics.D1
@@ -4816,11 +4835,11 @@ d83997f78b7066577450c746e42796b9
                 GHC.Generics.U1
               GHC.Generics.:+: GHC.Generics.C1
                                  ('GHC.Generics.MetaCons
-                                    "Wipe" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                    "Spiral" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                  GHC.Generics.U1)
              GHC.Generics.:+: (GHC.Generics.C1
                                  ('GHC.Generics.MetaCons
-                                    "Blend" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                    "Frame" 'GHC.Generics.PrefixI 'GHC.Types.False)
                                  GHC.Generics.U1
                                GHC.Generics.:+: GHC.Generics.C1
                                                   ('GHC.Generics.MetaCons
@@ -4828,8 +4847,8 @@ d83997f78b7066577450c746e42796b9
                                                      'GHC.Generics.PrefixI
                                                      'GHC.Types.False)
                                                   GHC.Generics.U1))
-3691ed8b5e249ec582535ba8aa70b6ee
-  data Tool = ZipImage | Wipe | Blend | Checkerboard
+fad96378789a8d19005dcb78b174623e
+  data Tool = ZipImage | Spiral | Frame | Checkerboard
 instance GHC.Classes.Eq [Models.Tool] = Models.$fEqTool
 instance Data.Aeson.Types.FromJSON.FromJSON [Models.Tool]
   = Models.$fFromJSONTool
@@ -4839,19 +4858,6 @@ instance GHC.Show.Show [Models.Tool] = Models.$fShowTool
 instance Data.Aeson.Types.ToJSON.ToJSON [Models.Tool]
   = Models.$fToJSONTool
 family instance GHC.Generics.Rep [Models.Tool] = Models.Rep_Tool
-"SPEC/Models $fConstructorMetaMetaCons @ "Blend" @ 'PrefixI @ 'False" [ALWAYS] forall ($dSingI1 :: GHC.Generics.SingI
-                                                                                                     'GHC.Types.False)
-                                                                                      ($dSingI :: GHC.Generics.SingI
-                                                                                                    'GHC.Generics.PrefixI)
-                                                                                      ($dKnownSymbol :: GHC.TypeLits.KnownSymbol
-                                                                                                          "Blend")
-  GHC.Generics.$fConstructorMetaMetaCons @ "Blend"
-                                         @ 'GHC.Generics.PrefixI
-                                         @ 'GHC.Types.False
-                                         $dKnownSymbol
-                                         $dSingI
-                                         $dSingI1
-  = Models.$fFromJSONTool_$s$fConstructorMetaMetaCons1
 "SPEC/Models $fConstructorMetaMetaCons @ "Checkerboard" @ 'PrefixI @ 'False" [ALWAYS] forall ($dSingI1 :: GHC.Generics.SingI
                                                                                                             'GHC.Types.False)
                                                                                              ($dSingI :: GHC.Generics.SingI
@@ -4865,13 +4871,26 @@ family instance GHC.Generics.Rep [Models.Tool] = Models.Rep_Tool
                                          $dSingI
                                          $dSingI1
   = Models.$fFromJSONTool_$s$fConstructorMetaMetaCons
-"SPEC/Models $fConstructorMetaMetaCons @ "Wipe" @ 'PrefixI @ 'False" [ALWAYS] forall ($dSingI1 :: GHC.Generics.SingI
-                                                                                                    'GHC.Types.False)
-                                                                                     ($dSingI :: GHC.Generics.SingI
-                                                                                                   'GHC.Generics.PrefixI)
-                                                                                     ($dKnownSymbol :: GHC.TypeLits.KnownSymbol
-                                                                                                         "Wipe")
-  GHC.Generics.$fConstructorMetaMetaCons @ "Wipe"
+"SPEC/Models $fConstructorMetaMetaCons @ "Frame" @ 'PrefixI @ 'False" [ALWAYS] forall ($dSingI1 :: GHC.Generics.SingI
+                                                                                                     'GHC.Types.False)
+                                                                                      ($dSingI :: GHC.Generics.SingI
+                                                                                                    'GHC.Generics.PrefixI)
+                                                                                      ($dKnownSymbol :: GHC.TypeLits.KnownSymbol
+                                                                                                          "Frame")
+  GHC.Generics.$fConstructorMetaMetaCons @ "Frame"
+                                         @ 'GHC.Generics.PrefixI
+                                         @ 'GHC.Types.False
+                                         $dKnownSymbol
+                                         $dSingI
+                                         $dSingI1
+  = Models.$fFromJSONTool_$s$fConstructorMetaMetaCons1
+"SPEC/Models $fConstructorMetaMetaCons @ "Spiral" @ 'PrefixI @ 'False" [ALWAYS] forall ($dSingI1 :: GHC.Generics.SingI
+                                                                                                      'GHC.Types.False)
+                                                                                       ($dSingI :: GHC.Generics.SingI
+                                                                                                     'GHC.Generics.PrefixI)
+                                                                                       ($dKnownSymbol :: GHC.TypeLits.KnownSymbol
+                                                                                                           "Spiral")
+  GHC.Generics.$fConstructorMetaMetaCons @ "Spiral"
                                          @ 'GHC.Generics.PrefixI
                                          @ 'GHC.Types.False
                                          $dKnownSymbol

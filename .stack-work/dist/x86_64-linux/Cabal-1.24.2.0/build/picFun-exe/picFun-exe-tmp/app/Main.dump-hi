@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-19 17:35:10.675182 UTC
+2017-05-30 18:57:14.956732 UTC
 
 interface main@main:Main 8002
-  interface hash: d39e22964cbf110dfd4b1c6b9eb413d9
-  ABI hash: 3bcbaeca96254b65f6fbd460490aa742
+  interface hash: 332e31e7fbf3486569e72bbcc6c2a1ff
+  ABI hash: 494ecbd760cc869e1edfbc73c83dcb0e
   export-list hash: 7893f28010ba902b5ecab0c14caeb505
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 2f09387325aab7617e6b60fcceee4574
@@ -162,7 +162,7 @@ family instance modules: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOs
                          zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.Zlib.Stream
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
-import  -/  picFun-0.1.0.0@picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Lib a8cd360cc50307c65f39092124c040b5
+import  -/  picFun-0.1.0.0@picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Lib fca898d0c8a33dcf3f87cb15bc680821
 d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -175,12 +175,12 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-359b8035e2eae11116b9f69e3b84d4bb
+971c4968e25f6b3d82e1a1520ca76b5a
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.imagApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-8bf262cce9cc8c57b28e3fe4dd249fad
+4e7181e0fae8aba05512ff57daeefea8
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)

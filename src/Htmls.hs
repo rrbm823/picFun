@@ -1,6 +1,6 @@
+{-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TypeSynonymInstances #-}
 {-# LANGUAGE FlexibleInstances #-}
-{-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 
 module Htmls where
@@ -28,7 +28,7 @@ instance MimeRender HTMLBlaze Html where
     mimeRender _ = renderHtml
   
 instance ToMarkup Tool where
-  toMarkup ZipImage = docTypeHtml $ do
+  toMarkup t = docTypeHtml $ do
     H.head $ do
       script "var handleLeft = function(f) { var oReq = new XMLHttpRequest(); oReq.open('POST', '../postImg/True', true); oReq.setRequestHeader('Content-Type', 'image/jpeg'); oReq.send(f); }; var handleRight = function(f) { var oReq = new XMLHttpRequest(); oReq.open('POST', '../postImg/False', true); oReq.setRequestHeader('Content-Type', 'image/jpeg'); oReq.send(f); };"
     body $ do
@@ -42,8 +42,12 @@ instance ToMarkup Tool where
             --H.input ! A.type_ "submit"
           
         H.td $ do
-          H.img ! A.src "../image/ZipImage" ! A.style "width: 50%; height: 50%"
+          H.img ! A.src link ! A.style "width: 50%; height: 50%"
           --H.form ! A.action "../postImg/Right" ! A.method "POST" ! A.content "image/jpeg" $ do
             --H.input ! A.type_ "file" ! A.accept "image/*"
             --H.input ! A.type_ "submit"
+            where
+              link = case t of
+                ZipImage -> "../image/ZipImage" 
+                Frame -> "../image/Frame"
       
