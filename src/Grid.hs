@@ -1,3 +1,4 @@
+{-# LANGUAGE TupleSections #-}
 {-# LANGUAGE RankNTypes #-}
 {-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE ConstrainedClassMethods #-}
@@ -5,6 +6,12 @@
 {-# LANGUAGE TemplateHaskell #-}
 module Grid where
 
+import Codec.Picture
+import Data.Vector.Storable.Mutable (IOVector)
+import qualified Data.Vector.Storable.Mutable as MV
+import qualified Data.Vector.Storable as V
+
+import Data.Monoid ((<>))
 import qualified Data.Foldable as F
 import Data.List (nub, intercalate)
 import Data.Maybe (mapMaybe, fromMaybe)
@@ -16,8 +23,6 @@ import qualified Lens.Micro.Internal as L
 import Lens.Micro
 import Lens.Micro.TH
 
--- | Comonad Grid implementation taken from https://samtay.github.io/posts/comonadic-game-of-life.html
---
 -- With this interpretation, for a board of size @n x n@
 -- the @(n + 1)@th column/row is the same as the boundary at the @1@th column/row.
 type Board = ZZ St
@@ -27,7 +32,7 @@ type Cell = (Int, Int)
 
 -- | Possible cell states
 data St = Off | On
-  deriving (Eq)
+  deriving (Eq,Show)
 
 -- | One dimensional finite list with cursor context
 --
@@ -42,63 +47,57 @@ data Z a = Z { _zl :: S.Seq a
              } deriving (Eq, Show)
 
 newtype ZZ a = ZZ { _unzz :: Z (Z a) }
-  deriving (Eq) -- TODO possibly implement equality up to shifting
+  deriving (Eq,Show)
 
 makeLenses ''Z
 makeLenses ''ZZ
 
--- | Class for a modular bounded container
---
--- Examples of functions provided for a simple one dimensional list, where appropriate
-class Zipper z where
-  type Index z
-  data Direction z
+vecToSeq v = S.fromFunction ( V.length v ) ((V.!) v)
+--helper functions for indexing
 
-  -- | Shift in a direction
-  shift :: Direction z -> z a -> z a
+data V a = V { _vl :: V.Vector a
+             , _vc :: a
+             , _vi :: Int
+             } deriving (Eq, Show)
 
-  -- | Retrieve current cursor value
-  cursor :: z a -> a
+newtype VV a = VV { _unvv :: V (V a) }
 
-  -- | Retrieve current index value
-  index :: z a -> Index z
+makeLenses ''V
+makeLenses ''VV
 
-  -- | Retrieve neighborhood of current cursor.
-  -- TODO consider keeping in Seq instead of []
-  neighborhood :: z a -> [a]
+instance ZipperS V where
+  type IndexS V = Int
+  data DirectionS V = VL | VR deriving (Eq, Show)
 
-  -- | Destruct to list maintaining order of @(Index z)@, e.g. @(Z ls c rs) -> ls ++ [c] ++ rs@.
-  toList :: z a -> [a]
-
-  -- | Destruct a list into a mapping with indices
-  toMap :: (Comonad z) => z a -> [(Index z, a)]
-  toMap = toList . extend ((,) <$> index <*> cursor)
-
-  -- | Construct zipper from mapping (provide default value so this is always safe, no bottoms)
-  fromMap :: Ord (Index z) => a -> [(Index z, a)] -> z a
-
-  -- | Lookup by possibly denormalised index (still safe from modularity).
-  --
-  -- e.g. [1,2] ! 2 == 1
-  (!) :: z a -> (Index z) -> a
-
-  -- | Adjust value at specified index
-  adjust :: (a -> a) -> Index z -> z a -> z a
-
-  -- | Update value at specified index
-  update :: a -> Index z -> z a -> z a
-  update = adjust . const
-
-  -- | Normalize @Index z@ value with respect to modular boundaries
-  normalize :: z a -> (Index z) -> (Index z)
-
-  -- | Get size (maximum of @Index z@).
-  size :: z a -> (Index z)
+  cursorS = _vc
+  indexS = _vi
+  sizeS (V l _ _) = V.length l + 1
+  (!>) v k = v ^. vix k
+  adjustS f k v = v & vix k %~ f
+  neighborhoodS (V l _ _)
+    | V.length l <= 2 = V.toList l
+    | otherwise       = map ((V.!) l) [0, V.length l - 1]
+  toListS (V l c i) = V.toList . V.reverse $ l <> (V.cons c f)
+    where (f, b) = V.splitAt i l
+  fromMapS _ [] = error "Zipper must have length greater than zero."
+  fromMapS a m = V (V.fromList ys) (iToa 0) 0
+    where ys = map iToa rng
+          iToa i = fromMaybe a $ lookup i m
+          l    = maximum . (0:) $ map fst m
+          rng  = if l == 0 then [] else [l,(l-1)..1]
+  shiftS d v@(V l c i)
+    | V.null l = v -- shifting length zero amounts to nothing
+    | d == VL   = V (V.snoc xs c) x xi
+    | d == VR   = V (V.cons c ys) y yi
+    where
+      (x, xs) = (V.head l, V.tail l)
+      (ys, y) = (V.init l, V.last l)
+      xi        = (i - 1) `mod` sizeS v
+      yi        = (i + 1) `mod` sizeS v
 
 instance Zipper Z where
   type Index Z = Int
   data Direction Z = L | R deriving (Eq, Show)
-
   cursor = _zc
   index = _zi
   normalize z = (`mod` (size z))
@@ -191,9 +190,6 @@ instance Comonad ZZ where
       (x,y)      = index z
       fromF      = S.fromFunction
 
-compose :: Int -> (a -> a) -> (a -> a)
-compose = (foldr (.) id .) . replicate
-
 zix :: Int -> Lens' (Z a) a
 zix k f z@(Z l c i) = maybe
   ((\x -> Z l x i) <$> f c)
@@ -206,3 +202,121 @@ zToLix z@(Z _ _ i) k
   | i > n  = Just $ i - n - 1
   where n = k `mod` s
         s = size z
+
+vix :: V.Storable a => Int -> Lens' (V a) a
+vix k f v@(V l c i ) = maybe
+  ((\x -> V l x i) <$> f c)
+  (\n -> (\x -> V (V.update_ l (V.singleton n) (V.singleton x)) c i) <$> f (l V.! n)) (vToLix v k)
+
+vToLix :: V.Storable a => V a -> Int -> Maybe Int
+vToLix z@(V l _ i) k
+  | i == n = Nothing
+  | i < n  = Just $ s - (n - i) - 1
+  | i > n  = Just $ i - n - 1
+  where n = k `mod` s
+        s = V.length l + 1
+
+compose :: Int -> (a -> a) -> (a -> a)
+compose = (foldr (.) id .) . replicate
+
+board :: Int -- ^ Length
+      -> Int -- ^ Height
+      -> [Cell] -- ^ List of cells initially alive
+      -> Board
+board l h = fromMap Off . ins (l-1,h-1) . map (,On)
+  where ins m cs = if (m, On) `elem` cs
+                   then cs
+                   else ((m,Off):cs)
+
+-- | Class for a modular bounded container
+--
+-- Examples of functions provided for a simple one dimensional list, where appropriate
+class Zipper z where
+  type Index z
+  data Direction z
+
+  -- | Shift in a direction
+  shift :: Direction z -> z a -> z a
+
+  -- | Retrieve current cursor value
+  cursor :: z a -> a
+
+  -- | Retrieve current index value
+  index :: z a -> Index z
+
+  -- | Retrieve neighborhood of current cursor.
+  -- TODO consider keeping in Seq instead of []
+  neighborhood :: z a -> [a]
+
+  -- | Destruct to list maintaining order of @(Index z)@, e.g. @(Z ls c rs) -> ls ++ [c] ++ rs@.
+  toList :: z a -> [a]
+
+  -- | Destruct a list into a mapping with indices
+  toMap :: (Comonad z) => z a -> [(Index z, a)]
+  toMap = toList . extend ((,) <$> index <*> cursor)
+
+  -- | Construct zipper from mapping (provide default value so this is always safe, no bottoms)
+  fromMap :: Ord (Index z) => a -> [(Index z, a)] -> z a
+
+  -- | Lookup by possibly denormalised index (still safe from modularity).
+  --
+  -- e.g. [1,2] ! 2 == 1
+  (!) :: z a -> (Index z) -> a
+
+  -- | Adjust value at specified index
+  adjust :: (a -> a) -> Index z -> z a -> z a
+
+  -- | Update value at specified index
+  update :: a -> Index z -> z a -> z a
+  update = adjust . const
+
+  -- | Normalize @Index z@ value with respect to modular boundaries
+  normalize :: z a -> (Index z) -> (Index z)
+
+  -- | Get size (maximum of @Index z@).
+  size :: z a -> (Index z)
+
+class ZipperS z where
+  type IndexS z
+  data DirectionS z
+
+  -- | Shift in a direction
+  shiftS :: V.Storable a => DirectionS z -> z a -> z a
+
+  -- | Retrieve current cursor value
+  cursorS :: V.Storable a => z a -> a
+
+  -- | Retrieve current index value
+  indexS :: V.Storable a => z a -> IndexS z
+
+  -- | Retrieve neighborhood of current cursor.
+  -- TODO consider keeping in Seq instead of []
+  neighborhoodS :: V.Storable a => z a -> [a]
+
+  -- | Destruct to list maintaining order of @(Index z)@, e.g. @(Z ls c rs) -> ls ++ [c] ++ rs@.
+  toListS :: V.Storable a => z a -> [a]
+
+  -- | Destruct a list into a mapping with indices
+  toMapS :: (V.Storable (IndexS z, a), V.Storable a, Comonad z) => z a -> [(IndexS z, a)]
+  toMapS = toListS . extend ((,) <$> indexS <*> cursorS)
+
+  -- | Construct zipper from mapping (provide default value so this is always safe, no bottoms)
+  fromMapS :: (V.Storable a, Ord (Index z)) => a -> [(IndexS z, a)] -> z a
+
+  -- | Lookup by possibly denormalised index (still safe from modularity).
+  --
+  -- e.g. [1,2] ! 2 == 1
+  (!>) :: V.Storable a => z a -> (IndexS z) -> a
+
+  -- | Adjust value at specified index
+  adjustS :: V.Storable a => (a -> a) -> IndexS z -> z a -> z a
+
+  -- | Update value at specified index
+  updateS :: V.Storable a => a -> IndexS z -> z a -> z a
+  updateS = adjustS . const
+
+  -- | Normalize @Index z@ value with respect to modular boundaries
+  normalizeS :: V.Storable a =>  z a -> (IndexS z) -> (IndexS z)
+
+  -- | Get size (maximum of @Index z@).
+  sizeS :: V.Storable a => z a -> (IndexS z)

@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-25 21:41:14.287822 UTC
+2017-06-08 18:55:21.956349 UTC
 
 interface picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Htmls [orphan module] 8002
-  interface hash: 9402487cae97be7de7c4862b67171bb6
-  ABI hash: 5cc60e164c0b79a7291b833ddffe2c16
-  export-list hash: c3f37b069a7cee912af8b3c217331b34
-  orphan hash: 3781c10923204d9d95bae9c050150099
+  interface hash: aae7e313561f4604a330334176a9e271
+  ABI hash: 66aa1e2126dbb30f5ec7eb36c90a41bc
+  export-list hash: 916788173142834e424c5476e53f681f
+  orphan hash: 1df9567ed14450c0d9d003518909f466
   flag hash: d81c5bd899ee9bae2e83b7d3242d4f56
   sig of: Nothing
   used TH splices: False
@@ -133,7 +133,9 @@ import  -/  http-media-0.6.4@http-media-0.6.4-Ic2rsgpbcUZCv89ocBCZpr:Network.HTT
 import  -/  http-media-0.6.4@http-media-0.6.4-Ic2rsgpbcUZCv89ocBCZpr:Network.HTTP.Media.MediaType d33bfddaa1306ad267f9a6689258b69b
 import  -/  Models a583d3d139141f01a428355c3be9e3e0
   exports: 649c66b751c1cc1240dccaa93aa3621e
+  Checkerboard d18c045cf311857166018e7c7b89bb5f
   Frame 268e61aa0777504eda62811730b0a81e
+  Spiral 0d48b9deaa765ca4c31d0e7122af2a74
   Tool fad96378789a8d19005dcb78b174623e
   ZipImage e541d41fd7cffcc77a9e57f0f14ed6ff
 import  -/  servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API ea4c313cfea87bcfbf12f5ad55ca0674
@@ -1355,7 +1357,7 @@ f15bcad8d454861faa53d8609e7f7f2f
     -> Text.Blaze.Internal.MarkupM b
     -> Data.ByteString.Builder.Internal.Builder
   {- Arity: 2, Strictness: <L,C(U)><S,1*U>, Inline: NOINLINE -}
-4579913ec66290dffeffc6b97c4bc73e
+9a322e848af820b649953a4575eb0fcf
   $fToMarkupTool :: Text.Blaze.ToMarkup Models.Tool
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -1363,1104 +1365,12 @@ f15bcad8d454861faa53d8609e7f7f2f
                   @ Models.Tool
                   Htmls.$fToMarkupTool_$ctoMarkup
                   Htmls.$fToMarkupTool_$ctoMarkup -}
-41c379c5395a31ed9db7b25eda2736c5
+72fff26d22aeccf7d42b8de1d21cbd91
   $fToMarkupTool1 :: Text.Blaze.Internal.ChoiceString
   {- Strictness: m2,
      Unfolding: (Text.Blaze.Internal.String Htmls.$fToMarkupTool2) -}
-98684c0f3c179d5fe6db431dae904832
-  $fToMarkupTool10 :: Text.Blaze.Internal.StaticString
-  {- Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool13
-                   Htmls.$fToMarkupTool12
-                   Htmls.$fToMarkupTool_t2) -}
-a3540efdfe5e56a6fbbca6f0dc134372
-  $fToMarkupTool100 :: Text.Blaze.Internal.StaticString
-  {- Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool103
-                   Htmls.$fToMarkupTool102
-                   Htmls.$fToMarkupTool_t19) -}
-b587ca1da218a59afda4b611803808b1
-  $fToMarkupTool101 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w18
-                   0#
-                   ipv }) -}
-cf6e5d94baa35043cc9bec1e73024b6f
-  $fToMarkupTool102 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t19 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-c819f16c841115d83c439dd63a3a2837
-  $fToMarkupTool103 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w18) -}
-edbfb92c85e2abeb0940920d17636654
-  $fToMarkupTool104 :: Text.Blaze.Internal.MarkupM ()
-  {- Unfolding: (Text.Blaze.Internal.Parent
-                   @ ()
-                   @ ()
-                   Htmls.$fToMarkupTool116
-                   Htmls.$fToMarkupTool112
-                   Htmls.$fToMarkupTool108
-                   Htmls.$fToMarkupTool105) -}
-31a92e5579689fb69d2e4318d84019fe
-  $fToMarkupTool105 :: Text.Blaze.Internal.MarkupM ()
-  {- Strictness: m5,
-     Unfolding: (Text.Blaze.Internal.Content
-                   @ ()
-                   Htmls.$fToMarkupTool106) -}
-760b2499e6b0f01660432554d37a2101
-  $fToMarkupTool106 :: Text.Blaze.Internal.ChoiceString
-  {- Strictness: m2,
-     Unfolding: (Text.Blaze.Internal.String Htmls.$fToMarkupTool107) -}
-04cc66db562dc349eb83e42bc49e6ad5
-  $fToMarkupTool107 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString#
-                   "Combine two pictures to create a cool new image"#) -}
-c01aa57976db3b6eec11d81859ea6e89
-  $fToMarkupTool108 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool111
-                   Htmls.$fToMarkupTool110
-                   Htmls.$fToMarkupTool_t20) -}
-7c52e3cc30b7c6eea349a3389cf02462
-  $fToMarkupTool109 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w19
-                   0#
-                   ipv }) -}
-cc08d449cca0a9992284c0250dd3c61a
-  $fToMarkupTool11 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w1
-                   0#
-                   ipv }) -}
-968e9311925826eba5e2cf14c036949c
-  $fToMarkupTool110 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t20 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-5670a24883167152f8eadcf367979c5a
-  $fToMarkupTool111 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w19) -}
-1b7ba9d185f1da1e0fc6092e0874a293
-  $fToMarkupTool112 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool115
-                   Htmls.$fToMarkupTool114
-                   Htmls.$fToMarkupTool_t21) -}
-5966c3709e2bd61507378b721f59599b
-  $fToMarkupTool113 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w20
-                   0#
-                   ipv }) -}
-617596ed76b4f585346d8ac8cc32f3f3
-  $fToMarkupTool114 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t21 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-5769f708f056d806a87d2a16a33fe3d5
-  $fToMarkupTool115 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w20) -}
-c6460b816b74f14d880d8b16eff20f72
-  $fToMarkupTool116 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool119
-                   Htmls.$fToMarkupTool118
-                   Htmls.$fToMarkupTool_t22) -}
-9d3570e81abd04ed95106abbefa65ac8
-  $fToMarkupTool117 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w21
-                   0#
-                   ipv }) -}
-f55fe70489b551df7dc3d03bd7c3ceae
-  $fToMarkupTool118 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t22 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-67f6dba6ae4cfabea899664d0f36f3a7
-  $fToMarkupTool119 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w21) -}
-e03fa57efabc0200003268451a841908
-  $fToMarkupTool12 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t2 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-3cedd99b7d325b94a96a25fe35eb292b
-  $fToMarkupTool120 :: Text.Blaze.Internal.StaticString
-  {- Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool123
-                   Htmls.$fToMarkupTool122
-                   Htmls.$fToMarkupTool_t23) -}
-8aaa31a15323ba2051ca654dee85fc59
-  $fToMarkupTool121 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w22
-                   0#
-                   ipv }) -}
-ff12f6368c6d728c0319d7f39510fae3
-  $fToMarkupTool122 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t23 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-fa2729835b3228af0f248804a5f09603
-  $fToMarkupTool123 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w22) -}
-8ce189d4311b21c0f8c20769c7b8adf2
-  $fToMarkupTool124 :: Text.Blaze.Internal.StaticString
-  {- Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool127
-                   Htmls.$fToMarkupTool126
-                   Htmls.$fToMarkupTool_t24) -}
-40848717eb9a7f9ec5d794d299e3d82f
-  $fToMarkupTool125 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w23
-                   0#
-                   ipv }) -}
-0840c25a2e80dc2ca1fa4783130d2c3a
-  $fToMarkupTool126 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t24 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-490abf64201709ee51fa0569139e4cf7
-  $fToMarkupTool127 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w23) -}
-09df47ac8997cc96098c1bc2a5f27162
-  $fToMarkupTool128 :: Text.Blaze.Internal.StaticString
-  {- Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool131
-                   Htmls.$fToMarkupTool130
-                   Htmls.$fToMarkupTool_t25) -}
-a172b3a2933d56e0716d2ce33c98c74c
-  $fToMarkupTool129 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w24
-                   0#
-                   ipv }) -}
-a9ce5fe9dac56a521d7ae29398aaac6f
-  $fToMarkupTool13 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w1) -}
-e5e94bd51b9fcea9025957afc00387d2
-  $fToMarkupTool130 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t25 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-68df514d47ea6e2e73c32c081675760b
-  $fToMarkupTool131 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w24) -}
-1082f3b14bb5b9c5331c70c6f066a068
-  $fToMarkupTool132 :: Text.Blaze.Internal.MarkupM ()
-  {- Unfolding: (Text.Blaze.Internal.Parent
-                   @ ()
-                   @ ()
-                   Htmls.$fToMarkupTool155
-                   Htmls.$fToMarkupTool151
-                   Htmls.$fToMarkupTool147
-                   Htmls.$fToMarkupTool133) -}
-be215a4dc0f5c5fe747c4df66c267495
-  $fToMarkupTool133 :: Text.Blaze.Internal.MarkupM ()
-  {- Unfolding: (Text.Blaze.Internal.Parent
-                   @ ()
-                   @ ()
-                   Htmls.$fToMarkupTool_f
-                   Htmls.$fToMarkupTool_f1
-                   Htmls.$fToMarkupTool_f2
-                   Htmls.$fToMarkupTool134) -}
-7601d9c666eda231bcdd956294f8ac28
-  $fToMarkupTool134 :: Text.Blaze.Internal.MarkupM ()
-  {- Unfolding: (Text.Blaze.Internal.external
-                   @ ()
-                   Htmls.$fToMarkupTool135) -}
-7a9ab24236811d74527af32acdc511d8
-  $fToMarkupTool135 :: Text.Blaze.Internal.MarkupM ()
-  {- Unfolding: (Text.Blaze.Internal.Content
-                   @ ()
-                   Htmls.$fToMarkupTool136) -}
-56b42bf639ce8830837621d33f577acb
-  $fToMarkupTool136 :: Text.Blaze.Internal.ChoiceString
-  {- Unfolding: (Text.Blaze.Internal.String
-                   Htmls.$fToMarkupTool137) -}
-94069bc2ec25bd28ac58b13ff82c6c7a
-  $fToMarkupTool137 :: [GHC.Types.Char]
-33e50c67541d2b0f3acb2e0d222a51a7
-  $fToMarkupTool138 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w25
-                   0#
-                   ipv }) -}
-3f664e757a29cff541ba62856823d11a
-  $fToMarkupTool139 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t26 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-b776e37900775568f151b5cdfdcfaa5b
-  $fToMarkupTool14 :: Text.Blaze.Internal.ChoiceString
-  {- Strictness: m2,
-     Unfolding: (Text.Blaze.Internal.String Htmls.$fToMarkupTool15) -}
-a549f7e18a53820c5045c7ebac3bfa63
-  $fToMarkupTool140 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w25) -}
-1de706862e66adc16126402f35b5fed6
-  $fToMarkupTool141 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w26
-                   0#
-                   ipv }) -}
-2e655603e68e04a13a0b5f4c237b438b
-  $fToMarkupTool142 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t27 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-5abd1e5c704719160ebcf87b93c5e627
-  $fToMarkupTool143 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w26) -}
-2a6045878494929a589b9044fb25693a
-  $fToMarkupTool144 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w27
-                   0#
-                   ipv }) -}
-01b08b1200be7671794c861fb74acca4
-  $fToMarkupTool145 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t28 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-18d8f3f95eed7ea0a750c112c4a71cf3
-  $fToMarkupTool146 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w27) -}
-74c66715951beadea8de83004626ff1a
-  $fToMarkupTool147 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool150
-                   Htmls.$fToMarkupTool149
-                   Htmls.$fToMarkupTool_t29) -}
-f45c2636077593caacec4e2dd321b9d8
-  $fToMarkupTool148 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w28
-                   0#
-                   ipv }) -}
-43c933cbb734a83dc426f8d3f9ba4cad
-  $fToMarkupTool149 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t29 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-0b41801206a095f2beb0aee47b428cd5
-  $fToMarkupTool15 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString#
-                   "width: 50%; height: 50%"#) -}
-ef0c2d925b8e63dbe4b56b2289b307bd
-  $fToMarkupTool150 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w28) -}
-63b1aaeb94baacda73b177e50acee81e
-  $fToMarkupTool151 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool154
-                   Htmls.$fToMarkupTool153
-                   Htmls.$fToMarkupTool_t30) -}
-b00131686f80fa4567cc82b7aa282d8d
-  $fToMarkupTool152 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w29
-                   0#
-                   ipv }) -}
-3a5fea2e81b3082b4d0639376008d6f7
-  $fToMarkupTool153 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t30 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-499fea358991237327c493ab399e5df0
-  $fToMarkupTool154 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w29) -}
-6f549a28713d639de8ccebfd84229295
-  $fToMarkupTool155 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool158
-                   Htmls.$fToMarkupTool157
-                   Htmls.$fToMarkupTool_t31) -}
-f7635f2d68be49c896e9708573ab00f2
-  $fToMarkupTool156 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w30
-                   0#
-                   ipv }) -}
-a08a3dff1291e78b58d63d79e13c69e4
-  $fToMarkupTool157 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t31 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-3f0da765512ae34f9ed66bc4311c97ea
-  $fToMarkupTool158 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w30) -}
-c57309546c8cf41d6f57410efdc9908e
-  $fToMarkupTool159 :: Text.Blaze.Internal.StaticString
-  {- Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool162
-                   Htmls.$fToMarkupTool161
-                   Htmls.$fToMarkupTool_t32) -}
-9ba0a4ea46769ab0f9af4402823ceba6
-  $fToMarkupTool16 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool19
-                   Htmls.$fToMarkupTool18
-                   Htmls.$fToMarkupTool_t3) -}
-47ec860dcffba623cc14c2e55c6eeeed
-  $fToMarkupTool160 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w31
-                   0#
-                   ipv }) -}
-2ed16dca59ed380fe77a1e2f24a7324c
-  $fToMarkupTool161 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t32 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-572eabcb8e53340a8b08aa2591e96e14
-  $fToMarkupTool162 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w31) -}
-02d0d097f25dbbaa7dc0f6cbab7cd4a4
-  $fToMarkupTool163 :: Text.Blaze.Internal.StaticString
-  {- Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool166
-                   Htmls.$fToMarkupTool165
-                   Htmls.$fToMarkupTool_t33) -}
-5e671c84fe176966a368a15f2c0a19e0
-  $fToMarkupTool164 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w32
-                   0#
-                   ipv }) -}
-8ffcd16adef3b44ddadd0276fe52ea8e
-  $fToMarkupTool165 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t33 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-d71e6046dc7d1d5780ef16f60ef05a04
-  $fToMarkupTool166 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w32) -}
-b5a62fc1cd89b89921299c9192989275
-  $fToMarkupTool167 :: Text.Blaze.Internal.StaticString
-  {- Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool170
-                   Htmls.$fToMarkupTool169
-                   Htmls.$fToMarkupTool_t34) -}
-44355b19cff8d359ea7bc03c2906e855
-  $fToMarkupTool168 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w33
-                   0#
-                   ipv }) -}
-e785b042ba0b51b5fe89b6dfde7cde25
-  $fToMarkupTool169 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t34 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-a38eff578a093beb94210a9dd357948e
-  $fToMarkupTool17 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w2
-                   0#
-                   ipv }) -}
-8a284eafb39a5753199f4f160e9521c4
-  $fToMarkupTool170 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w33) -}
-6f5f3f790e8e620edafe92ca5f2ed193
-  $fToMarkupTool18 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t3 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-c52aee655166aaba3a0391a441a96b6c
-  $fToMarkupTool19 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w2) -}
-25e0bcff5b1169471cee4fecd4e08a65
-  $fToMarkupTool2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "../image/Frame"#) -}
-896e1e371866af67e183bfe5e7661638
-  $fToMarkupTool20 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool23
-                   Htmls.$fToMarkupTool22
-                   Htmls.$fToMarkupTool_t4) -}
-cd384c4e7a9e06231ed73119143cb9ff
-  $fToMarkupTool21 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w3
-                   0#
-                   ipv }) -}
-19dde5d7740d59e7ae5d9446c0d86db1
-  $fToMarkupTool22 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t4 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-ba8fd400f58131fc410de98ceb080610
-  $fToMarkupTool23 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w3) -}
-4ed6481059fbc5c2c1b3bd5a32198936
-  $fToMarkupTool24 :: Text.Blaze.Internal.StaticString
-  {- Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool27
-                   Htmls.$fToMarkupTool26
-                   Htmls.$fToMarkupTool_t5) -}
-97826b0ce82f469d50816ffb8292567e
-  $fToMarkupTool25 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w4
-                   0#
-                   ipv }) -}
-434e0bd90e8ec262487c722976174828
-  $fToMarkupTool26 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t5 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-bb5baa578f632c8b38924a793517448b
-  $fToMarkupTool27 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w4) -}
-6a4f86559297ccbe2dff00c62323bb04
-  $fToMarkupTool28 :: Text.Blaze.Internal.StaticString
-  {- Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool31
-                   Htmls.$fToMarkupTool30
-                   Htmls.$fToMarkupTool_t6) -}
-cb22558079b1d95b86c32a2b9c5b7852
-  $fToMarkupTool29 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w5
-                   0#
-                   ipv }) -}
-e343a215653bceb43c6c84f9b648bf2b
-  $fToMarkupTool3 :: Text.Blaze.Internal.ChoiceString
-  {- Strictness: m2,
-     Unfolding: (Text.Blaze.Internal.String Htmls.$fToMarkupTool4) -}
-289b88e92cb996522525ebe3bb91e55f
-  $fToMarkupTool30 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t6 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-b81e5eef99525b75c2dc2e7445931fd9
-  $fToMarkupTool31 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w5) -}
-94ff92e047de2a2f76d4be65efc234ed
-  $fToMarkupTool32 :: Text.Blaze.Internal.StaticString
-  {- Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool35
-                   Htmls.$fToMarkupTool34
-                   Htmls.$fToMarkupTool_t7) -}
-88e02abc8e66e7838e2435c9b391c374
-  $fToMarkupTool33 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w6
-                   0#
-                   ipv }) -}
-c42b88dec90a594e7ef733caed2a2549
-  $fToMarkupTool34 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t7 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-b5664c25c7d8c9e48e34c769356c2a95
-  $fToMarkupTool35 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w6) -}
-079cb4dbdf3c593768804f50b4819cf8
-  $fToMarkupTool36 :: Text.Blaze.Internal.MarkupM ()
-  {- Unfolding: (Text.Blaze.Internal.Parent
-                   @ ()
-                   @ ()
-                   Htmls.$fToMarkupTool78
-                   Htmls.$fToMarkupTool76
-                   Htmls.$fToMarkupTool74
-                   Htmls.$fToMarkupTool37) -}
-fb97a926f152a993f8b46566f89ebf4f
-  $fToMarkupTool37 :: Text.Blaze.Internal.MarkupM ()
-  {- Unfolding: (Text.Blaze.Internal.Append
-                   @ ()
-                   @ ()
-                   @ ()
-                   Htmls.$fToMarkupTool71
-                   Htmls.$fToMarkupTool38) -}
-d6f81e73693943fe896bac6a99cc1aa4
-  $fToMarkupTool38 :: Text.Blaze.Html.Html
-  {- Strictness: m8,
-     Unfolding: (Text.Blaze.Internal.AddAttribute
-                   @ ()
-                   Htmls.$fToMarkupTool67
-                   Htmls.$fToMarkupTool63
-                   Htmls.$fToMarkupTool61
-                   Htmls.$fToMarkupTool39) -}
-c4b8e40bf97d05fad597245567a1dfd5
-  $fToMarkupTool39 :: Text.Blaze.Internal.MarkupM ()
-  {- Strictness: m8,
-     Unfolding: (Text.Blaze.Internal.AddAttribute
-                   @ ()
-                   Htmls.$fToMarkupTool57
-                   Htmls.$fToMarkupTool53
-                   Htmls.$fToMarkupTool51
-                   Htmls.$fToMarkupTool40) -}
-4305b434f760d971f76c01d2c9c42303
-  $fToMarkupTool4 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "../image/ZipImage"#) -}
-7a83618cae86194a671962aa05c370e2
-  $fToMarkupTool40 :: Text.Blaze.Internal.MarkupM ()
-  {- Strictness: m8,
-     Unfolding: (Text.Blaze.Internal.AddAttribute
-                   @ ()
-                   Htmls.$fToMarkupTool47
-                   Htmls.$fToMarkupTool43
-                   Htmls.$fToMarkupTool41
-                   Text.Blaze.Html5.input) -}
-9c99e855ae3b30c16981a4ae01d5a44e
-  $fToMarkupTool41 :: Text.Blaze.Internal.ChoiceString
-  {- Strictness: m2,
-     Unfolding: (Text.Blaze.Internal.String Htmls.$fToMarkupTool42) -}
-faba70bb57a3301df74d96c2d034e68e
-  $fToMarkupTool42 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "file"#) -}
-b4938ea46327181f041df28920143049
-  $fToMarkupTool43 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool46
-                   Htmls.$fToMarkupTool45
-                   Htmls.$fToMarkupTool_t8) -}
-f3f043e3eff640e7ef6c2343f1f8dc55
-  $fToMarkupTool44 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w7
-                   0#
-                   ipv }) -}
-bc9ccbceedc27549ccd8c3186795eddb
-  $fToMarkupTool45 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t8 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-c6811988d6a83acf9297c5aaa966dc0d
-  $fToMarkupTool46 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w7) -}
-e67986058ed326f2b47aff9409852b52
-  $fToMarkupTool47 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool50
-                   Htmls.$fToMarkupTool49
-                   Htmls.$fToMarkupTool_t9) -}
-d8110d02dd77a9bd46e399e9aab1e08e
-  $fToMarkupTool48 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w8
-                   0#
-                   ipv }) -}
-0b90ffb6e368bf81c460c78f29acbcfe
-  $fToMarkupTool49 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t9 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-5c8b6e33506729c15918d6b42a604362
-  $fToMarkupTool5 :: Text.Blaze.Internal.AttributeValue
-  {- Strictness: x -}
-fb21f42bb86447825f2483ef03d37352
-  $fToMarkupTool50 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w8) -}
-743986ddf45932699d5fe2b27e217587
-  $fToMarkupTool51 :: Text.Blaze.Internal.ChoiceString
-  {- Strictness: m2,
-     Unfolding: (Text.Blaze.Internal.String Htmls.$fToMarkupTool52) -}
-44bbba89d8906eaca49b4326da0be0e9
-  $fToMarkupTool52 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "image/jpeg"#) -}
-45cb7005f24ce8a9473d825315eee514
-  $fToMarkupTool53 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool56
-                   Htmls.$fToMarkupTool55
-                   Htmls.$fToMarkupTool_t10) -}
-359bc098fe08f29b8618d0c534e56834
-  $fToMarkupTool54 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w9
-                   0#
-                   ipv }) -}
-8b270d1850a54e19d0ee29d53ad4ba2d
-  $fToMarkupTool55 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t10 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-5ac9a77a9a54f0c1b81d91bd2335c546
-  $fToMarkupTool56 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w9) -}
-8ea2656bfdd4248878627f95a4a3adfb
-  $fToMarkupTool57 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool60
-                   Htmls.$fToMarkupTool59
-                   Htmls.$fToMarkupTool_t11) -}
-b3ee106718f08e0ed99cf5f7f0f7780c
-  $fToMarkupTool58 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w10
-                   0#
-                   ipv }) -}
-35f100e7f6a123fbc0fedc3fb37cf4cd
-  $fToMarkupTool59 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t11 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-8584b4dbaf8e08851c8a3d0f781f6f5b
-  $fToMarkupTool6 :: Text.Blaze.Internal.StaticString
-  {- Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool9
-                   Htmls.$fToMarkupTool8
-                   Htmls.$fToMarkupTool_t1) -}
-80ce1eddb87002935a2fec9647b4f8b2
-  $fToMarkupTool60 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w10) -}
-77b9c4fe9f502fc3241f5ff0cab147c9
-  $fToMarkupTool61 :: Text.Blaze.Internal.ChoiceString
-  {- Strictness: m2,
-     Unfolding: (Text.Blaze.Internal.String Htmls.$fToMarkupTool62) -}
-445e4e2c77799ba33e79da1c4d134f0d
-  $fToMarkupTool62 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString#
-                   "handleRight(this.files[0])"#) -}
-57cc7739b8dc38e262e1d10844083352
-  $fToMarkupTool63 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool66
-                   Htmls.$fToMarkupTool65
-                   Htmls.$fToMarkupTool_t12) -}
-526a7773b4738ae59642b8603bc93e8b
-  $fToMarkupTool64 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w11
-                   0#
-                   ipv }) -}
-ae8327df303cb0a8ed60931e87d912e3
-  $fToMarkupTool65 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t12 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-f7be6b6f80a14a78f4c75246c54a6073
-  $fToMarkupTool66 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w11) -}
-c8b24d17ae32d7dc82aedd57f9a7cd38
-  $fToMarkupTool67 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool70
-                   Htmls.$fToMarkupTool69
-                   Htmls.$fToMarkupTool_t13) -}
-6c11416ebf0435ea1fdb8849ae5a3a5c
-  $fToMarkupTool68 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w12
-                   0#
-                   ipv }) -}
-627e7dc0b03b77d59a0d93656826ee8a
-  $fToMarkupTool69 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t13 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-507abf68bab3b52ff2979239319bd51a
-  $fToMarkupTool7 ::
+4c42f22671c9a27d9c182b2cd8f3e7cc
+  $fToMarkupTool10 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Text.Internal.Text #)
@@ -2477,214 +1387,8 @@ c8b24d17ae32d7dc82aedd57f9a7cd38
                    Htmls.$fToMarkupTool_w
                    0#
                    ipv }) -}
-44938da649fe3ead4a9157b59068bb5a
-  $fToMarkupTool70 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w12) -}
-bf95086b3b34134f128e1d4e6b41f5dd
-  $fToMarkupTool71 :: Text.Blaze.Html.Html
-  {- Strictness: m8,
-     Unfolding: (Text.Blaze.Internal.AddAttribute
-                   @ ()
-                   Htmls.$fToMarkupTool67
-                   Htmls.$fToMarkupTool63
-                   Htmls.$fToMarkupTool72
-                   Htmls.$fToMarkupTool39) -}
-6f2d56b13a527a5df70ebe408bb52205
-  $fToMarkupTool72 :: Text.Blaze.Internal.ChoiceString
-  {- Strictness: m2,
-     Unfolding: (Text.Blaze.Internal.String Htmls.$fToMarkupTool73) -}
-6f8ff9152d1452313eb35364fa5eea8b
-  $fToMarkupTool73 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString#
-                   "handleLeft(this.files[0])"#) -}
-98592b31681e236571810c2b121438f6
-  $fToMarkupTool74 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool27
-                   Htmls.$fToMarkupTool75
-                   Htmls.$fToMarkupTool_t5) -}
-9d0306dfb7e5609271b670df47d2004f
-  $fToMarkupTool75 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t5 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-576f74ad306ea7fcf7ab901846959a85
-  $fToMarkupTool76 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool31
-                   Htmls.$fToMarkupTool77
-                   Htmls.$fToMarkupTool_t6) -}
-67bf8aeffc73b09e1279e27d6865c65e
-  $fToMarkupTool77 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t6 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-c4798aaed441a3826c4da77b3381cacc
-  $fToMarkupTool78 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool35
-                   Htmls.$fToMarkupTool79
-                   Htmls.$fToMarkupTool_t7) -}
-a351a60bcc96cd20e83aa1d1fc62287c
-  $fToMarkupTool79 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t7 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-b9c390405ed85706a76f5829ca704b9a
-  $fToMarkupTool8 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t1 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-cfa76ca1f1e48faf46b26773eeac04b4
-  $fToMarkupTool80 :: Text.Blaze.Internal.StaticString
-  {- Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool83
-                   Htmls.$fToMarkupTool82
-                   Htmls.$fToMarkupTool_t14) -}
-dd09fc6997a5bc468acaf78412b6173d
-  $fToMarkupTool81 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w13
-                   0#
-                   ipv }) -}
-b5a3abb0c8891fd2b5e897bd28546d85
-  $fToMarkupTool82 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t14 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-4ae3686027f480359d04215885d38e91
-  $fToMarkupTool83 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w13) -}
-30c526d84edc47e89af06ab8794e00ce
-  $fToMarkupTool84 :: Text.Blaze.Internal.StaticString
-  {- Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool87
-                   Htmls.$fToMarkupTool86
-                   Htmls.$fToMarkupTool_t15) -}
-f9267e1d9acba447c7648e8b9120dafb
-  $fToMarkupTool85 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w14
-                   0#
-                   ipv }) -}
-9278c8b6c2aacd51ea13f34e1ef2f2bf
-  $fToMarkupTool86 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t15 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-65b5d9d4996298dd4d3330d5842fbf54
-  $fToMarkupTool87 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w14) -}
-57f09eb1eaad790d7f22cb7a1e69b332
-  $fToMarkupTool88 :: Text.Blaze.Internal.StaticString
-  {- Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool91
-                   Htmls.$fToMarkupTool90
-                   Htmls.$fToMarkupTool_t16) -}
-61d166718a2485ea69b562e9fb342545
-  $fToMarkupTool89 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w15
-                   0#
-                   ipv }) -}
-d68696090c77b558e46106fc936841fa
-  $fToMarkupTool9 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++ @ GHC.Types.Char Htmls.$fToMarkupTool_w) -}
-8e55494a0a2daa2606ac76bfd8c69bb6
-  $fToMarkupTool90 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t16 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-291fbe72ea40d1cc62cb1033f7a72b56
-  $fToMarkupTool91 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w15) -}
-20aeae1f773f83de229a57c63cfe45ca
-  $fToMarkupTool92 :: Text.Blaze.Internal.StaticString
-  {- Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool95
-                   Htmls.$fToMarkupTool94
-                   Htmls.$fToMarkupTool_t17) -}
-7cf5a57826dc9e22c327f61900aa3015
-  $fToMarkupTool93 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Text.Blaze.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Text.Blaze.Internal.$fIsStringStaticString1
-                   Htmls.$fToMarkupTool_w16
-                   0#
-                   ipv }) -}
-2f32252f19512ebb3bc8ac7a626b1328
-  $fToMarkupTool94 :: Data.ByteString.Internal.ByteString
-  {- Unfolding: (case Htmls.$fToMarkupTool_t17 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-ed785ca14aab2c2e44dd7da34e1f834a
-  $fToMarkupTool95 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1,
-     Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Htmls.$fToMarkupTool_w16) -}
-078ca2524f7398ff999732aa34a20358
-  $fToMarkupTool96 :: Text.Blaze.Internal.StaticString
-  {- Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool99
-                   Htmls.$fToMarkupTool98
-                   Htmls.$fToMarkupTool_t18) -}
-ae4c3cc7cadc116ca8defc6e5c422e34
-  $fToMarkupTool97 ::
+ff02a6fb28f546f06056b4db92cd57f9
+  $fToMarkupTool100 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Text.Internal.Text #)
@@ -2701,17 +1405,1327 @@ ae4c3cc7cadc116ca8defc6e5c422e34
                    Htmls.$fToMarkupTool_w17
                    0#
                    ipv }) -}
-373cf1c92418fe6c8d0421028828fb42
-  $fToMarkupTool98 :: Data.ByteString.Internal.ByteString
+c9877246163cee78604726d95615021b
+  $fToMarkupTool101 :: Data.ByteString.Internal.ByteString
   {- Unfolding: (case Htmls.$fToMarkupTool_t18 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
                  Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
-2aa36a6b5919080c4ca078ad80d05bed
-  $fToMarkupTool99 :: [GHC.Types.Char] -> [GHC.Types.Char]
+ac863fd4da609d41ec71d63c569264c3
+  $fToMarkupTool102 :: [GHC.Types.Char] -> [GHC.Types.Char]
   {- Arity: 1,
      Unfolding: (GHC.Base.++
                    @ GHC.Types.Char
                    Htmls.$fToMarkupTool_w17) -}
-6747a674788403db022d715b7a9de3c2
+936346e5605b160f790c6abacb570601
+  $fToMarkupTool103 :: Text.Blaze.Internal.StaticString
+  {- Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool106
+                   Htmls.$fToMarkupTool105
+                   Htmls.$fToMarkupTool_t19) -}
+c75348b8ff29bd65b8acf566236d5b05
+  $fToMarkupTool104 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w18
+                   0#
+                   ipv }) -}
+0b12a6623864aa93d25d6dde44ebffe7
+  $fToMarkupTool105 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t19 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+80250c8b6977965add8dfbc65e398ef7
+  $fToMarkupTool106 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w18) -}
+dca69490395cf812ccbda698bfb03bfb
+  $fToMarkupTool107 :: Text.Blaze.Internal.MarkupM ()
+  {- Unfolding: (Text.Blaze.Internal.Parent
+                   @ ()
+                   @ ()
+                   Htmls.$fToMarkupTool119
+                   Htmls.$fToMarkupTool115
+                   Htmls.$fToMarkupTool111
+                   Htmls.$fToMarkupTool108) -}
+e79f11639b4b8bcff93c4e57617fc9ae
+  $fToMarkupTool108 :: Text.Blaze.Internal.MarkupM ()
+  {- Strictness: m5,
+     Unfolding: (Text.Blaze.Internal.Content
+                   @ ()
+                   Htmls.$fToMarkupTool109) -}
+e50bef8666ae1cd7ad77e25ce89bc374
+  $fToMarkupTool109 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m2,
+     Unfolding: (Text.Blaze.Internal.String Htmls.$fToMarkupTool110) -}
+577b04755a08a01d200e7f9d1d8b3932
+  $fToMarkupTool11 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t1 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+f57611e0ccc65565bc8c7f5e986847a4
+  $fToMarkupTool110 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Combine two pictures to create a cool new image"#) -}
+ecad9d47cecfc42efce658f7fa69a080
+  $fToMarkupTool111 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool114
+                   Htmls.$fToMarkupTool113
+                   Htmls.$fToMarkupTool_t20) -}
+a0f2a5fec11af11e2f1b4cafe3fb4f1d
+  $fToMarkupTool112 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w19
+                   0#
+                   ipv }) -}
+b883b74d60afe0428a6a46b02cd44a77
+  $fToMarkupTool113 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t20 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+247c70501dc61e906cbb2bae537e0169
+  $fToMarkupTool114 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w19) -}
+403ae137e87f7f64ff35eddfdde47644
+  $fToMarkupTool115 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool118
+                   Htmls.$fToMarkupTool117
+                   Htmls.$fToMarkupTool_t21) -}
+a12ffd517cbb29897714c7af40c224c6
+  $fToMarkupTool116 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w20
+                   0#
+                   ipv }) -}
+22bf8c09b26096a192365f38778e5388
+  $fToMarkupTool117 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t21 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+38f7eb4523e9dd28aac155c6c72f3e83
+  $fToMarkupTool118 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w20) -}
+3bc5e7ef6d9f5c9220c2c7988c5f7dc9
+  $fToMarkupTool119 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool122
+                   Htmls.$fToMarkupTool121
+                   Htmls.$fToMarkupTool_t22) -}
+faf81a216c1266ad7bd703cc9aa7e179
+  $fToMarkupTool12 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Htmls.$fToMarkupTool_w) -}
+6eb07cddcf3657e85646d136d85994f5
+  $fToMarkupTool120 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w21
+                   0#
+                   ipv }) -}
+f14e162f2ad2e9549445e537af9584fb
+  $fToMarkupTool121 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t22 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+dd204565e3879ae488f467e5994cc02d
+  $fToMarkupTool122 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w21) -}
+8da0134201576c8d67b17c94352b1596
+  $fToMarkupTool123 :: Text.Blaze.Internal.StaticString
+  {- Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool126
+                   Htmls.$fToMarkupTool125
+                   Htmls.$fToMarkupTool_t23) -}
+5dd53fb9b8655f7502cd190b8c65b373
+  $fToMarkupTool124 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w22
+                   0#
+                   ipv }) -}
+15f176250f9ff9304cb1555f2edd881c
+  $fToMarkupTool125 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t23 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+d8cbdf219fd7da584316e53a2ff45ec2
+  $fToMarkupTool126 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w22) -}
+589a6373be49aea7eb22292ef1a2974c
+  $fToMarkupTool127 :: Text.Blaze.Internal.StaticString
+  {- Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool130
+                   Htmls.$fToMarkupTool129
+                   Htmls.$fToMarkupTool_t24) -}
+70c3629753a8f73af4ae4cc2b29dca0f
+  $fToMarkupTool128 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w23
+                   0#
+                   ipv }) -}
+b6d961dcd878e097ceb0579ed92bc2a5
+  $fToMarkupTool129 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t24 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+a6f299d600b520188c7c3cf9127fe784
+  $fToMarkupTool13 :: Text.Blaze.Internal.StaticString
+  {- Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool16
+                   Htmls.$fToMarkupTool15
+                   Htmls.$fToMarkupTool_t2) -}
+517a050a78057c4047161db7dd4f255f
+  $fToMarkupTool130 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w23) -}
+24e4b9e263641a7140a3b9fc36c52878
+  $fToMarkupTool131 :: Text.Blaze.Internal.StaticString
+  {- Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool134
+                   Htmls.$fToMarkupTool133
+                   Htmls.$fToMarkupTool_t25) -}
+9090ab45eeaf336b7fe2da824606c3f1
+  $fToMarkupTool132 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w24
+                   0#
+                   ipv }) -}
+3209facb92d1d6234cd67988f0a35047
+  $fToMarkupTool133 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t25 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+b96a624672df419149e51470edf198e2
+  $fToMarkupTool134 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w24) -}
+d71c778bf7a33e9613ad54452f11113e
+  $fToMarkupTool135 :: Text.Blaze.Internal.MarkupM ()
+  {- Unfolding: (Text.Blaze.Internal.Parent
+                   @ ()
+                   @ ()
+                   Htmls.$fToMarkupTool158
+                   Htmls.$fToMarkupTool154
+                   Htmls.$fToMarkupTool150
+                   Htmls.$fToMarkupTool136) -}
+8631a09937afe073f7fa3b65b1953dbe
+  $fToMarkupTool136 :: Text.Blaze.Internal.MarkupM ()
+  {- Unfolding: (Text.Blaze.Internal.Parent
+                   @ ()
+                   @ ()
+                   Htmls.$fToMarkupTool_f
+                   Htmls.$fToMarkupTool_f1
+                   Htmls.$fToMarkupTool_f2
+                   Htmls.$fToMarkupTool137) -}
+a538da4d217dec390b3bfbf262def690
+  $fToMarkupTool137 :: Text.Blaze.Internal.MarkupM ()
+  {- Unfolding: (Text.Blaze.Internal.external
+                   @ ()
+                   Htmls.$fToMarkupTool138) -}
+c105bbaecc05e7bb6a1a70fa61ee84d9
+  $fToMarkupTool138 :: Text.Blaze.Internal.MarkupM ()
+  {- Unfolding: (Text.Blaze.Internal.Content
+                   @ ()
+                   Htmls.$fToMarkupTool139) -}
+b95c1de70912d67f01ac922b14007cdf
+  $fToMarkupTool139 :: Text.Blaze.Internal.ChoiceString
+  {- Unfolding: (Text.Blaze.Internal.String
+                   Htmls.$fToMarkupTool140) -}
+f6f4f5b382f675315c82a0cdc920542e
+  $fToMarkupTool14 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w1
+                   0#
+                   ipv }) -}
+bcc60b4aa4f8af2d6a168a490b0af828
+  $fToMarkupTool140 :: [GHC.Types.Char]
+89ceae8be6d2b5891c35b294def3f8b1
+  $fToMarkupTool141 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w25
+                   0#
+                   ipv }) -}
+9e587d3b8427a12838cdad404ae61357
+  $fToMarkupTool142 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t26 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+e0cb57f08985fe54d27334912673ebd4
+  $fToMarkupTool143 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w25) -}
+e220a448d99a0feeceff17e9fed4ac50
+  $fToMarkupTool144 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w26
+                   0#
+                   ipv }) -}
+ef5e187efd8a44f4d5b04985e793a9a0
+  $fToMarkupTool145 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t27 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+a274321e92f11042f6ea92fff6a93c65
+  $fToMarkupTool146 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w26) -}
+484a5b12ca004bf6e30852d1573a9638
+  $fToMarkupTool147 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w27
+                   0#
+                   ipv }) -}
+b85da15073a96f6bcf6acc9bf03b7551
+  $fToMarkupTool148 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t28 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+ccdc1f8a7a9065d3796025fb471bb883
+  $fToMarkupTool149 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w27) -}
+b8a847bf615331c24b43910340d1dd5d
+  $fToMarkupTool15 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t2 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+7a6e23481abec79fe1508c756d864e33
+  $fToMarkupTool150 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool153
+                   Htmls.$fToMarkupTool152
+                   Htmls.$fToMarkupTool_t29) -}
+508791695097e9fa07276bee1a4afe5e
+  $fToMarkupTool151 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w28
+                   0#
+                   ipv }) -}
+d57372b2e4367328e16718f36d5a3221
+  $fToMarkupTool152 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t29 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+7c469dbe10f23d888842b1496f08bc2e
+  $fToMarkupTool153 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w28) -}
+a28be352d0818e1adf2666629acebcdb
+  $fToMarkupTool154 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool157
+                   Htmls.$fToMarkupTool156
+                   Htmls.$fToMarkupTool_t30) -}
+8f98d7811b137bf42bf13ceeeef1336a
+  $fToMarkupTool155 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w29
+                   0#
+                   ipv }) -}
+d7cb3092e5a63b834651ed3b7097050d
+  $fToMarkupTool156 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t30 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+6cb134e5e575acac241015fcd2f1ec85
+  $fToMarkupTool157 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w29) -}
+ed0331d0594e8907d31aa8964472c0b4
+  $fToMarkupTool158 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool161
+                   Htmls.$fToMarkupTool160
+                   Htmls.$fToMarkupTool_t31) -}
+87a19d13a6e293678f3df81e7d2d5171
+  $fToMarkupTool159 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w30
+                   0#
+                   ipv }) -}
+e18d529cb9f723b0761979703bc07cb4
+  $fToMarkupTool16 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w1) -}
+2034c26d95a725812cd30d4d0087bec0
+  $fToMarkupTool160 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t31 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+b58dbf4c16d478c60cbe46e3bc943a95
+  $fToMarkupTool161 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w30) -}
+2898adf059d40079fe2faec8996adf58
+  $fToMarkupTool162 :: Text.Blaze.Internal.StaticString
+  {- Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool165
+                   Htmls.$fToMarkupTool164
+                   Htmls.$fToMarkupTool_t32) -}
+fe5264a4da1d8bef1b1831b4c3f48402
+  $fToMarkupTool163 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w31
+                   0#
+                   ipv }) -}
+6deb73eebe68e81f9f9aee91c02ef9c1
+  $fToMarkupTool164 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t32 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+847bb6911bb161f60b1f39311f468466
+  $fToMarkupTool165 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w31) -}
+c79c2205315618934169848408022ea9
+  $fToMarkupTool166 :: Text.Blaze.Internal.StaticString
+  {- Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool169
+                   Htmls.$fToMarkupTool168
+                   Htmls.$fToMarkupTool_t33) -}
+4a3635a2a78a7f8f829087016b7eaf38
+  $fToMarkupTool167 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w32
+                   0#
+                   ipv }) -}
+5997d05d8ff2ee0e3cc35b2ae359d636
+  $fToMarkupTool168 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t33 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+6f24d7613773c8843dfcc221c85f0d0d
+  $fToMarkupTool169 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w32) -}
+229f21566f3d67592a7e740db9299e61
+  $fToMarkupTool17 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m2,
+     Unfolding: (Text.Blaze.Internal.String Htmls.$fToMarkupTool18) -}
+bde20e6a78261f319c0755710d5ac1ec
+  $fToMarkupTool170 :: Text.Blaze.Internal.StaticString
+  {- Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool173
+                   Htmls.$fToMarkupTool172
+                   Htmls.$fToMarkupTool_t34) -}
+76589b84d2fe9b847040963a45973daf
+  $fToMarkupTool171 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w33
+                   0#
+                   ipv }) -}
+31982a0914e33cb76c1a60399a6db0df
+  $fToMarkupTool172 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t34 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+29defae7017cc5001d6a629fbebde869
+  $fToMarkupTool173 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w33) -}
+d1efda0e5022a89e514a9d63f634ef2e
+  $fToMarkupTool18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "width: 50%; height: 50%"#) -}
+3bd317d4764aba81c8c7de9b44ac01af
+  $fToMarkupTool19 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool22
+                   Htmls.$fToMarkupTool21
+                   Htmls.$fToMarkupTool_t3) -}
+2bfb0828b55d8b36f7e50fbcd2ecb57a
+  $fToMarkupTool2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "../image/Checkerboard"#) -}
+5b74040e381ae9721fd4ac2caf77236e
+  $fToMarkupTool20 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w2
+                   0#
+                   ipv }) -}
+014bbc78ec7191858ce21045feb5f0d1
+  $fToMarkupTool21 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t3 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+7c9652db5e1ca7b7769693323c833f09
+  $fToMarkupTool22 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w2) -}
+5d8e941d958b45398fbec08aa8b258d3
+  $fToMarkupTool23 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool26
+                   Htmls.$fToMarkupTool25
+                   Htmls.$fToMarkupTool_t4) -}
+3131a721a65967188b1dfad18241078b
+  $fToMarkupTool24 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w3
+                   0#
+                   ipv }) -}
+353d987be2ef00c933fb28c33dae7875
+  $fToMarkupTool25 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t4 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+5b974ad868c1e83fb92c12c102954fe0
+  $fToMarkupTool26 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w3) -}
+e6f2c2e4cbaf88fa7625075ea43fc6a5
+  $fToMarkupTool27 :: Text.Blaze.Internal.StaticString
+  {- Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool30
+                   Htmls.$fToMarkupTool29
+                   Htmls.$fToMarkupTool_t5) -}
+0201be33cddafb629b2b3233b7b941cc
+  $fToMarkupTool28 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w4
+                   0#
+                   ipv }) -}
+7c418f1941a18f34b5f5844e0e75b852
+  $fToMarkupTool29 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t5 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+71f59bc9d51031350fc05191d88ba184
+  $fToMarkupTool3 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m2,
+     Unfolding: (Text.Blaze.Internal.String Htmls.$fToMarkupTool4) -}
+6a1783f9c0dd3117e840b96e68e31ec4
+  $fToMarkupTool30 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w4) -}
+dbb3963783899106bee2f79cba0ef558
+  $fToMarkupTool31 :: Text.Blaze.Internal.StaticString
+  {- Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool34
+                   Htmls.$fToMarkupTool33
+                   Htmls.$fToMarkupTool_t6) -}
+42d97e0aee0e77a2beb255234b81639a
+  $fToMarkupTool32 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w5
+                   0#
+                   ipv }) -}
+53fb31508760cd149afd62f6f8ea3711
+  $fToMarkupTool33 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t6 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+95d1456f5f48a354abbec8cefcf26163
+  $fToMarkupTool34 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w5) -}
+fdfba3cf80d4e7fa4b7769ca42b20ccc
+  $fToMarkupTool35 :: Text.Blaze.Internal.StaticString
+  {- Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool38
+                   Htmls.$fToMarkupTool37
+                   Htmls.$fToMarkupTool_t7) -}
+0ceca0df7b1c677c053d07ac04d404ff
+  $fToMarkupTool36 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w6
+                   0#
+                   ipv }) -}
+ab10a0ecca5f02397942c1ba57703723
+  $fToMarkupTool37 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t7 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+2bea1eb8aeb210ca39cfc6f25d024eb9
+  $fToMarkupTool38 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w6) -}
+0b660dcd9bad62a007aa0fc477cc35b9
+  $fToMarkupTool39 :: Text.Blaze.Internal.MarkupM ()
+  {- Unfolding: (Text.Blaze.Internal.Parent
+                   @ ()
+                   @ ()
+                   Htmls.$fToMarkupTool81
+                   Htmls.$fToMarkupTool79
+                   Htmls.$fToMarkupTool77
+                   Htmls.$fToMarkupTool40) -}
+20f462114ff0964692f7179e1489bbce
+  $fToMarkupTool4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "../image/Frame"#) -}
+b0edb261f61d75d59258f8b2ea3fd6ab
+  $fToMarkupTool40 :: Text.Blaze.Internal.MarkupM ()
+  {- Unfolding: (Text.Blaze.Internal.Append
+                   @ ()
+                   @ ()
+                   @ ()
+                   Htmls.$fToMarkupTool74
+                   Htmls.$fToMarkupTool41) -}
+941819e6aa6a8feeb2905a889371f9d4
+  $fToMarkupTool41 :: Text.Blaze.Html.Html
+  {- Strictness: m8,
+     Unfolding: (Text.Blaze.Internal.AddAttribute
+                   @ ()
+                   Htmls.$fToMarkupTool70
+                   Htmls.$fToMarkupTool66
+                   Htmls.$fToMarkupTool64
+                   Htmls.$fToMarkupTool42) -}
+cec31da8bfd6b115a263981b6cf9bdfc
+  $fToMarkupTool42 :: Text.Blaze.Internal.MarkupM ()
+  {- Strictness: m8,
+     Unfolding: (Text.Blaze.Internal.AddAttribute
+                   @ ()
+                   Htmls.$fToMarkupTool60
+                   Htmls.$fToMarkupTool56
+                   Htmls.$fToMarkupTool54
+                   Htmls.$fToMarkupTool43) -}
+dee4226319b8ecb9d8ee03520c103a47
+  $fToMarkupTool43 :: Text.Blaze.Internal.MarkupM ()
+  {- Strictness: m8,
+     Unfolding: (Text.Blaze.Internal.AddAttribute
+                   @ ()
+                   Htmls.$fToMarkupTool50
+                   Htmls.$fToMarkupTool46
+                   Htmls.$fToMarkupTool44
+                   Text.Blaze.Html5.input) -}
+522f9465c4b54c8df3a45e43b35c432d
+  $fToMarkupTool44 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m2,
+     Unfolding: (Text.Blaze.Internal.String Htmls.$fToMarkupTool45) -}
+18e9e76f208e7aa40638b9ba6deee648
+  $fToMarkupTool45 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "file"#) -}
+cd3ebbdf7b3b69eaf42fae1fc30bbba9
+  $fToMarkupTool46 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool49
+                   Htmls.$fToMarkupTool48
+                   Htmls.$fToMarkupTool_t8) -}
+8156521161175c9f92d4ea40bb890922
+  $fToMarkupTool47 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w7
+                   0#
+                   ipv }) -}
+fc9a756d4b913345077f2af4ae2ed643
+  $fToMarkupTool48 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t8 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+4e2b55906024d216531e1acedfe7766a
+  $fToMarkupTool49 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w7) -}
+3621b156711098a37b7c78d7ad6deace
+  $fToMarkupTool5 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m2,
+     Unfolding: (Text.Blaze.Internal.String Htmls.$fToMarkupTool6) -}
+0610a368a024858cb6f786913b7de169
+  $fToMarkupTool50 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool53
+                   Htmls.$fToMarkupTool52
+                   Htmls.$fToMarkupTool_t9) -}
+5f497c2764c2783e37e063bead1c4bfb
+  $fToMarkupTool51 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w8
+                   0#
+                   ipv }) -}
+9e35b2adf523d10f9444d6ad63b24b04
+  $fToMarkupTool52 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t9 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+cb06bfe7013976676dfc85719c875a16
+  $fToMarkupTool53 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w8) -}
+a6543bd2076bfc64bcef3425b750b157
+  $fToMarkupTool54 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m2,
+     Unfolding: (Text.Blaze.Internal.String Htmls.$fToMarkupTool55) -}
+305cdf4f3862c3e153c43dbd38ef4ba6
+  $fToMarkupTool55 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "image/jpeg"#) -}
+3cd409bcaba0309aa5cabb07170a4452
+  $fToMarkupTool56 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool59
+                   Htmls.$fToMarkupTool58
+                   Htmls.$fToMarkupTool_t10) -}
+700903790609b3e3e462b71ea49fea4e
+  $fToMarkupTool57 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w9
+                   0#
+                   ipv }) -}
+e00615597549238539620b394ec3ded5
+  $fToMarkupTool58 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t10 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+cc16ebb2ec250dbebd41622d74277051
+  $fToMarkupTool59 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w9) -}
+d9f82d8ff63e273547aa94d01800688e
+  $fToMarkupTool6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "../image/Spiral"#) -}
+d181e06033ac9509851e045b87e855d0
+  $fToMarkupTool60 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool63
+                   Htmls.$fToMarkupTool62
+                   Htmls.$fToMarkupTool_t11) -}
+5b99a8dde48812c70b21e5e29324ca58
+  $fToMarkupTool61 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w10
+                   0#
+                   ipv }) -}
+e0890f1ff8be1030e28a925cac27c46f
+  $fToMarkupTool62 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t11 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+3fc78ec4cb46f7e6e7314fa412adac92
+  $fToMarkupTool63 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w10) -}
+52e8d64c52f564c421a3539de3140998
+  $fToMarkupTool64 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m2,
+     Unfolding: (Text.Blaze.Internal.String Htmls.$fToMarkupTool65) -}
+cbe9f278b05ea5d8bd2c663981a9b81c
+  $fToMarkupTool65 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "handleRight(this.files[0])"#) -}
+d477e0f8880cd585f42fef22d4260a58
+  $fToMarkupTool66 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool69
+                   Htmls.$fToMarkupTool68
+                   Htmls.$fToMarkupTool_t12) -}
+930904a706c14849278ebe51f22825fe
+  $fToMarkupTool67 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w11
+                   0#
+                   ipv }) -}
+c54a8b075bf6f84290482c38eb5bd4a4
+  $fToMarkupTool68 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t12 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+2e351df3d02960f7d66f60cdc8665f33
+  $fToMarkupTool69 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w11) -}
+668f7bea76fa4cf8e704c18736e6b7c2
+  $fToMarkupTool7 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m2,
+     Unfolding: (Text.Blaze.Internal.String Htmls.$fToMarkupTool8) -}
+9d033767df9e8e3f4bd144169585e6fa
+  $fToMarkupTool70 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool73
+                   Htmls.$fToMarkupTool72
+                   Htmls.$fToMarkupTool_t13) -}
+804958af127df7f3e0f533f39b1ea36b
+  $fToMarkupTool71 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w12
+                   0#
+                   ipv }) -}
+67c6b8c8ea9bd0be28528336c9e2b977
+  $fToMarkupTool72 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t13 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+48a71245f476aff0c85ae4b57e24f417
+  $fToMarkupTool73 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w12) -}
+fa8288fad7470c1c9864c47db099e7a3
+  $fToMarkupTool74 :: Text.Blaze.Html.Html
+  {- Strictness: m8,
+     Unfolding: (Text.Blaze.Internal.AddAttribute
+                   @ ()
+                   Htmls.$fToMarkupTool70
+                   Htmls.$fToMarkupTool66
+                   Htmls.$fToMarkupTool75
+                   Htmls.$fToMarkupTool42) -}
+c790d570b911553efe7858868d8594b6
+  $fToMarkupTool75 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m2,
+     Unfolding: (Text.Blaze.Internal.String Htmls.$fToMarkupTool76) -}
+25a66ec92a361160f7d2849430d20c1b
+  $fToMarkupTool76 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "handleLeft(this.files[0])"#) -}
+9515fe7ee21689d115f121848752179d
+  $fToMarkupTool77 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool30
+                   Htmls.$fToMarkupTool78
+                   Htmls.$fToMarkupTool_t5) -}
+53489cbd0acda8ae999e4187e0ac6c1c
+  $fToMarkupTool78 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t5 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+f36e086f9617b84222f7ff339d6c56e4
+  $fToMarkupTool79 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool34
+                   Htmls.$fToMarkupTool80
+                   Htmls.$fToMarkupTool_t6) -}
+a393a48afa80f6200eb81c9e6faafaad
+  $fToMarkupTool8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "../image/ZipImage"#) -}
+d2385d56c9d517567aafb9b8aa2bc524
+  $fToMarkupTool80 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t6 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+3f8fd4aebef6a1733c2693aa185a3830
+  $fToMarkupTool81 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool38
+                   Htmls.$fToMarkupTool82
+                   Htmls.$fToMarkupTool_t7) -}
+aec68ea6748790df390e649c4f856052
+  $fToMarkupTool82 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t7 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+e82393b9fdb5357d400f1259eebfc1a7
+  $fToMarkupTool83 :: Text.Blaze.Internal.StaticString
+  {- Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool86
+                   Htmls.$fToMarkupTool85
+                   Htmls.$fToMarkupTool_t14) -}
+5b36b4f5143958e281a273a693758f37
+  $fToMarkupTool84 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w13
+                   0#
+                   ipv }) -}
+57a67855ec8864ea647e5c9773f4fbf5
+  $fToMarkupTool85 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t14 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+757a2e88aa7e8ff9ca768e2d56745d47
+  $fToMarkupTool86 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w13) -}
+20c9058ed8501faeb6cf950cc2f0fa58
+  $fToMarkupTool87 :: Text.Blaze.Internal.StaticString
+  {- Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool90
+                   Htmls.$fToMarkupTool89
+                   Htmls.$fToMarkupTool_t15) -}
+25be14349220a6240ebd82aa1af8d4f9
+  $fToMarkupTool88 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w14
+                   0#
+                   ipv }) -}
+73025616ed8344c72e9df5849ea3eed7
+  $fToMarkupTool89 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t15 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+58426a9611a9b625e7aad81705e998a4
+  $fToMarkupTool9 :: Text.Blaze.Internal.StaticString
+  {- Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool12
+                   Htmls.$fToMarkupTool11
+                   Htmls.$fToMarkupTool_t1) -}
+9879c51143303aa1e05f25919349ed59
+  $fToMarkupTool90 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w14) -}
+458211485de99ab75be5dc5802979315
+  $fToMarkupTool91 :: Text.Blaze.Internal.StaticString
+  {- Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool94
+                   Htmls.$fToMarkupTool93
+                   Htmls.$fToMarkupTool_t16) -}
+763c614cbaf9c86a65431ef8deb00683
+  $fToMarkupTool92 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w15
+                   0#
+                   ipv }) -}
+3cba2114d1d1092f712c4f2cbe86e462
+  $fToMarkupTool93 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t16 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+d6f7e6956d9de9faf2e0ab925d799689
+  $fToMarkupTool94 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w15) -}
+02ef9ac33143ac83281a51013d3cfe46
+  $fToMarkupTool95 :: Text.Blaze.Internal.StaticString
+  {- Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool98
+                   Htmls.$fToMarkupTool97
+                   Htmls.$fToMarkupTool_t17) -}
+a093bd6454ae63268072da6fdcdfe264
+  $fToMarkupTool96 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Blaze.Internal.$fIsStringStaticString1
+                   Htmls.$fToMarkupTool_w16
+                   0#
+                   ipv }) -}
+6ed23257e27a7c9082596cde1187c867
+  $fToMarkupTool97 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Htmls.$fToMarkupTool_t17 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+89f4662ec3a324d766a8a73b5c388b20
+  $fToMarkupTool98 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Htmls.$fToMarkupTool_w16) -}
+8a80748cb135e7030570a8b40731496f
+  $fToMarkupTool99 :: Text.Blaze.Internal.StaticString
+  {- Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool102
+                   Htmls.$fToMarkupTool101
+                   Htmls.$fToMarkupTool_t18) -}
+9d0330f04e33c2f77d358587f7ef50a5
   $fToMarkupTool_$ctoMarkup ::
     Models.Tool -> Text.Blaze.Internal.Markup
   {- Arity: 1, Strictness: <L,1*U>,
@@ -2724,25 +2738,25 @@ ae4c3cc7cadc116ca8defc6e5c422e34
                    (Text.Blaze.Internal.Parent
                       @ ()
                       @ ()
-                      Htmls.$fToMarkupTool167
-                      Htmls.$fToMarkupTool163
-                      Htmls.$fToMarkupTool159
+                      Htmls.$fToMarkupTool170
+                      Htmls.$fToMarkupTool166
+                      Htmls.$fToMarkupTool162
                       (Text.Blaze.Internal.Append
                          @ ()
                          @ ()
                          @ ()
-                         Htmls.$fToMarkupTool132
+                         Htmls.$fToMarkupTool135
                          (Text.Blaze.Internal.Parent
                             @ ()
                             @ ()
-                            Htmls.$fToMarkupTool128
-                            Htmls.$fToMarkupTool124
-                            Htmls.$fToMarkupTool120
+                            Htmls.$fToMarkupTool131
+                            Htmls.$fToMarkupTool127
+                            Htmls.$fToMarkupTool123
                             (Text.Blaze.Internal.Append
                                @ ()
                                @ ()
                                @ ()
-                               Htmls.$fToMarkupTool104
+                               Htmls.$fToMarkupTool107
                                (Text.Blaze.Internal.Append
                                   @ ()
                                   @ ()
@@ -2751,301 +2765,300 @@ ae4c3cc7cadc116ca8defc6e5c422e34
                                   (Text.Blaze.Internal.Parent
                                      @ ()
                                      @ ()
-                                     Htmls.$fToMarkupTool100
-                                     Htmls.$fToMarkupTool96
-                                     Htmls.$fToMarkupTool92
+                                     Htmls.$fToMarkupTool103
+                                     Htmls.$fToMarkupTool99
+                                     Htmls.$fToMarkupTool95
                                      (Text.Blaze.Internal.Parent
                                         @ ()
                                         @ ()
-                                        Htmls.$fToMarkupTool88
-                                        Htmls.$fToMarkupTool84
-                                        Htmls.$fToMarkupTool80
+                                        Htmls.$fToMarkupTool91
+                                        Htmls.$fToMarkupTool87
+                                        Htmls.$fToMarkupTool83
                                         (Text.Blaze.Internal.Append
                                            @ ()
                                            @ ()
                                            @ ()
-                                           Htmls.$fToMarkupTool36
+                                           Htmls.$fToMarkupTool39
                                            (Text.Blaze.Internal.Parent
                                               @ ()
                                               @ ()
-                                              Htmls.$fToMarkupTool32
-                                              Htmls.$fToMarkupTool28
-                                              Htmls.$fToMarkupTool24
+                                              Htmls.$fToMarkupTool35
+                                              Htmls.$fToMarkupTool31
+                                              Htmls.$fToMarkupTool27
                                               (Text.Blaze.Internal.AddAttribute
                                                  @ ()
-                                                 Htmls.$fToMarkupTool20
-                                                 Htmls.$fToMarkupTool16
-                                                 Htmls.$fToMarkupTool14
+                                                 Htmls.$fToMarkupTool23
+                                                 Htmls.$fToMarkupTool19
+                                                 Htmls.$fToMarkupTool17
                                                  (Text.Blaze.Internal.AddAttribute
                                                     @ ()
-                                                    Htmls.$fToMarkupTool10
-                                                    Htmls.$fToMarkupTool6
+                                                    Htmls.$fToMarkupTool13
+                                                    Htmls.$fToMarkupTool9
                                                     (case t of wild {
-                                                       DEFAULT
-                                                       -> Htmls.$fToMarkupTool5
-                                                            `cast`
-                                                          (Text.Blaze.Internal.N:AttributeValue[0])
-                                                       Models.ZipImage -> Htmls.$fToMarkupTool3
-                                                       Models.Frame -> Htmls.$fToMarkupTool1 })
+                                                       Models.ZipImage -> Htmls.$fToMarkupTool7
+                                                       Models.Spiral -> Htmls.$fToMarkupTool5
+                                                       Models.Frame -> Htmls.$fToMarkupTool3
+                                                       Models.Checkerboard
+                                                       -> Htmls.$fToMarkupTool1 })
                                                     Text.Blaze.Html5.img)))))))))))) -}
-fe8382bd1a261678ad1fc08b23c02b3c
+55234ea428a7003fdf39e4c73ac5c320
   $fToMarkupTool_f :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool149
+                   Htmls.$fToMarkupTool148
+                   Htmls.$fToMarkupTool_t28) -}
+e3a6bd59f847a04f5d10b032c36bafb9
+  $fToMarkupTool_f1 :: Text.Blaze.Internal.StaticString
   {- Strictness: m,
      Unfolding: (Text.Blaze.Internal.StaticString
                    Htmls.$fToMarkupTool146
                    Htmls.$fToMarkupTool145
-                   Htmls.$fToMarkupTool_t28) -}
-bd9bba66e60820e0811659febdbbf0ea
-  $fToMarkupTool_f1 :: Text.Blaze.Internal.StaticString
+                   Htmls.$fToMarkupTool_t27) -}
+59464ba342121e6098f69d5d96e117aa
+  $fToMarkupTool_f2 :: Text.Blaze.Internal.StaticString
   {- Strictness: m,
      Unfolding: (Text.Blaze.Internal.StaticString
                    Htmls.$fToMarkupTool143
                    Htmls.$fToMarkupTool142
-                   Htmls.$fToMarkupTool_t27) -}
-ac68488799457c4c18160467da9e5699
-  $fToMarkupTool_f2 :: Text.Blaze.Internal.StaticString
-  {- Strictness: m,
-     Unfolding: (Text.Blaze.Internal.StaticString
-                   Htmls.$fToMarkupTool140
-                   Htmls.$fToMarkupTool139
                    Htmls.$fToMarkupTool_t26) -}
-4ee5f7395c6810b577a76324959c6635
+3608ed982a9c5fc9a072a0ec1e072d19
   $fToMarkupTool_t1 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool7 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool10 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-c2f117393575ce0abe9a55a4ac88f1df
+71cb00211463675559b0dfd377d87c76
   $fToMarkupTool_t10 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool54 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool57 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-1b04db0c7efe0106a43e7df07b4fbb24
+83ab5f80d9053d67d2fa9c1316b44222
   $fToMarkupTool_t11 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool58 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool61 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-8f5af2a08d3640d9a8fd7ad678ba586b
+912af16a691b336366a5ddfa25ba6054
   $fToMarkupTool_t12 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool64 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool67 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-3785bc0c83b0a3dc3161878d148c29bf
+6250cc249ebde856aaa1fac767654f44
   $fToMarkupTool_t13 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool68 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool71 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-c5f361882bec0333a816f840bfb61390
+84c150bbd1cee2e14728b705cfb23fbb
   $fToMarkupTool_t14 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool81 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool84 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-58d528c7e05347808bce0eaca8839e7a
+f5262c02df6020712d60e26f73a5b16a
   $fToMarkupTool_t15 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool85 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool88 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-ba0431ca8cf93d161eb39788ca959b4f
+6a7da1eba4d5045feb919c9578d8b989
   $fToMarkupTool_t16 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool89 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool92 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-7371bbde53942d599dbdd539b10d4520
+b6604cf03de7ca9dc008139a95c615b5
   $fToMarkupTool_t17 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool93 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool96 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-d65a982e96d1200d50173e5bb17ab742
+d2116fe69537fa9a0450e914faaf90ad
   $fToMarkupTool_t18 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool97 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool100 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-9ac2f73c527e2c0a6ef03871daccb16f
+bc8266b9a8443b2bc0704801496adae6
   $fToMarkupTool_t19 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool101 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool104 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-e57f70f72ecac0323ef999a820a8d4cc
+2db9763a4a3d5a0740d2393a2c255f25
   $fToMarkupTool_t2 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool11 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool14 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-bd60021528d02ec088808961a20fa50c
+991c1845f86063faa71ea795da44a9a9
   $fToMarkupTool_t20 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool109 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool112 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-8da37a0961f628c4989a9cb342d838cb
+0e6746aff9fd101dea82be6189367ce2
   $fToMarkupTool_t21 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool113 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool116 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-ddf2a0d91217177c3a376ce2c8dc097b
+e999401b3987366f7106083edf3a52e0
   $fToMarkupTool_t22 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool117 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool120 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-8fd13db69f6fd787ae8fb6a88ddea9a5
+c888b41f53c928f0f28ebea014aa3def
   $fToMarkupTool_t23 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool121 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool124 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-7de0cacd3f72c6a2a8187aba34eeee8a
+f2ba16c83afbc359d477a3cc87748b84
   $fToMarkupTool_t24 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool125 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool128 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-9c4a1c7c0efb723e5f3783d5a093a889
+fc65e1ed77cd174e7b799b64de72cb09
   $fToMarkupTool_t25 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool129 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool132 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-5e64e360929dd70def55078db2af0c0c
+af530f6d07cbdae7e0dd7d89cf28cd57
   $fToMarkupTool_t26 :: Data.Text.Internal.Text
-  {- Unfolding: (case GHC.Magic.runRW#
-                        @ 'GHC.Types.PtrRepLifted
-                        @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool138 of ds1 { (#,#) ipv ipv1 ->
-                 ipv1 }) -}
-21624a8ecf135b31c3a09f8978c0f46a
-  $fToMarkupTool_t27 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
                         Htmls.$fToMarkupTool141 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-77f4e44fe6725b9ca65a90c502c82dbd
-  $fToMarkupTool_t28 :: Data.Text.Internal.Text
+160f8a65c13cbae39d0f9b4584fb6910
+  $fToMarkupTool_t27 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
                         Htmls.$fToMarkupTool144 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-a1f47ffe64edf946465debfcdfbe9fa0
+cdc56e15d4823a3fb0ad0ec9ef4f442f
+  $fToMarkupTool_t28 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        Htmls.$fToMarkupTool147 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+027a1be74c9ac58853d042c8f15d2a18
   $fToMarkupTool_t29 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool148 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool151 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-3296bdbd21d3d5795e163c8b5f43a630
+e6f0fb89912bd0b300e15ff95c26f529
   $fToMarkupTool_t3 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool17 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool20 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-8c2f515f8ba82428767e38c7e904f7ac
+42e42abc814b70e677335ac0130ede4d
   $fToMarkupTool_t30 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool152 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool155 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-520696f30b8dacd580f7ba269cfce5ca
+3e04f6c414e8cfa3a243b2c8a8e37fb1
   $fToMarkupTool_t31 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool156 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool159 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-b8f8359551b091c4e70f8e7d57d3157f
+495bf279dc17f147d684df4ca07b97a9
   $fToMarkupTool_t32 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool160 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool163 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-66e53c6200dac476f91d90ffc4b7906f
+9375f888152c60003eef675d36f462b6
   $fToMarkupTool_t33 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool164 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool167 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-f8cca21d93afbd7392b4cf463ea2eaab
+d1b84bf276482a7505f7b47cb4e636dc
   $fToMarkupTool_t34 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool168 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool171 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-54ef504a8ef60389c4bc834afd1ba1a4
+6ea3a37039fc50602611fab91928a40b
   $fToMarkupTool_t4 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool21 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool24 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-14b56a1ad3222505849e192ae500be65
+cb0c7c4e528f53fa662baea8a467f10f
   $fToMarkupTool_t5 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool25 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool28 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-1211161d4b993f70716744c7d41496fd
+ad86021bd70b26e612724c00994d4ef9
   $fToMarkupTool_t6 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool29 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool32 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-b99659596d4f2ef0480f94672bf38571
+8a8d89ca3903d723186a0ffa059cf4a7
   $fToMarkupTool_t7 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool33 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool36 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-545e43b570a1e0272b4f6e899a19b27c
+0d1db742d632fff4d0825c7e769b3aba
   $fToMarkupTool_t8 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool44 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool47 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-6f015fb83c89969ee2ad67c20d99434c
+6c4ed046c0c0a03caf8130221f5b5357
   $fToMarkupTool_t9 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Htmls.$fToMarkupTool48 of ds1 { (#,#) ipv ipv1 ->
+                        Htmls.$fToMarkupTool51 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
 932e9fb11e6438dfda21675699b05a7f
   $fToMarkupTool_w :: GHC.Base.String

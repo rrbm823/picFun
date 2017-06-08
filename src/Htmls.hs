@@ -50,4 +50,5 @@ instance ToMarkup Tool where
               link = case t of
                 ZipImage -> "../image/ZipImage" 
                 Frame -> "../image/Frame"
-      
+                Spiral -> "../image/Spiral"
+                Checkerboard -> "../image/Checkerboard"

@@ -1,6 +1,5 @@
 {-# LANGUAGE ScopedTypeVariables #-}
 {-# LANGUAGE FlexibleContexts #-}
-{-# LANGUAGE Rank2Types #-}
 module Pixels where
 
 import Grid
@@ -113,7 +112,22 @@ makeFrame i1 i2 box = do
         freezeImage i
 
 frame i1 i2 g1 g2 = let width_margin = (g1 - i1) `div` 2; height_margin = (g2 - i2) `div` 2; in [(a,b) | a <- [width_margin .. i1 + width_margin - 1], b <- [height_margin .. i2 + height_margin - 1]]
-     
+
+checkerboard  img1@(Image e f _) img2@(Image g h _) = let
+  min1 = min e g
+  min2 = min f h
+  min' = min min1 min2
+  i1@(Image i _ _) = cropImage min' min' img1
+  i2@(Image _ _ _) = cropImage min' min' img2
+  in (makeCheckerImage i1 i2)
+     where makeCheckerImage l m = do
+             l' <- thawImage l
+             let w = imageHeight l `div` 8
+             let checkers1 =  concatMap (\i -> fmap (\(a,b) -> (a -1 ,b + i*w - 1)) [(x,y) | i <- [0,2,4,6], width <- [w], x <- [i*width..(i+1)*width], y <- [0..width]]) [1,3,5,7]
+             let checkers2 =  concatMap (\i -> fmap (\(a,b) -> (a,b + i*w)) [(x,y) | i <- [1,3,5,7], width <- [w], x <- [i*width..(i+1)*width], y <- [0..width]]) [0,2,4,6]
+             mapM (\(x,y) -> writePixel l' x y $ pixelAt m x y) $ checkers1 ++ checkers2
+             freezeImage l'
+             
 zipImages :: Pixel a => Image a -> Image a -> Image a
 zipImages i1@(Image g1 h1 d1) i2@(Image g2 h2 d2) = let
   gmin = min g1 g2

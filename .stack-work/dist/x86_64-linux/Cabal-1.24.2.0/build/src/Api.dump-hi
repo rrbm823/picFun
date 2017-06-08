@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-25 21:41:16.43885 UTC
+2017-06-08 18:55:26.302067 UTC
 
 interface picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Api 8002
-  interface hash: 6166967800e2817953b2250c1f62746f
-  ABI hash: d56792a22e7da97e5410829dada34b19
-  export-list hash: 2418294c7dae57e34d04183075077be0
+  interface hash: e7a6b5f2e2810de598cd2d58b5f2aed9
+  ABI hash: 71eeaa6be253d3aad554767dab90c6d2
+  export-list hash: 18f16d31ad91f101a223f51f643531e5
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: f358ba08f3764a2defef0682f557f343
   sig of: Nothing
@@ -129,8 +129,8 @@ import  -/  JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.
 import  -/  base-4.9.1.0:Data.Proxy d7f87a37cf7ec5ca87c59c8d2859031f
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
-import  -/  Htmls 5cc60e164c0b79a7291b833ddffe2c16
-  exports: c3f37b069a7cee912af8b3c217331b34
+import  -/  Htmls 66aa1e2126dbb30f5ec7eb36c90a41bc
+  exports: 916788173142834e424c5476e53f681f
   HTMLBlaze dcf0c3556f1dc5d5f3110238bb6e4e98
 import  -/  Models a583d3d139141f01a428355c3be9e3e0
   exports: 649c66b751c1cc1240dccaa93aa3621e

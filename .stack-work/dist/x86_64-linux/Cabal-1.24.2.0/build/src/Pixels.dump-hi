@@ -1,19 +1,20 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-30 18:57:10.982939 UTC
+2017-06-08 18:55:25.793784 UTC
 
 interface picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Pixels 8002
-  interface hash: 8ea99f0f170628aeee8dfcc5e15af10e
-  ABI hash: 9280ecad36564478e8c9d4e9d4bc076e
-  export-list hash: e815c9682fdde12bd3b31a042522bcff
+  interface hash: 0b9745c3a8752ea3f764478ba0043482
+  ABI hash: 404eae2032de27708edb314ee406e75b
+  export-list hash: b96fd90f5e3464f289e939520891e8f1
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
-  flag hash: 1629a6b3a1be45bac89f3b20e82b5009
+  flag hash: 57a8dfdafafb2317c20beeda1ec65e79
   sig of: Nothing
   used TH splices: False
   where
 exports:
   Pixels.b
   Pixels.brightnessRGB8
+  Pixels.checkerboard
   Pixels.cropImage
   Pixels.cropImageOffset
   Pixels.dynCrop
@@ -171,8 +172,8 @@ import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Lazy 208431757121593b5ca64b062df0cfbd
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
-import  -/  Grid 78bf6f1388c27e51d1db14fb9c119034
-  exports: f168d16018acef190802174e76b1c003
+import  -/  Grid 7ac835dfff59ecd62ee6fe27ba7d51b4
+  exports: be2f77ff63f8341c28635e00b58c8506
 import  -/  servant-JuicyPixels-0.3.0.2@servant-JuicyPixels-0.3.0.2-KFDh0ZSrRqdHyQZspaSYy6:Servant.JuicyPixels 8b5d4bad3818d21fd79b30ab2960a0f1
 import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Storable 6efee64e1486b549434fd0e1352e7839
 31f4b8a1c6ea205ae0c2ad3da0b107d7
@@ -190,7 +191,7 @@ b78afe589cb238e46629bf6cd40f488d
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk"#) -}
-de0c3a90f5518ee2b7488556bc88cac6
+40f1c05e627da1aae0629d23145d00a9
   $w$sframe ::
     GHC.Prim.Int#
     -> GHC.Types.Int
@@ -217,7 +218,7 @@ de0c3a90f5518ee2b7488556bc88cac6
                       case w of wild2 { GHC.Types.I# y1 ->
                       case GHC.Classes.divInt# (GHC.Prim.-# x y1) 2# of ww2 { DEFAULT ->
                       let {
-                        lvl56 :: [GHC.Types.Int]
+                        lvl70 :: [GHC.Types.Int]
                         = GHC.Enum.eftInt ww2 (GHC.Prim.-# (GHC.Prim.+# y1 ww2) 1#)
                       } in
                       letrec {
@@ -244,11 +245,27 @@ de0c3a90f5518ee2b7488556bc88cac6
                                 : y2 ys
                                 -> GHC.Types.: @ (GHC.Types.Int, GHC.Types.Int) (ds, y2) (go1 ys) }
                           } in
-                          go1 lvl56
+                          go1 lvl70
                       } in
                       go ww4 } } }
                    GHC.Types.True
                    -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int) } }) -}
+cdc23436a9a36caf24887ecd79a85611
+  $wcheckerboard ::
+    (Control.Monad.Primitive.PrimMonad m,
+     Codec.Picture.Types.Pixel px) =>
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Vector.Storable.Vector
+         (Codec.Picture.Types.PixelBaseComponent px)
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Vector.Storable.Vector
+         (Codec.Picture.Types.PixelBaseComponent px)
+    -> m (Codec.Picture.Types.Image px)
+  {- Arity: 8,
+     Strictness: <S(SL),U(U(U,U,U,U,U),U)><L,U(U,A,A,A,A,A,C(U(U)),A,A,A,C(C1(C1(U))),A,C(C1(C1(C1(C1(U))))),A,A,C(C1(C1(C1(U)))))><L,U><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0] -}
 ec395dc32c9f2e15bed82405b70ba9ba
   $wcropImage ::
     Codec.Picture.Types.Pixel a =>
@@ -669,6 +686,25 @@ f8d90adc2ce9792044e9b305a5511960
                    ww5
                    ww6
                    ww7 } }) -}
+5d5c382321bae7dc08b93f38dd897147
+  checkerboard ::
+    (Control.Monad.Primitive.PrimMonad m,
+     Codec.Picture.Types.Pixel px) =>
+    Codec.Picture.Types.Image px
+    -> Codec.Picture.Types.Image px -> m (Codec.Picture.Types.Image px)
+  {- Arity: 4,
+     Strictness: <S(SL),U(U(U,U,U,U,U),U)><L,U(U,A,A,A,A,A,C(U(U)),A,A,A,C(C1(C1(U))),A,C(C1(C1(C1(C1(U))))),A,A,C(C1(C1(C1(U)))))><S,1*U(U,U,U)><S,1*U(U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ (m :: * -> *)
+                   @ px
+                   (w :: Control.Monad.Primitive.PrimMonad m)
+                   (w1 :: Codec.Picture.Types.Pixel px)
+                   (w2 :: Codec.Picture.Types.Image px)
+                   (w3 :: Codec.Picture.Types.Image px) ->
+                 case w2 of ww { Codec.Picture.Types.Image ww1 ww2 ww3 ->
+                 case w3 of ww4 { Codec.Picture.Types.Image ww5 ww6 ww7 ->
+                 Pixels.$wcheckerboard @ m @ px w w1 ww1 ww2 ww3 ww5 ww6 ww7 } }) -}
 f765b642f02969ab6e8ea20bea1817c2
   cropImage ::
     Codec.Picture.Types.Pixel a =>
