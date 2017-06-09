@@ -8,6 +8,7 @@ import Codec.Picture
 import Codec.Picture.Types
 import Data.List (sortBy, span)
 import Data.Ord
+import Control.Monad
 import qualified Data.ByteString.Lazy as LB
 import qualified Data.Vector.Storable as V
 
@@ -117,24 +118,42 @@ checkerboard  img1@(Image e f _) img2@(Image g h _) = let
   min1 = min e g
   min2 = min f h
   min' = min min1 min2
-  i1@(Image i _ _) = cropImage min' min' img1
+  i1@(Image s _ _) = cropImage min' min' img1
   i2@(Image _ _ _) = cropImage min' min' img2
-  in (makeCheckerImage i1 i2)
-     where makeCheckerImage l m = do
-             l' <- thawImage l
-             let w = imageHeight l `div` 8
-             let checkers1 =  concatMap (\i -> fmap (\(a,b) -> (a -1 ,b + i*w - 1)) [(x,y) | i <- [0,2,4,6], width <- [w], x <- [i*width..(i+1)*width], y <- [0..width]]) [1,3,5,7]
-             let checkers2 =  concatMap (\i -> fmap (\(a,b) -> (a,b + i*w)) [(x,y) | i <- [1,3,5,7], width <- [w], x <- [i*width..(i+1)*width], y <- [0..width]]) [0,2,4,6]
-             mapM (\(x,y) -> writePixel l' x y $ pixelAt m x y) $ checkers1 ++ checkers2
-             freezeImage l'
+  w = s `div` 8
+  checkers1 =  concatMap
+    (\i -> (\(a,b) -> (a - 1 ,b + i*w - 1)) 
+           <$> [(x,y) |
+                i <- [0,2,4,6],
+                width <- [w],
+                x <- [i*width..(i+1)*width],
+                y <- [0..width]]
+    ) [1,3,5,7]
+  checkers2 =  concatMap
+    (\i -> (\(a,b) -> (a,b + i*w))
+           <$> [(x,y) |
+                i <- [1,3,5,7],
+                width <- [w],
+                x <- [i*width..(i+1)*width],
+                y <- [0..width]]
+    ) [0,2,4,6]
+    in mutateImage i1 i2 $ checkers1 ++ checkers2 -- (makeCheckerImage i1 i2)
              
-zipImages :: Pixel a => Image a -> Image a -> Image a
+zipImages :: Pixel a => Image a -> Image a -> IO (Image a)
 zipImages i1@(Image g1 h1 d1) i2@(Image g2 h2 d2) = let
   gmin = min g1 g2
   hmin = min h1 h2
-  (Image _ _ c1) = cropImage gmin hmin i1
-  (Image _ _ c2) = cropImage gmin hmin i2
-  in (Image gmin hmin $ V.izipWith (\i x y -> if odd i then x else y) c1 c2 )
+  a@(Image _ _ c1) = cropImage gmin hmin i1
+  b@(Image _ _ c2) = cropImage gmin hmin i2
+  odds = [(x,y) |x <- [0..gmin - 1], y <- [0..hmin - 1],  ( (odd x && even y) || (even x && odd y) )] 
+  in mutateImage a b odds -- (Image gmin hmin $ V.izipWith (\i x y -> if odd i then x else y) c1 c2 )
+
+mutateImage :: Pixel px => Image px -> Image px -> [ (Int, Int) ] -> IO (Image px)
+mutateImage l m b = do
+  l' <- thawImage l
+  mapM (\(x,y) -> writePixel l' x y $ pixelAt m x y) b
+  freezeImage l'
+  
 
 dynCrop :: Int -> Int -> DynamicImage -> DynamicImage
 dynCrop w h = dynamicPixelMap $ cropImage w h

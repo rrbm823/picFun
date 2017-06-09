@@ -7,9 +7,7 @@
 module Grid where
 
 import Codec.Picture
-import Data.Vector.Storable.Mutable (IOVector)
-import qualified Data.Vector.Storable.Mutable as MV
-import qualified Data.Vector.Storable as V
+import qualified Data.Vector as V
 
 import Data.Monoid ((<>))
 import qualified Data.Foldable as F
@@ -65,35 +63,35 @@ newtype VV a = VV { _unvv :: V (V a) }
 makeLenses ''V
 makeLenses ''VV
 
-instance ZipperS V where
-  type IndexS V = Int
-  data DirectionS V = VL | VR deriving (Eq, Show)
+instance Zipper V where
+  type Index V = Int
+  data Direction V = VL | VR deriving (Eq, Show)
 
-  cursorS = _vc
-  indexS = _vi
-  sizeS (V l _ _) = V.length l + 1
-  (!>) v k = v ^. vix k
-  adjustS f k v = v & vix k %~ f
-  neighborhoodS (V l _ _)
+  cursor = _vc
+  index = _vi
+  size (V l _ _) = V.length l + 1
+  (!) v k = v ^. vix k
+  adjust f k v = v & vix k %~ f
+  neighborhood (V l _ _)
     | V.length l <= 2 = V.toList l
     | otherwise       = map ((V.!) l) [0, V.length l - 1]
-  toListS (V l c i) = V.toList . V.reverse $ l <> (V.cons c f)
+  toList (V l c i) = V.toList . V.reverse $ l <> (V.cons c f)
     where (f, b) = V.splitAt i l
-  fromMapS _ [] = error "Zipper must have length greater than zero."
-  fromMapS a m = V (V.fromList ys) (iToa 0) 0
+  fromMap _ [] = error "Zipper must have length greater than zero."
+  fromMap a m = V (V.fromList ys) (iToa 0) 0
     where ys = map iToa rng
           iToa i = fromMaybe a $ lookup i m
           l    = maximum . (0:) $ map fst m
           rng  = if l == 0 then [] else [l,(l-1)..1]
-  shiftS d v@(V l c i)
+  shift d v@(V l c i)
     | V.null l = v -- shifting length zero amounts to nothing
     | d == VL   = V (V.snoc xs c) x xi
     | d == VR   = V (V.cons c ys) y yi
     where
       (x, xs) = (V.head l, V.tail l)
       (ys, y) = (V.init l, V.last l)
-      xi        = (i - 1) `mod` sizeS v
-      yi        = (i + 1) `mod` sizeS v
+      xi        = (i - 1) `mod` size v
+      yi        = (i + 1) `mod` size v
 
 instance Zipper Z where
   type Index Z = Int
@@ -203,12 +201,12 @@ zToLix z@(Z _ _ i) k
   where n = k `mod` s
         s = size z
 
-vix :: V.Storable a => Int -> Lens' (V a) a
+vix :: Int -> Lens' (V a) a
 vix k f v@(V l c i ) = maybe
   ((\x -> V l x i) <$> f c)
   (\n -> (\x -> V (V.update_ l (V.singleton n) (V.singleton x)) c i) <$> f (l V.! n)) (vToLix v k)
 
-vToLix :: V.Storable a => V a -> Int -> Maybe Int
+vToLix :: V a -> Int -> Maybe Int
 vToLix z@(V l _ i) k
   | i == n = Nothing
   | i < n  = Just $ s - (n - i) - 1
@@ -276,6 +274,7 @@ class Zipper z where
   -- | Get size (maximum of @Index z@).
   size :: z a -> (Index z)
 
+{--
 class ZipperS z where
   type IndexS z
   data DirectionS z
@@ -320,3 +319,4 @@ class ZipperS z where
 
   -- | Get size (maximum of @Index z@).
   sizeS :: V.Storable a => z a -> (IndexS z)
+--}

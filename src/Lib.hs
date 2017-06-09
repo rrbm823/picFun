@@ -19,7 +19,7 @@ imagApp = do
   run 8080 $ serve imageApi (zipSrv left right)
 
 zipSrv :: TVar DynamicImage -> TVar DynamicImage -> Server ImageAPI
-zipSrv i1 i2 = postImg :<|> display :<|> (return . read)
+zipSrv i1 i2 = postImg :<|> display :<|> gif :<|> (return . read)
   where
     postImg e p
       | e = liftIO $ atomically $ do
@@ -30,11 +30,16 @@ zipSrv i1 i2 = postImg :<|> display :<|> (return . read)
           modifyTVar i2 (const p)
           readTVar i2
           return e
+    gif r = case read r of
+       Rave -> liftIO $ do
+         img <- readTVarIO i1
+         return $ take 7 $ iterate (brightnessRGB8 (30)) (convertRGB8 img)
     display r = case read r of
        ZipImage -> liftIO $ do
          leftImg <- readTVarIO i1
          rightImg <- readTVarIO i2
-         return $ ImageRGB8 $ zipImages (convertRGB8 leftImg) (convertRGB8 rightImg)
+         imgResult <- zipImages (convertRGB8 leftImg) (convertRGB8 rightImg)
+         return $ ImageRGB8 imgResult
        Spiral -> liftIO $ do
          leftImg <- readTVarIO i1
          rightImg <- readTVarIO i2
@@ -45,3 +50,9 @@ zipSrv i1 i2 = postImg :<|> display :<|> (return . read)
          rightImg <- readTVarIO i2
          imgResult <- imageInImage (convertRGB8 leftImg) (convertRGB8 rightImg) 
          return $ ImageRGB8 imgResult
+       Checkerboard ->  liftIO $ do
+         leftImg <- readTVarIO i1
+         rightImg <- readTVarIO i2
+         imgResult <- checkerboard (convertRGB8 leftImg) (convertRGB8 rightImg) 
+         return $ ImageRGB8 imgResult
+       
