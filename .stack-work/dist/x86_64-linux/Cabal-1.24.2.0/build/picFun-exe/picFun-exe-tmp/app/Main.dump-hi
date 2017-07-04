@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-09 23:50:53.441139 UTC
+2017-07-04 19:27:54.135946 UTC
 
 interface main@main:Main 8002
-  interface hash: 00a72d92229a5c85e376cdebc8af52dc
-  ABI hash: 1dbe2a3f0047051e21d814e83a9c180b
-  export-list hash: 7893f28010ba902b5ecab0c14caeb505
+  interface hash: 1b0b215c52dceefd40fa8621b0fe970d
+  ABI hash: d601ee9d4fbc06443aa2be8c0133aa11
+  export-list hash: e75652cc55706d6721bd7b19037304cd
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 2f09387325aab7617e6b60fcceee4574
   sig of: Nothing
@@ -52,11 +52,12 @@ package dependencies: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMK
                       microlens-th-0.4.1.1@microlens-th-0.4.1.1-26cEGwGOrIB7ilX0jLiOT0
                       mime-types-0.1.0.7@mime-types-0.1.0.7-31dnC2ifQ9r5TApUZagLPk
                       mmorph-1.0.9@mmorph-1.0.9-5bASEvmIkr5CpdAYXwPsn0
+                      monad-loops-0.4.3@monad-loops-0.4.3-ERCN4ZKCeeS5SRhwqXsLBP
                       mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
                       network-2.6.3.1@network-2.6.3.1-ABFtZSq90Z9BfMXNiqgBoe
                       network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF
                       parsec-3.1.11@parsec-3.1.11-113irVHGgd88sRnywByDNw
-                      picFun-0.1.0.0@picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk
+                      picFun-0.1.0.0@picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf
                       pretty-1.1.3.3@pretty-1.1.3.3
                       primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH
                       psqueues-0.2.2.3@psqueues-0.2.2.3-9nDehYbroydEusqdFJopTa
@@ -96,7 +97,7 @@ orphans: attoparsec-0.13.1.0@attoparsec-0.13.1.0-1ABl8gBrvGSCXKXEElG6rU:Data.Att
          bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
          hashable-1.2.6.0@hashable-1.2.6.0-3EXxoqeEgbfAKr6aGkye6x:Data.Hashable.Generic
          network-2.6.3.1@network-2.6.3.1-ABFtZSq90Z9BfMXNiqgBoe:Network.Socket
-         picFun-0.1.0.0@picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Htmls
+         picFun-0.1.0.0@picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf:Htmls
          stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
@@ -134,8 +135,8 @@ family instance modules: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOs
                          iproute-1.7.1@iproute-1.7.1-4HULutk0xITKNjI1pwYrD4:Data.IP.Range
                          microlens-0.4.8.0@microlens-0.4.8.0-5PXN9DedWooJg6UJ24ter0:Lens.Micro.Internal
                          network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF:Network.URI
-                         picFun-0.1.0.0@picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Grid
-                         picFun-0.1.0.0@picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Models
+                         picFun-0.1.0.0@picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf:Grid
+                         picFun-0.1.0.0@picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf:Models
                          pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
                          pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
                          primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH:Control.Monad.Primitive
@@ -162,7 +163,7 @@ family instance modules: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOs
                          zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.Zlib.Stream
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
-import  -/  picFun-0.1.0.0@picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Lib e6a2f4413dafc0df77390f016f62fc5c
+import  -/  picFun-0.1.0.0@picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf:Lib 59ad9d3daa1122c0e26082ff62d73b61
 d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -175,12 +176,12 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-bbd35dde920a1269abdb21aae04429e9
+d77b3dd22f38f926dcc4815d932af652
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.imagApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-8d17066817eb831d76306e5f71955420
+e61d39e59ee7e707be134b23ed44f439
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)

@@ -112,6 +112,13 @@
   (major1) == 0 && (major2) <  3 || \
   (major1) == 0 && (major2) == 3 && (minor) <= 21)
 
+/* package monad-loops-0.4.3 */
+#define VERSION_monad_loops "0.4.3"
+#define MIN_VERSION_monad_loops(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  4 || \
+  (major1) == 0 && (major2) == 4 && (minor) <= 3)
+
 /* package mtl-2.2.1 */
 #define VERSION_mtl "2.2.1"
 #define MIN_VERSION_mtl(major1,major2,minor) (\
@@ -231,7 +238,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk"
+#define CURRENT_COMPONENT_ID "picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf"
 
-#define CURRENT_PACKAGE_KEY "picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk"
+#define CURRENT_PACKAGE_KEY "picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf"
 

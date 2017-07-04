@@ -6,6 +6,7 @@
 module Htmls where
 
 import Control.Monad
+import Data.Monoid
 import qualified Data.Text as T
 import Text.Blaze.Html5 as H
 import Text.Blaze.Html5.Attributes as A
@@ -26,32 +27,40 @@ instance ToMarkup a => MimeRender HTMLBlaze a where
 
 instance MimeRender HTMLBlaze Html where
     mimeRender _ = renderHtml
-  
+
 instance ToMarkup Tool where
+  toMarkup Draw = docTypeHtml $ do
+    H.head $ do
+      link ! A.rel "stylesheet" ! A.href "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+      meta ! A.name "viewport" ! A.content "width=device-width, initial-scale=1"
+    body $ do
+      H.p ! A.style "text-align: center" $ toHtml ("Draw something on an image or nothing with some friends. Yay!" :: String)
+      H.div ! A.class_ "container" $ H.canvas ! A.onload "showPic()" ! A.id "theImage" $ ""
+      H.div ! A.class_ "container" $ do
+        H.div ! A.class_ "col-md-8 col-lg-4" $ H.input ! A.class_ "btn btn-default" ! A.type_ "button" ! A.onclick "picUpdate()" ! A.value "Update This Img"
+        H.div ! A.class_ "col-md-8 col-lg-4" $ H.input ! A.class_ "btn btn-default" ! A.type_ "button" ! A.onclick "showPic()" ! A.value "Show Current Img"
+        H.div ! A.class_ "col-md-12 col-lg 4" $  H.input ! A.class_ "btn btn-default" !  A.type_ "file" ! A.accept "image/jpeg" ! A.onchange "handlePic(this.files[0])"
+      script ! A.type_ "text/javascript" ! A.src "../canvas.js" $ ""
+      script ! A.type_ "text/javascript" ! A.src "../loading.js" $ ""
+
   toMarkup t = docTypeHtml $ do
     H.head $ do
-      script "var handleLeft = function(f) { var oReq = new XMLHttpRequest(); oReq.open('POST', '../postImg/True', true); oReq.setRequestHeader('Content-Type', 'image/jpeg'); oReq.send(f); }; var handleRight = function(f) { var oReq = new XMLHttpRequest(); oReq.open('POST', '../postImg/False', true); oReq.setRequestHeader('Content-Type', 'image/jpeg'); oReq.send(f); };"
-      script ("var picUpdate = function() { document.getElementById('theImage').src='" `mappend` link `mappend` "'}")
+      link ! A.rel "stylesheet" ! A.href "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      meta ! A.name "viewport" ! A.content "width=device-width, initial-scale=1"
     body $ do
-      H.p $ toHtml ("Combine two pictures to create a cool new image" :: String)
-      br
-      H.table $ H.tr $ do
-        H.td $ do
-          H.tr $ do
-          --H.form ! A.action "../postImg/Left" ! A.method "POST" ! A.content "image/jpeg" $ do
-            H.input ! A.type_ "file" ! A.accept "image/jpeg" ! A.onchange "handleLeft(this.files[0])"
-            H.input ! A.type_ "file" ! A.accept "image/jpeg" ! A.onchange "handleRight(this.files[0])"
-            --H.input ! A.type_ "submit"
-          H.tr $ do
-            H.input ! A.type_ "button" ! A.onclick "picUpdate()"
-        H.td $ do
-          H.img ! A.id "theImage" -- ! A.style "width: 50%; height: 50%"
-          --H.form ! A.action "../postImg/Right" ! A.method "POST" ! A.content "image/jpeg" $ do
-            --H.input ! A.type_ "file" ! A.accept "image/*"
-            --H.input ! A.type_ "submit"
-            where
-              link = case t of
-                ZipImage -> "../image/ZipImage" 
-                Frame -> "../image/Frame"
-                Spiral -> "../image/Spiral"
-                Checkerboard -> "../image/Checkerboard"
+      H.p ! A.style "text-align: center" $ toHtml ("Combine two pictures to create a cool new image" :: String)
+      H.div ! A.class_ "container" $ do
+        H.canvas ! A.id "theImage" $ ""
+      H.div ! A.class_ "container" $ do
+        H.div ! A.class_ "col-md-6 col-lg-4" $ H.input ! A.class_ "btn btn-default" ! A.type_ "file" ! A.accept "image/jpeg" ! A.onchange "handlePic2(this.files[0],'True')"
+        H.div ! A.class_ "col-md-6 col-lg-4" $ H.input ! A.class_ "btn btn-default" ! A.type_ "file" ! A.accept "image/jpeg" ! A.onchange "handlePic2(this.files[0],'False')"    
+        H.div ! A.class_ "col-md-8 col-lg-4" $ H.input ! A.class_ "btn btn-default" ! A.type_ "button" ! A.onclick "picUpdate2()" ! A.value "Combine!"
+      script ! A.type_ "text/javascript" ! A.src "../loading.js" $ ""
+      script $ "picUpdate2 = function() { img.src ='" <> l <> "?d=' + Date.now(); showPic(); };"
+        where
+          l = case t of
+            ZipImage -> "../image/ZipImage" 
+            Frame -> "../image/Frame"
+            Spiral -> "../image/Spiral"
+            Checkerboard -> "../image/Checkerboard"
+

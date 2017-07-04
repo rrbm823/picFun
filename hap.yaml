@@ -1,0 +1,13 @@
+deploy_path: '/srv'
+host: 45.55.139.162
+port: 22
+repo: 'https://github.com/rrbm823/picFun'
+revision: origin/master
+build_script: 
+restart_command: 
+copy_files:
+  - src: '/home/lamb/Documents/picFun/.stack-work/install/x86_64-linux/lts-8.6/8.0.2/bin/picFun-exe'
+    dest: './'
+copy_dirs:
+  - src: 'static'
+    dest: 'static'

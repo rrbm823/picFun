@@ -9,6 +9,7 @@ import Codec.Picture.Types
 import Data.List (sortBy, span)
 import Data.Ord
 import Control.Monad
+import Control.Monad.Loops
 import qualified Data.ByteString.Lazy as LB
 import qualified Data.Vector.Storable as V
 
@@ -30,7 +31,7 @@ brightnessRGB8 add = pixelMap brightFunction
 spiral_part :: (Ord t, Floating t) => [(t,t)] -> [(t,t)] -> (Int, Int) -> Bool 
 spiral_part fn fp (x,y) = closest_n > closest_p
   where
-    closest_n = e_dist_int (0,0) $ head $ sortBy (comparing $ e_dist_int (x,y)) fn --inefficient sorting!
+    closest_n = e_dist_int (0,0) $ head $ sortBy (comparing $ e_dist_int (x,y)) fn
     closest_p = e_dist_int (0,0) $ head $ sortBy (comparing $ e_dist_int (x,y)) fp
 
 spiral_check :: (Enum t, Ord t, Floating t) => (t,t) -> Bool
@@ -85,19 +86,16 @@ toPolar (x,y) = (sqrt (x*x + y*y) , atan_ y x) where
 
 toCart (r,theta) = (r*cos(theta), r*sin(theta))
 
-sprlImages :: Pixel a => Image a -> Image a -> IO (Image a)
-sprlImages i1@(Image g1 h1 d1) i2@(Image g2 h2 d2) = let
+sprlImages :: Pixel a => Float -> Image a -> Image a -> IO (Image a)
+sprlImages o i1@(Image g1 h1 d1) i2@(Image g2 h2 d2) = let
   gmin = min g1 g2
   hmin = min h1 h2
   gminF = fromIntegral gmin :: Float
   hminF = fromIntegral hmin :: Float
   c1 = cropImage gmin hmin i1
   c2 = cropImage gmin hmin i2
-  in do
-     c1' <- thawImage c1
-     let sp = (\(a,b) -> (round a + gmin `div` 2, round b + hmin `div` 2)) <$> f_spiral_n [0..gminF*gminF] ++ f_spiral_p [0..gminF*gminF]
-     mapM_ (\(a,b) -> writePixel c1' a b $ pixelAt c2 a b) $ filter (\(a,b) -> a >= 0 && b >= 0 && a < gmin && b < hmin) sp
-     freezeImage c1'
+  sp = filter (\(a,b) -> a >= 0 && b >= 0 && a < gmin && b < hmin) $ (\(a,b) -> (round a + gmin `div` 2, round b + hmin `div` 2)) <$> f_spiral_n ((+o) <$> [0..gminF*gminF]) ++ f_spiral_p ((+o) <$> [0..gminF*gminF])
+  in mutateImage c1 c2 sp
   
 imageInImage :: Pixel a => Image a -> Image a -> IO (Image a)
 imageInImage img1@(Image e f _) img2@(Image g h _)
@@ -118,11 +116,12 @@ checkerboard  img1@(Image e f _) img2@(Image g h _) = let
   min1 = min e g
   min2 = min f h
   min' = min min1 min2
-  i1@(Image s _ _) = cropImage min' min' img1
-  i2@(Image _ _ _) = cropImage min' min' img2
-  w = s `div` 8
+  w = min' `div` 8
+  s = w * 8
+  i1 = cropImage s s img1
+  i2 = cropImage s s img2
   checkers1 =  concatMap
-    (\i -> (\(a,b) -> (a - 1 ,b + i*w - 1)) 
+    (\i -> (\(a,b) -> (a - 1, b + i*w - 1)) 
            <$> [(x,y) |
                 i <- [0,2,4,6],
                 width <- [w],
@@ -137,23 +136,24 @@ checkerboard  img1@(Image e f _) img2@(Image g h _) = let
                 x <- [i*width..(i+1)*width],
                 y <- [0..width]]
     ) [0,2,4,6]
-    in mutateImage i1 i2 $ checkers1 ++ checkers2 -- (makeCheckerImage i1 i2)
+    in mutateImage i1 i2 $ checkers1 ++ checkers2
              
-zipImages :: Pixel a => Image a -> Image a -> IO (Image a)
-zipImages i1@(Image g1 h1 d1) i2@(Image g2 h2 d2) = let
+zipImages :: Pixel a => Int -> Image a -> Image a -> IO (Image a)
+zipImages n i1@(Image g1 h1 d1) i2@(Image g2 h2 d2) = let
   gmin = min g1 g2
   hmin = min h1 h2
   a@(Image _ _ c1) = cropImage gmin hmin i1
   b@(Image _ _ c2) = cropImage gmin hmin i2
-  odds = [(x,y) |x <- [0..gmin - 1], y <- [0..hmin - 1],  ( (odd x && even y) || (even x && odd y) )] 
+  odds = [(x,y) |x <- [0..gmin - 1], y <- [0..hmin - 1],   (modB x n && not (modB y n)) || (not (modB x n) && modB y n) ] 
   in mutateImage a b odds -- (Image gmin hmin $ V.izipWith (\i x y -> if odd i then x else y) c1 c2 )
+
+modB m d = mod m d == 0
 
 mutateImage :: Pixel px => Image px -> Image px -> [ (Int, Int) ] -> IO (Image px)
 mutateImage l m b = do
   l' <- thawImage l
   mapM (\(x,y) -> writePixel l' x y $ pixelAt m x y) b
-  freezeImage l'
-  
+  freezeImage l'  
 
 dynCrop :: Int -> Int -> DynamicImage -> DynamicImage
 dynCrop w h = dynamicPixelMap $ cropImage w h
@@ -167,3 +167,16 @@ cropImage e f img@(Image g h _)
 
 cropImageOffset :: Pixel a => Int -> Int -> Int -> Int -> Image a -> Image a
 cropImageOffset e1 e2 o1 o2 img = generateImage (\x y -> pixelAt img (x + o1) (y + o2)) e1 e2
+
+sincWindow a x
+  | x == 0     = 1
+  | (0-a) <= x = a * sin(pi * x) * sin(pi * x / a) / (pi*pi*x*x)
+  | True       = 0
+
+sincWindow2d a (x,y) = sincWindow a x * sincWindow a y
+
+interpolateSinc :: V.Vector Float -> Float -> Float -> Float
+interpolateSinc s a x = sum $ [(s V.! round i) * sincWindow a ( x - i ) |
+                               i <- mkIndices a x]
+
+mkIndices a x = [(fromIntegral $ floor x) - a + 1 .. (fromIntegral $ floor x) + a]  

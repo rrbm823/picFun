@@ -19,31 +19,52 @@ imagApp = do
   run 8080 $ serve imageApi (zipSrv left right)
 
 zipSrv :: TVar DynamicImage -> TVar DynamicImage -> Server ImageAPI
-zipSrv i1 i2 = postImg :<|> display :<|> gif :<|> (return . read)
+zipSrv i1 i2 = postImg :<|> display :<|> gif :<|> (return . read) :<|> serveDirectory "static"
   where
     postImg e p
-      | e = liftIO $ atomically $ do
-          modifyTVar i1 (const p)
-          readTVar i1
-          return e
-      | True = liftIO $ atomically $ do
-          modifyTVar i2 (const p)
-          readTVar i2
-          return e
+      | e = liftIO $ do
+          print "modifying left img"
+          atomically $ do
+            modifyTVar i1 (const p)
+            -- readTVar i1
+            return e
+      | True = liftIO $ do
+          print "modifying right img"
+          atomically $ do
+            modifyTVar i2 (const p)
+            -- readTVar i2
+            return e
     gif r = case read r of
        Rave -> liftIO $ do
          img <- readTVarIO i1
-         return $ take 7 $ iterate (brightnessRGB8 (30)) (convertRGB8 img)
-    display r = case read r of
+         return $ take 7 $ iterate (brightnessRGB8 (10)) (convertRGB8 img)
+       Checkerboard ->  liftIO $ do
+         leftImg <- readTVarIO i1
+         rightImg <- readTVarIO i2
+         img1 <- checkerboard (convertRGB8 leftImg) (convertRGB8 rightImg)
+         img2 <- checkerboard (convertRGB8 rightImg) (convertRGB8 leftImg)
+         return $ [img1, img2]
+       Spiral -> liftIO $ do
+         leftImg <- readTVarIO i1
+         rightImg <- readTVarIO i2
+         mapM (\s -> sprlImages s (convertRGB8 leftImg) (convertRGB8 rightImg)) $ take 10 (iterate (+0.3) 0.0)
        ZipImage -> liftIO $ do
          leftImg <- readTVarIO i1
          rightImg <- readTVarIO i2
-         imgResult <- zipImages (convertRGB8 leftImg) (convertRGB8 rightImg)
+         mapM (\n -> zipImages n (convertRGB8 leftImg) (convertRGB8 rightImg)) [2..10]
+    display r = case read r of
+       Draw -> liftIO $ do
+         img <- readTVarIO i1
+         return $ ImageRGB8 $ convertRGB8 img
+       ZipImage -> liftIO $ do
+         leftImg <- readTVarIO i1
+         rightImg <- readTVarIO i2
+         imgResult <- zipImages 2 (convertRGB8 leftImg) (convertRGB8 rightImg)
          return $ ImageRGB8 imgResult
        Spiral -> liftIO $ do
          leftImg <- readTVarIO i1
          rightImg <- readTVarIO i2
-         imgResult <- sprlImages (convertRGB8 leftImg) (convertRGB8 rightImg)
+         imgResult <- sprlImages 0 (convertRGB8 leftImg) (convertRGB8 rightImg)
          return $ ImageRGB8 imgResult
        Frame -> liftIO $ do
          leftImg <- readTVarIO i1

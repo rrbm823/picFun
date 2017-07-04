@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-09 23:50:52.236468 UTC
+2017-07-04 19:27:51.4948 UTC
 
-interface picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Lib 8002
-  interface hash: 9c69498fde1fac7dfbe07a9134ce39d5
-  ABI hash: e6a2f4413dafc0df77390f016f62fc5c
-  export-list hash: 4d6c82c2362869636e518908bbf93ef2
-  orphan hash: dd8fc1fcf3bb87eeaa502c1bec6dfcb7
+interface picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf:Lib 8002
+  interface hash: 0d2b0575b056ba38218a52ee70eca058
+  ABI hash: 59ad9d3daa1122c0e26082ff62d73b61
+  export-list hash: 7354d3e2f971af1d7438fd5c3da664ee
+  orphan hash: 8b207d14d0563adba52cea3ee0184c18
   flag hash: ab396f11155bd696ab63895436e6f1df
   sig of: Nothing
   used TH splices: False
@@ -53,6 +53,7 @@ package dependencies: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMK
                       microlens-th-0.4.1.1@microlens-th-0.4.1.1-26cEGwGOrIB7ilX0jLiOT0
                       mime-types-0.1.0.7@mime-types-0.1.0.7-31dnC2ifQ9r5TApUZagLPk
                       mmorph-1.0.9@mmorph-1.0.9-5bASEvmIkr5CpdAYXwPsn0
+                      monad-loops-0.4.3@monad-loops-0.4.3-ERCN4ZKCeeS5SRhwqXsLBP
                       mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
                       network-2.6.3.1@network-2.6.3.1-ABFtZSq90Z9BfMXNiqgBoe
                       network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF
@@ -96,7 +97,7 @@ orphans: attoparsec-0.13.1.0@attoparsec-0.13.1.0-1ABl8gBrvGSCXKXEElG6rU:Data.Att
          bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
          hashable-1.2.6.0@hashable-1.2.6.0-3EXxoqeEgbfAKr6aGkye6x:Data.Hashable.Generic
          network-2.6.3.1@network-2.6.3.1-ABFtZSq90Z9BfMXNiqgBoe:Network.Socket
-         picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Htmls
+         picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf:Htmls
          stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
@@ -134,8 +135,8 @@ family instance modules: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOs
                          iproute-1.7.1@iproute-1.7.1-4HULutk0xITKNjI1pwYrD4:Data.IP.Range
                          microlens-0.4.8.0@microlens-0.4.8.0-5PXN9DedWooJg6UJ24ter0:Lens.Micro.Internal
                          network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF:Network.URI
-                         picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Grid
-                         picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Models
+                         picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf:Grid
+                         picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf:Models
                          pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
                          pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
                          primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH:Control.Monad.Primitive
@@ -164,43 +165,48 @@ import  -/  JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.
 import  -/  JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.Picture.Types 22b7a216fd591cfd9ca02dad94569487
 import  -/  base-4.9.1.0:Control.Monad a6784c5dab0d75c63dabec5a37843f98
 import  -/  base-4.9.1.0:Control.Monad.IO.Class 1a4384f66ee999caf5366398edb6ca7b
+import  -/  base-4.9.1.0:Data.Traversable 556020d7cf3c4a34a774600512918a37
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:GHC.Conc.Sync 8d0a228e5fc4d8c110495066f4d52ea1
 import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
 import  -/  base-4.9.1.0:Text.Read 75c59863e882ebaec4532e9465e2ee9b
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 import  -/  mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6:Control.Monad.Trans d69bc2e104a90fb918d853b240f7af2e
-import  -/  Api a77364eb5bd6d4657c49fc01d22ac574
-  exports: 1c7021d10c0b328ec4d502193d57f4ac
-  ImageAPI bc9b6d19bab89ac785117c4e15bcb22e
-  imageApi 1b64c9f2fb76b3c05f081b30e33e0a1d
-import  -/  Htmls aa0035ee828be950ec0a64c28b4fe3d2
-  exports: 67d6274d56ce8eb3c41abc47b0b45b11
-import  -/  Models d801f338584b61c18b182f9aac54bd61
-  exports: b83cc7622d83dd136fe94f56bd460b59
-  Checkerboard 87b1b1e2f0ec1d59fb85486ca940f78c
-  Frame 9d348997b1c334f965a8bb9d002958d9
-  Rave 0a68a386e67e3949c41f152725576c95
-  Spiral a5176eaaba44fef2e3ae7eee7d1247f5
-  ZipImage 29c766bbc8773fc9de26eea02ed8123d
-import  -/  Pixels 2a50f0d96a4c36aac3609c3137facfb7
-  exports: 338420f4cb786f9da52f81c2ebb060a2
-  brightnessRGB8 f8d90adc2ce9792044e9b305a5511960
-  checkerboard da4742356b7802efdc172f4702dbefbb
-  imageInImage 385d9bb1fab60edb5d2a477dee163f36
-  sprlImages 733c1e797d483d988c593dbabb29b315
-  zipImages 755194174b5a2ec83e225817ff10b61e
+import  -/  Api cec13e727da71c433fe3c19aad96d2b9
+  exports: c1ce43ad452a44a0fd00d3408a502629
+  ImageAPI aaa395ca62f141a1913875c4dcb4b3a8
+  imageApi d3a21f35e20458b9da28fdea66834d67
+import  -/  Htmls c8f882b4e9492955dcce536e246ffd85
+  exports: 3aa197b1619ffdb8f2e6e00c837ee2cb
+import  -/  Models 5992fa304552c7c8ef828c4d5dfbaa4c
+  exports: ed66af611eab7c3185e2115f774dae78
+  Checkerboard 4556cccb471b9e23ec232714fec9e5ef
+  Draw 649a4d9ca566e87ee522a85c2315c827
+  Frame 1e4081a8fa652880cc6d6d9da735b78c
+  Rave fac933797deb9962eff4d4bb075a0297
+  Spiral 48f6c0586db73bcd57232151895cf600
+  ZipImage 13d8b8fa101f7f89d31128513beda6fc
+import  -/  Pixels 219a079f4f81a8a6d27c3273aebd6b68
+  exports: 43e442eda0600fa3db68945090dd545d
+  brightnessRGB8 afd0bc14c1200765deb48e2c9dbde010
+  checkerboard 098bdd2ce69f5f47ea264241d4df530c
+  imageInImage 30a1fd0877a29cdf51404a22acb1627c
+  sprlImages ea38a3d0a5c30f42a3c036336a0b792b
+  zipImages abe7f842c1defd430aeaad43f72d9b56
 import  -/  servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API ea4c313cfea87bcfbf12f5ad55ca0674
 import  -/  servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API.Alternative 23b24c34dda253c03c99ee6490f6a518
 import  -/  servant-server-0.9.1.1@servant-server-0.9.1.1-FQ1NWT7Wr2yC5f3jkCvAai:Servant f16ad379d06ca393241deec48780d4ce
 import  -/  servant-server-0.9.1.1@servant-server-0.9.1.1-FQ1NWT7Wr2yC5f3jkCvAai:Servant.Server 6c78f2fd217ad1104fce5a8747d45e5e
 import  -/  servant-server-0.9.1.1@servant-server-0.9.1.1-FQ1NWT7Wr2yC5f3jkCvAai:Servant.Server.Internal 8016294a2c09ad55135b1e9e2607120d
+import  -/  servant-server-0.9.1.1@servant-server-0.9.1.1-FQ1NWT7Wr2yC5f3jkCvAai:Servant.Utils.StaticFiles 15274c23e2b46e48f4b5557ce6cd227a
 import  -/  stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Concurrent.STM 3662559905a40ae5adbc3e935ac706c8
 import  -/  stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Concurrent.STM.TVar 8271fdeaf6f41f205dbe31243cf91390
 import  -/  warp-3.2.11.1@warp-3.2.11.1-DxTaqp5mZpf71E3TnvlUWY:Network.Wai.Handler.Warp 6b4cd67732b77647b92c9f9152f22407
 import  -/  warp-3.2.11.1@warp-3.2.11.1-DxTaqp5mZpf71E3TnvlUWY:Network.Wai.Handler.Warp.Run 52f6140d106c325277d02cdea63693f7
-b050bf1a7a795478f33a337cf86ec38e
+aa20f10cae4b81e6318f96d75d73b290
   $s$fAllCTRender:a ::
     Servant.API.ContentTypes.AllCTRender
       '[Servant.JuicyPixels.JPEG 100] Codec.Picture.Types.DynamicImage
@@ -226,14 +232,14 @@ b050bf1a7a795478f33a337cf86ec38e
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
                      Lib.$s$fAllCTRender:a1) -}
-292b4d5b686c81c6a15c56d375430256
+6e1b572ab6e873585bdae8528f1631dd
   $s$fAllCTRender:a1 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.JuicyPixels.JPEG 100] Codec.Picture.Types.DynamicImage
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a0 -}
-bc651a9d81bf3e12dd9f292a36683976
+8cdf13eb075318be6429afc799a9cef7
   $s$fAllCTRender:a10 ::
     Data.Proxy.Proxy (Servant.JuicyPixels.JPEG 100)
     -> Network.HTTP.Media.MediaType.Internal.MediaType
@@ -241,8 +247,79 @@ bc651a9d81bf3e12dd9f292a36683976
      Unfolding: InlineRule (1, True, True)
                 (\ (eta :: Data.Proxy.Proxy (Servant.JuicyPixels.JPEG 100)) ->
                  Servant.JuicyPixels.$fAcceptTYPEJPEG1) -}
-833908c561430fbc0363b2c381f5d479
+66319235ff51e21e07d6ee15e18a1d51
   $s$fAllCTRender:a11 ::
+    Servant.API.ContentTypes.AllCTRender
+      '[Api.GIFAnim 10]
+      [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ '[Api.GIFAnim 10]
+                  @ [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
+                  (Servant.API.ContentTypes.$fAllCTRender:a_$cp1AllCTRender
+                     @ (Api.GIFAnim 10)
+                     @ '[]
+                     @ [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
+                     Lib.$s$fAllCTRender:a16
+                     Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
+                     Lib.$s$fAllCTRender:a12)
+                  (Servant.API.ContentTypes.$fAllCTRender:a_$chandleAcceptH
+                     @ (Api.GIFAnim 10)
+                     @ '[]
+                     @ [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
+                     Lib.$s$fAllCTRender:a16
+                     Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
+                     Lib.$s$fAllCTRender:a12) -}
+1307370bdfa214fc80836684892cb37b
+  $s$fAllCTRender:a12 ::
+    Servant.API.ContentTypes.AllMimeRender
+      '[Api.GIFAnim 10]
+      [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a1 -}
+fe20452439b4f2dc48b15d737ee6d195
+  $s$fAllCTRender:a13 :: GHC.TypeLits.KnownNat 10
+  {- Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a14
+                  `cast`
+                (Trans
+                     (Sym (GHC.TypeLits.N:SNat[0] <10>_P))
+                     (Sym (GHC.TypeLits.N:KnownNat[0]) <10>_N)) -}
+5f6f8282e995aaf285caec199d4c30c6
+  $s$fAllCTRender:a14 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (10) -}
+b48e6568dd458275d7095bb117b72d95
+  $s$fAllCTRender:a15 ::
+    Servant.API.ContentTypes.MimeRender
+      (Api.GIFAnim 10)
+      [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEGIFAnim[] -}
+dd83aa427b34491ff164cc0e7ba5e9b4
+  $s$fAllCTRender:a16 ::
+    Servant.API.ContentTypes.Accept (Api.GIFAnim 10)
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a17
+                  `cast`
+                (Sym (Servant.API.ContentTypes.N:Accept[0]
+                          <*>_N <Api.GIFAnim 10>_N)) -}
+3b01ccd5f7bb03fe204bafe3c3447dd5
+  $s$fAllCTRender:a17 ::
+    Data.Proxy.Proxy (Api.GIFAnim 10)
+    -> Network.HTTP.Media.MediaType.Internal.MediaType
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (eta :: Data.Proxy.Proxy (Api.GIFAnim 10)) ->
+                 Api.$fAccept(->)GIFAnim1) -}
+dc3d1f6612c10cb0885b9a8f31b0b864
+  $s$fAllCTRender:a18 ::
     Servant.API.ContentTypes.AllCTRender
       '[Servant.API.ContentTypes.JSON] GHC.Types.Bool
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -260,7 +337,7 @@ bc651a9d81bf3e12dd9f292a36683976
                      Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
-                     Lib.$s$fAllCTRender:a12)
+                     Lib.$s$fAllCTRender:a19)
                   (Servant.API.ContentTypes.$fAllCTRender:a_$chandleAcceptH
                      @ Servant.API.ContentTypes.JSON
                      @ '[]
@@ -272,16 +349,34 @@ bc651a9d81bf3e12dd9f292a36683976
                      Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
-                     Lib.$s$fAllCTRender:a12) -}
-bf7f9a86d4e4b41b0fd4f75cb387c2cc
-  $s$fAllCTRender:a12 ::
+                     Lib.$s$fAllCTRender:a19) -}
+4c36323a044e5127fa5311cdc2252e18
+  $s$fAllCTRender:a19 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] GHC.Types.Bool
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
-                Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a1 -}
-a00589908ec394639af1f19837e02b1b
-  $s$fAllCTRender:a13 ::
+                Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a2 -}
+157a97a365b08dbdde8d3a98f096da08
+  $s$fAllCTRender:a2 ::
+    Data.Proxy.Proxy '[Servant.JuicyPixels.JPEG 100]
+    -> Codec.Picture.Types.DynamicImage
+    -> [(Network.HTTP.Media.MediaType.Internal.MediaType,
+         Data.ByteString.Lazy.Internal.ByteString)]
+  {- Arity: 2, Strictness: <L,A><L,1*U>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ (eta :: Data.Proxy.Proxy '[Servant.JuicyPixels.JPEG 100])
+                   (eta1 :: Codec.Picture.Types.DynamicImage) ->
+                 GHC.Types.:
+                   @ (Network.HTTP.Media.MediaType.Internal.MediaType,
+                      Data.ByteString.Lazy.Internal.ByteString)
+                   (Servant.JuicyPixels.$fAcceptTYPEJPEG1,
+                    Codec.Picture.Saving.imageToJpg (GHC.Types.I# 100#) eta1)
+                   (GHC.Types.[]
+                      @ (Network.HTTP.Media.MediaType.Internal.MediaType,
+                         Data.ByteString.Lazy.Internal.ByteString))) -}
+454bb33280eee9e35857f79c59077895
+  $s$fAllCTRender:a20 ::
     Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
     -> GHC.Types.Bool
     -> [(Network.HTTP.Media.MediaType.Internal.MediaType,
@@ -298,54 +393,15 @@ a00589908ec394639af1f19837e02b1b
                    (GHC.Types.[]
                       @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                          Data.ByteString.Lazy.Internal.ByteString))) -}
-be1fc6332b449e0d82d8f0ea27c25fce
-  $s$fAllCTRender:a14 ::
+85e4479a4d4db3a403d7ea3e00e5d3db
+  $s$fAllCTRender:a21 ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON GHC.Types.Bool
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa -}
-5c1c8de4523cf14ade9388f126d031eb
-  $s$fAllCTRender:a15 ::
-    Servant.API.ContentTypes.AllCTRender
-      '[Api.GIFAnim]
-      [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ '[Api.GIFAnim]
-                  @ [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
-                  (Servant.API.ContentTypes.$fAllCTRender:a_$cp1AllCTRender
-                     @ Api.GIFAnim
-                     @ '[]
-                     @ [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
-                     Api.$fAcceptTYPEGIFAnim_$ccontentType
-                       `cast`
-                     (Sym (Servant.API.ContentTypes.N:Accept[0] <*>_N <Api.GIFAnim>_N))
-                     Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
-                       `cast`
-                     (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
-                     Lib.$s$fAllCTRender:a16)
-                  (Servant.API.ContentTypes.$fAllCTRender:a_$chandleAcceptH
-                     @ Api.GIFAnim
-                     @ '[]
-                     @ [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
-                     Api.$fAcceptTYPEGIFAnim_$ccontentType
-                       `cast`
-                     (Sym (Servant.API.ContentTypes.N:Accept[0] <*>_N <Api.GIFAnim>_N))
-                     Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
-                       `cast`
-                     (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
-                     Lib.$s$fAllCTRender:a16) -}
-32f95aa51fb33ecba6452bf8e1202134
-  $s$fAllCTRender:a16 ::
-    Servant.API.ContentTypes.AllMimeRender
-      '[Api.GIFAnim]
-      [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, True)
-                Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a2 -}
-41c5d42d7d1cdf769b4922837da94f3e
-  $s$fAllCTRender:a17 ::
+0394ff5113da251b4e8ae14e54606651
+  $s$fAllCTRender:a22 ::
     Servant.API.ContentTypes.AllCTRender '[Htmls.HTMLBlaze] Models.Tool
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
@@ -362,7 +418,7 @@ be1fc6332b449e0d82d8f0ea27c25fce
                      Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
-                     Lib.$s$fAllCTRender:a18)
+                     Lib.$s$fAllCTRender:a23)
                   (Servant.API.ContentTypes.$fAllCTRender:a_$chandleAcceptH
                      @ Htmls.HTMLBlaze
                      @ '[]
@@ -374,16 +430,16 @@ be1fc6332b449e0d82d8f0ea27c25fce
                      Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
-                     Lib.$s$fAllCTRender:a18) -}
-aec0cc648e9447e884a22886a76a69dc
-  $s$fAllCTRender:a18 ::
+                     Lib.$s$fAllCTRender:a23) -}
+ce8493cdca31f02ced3bb493ddab0041
+  $s$fAllCTRender:a23 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Htmls.HTMLBlaze] Models.Tool
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a3 -}
-6fa8bdeabee8d8ab4aa55aa4f2e2c87b
-  $s$fAllCTRender:a19 ::
+3ab2574e495e10930392b5da235c60fc
+  $s$fAllCTRender:a24 ::
     Data.Proxy.Proxy '[Htmls.HTMLBlaze]
     -> Models.Tool
     -> [(Network.HTTP.Media.MediaType.Internal.MediaType,
@@ -406,38 +462,20 @@ aec0cc648e9447e884a22886a76a69dc
                    (GHC.Types.[]
                       @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                          Data.ByteString.Lazy.Internal.ByteString))) -}
-659b77ae582467cd69072bd1452f1665
-  $s$fAllCTRender:a2 ::
-    Data.Proxy.Proxy '[Servant.JuicyPixels.JPEG 100]
-    -> Codec.Picture.Types.DynamicImage
-    -> [(Network.HTTP.Media.MediaType.Internal.MediaType,
-         Data.ByteString.Lazy.Internal.ByteString)]
-  {- Arity: 2, Strictness: <L,A><L,1*U>m2,
-     Unfolding: InlineRule (2, True, False)
-                (\ (eta :: Data.Proxy.Proxy '[Servant.JuicyPixels.JPEG 100])
-                   (eta1 :: Codec.Picture.Types.DynamicImage) ->
-                 GHC.Types.:
-                   @ (Network.HTTP.Media.MediaType.Internal.MediaType,
-                      Data.ByteString.Lazy.Internal.ByteString)
-                   (Servant.JuicyPixels.$fAcceptTYPEJPEG1,
-                    Codec.Picture.Saving.imageToJpg (GHC.Types.I# 100#) eta1)
-                   (GHC.Types.[]
-                      @ (Network.HTTP.Media.MediaType.Internal.MediaType,
-                         Data.ByteString.Lazy.Internal.ByteString))) -}
-aff86f2f73549db6e2409a2ed2d2f247
-  $s$fAllCTRender:a20 ::
+fcbd750b6b4206d23747263ffc6d6c35
+  $s$fAllCTRender:a25 ::
     Servant.API.ContentTypes.MimeRender Htmls.HTMLBlaze Models.Tool
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEHTMLBlazea -}
-87da24c18d0cc3bd721d8c5c521d80da
+5203f0084257ca94a26ba63dfd8ff29a
   $s$fAllCTRender:a3 ::
     Servant.API.ContentTypes.MimeRender
       (Servant.JuicyPixels.JPEG 100) Codec.Picture.Types.DynamicImage
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJPEGDynamicImage -}
-0b6caca30326407e36dc5f2783bd5111
+5f9f27f597a3f01a1d2555577bf3a519
   $s$fAllCTRender:a4 ::
     Data.Proxy.Proxy (Servant.JuicyPixels.JPEG 100)
     -> Codec.Picture.Types.DynamicImage
@@ -447,7 +485,7 @@ aff86f2f73549db6e2409a2ed2d2f247
                 (\ (eta :: Data.Proxy.Proxy (Servant.JuicyPixels.JPEG 100))
                    (eta1 :: Codec.Picture.Types.DynamicImage) ->
                  Codec.Picture.Saving.imageToJpg (GHC.Types.I# 100#) eta1) -}
-b0f447f58dde75e6871115d34e455315
+584685cbe3bfc811f7e7640e5f88d37d
   $s$fAllCTRender:a5 ::
     'GHC.Types.True Data.Type.Equality.~ 'GHC.Types.True
   {- Strictness: m,
@@ -456,7 +494,7 @@ b0f447f58dde75e6871115d34e455315
                   `cast`
                 (Sym (Data.Type.Equality.N:~[0]
                           <GHC.Types.Bool>_N) <'GHC.Types.True>_N <'GHC.Types.True>_N) -}
-cec486086a0a95c601c1392fc7fef463
+7c80e4fa655aaa8153c7efd68ac369e6
   $s$fAllCTRender:a6 :: 'GHC.Types.True GHC.Types.~~ 'GHC.Types.True
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Eq#
@@ -465,7 +503,7 @@ cec486086a0a95c601c1392fc7fef463
                    @ 'GHC.Types.True
                    @ 'GHC.Types.True
                    @~ <'GHC.Types.True>_N) -}
-4aa291980b51db6c276b439ff21d158e
+7a871f3d7fa01642006b1539fa4e1e99
   $s$fAllCTRender:a7 :: GHC.TypeLits.KnownNat 100
   {- Unfolding: InlineRule (0, True, True)
                 Lib.$s$fAllCTRender:a8
@@ -473,10 +511,10 @@ cec486086a0a95c601c1392fc7fef463
                 (Trans
                      (Sym (GHC.TypeLits.N:SNat[0] <100>_P))
                      (Sym (GHC.TypeLits.N:KnownNat[0]) <100>_N)) -}
-2a3bc306268d1867831cbb0a1e34e90a
+7edeed3373acb1f8202beccffce81ec1
   $s$fAllCTRender:a8 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (100) -}
-2a8bf2e3b9c72feba9bd6e7c8ca6c745
+53c2fdb912ed6d02833895915631be88
   $s$fAllCTRender:a9 ::
     Servant.API.ContentTypes.Accept (Servant.JuicyPixels.JPEG 100)
   {- Arity: 1, Strictness: <L,A>,
@@ -485,7 +523,7 @@ cec486086a0a95c601c1392fc7fef463
                   `cast`
                 (Sym (Servant.API.ContentTypes.N:Accept[0]
                           <*>_N <Servant.JuicyPixels.JPEG 100>_N)) -}
-8e1d0f1905d7e9d0e9bea8e2030f7e9c
+1805d1ec42175f37ff801b48e825a057
   $s$fAllCTRender:a_$s$fAllMimeRender:a0 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.JuicyPixels.JPEG 100] Codec.Picture.Types.DynamicImage
@@ -498,30 +536,63 @@ cec486086a0a95c601c1392fc7fef463
                      @ Codec.Picture.Types.DynamicImage
                      Lib.$s$fAllCTRender:a3)
                   Lib.$s$fAllCTRender:a2 -}
-3ea54566e7b1e8d39fbe6a18c7302c7e
+d5ef5e95a1c56e4a18bab78806bd4a17
   $s$fAllCTRender:a_$s$fAllMimeRender:a0_$callMimeRender ::
-    Data.Proxy.Proxy '[Api.GIFAnim]
+    Data.Proxy.Proxy '[Api.GIFAnim 10]
     -> [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
     -> [(Network.HTTP.Media.MediaType.Internal.MediaType,
          Data.ByteString.Lazy.Internal.ByteString)]
   {- Arity: 2, Strictness: <L,A><L,1*U>m2,
      Unfolding: InlineRule (2, True, False)
-                (\ (eta :: Data.Proxy.Proxy '[Api.GIFAnim])
+                (\ (eta :: Data.Proxy.Proxy '[Api.GIFAnim 10])
                    (eta1 :: [Codec.Picture.Types.Image
                                Codec.Picture.Types.PixelRGB8]) ->
                  GHC.Types.:
                    @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                       Data.ByteString.Lazy.Internal.ByteString)
-                   (Api.$fAcceptTYPEGIFAnim_$ccontentType
-                      (Data.Proxy.Proxy @ GHC.Types.* @ Api.GIFAnim),
+                   ((Api.$fMimeRenderTYPEGIFAnim[]_$cp1MimeRender
+                       @ 10
+                       Lib.$s$fAllCTRender:a13
+                       Lib.$s$fAllCTRender:a5
+                         `cast`
+                       ((Data.Type.Equality.~)
+                          <GHC.Types.Bool>_N
+                          (Sym (LeqDef (<10>_N, <10>_N)))
+                          <'GHC.Types.True>_N)_R)
+                      `cast`
+                    (Servant.API.ContentTypes.N:Accept[0]
+                         <GHC.Types.*>_N <Api.GIFAnim 10>_N)
+                      (Data.Proxy.Proxy @ GHC.Types.* @ (Api.GIFAnim 10)),
                     Api.$fMimeRenderTYPEGIFAnim[]_$cmimeRender
-                      (Data.Proxy.Proxy @ GHC.Types.* @ Api.GIFAnim)
+                      @ 10
+                      Lib.$s$fAllCTRender:a13
+                      Lib.$s$fAllCTRender:a5
+                        `cast`
+                      ((Data.Type.Equality.~)
+                         <GHC.Types.Bool>_N
+                         (Sym (LeqDef (<10>_N, <10>_N)))
+                         <'GHC.Types.True>_N)_R
+                      (Data.Proxy.Proxy @ GHC.Types.* @ (Api.GIFAnim 10))
                       eta1)
                    (GHC.Types.[]
                       @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                          Data.ByteString.Lazy.Internal.ByteString))) -}
-3a3545b8e2d256d2b71d66114e5fc821
+06cb8f83ee0bafd0041144ecccfca422
   $s$fAllCTRender:a_$s$fAllMimeRender:a1 ::
+    Servant.API.ContentTypes.AllMimeRender
+      '[Api.GIFAnim 10]
+      [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ '[Api.GIFAnim 10]
+                  @ [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
+                  (Servant.API.ContentTypes.$fAllMimeRender:a0_$cp1AllMimeRender
+                     @ (Api.GIFAnim 10)
+                     @ [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
+                     Lib.$s$fAllCTRender:a15)
+                  Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a0_$callMimeRender -}
+b8d1bb511f7036e78f1066e64dd4b466
+  $s$fAllCTRender:a_$s$fAllMimeRender:a2 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] GHC.Types.Bool
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -531,23 +602,9 @@ cec486086a0a95c601c1392fc7fef463
                   (Servant.API.ContentTypes.$fAllMimeRender:a0_$cp1AllMimeRender
                      @ Servant.API.ContentTypes.JSON
                      @ GHC.Types.Bool
-                     Lib.$s$fAllCTRender:a14)
-                  Lib.$s$fAllCTRender:a13 -}
-c9a868608989900fb70079d46d0e305f
-  $s$fAllCTRender:a_$s$fAllMimeRender:a2 ::
-    Servant.API.ContentTypes.AllMimeRender
-      '[Api.GIFAnim]
-      [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ '[Api.GIFAnim]
-                  @ [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
-                  (Servant.API.ContentTypes.$fAllMimeRender:a0_$cp1AllMimeRender
-                     @ Api.GIFAnim
-                     @ [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
-                     Api.$fMimeRenderTYPEGIFAnim[])
-                  Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a0_$callMimeRender -}
-66aaee4119b8e1f9bab5ebe49e887647
+                     Lib.$s$fAllCTRender:a21)
+                  Lib.$s$fAllCTRender:a20 -}
+beb32b0ff15aaa357161b5cd5806cf06
   $s$fAllCTRender:a_$s$fAllMimeRender:a3 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Htmls.HTMLBlaze] Models.Tool
@@ -558,9 +615,37 @@ c9a868608989900fb70079d46d0e305f
                   (Servant.API.ContentTypes.$fAllMimeRender:a0_$cp1AllMimeRender
                      @ Htmls.HTMLBlaze
                      @ Models.Tool
-                     Lib.$s$fAllCTRender:a20)
-                  Lib.$s$fAllCTRender:a19 -}
-4f5753d433868fbf3b097aceb4e63fc9
+                     Lib.$s$fAllCTRender:a25)
+                  Lib.$s$fAllCTRender:a24 -}
+574e1ace4fa634f151efaa5dc0f36002
+  $s$fAllCTRender:a_$s$fMimeRenderTYPEGIFAnim[] ::
+    Servant.API.ContentTypes.MimeRender
+      (Api.GIFAnim 10)
+      [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ *
+                  @ (Api.GIFAnim 10)
+                  @ [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
+                  (Api.$fMimeRenderTYPEGIFAnim[]_$cp1MimeRender
+                     @ 10
+                     Lib.$s$fAllCTRender:a13
+                     Lib.$s$fAllCTRender:a5
+                       `cast`
+                     ((Data.Type.Equality.~)
+                        <GHC.Types.Bool>_N
+                        (Sym (LeqDef (<10>_N, <10>_N)))
+                        <'GHC.Types.True>_N)_R)
+                  (Api.$fMimeRenderTYPEGIFAnim[]_$cmimeRender
+                     @ 10
+                     Lib.$s$fAllCTRender:a13
+                     Lib.$s$fAllCTRender:a5
+                       `cast`
+                     ((Data.Type.Equality.~)
+                        <GHC.Types.Bool>_N
+                        (Sym (LeqDef (<10>_N, <10>_N)))
+                        <'GHC.Types.True>_N)_R) -}
+b353e5a99471921e90f4517f8d25fa72
   $s$fAllCTRender:a_$s$fMimeRenderTYPEHTMLBlazea ::
     Servant.API.ContentTypes.MimeRender Htmls.HTMLBlaze Models.Tool
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -574,7 +659,7 @@ c9a868608989900fb70079d46d0e305f
                   (Htmls.$fMimeRenderTYPEHTMLBlazea_$cmimeRender
                      @ Models.Tool
                      Htmls.$fToMarkupTool) -}
-556777706d87e03f5fdb07cacbb6efba
+bf176f22a138f93091e75973ce2d2b06
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJPEGDynamicImage ::
     Servant.API.ContentTypes.MimeRender
       (Servant.JuicyPixels.JPEG 100) Codec.Picture.Types.DynamicImage
@@ -593,7 +678,7 @@ c9a868608989900fb70079d46d0e305f
                         (Sym (LeqDef (<100>_N, <100>_N)))
                         <'GHC.Types.True>_N)_R)
                   Lib.$s$fAllCTRender:a4 -}
-09d630df8b515fabeec3a32c4792bbca
+dc497fa30eb2c0d4c0075adedbd580ac
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON GHC.Types.Bool
@@ -606,7 +691,7 @@ c9a868608989900fb70079d46d0e305f
                      @ GHC.Types.Bool
                      Data.Aeson.Types.ToJSON.$fToJSONBool)
                   Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender -}
-92dd26c280f88d05f44b36294c8a8b9a
+d2fedc1a7f7a1dcea7b4937cfc54c220
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> GHC.Types.Bool -> Data.ByteString.Lazy.Internal.ByteString
@@ -615,7 +700,7 @@ c9a868608989900fb70079d46d0e305f
                 (\ (ds :: Data.Proxy.Proxy Servant.API.ContentTypes.JSON)
                    (eta :: GHC.Types.Bool) ->
                  Lib.$s$fAllCTRender:a_$sencode eta) -}
-3b3bce2440c2b34d0d88f8cafb52d42e
+b10bda0d328e7c64296ac138a8dd2b0f
   $s$fAllCTRender:a_$sencode ::
     GHC.Types.Bool -> Data.ByteString.Lazy.Internal.ByteString
   {- Arity: 1, Strictness: <L,U>,
@@ -626,7 +711,7 @@ c9a868608989900fb70079d46d0e305f
                      `cast`
                    (Data.Aeson.Encoding.Internal.N:Encoding'[0]
                         <Data.Aeson.Types.Internal.Value>_P)) -}
-4e491e210a68502f96a3998d3140ec01
+f9083bb866c17d7d825355929b7263bb
   $s$fAllMimeUnrender:a ::
     Servant.API.ContentTypes.AllMimeUnrender
       '[Servant.JuicyPixels.JPEG 100] Codec.Picture.Types.DynamicImage
@@ -648,14 +733,14 @@ c9a868608989900fb70079d46d0e305f
                      Lib.$s$fAllMimeUnrender:a1
                      (Servant.API.ContentTypes.$fAllMimeUnrender[]a
                         @ Codec.Picture.Types.DynamicImage)) -}
-2708bb0a9f3c5fb9b4d996e8591de4ae
+2b05f500d14a37a9d8fcf2fab0035d58
   $s$fAllMimeUnrender:a1 ::
     Servant.API.ContentTypes.MimeUnrender
       (Servant.JuicyPixels.JPEG 100) Codec.Picture.Types.DynamicImage
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJPEGDynamicImage -}
-ce2a0483a2c6e734df98a108095f86e7
+4b8028474e07a85e52951ac8ae9cebb4
   $s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJPEGDynamicImage ::
     Servant.API.ContentTypes.MimeUnrender
       (Servant.JuicyPixels.JPEG 100) Codec.Picture.Types.DynamicImage
@@ -682,7 +767,7 @@ ce2a0483a2c6e734df98a108095f86e7
                         <GHC.Types.Bool>_N
                         (Sym (LeqDef (<100>_N, <100>_N)))
                         <'GHC.Types.True>_N)_R) -}
-e6f517a8f99ce2bc16d7e0a81f328fed
+747c1fc17a09a6fcb1edcd8088c322c2
   $sserve2 ::
     Data.Proxy.Proxy
       (("postImg"
@@ -706,16 +791,18 @@ e6f517a8f99ce2bc16d7e0a81f328fed
                                                                                           "tool"
                                                                                           GHC.Base.String
                                                                                         Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                             '[Api.GIFAnim]
+                                                                                                             '[Api.GIFAnim
+                                                                                                                 10]
                                                                                                              [Codec.Picture.Types.Image
                                                                                                                 Codec.Picture.Types.PixelRGB8]))
-                                                                   Servant.API.Alternative.:<|> ("show"
-                                                                                                 Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                                                                       "tool"
-                                                                                                                       GHC.Base.String
-                                                                                                                     Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                          '[Htmls.HTMLBlaze]
-                                                                                                                                          Models.Tool)))))
+                                                                   Servant.API.Alternative.:<|> (("show"
+                                                                                                  Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                        "tool"
+                                                                                                                        GHC.Base.String
+                                                                                                                      Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                           '[Htmls.HTMLBlaze]
+                                                                                                                                           Models.Tool))
+                                                                                                 Servant.API.Alternative.:<|> Servant.API.Raw.Raw))))
     -> Servant.Server.Internal.Context.Context '[]
     -> Servant.Server.Internal.RoutingApplication.Delayed
          env
@@ -741,16 +828,18 @@ e6f517a8f99ce2bc16d7e0a81f328fed
                                                                                                 "tool"
                                                                                                 GHC.Base.String
                                                                                               Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                   '[Api.GIFAnim]
+                                                                                                                   '[Api.GIFAnim
+                                                                                                                       10]
                                                                                                                    [Codec.Picture.Types.Image
                                                                                                                       Codec.Picture.Types.PixelRGB8]))
-                                                                         Servant.API.Alternative.:<|> ("show"
-                                                                                                       Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                                                                             "tool"
-                                                                                                                             GHC.Base.String
-                                                                                                                           Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                                '[Htmls.HTMLBlaze]
-                                                                                                                                                Models.Tool))))))
+                                                                         Servant.API.Alternative.:<|> (("show"
+                                                                                                        Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                              "tool"
+                                                                                                                              GHC.Base.String
+                                                                                                                            Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                                 '[Htmls.HTMLBlaze]
+                                                                                                                                                 Models.Tool))
+                                                                                                       Servant.API.Alternative.:<|> Servant.API.Raw.Raw)))))
     -> Servant.Server.Internal.Router.Router env
   {- Arity: 3, Strictness: <S,1*H><L,U><L,U>, Inline: INLINE[0],
      Unfolding: InlineRule (3, True, False)
@@ -779,16 +868,18 @@ e6f517a8f99ce2bc16d7e0a81f328fed
                                                                                                                "tool"
                                                                                                                GHC.Base.String
                                                                                                              Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                  '[Api.GIFAnim]
+                                                                                                                                  '[Api.GIFAnim
+                                                                                                                                      10]
                                                                                                                                   [Codec.Picture.Types.Image
                                                                                                                                      Codec.Picture.Types.PixelRGB8]))
-                                                                                        Servant.API.Alternative.:<|> ("show"
-                                                                                                                      Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                                                                                            "tool"
-                                                                                                                                            GHC.Base.String
-                                                                                                                                          Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                                               '[Htmls.HTMLBlaze]
-                                                                                                                                                               Models.Tool))))))
+                                                                                        Servant.API.Alternative.:<|> (("show"
+                                                                                                                       Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                                             "tool"
+                                                                                                                                             GHC.Base.String
+                                                                                                                                           Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                                                '[Htmls.HTMLBlaze]
+                                                                                                                                                                Models.Tool))
+                                                                                                                      Servant.API.Alternative.:<|> Servant.API.Raw.Raw)))))
                    (w1 :: Servant.Server.Internal.Context.Context '[])
                    (w2 :: Servant.Server.Internal.RoutingApplication.Delayed
                             env
@@ -816,16 +907,18 @@ e6f517a8f99ce2bc16d7e0a81f328fed
                                                                                                                    "tool"
                                                                                                                    GHC.Base.String
                                                                                                                  Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                      '[Api.GIFAnim]
+                                                                                                                                      '[Api.GIFAnim
+                                                                                                                                          10]
                                                                                                                                       [Codec.Picture.Types.Image
                                                                                                                                          Codec.Picture.Types.PixelRGB8]))
-                                                                                            Servant.API.Alternative.:<|> ("show"
-                                                                                                                          Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                                                                                                "tool"
-                                                                                                                                                GHC.Base.String
-                                                                                                                                              Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                                                   '[Htmls.HTMLBlaze]
-                                                                                                                                                                   Models.Tool))))))) ->
+                                                                                            Servant.API.Alternative.:<|> (("show"
+                                                                                                                           Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                                                 "tool"
+                                                                                                                                                 GHC.Base.String
+                                                                                                                                               Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                                                    '[Htmls.HTMLBlaze]
+                                                                                                                                                                    Models.Tool))
+                                                                                                                          Servant.API.Alternative.:<|> Servant.API.Raw.Raw)))))) ->
                  case w of w3 { Data.Proxy.Proxy ->
                  Lib.$w$dHasServer
                    @ env
@@ -852,32 +945,34 @@ e6f517a8f99ce2bc16d7e0a81f328fed
                                                                                                             "tool"
                                                                                                             GHC.Base.String
                                                                                                           Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                               '[Api.GIFAnim]
+                                                                                                                               '[Api.GIFAnim
+                                                                                                                                   10]
                                                                                                                                [Codec.Picture.Types.Image
                                                                                                                                   Codec.Picture.Types.PixelRGB8]))
-                                                                                     Servant.API.Alternative.:<|> ("show"
-                                                                                                                   Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                                                                                         "tool"
-                                                                                                                                         GHC.Base.String
-                                                                                                                                       Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                                            '[Htmls.HTMLBlaze]
-                                                                                                                                                            Models.Tool))))))
+                                                                                     Servant.API.Alternative.:<|> (("show"
+                                                                                                                    Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                                          "tool"
+                                                                                                                                          GHC.Base.String
+                                                                                                                                        Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                                             '[Htmls.HTMLBlaze]
+                                                                                                                                                             Models.Tool))
+                                                                                                                   Servant.API.Alternative.:<|> Servant.API.Raw.Raw)))))
                    w1
                    w2 }) -}
-e879f7abc874c6927a6c38242bd3e747
+1b6f766083687160dfd66d0d814fda67
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module Lib.$trModule2 Lib.$trModule1) -}
-208770979e3caa14e904cd75c8d0fae1
+da8275d9e3e7619c23248f39c575ca4f
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Lib"#) -}
-78239cda4a2a90f44394878e1bc05c6e
+e4c920c61777eecfc27c8bb520546817
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk"#) -}
-aa820ee8200966709d4cdc8488815b44
+                   "picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf"#) -}
+6ac4946fdc38e275a759ffd9e2c811b4
   $w$dHasServer ::
     Data.Proxy.Proxy
       (("postImg"
@@ -901,16 +996,18 @@ aa820ee8200966709d4cdc8488815b44
                                                                                           "tool"
                                                                                           GHC.Base.String
                                                                                         Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                             '[Api.GIFAnim]
+                                                                                                             '[Api.GIFAnim
+                                                                                                                 10]
                                                                                                              [Codec.Picture.Types.Image
                                                                                                                 Codec.Picture.Types.PixelRGB8]))
-                                                                   Servant.API.Alternative.:<|> ("show"
-                                                                                                 Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                                                                       "tool"
-                                                                                                                       GHC.Base.String
-                                                                                                                     Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                          '[Htmls.HTMLBlaze]
-                                                                                                                                          Models.Tool)))))
+                                                                   Servant.API.Alternative.:<|> (("show"
+                                                                                                  Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                        "tool"
+                                                                                                                        GHC.Base.String
+                                                                                                                      Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                           '[Htmls.HTMLBlaze]
+                                                                                                                                           Models.Tool))
+                                                                                                 Servant.API.Alternative.:<|> Servant.API.Raw.Raw))))
     -> Servant.Server.Internal.Context.Context '[]
     -> Servant.Server.Internal.RoutingApplication.Delayed
          env
@@ -936,19 +1033,21 @@ aa820ee8200966709d4cdc8488815b44
                                                                                                 "tool"
                                                                                                 GHC.Base.String
                                                                                               Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                   '[Api.GIFAnim]
+                                                                                                                   '[Api.GIFAnim
+                                                                                                                       10]
                                                                                                                    [Codec.Picture.Types.Image
                                                                                                                       Codec.Picture.Types.PixelRGB8]))
-                                                                         Servant.API.Alternative.:<|> ("show"
-                                                                                                       Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                                                                             "tool"
-                                                                                                                             GHC.Base.String
-                                                                                                                           Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                                '[Htmls.HTMLBlaze]
-                                                                                                                                                Models.Tool))))))
+                                                                         Servant.API.Alternative.:<|> (("show"
+                                                                                                        Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                              "tool"
+                                                                                                                              GHC.Base.String
+                                                                                                                            Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                                 '[Htmls.HTMLBlaze]
+                                                                                                                                                 Models.Tool))
+                                                                                                       Servant.API.Alternative.:<|> Servant.API.Raw.Raw)))))
     -> Servant.Server.Internal.Router.Router env
   {- Arity: 3, Strictness: <S,1*H><L,U><L,U>, Inline: [0] -}
-30e2cb3bffebf9f69ea9ba85d3f8e1d0
+2bd671b510e5218689d3283de46cd5d2
   $wzipSrv ::
     GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage
     -> GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage
@@ -969,18 +1068,20 @@ aa820ee8200966709d4cdc8488815b44
                                               GHC.Types.IO
                                               [Codec.Picture.Types.Image
                                                  Codec.Picture.Types.PixelRGB8])
-                                        Servant.API.Alternative.:<|> (GHC.Base.String
-                                                                      -> Control.Monad.Trans.Except.ExceptT
-                                                                           Servant.Server.Internal.ServantErr.ServantErr
-                                                                           GHC.Types.IO
-                                                                           Models.Tool)) #)
+                                        Servant.API.Alternative.:<|> ((GHC.Base.String
+                                                                       -> Control.Monad.Trans.Except.ExceptT
+                                                                            Servant.Server.Internal.ServantErr.ServantErr
+                                                                            GHC.Types.IO
+                                                                            Models.Tool)
+                                                                      Servant.API.Alternative.:<|> Servant.Server.Internal.Server
+                                                                                                     Servant.API.Raw.Raw)) #)
   {- Arity: 2, Strictness: <L,U(U)><L,U(U)>, Inline: [0] -}
-eb6f72df2110eb88464b60ee63463ffb
+bc4a3236cc78428bb708fd5face6575c
   imagApp :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.imagApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-474a69a963b5b3419a0d6cd8831a56c1
+900e4ee137dc7cb124dd63b7efd99f4f
   imagApp1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -989,11 +1090,11 @@ eb6f72df2110eb88464b60ee63463ffb
                  case GHC.Prim.atomically#
                         @ (GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage)
                         Lib.imagApp8
-                        s of ds1 { (#,#) ipv ipv1 ->
+                        s of ds1 { (#,#) ipv2 ipv3 ->
                  case GHC.Prim.atomically#
                         @ (GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage)
                         Lib.imagApp3
-                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                        ipv2 of ds2 { (#,#) ipv4 ipv5 ->
                  Network.Wai.Handler.Warp.Run.$wrunSettings
                    Lib.imagApp2
                    Network.Wai.Handler.Warp.Settings.defaultSettings16
@@ -1075,20 +1176,22 @@ eb6f72df2110eb88464b60ee63463ffb
                                                                                                                     "tool"
                                                                                                                     GHC.Base.String
                                                                                                                   Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                       '[Api.GIFAnim]
+                                                                                                                                       '[Api.GIFAnim
+                                                                                                                                           10]
                                                                                                                                        [Codec.Picture.Types.Image
                                                                                                                                           Codec.Picture.Types.PixelRGB8]))
-                                                                                             Servant.API.Alternative.:<|> ("show"
-                                                                                                                           Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                                                                                                 "tool"
-                                                                                                                                                 GHC.Base.String
-                                                                                                                                               Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                                                    '[Htmls.HTMLBlaze]
-                                                                                                                                                                    Models.Tool))))>_N
+                                                                                             Servant.API.Alternative.:<|> (("show"
+                                                                                                                            Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                                                  "tool"
+                                                                                                                                                  GHC.Base.String
+                                                                                                                                                Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                                                     '[Htmls.HTMLBlaze]
+                                                                                                                                                                     Models.Tool))
+                                                                                                                           Servant.API.Alternative.:<|> Servant.API.Raw.Raw)))>_N
                                 <'[]>_N))
                       (Data.Proxy.Proxy @ * @ Api.ImageAPI)
                       Servant.Server.Internal.Context.$WEmptyContext
-                      (case Lib.$wzipSrv ipv1 ipv3 of ww { (#,#) ww1 ww2 ->
+                      (case Lib.$wzipSrv ipv3 ipv5 of ww { (#,#) ww1 ww2 ->
                        (Servant.API.Alternative.:<|>
                           @ (GHC.Types.Bool
                              -> Codec.Picture.Types.DynamicImage
@@ -1107,11 +1210,13 @@ eb6f72df2110eb88464b60ee63463ffb
                                                                  GHC.Types.IO
                                                                  [Codec.Picture.Types.Image
                                                                     Codec.Picture.Types.PixelRGB8])
-                                                           Servant.API.Alternative.:<|> (GHC.Base.String
-                                                                                         -> Control.Monad.Trans.Except.ExceptT
-                                                                                              Servant.Server.Internal.ServantErr.ServantErr
-                                                                                              GHC.Types.IO
-                                                                                              Models.Tool)))
+                                                           Servant.API.Alternative.:<|> ((GHC.Base.String
+                                                                                          -> Control.Monad.Trans.Except.ExceptT
+                                                                                               Servant.Server.Internal.ServantErr.ServantErr
+                                                                                               GHC.Types.IO
+                                                                                               Models.Tool)
+                                                                                         Servant.API.Alternative.:<|> Servant.Server.Internal.Server
+                                                                                                                        Servant.API.Raw.Raw)))
                           ww1
                           ww2)
                          `cast`
@@ -1217,7 +1322,8 @@ eb6f72df2110eb88464b60ee63463ffb
                                                                                                                          <Network.HTTP.Types.Method.StdMethod>_N
                                                                                                                          <[Codec.Picture.Types.Image
                                                                                                                              Codec.Picture.Types.PixelRGB8]>_N
-                                                                                                                         <'[Api.GIFAnim]>_N
+                                                                                                                         <'[Api.GIFAnim
+                                                                                                                              10]>_N
                                                                                                                          <200>_N
                                                                                                                          <'Network.HTTP.Types.Method.GET>_N
                                                                                                                          <Control.Monad.Trans.Except.ExceptT
@@ -1231,7 +1337,8 @@ eb6f72df2110eb88464b60ee63463ffb
                                                                                                                          <Servant.API.Verbs.Verb
                                                                                                                             'Network.HTTP.Types.Method.GET
                                                                                                                             200
-                                                                                                                            '[Api.GIFAnim]
+                                                                                                                            '[Api.GIFAnim
+                                                                                                                                10]
                                                                                                                             [Codec.Picture.Types.Image
                                                                                                                                Codec.Picture.Types.PixelRGB8]>_N
                                                                                                                          <Control.Monad.Trans.Except.ExceptT
@@ -1243,7 +1350,8 @@ eb6f72df2110eb88464b60ee63463ffb
                                                                                                                             "tool"
                                                                                                                             GHC.Base.String
                                                                                                                           Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                               '[Api.GIFAnim]
+                                                                                                                                               '[Api.GIFAnim
+                                                                                                                                                   10]
                                                                                                                                                [Codec.Picture.Types.Image
                                                                                                                                                   Codec.Picture.Types.PixelRGB8]>_N
                                                                                                                          <"gif">_N
@@ -1251,55 +1359,75 @@ eb6f72df2110eb88464b60ee63463ffb
                                                                                                                             Servant.Server.Internal.ServantErr.ServantErr
                                                                                                                             GHC.Types.IO>_N))))
                                                                                                  Servant.API.Alternative.:<|> Trans
-                                                                                                                                  (<[GHC.Types.Char]>_R
-                                                                                                                                   ->_R Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
-                                                                                                                                                      <Network.HTTP.Types.Method.StdMethod>_N
-                                                                                                                                                      <Models.Tool>_N
-                                                                                                                                                      <'[Htmls.HTMLBlaze]>_N
-                                                                                                                                                      <200>_N
-                                                                                                                                                      <'Network.HTTP.Types.Method.GET>_N
-                                                                                                                                                      <Control.Monad.Trans.Except.ExceptT
-                                                                                                                                                         Servant.Server.Internal.ServantErr.ServantErr
-                                                                                                                                                         GHC.Types.IO>_N)))
                                                                                                                                   (Trans
-                                                                                                                                       (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m11[0]
-                                                                                                                                                      <*>_N
-                                                                                                                                                      <[GHC.Types.Char]>_N
-                                                                                                                                                      <"tool">_N
-                                                                                                                                                      <Servant.API.Verbs.Verb
-                                                                                                                                                         'Network.HTTP.Types.Method.GET
-                                                                                                                                                         200
-                                                                                                                                                         '[Htmls.HTMLBlaze]
-                                                                                                                                                         Models.Tool>_N
-                                                                                                                                                      <Control.Monad.Trans.Except.ExceptT
-                                                                                                                                                         Servant.Server.Internal.ServantErr.ServantErr
-                                                                                                                                                         GHC.Types.IO>_N)))
-                                                                                                                                       (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
-                                                                                                                                                      <*>_N
-                                                                                                                                                      <Servant.API.Capture.Capture
-                                                                                                                                                         "tool"
-                                                                                                                                                         GHC.Base.String
-                                                                                                                                                       Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                                                            '[Htmls.HTMLBlaze]
-                                                                                                                                                                            Models.Tool>_N
-                                                                                                                                                      <"show">_N
-                                                                                                                                                      <Control.Monad.Trans.Except.ExceptT
-                                                                                                                                                         Servant.Server.Internal.ServantErr.ServantErr
-                                                                                                                                                         GHC.Types.IO>_N)))))_R
+                                                                                                                                       (<[GHC.Types.Char]>_R
+                                                                                                                                        ->_R Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
+                                                                                                                                                           <Network.HTTP.Types.Method.StdMethod>_N
+                                                                                                                                                           <Models.Tool>_N
+                                                                                                                                                           <'[Htmls.HTMLBlaze]>_N
+                                                                                                                                                           <200>_N
+                                                                                                                                                           <'Network.HTTP.Types.Method.GET>_N
+                                                                                                                                                           <Control.Monad.Trans.Except.ExceptT
+                                                                                                                                                              Servant.Server.Internal.ServantErr.ServantErr
+                                                                                                                                                              GHC.Types.IO>_N)))
+                                                                                                                                       (Trans
+                                                                                                                                            (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m11[0]
+                                                                                                                                                           <*>_N
+                                                                                                                                                           <[GHC.Types.Char]>_N
+                                                                                                                                                           <"tool">_N
+                                                                                                                                                           <Servant.API.Verbs.Verb
+                                                                                                                                                              'Network.HTTP.Types.Method.GET
+                                                                                                                                                              200
+                                                                                                                                                              '[Htmls.HTMLBlaze]
+                                                                                                                                                              Models.Tool>_N
+                                                                                                                                                           <Control.Monad.Trans.Except.ExceptT
+                                                                                                                                                              Servant.Server.Internal.ServantErr.ServantErr
+                                                                                                                                                              GHC.Types.IO>_N)))
+                                                                                                                                            (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
+                                                                                                                                                           <*>_N
+                                                                                                                                                           <Servant.API.Capture.Capture
+                                                                                                                                                              "tool"
+                                                                                                                                                              GHC.Base.String
+                                                                                                                                                            Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                                                                 '[Htmls.HTMLBlaze]
+                                                                                                                                                                                 Models.Tool>_N
+                                                                                                                                                           <"show">_N
+                                                                                                                                                           <Control.Monad.Trans.Except.ExceptT
+                                                                                                                                                              Servant.Server.Internal.ServantErr.ServantErr
+                                                                                                                                                              GHC.Types.IO>_N))))
+                                                                                                                                   Servant.API.Alternative.:<|> <Servant.Server.Internal.ServerT
+                                                                                                                                                                   Servant.API.Raw.Raw
+                                                                                                                                                                   (Control.Monad.Trans.Except.ExceptT
+                                                                                                                                                                      Servant.Server.Internal.ServantErr.ServantErr
+                                                                                                                                                                      GHC.Types.IO)>_R)_R
+                                                                                                                                  (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:<|>m[0]
+                                                                                                                                                 <Servant.API.Raw.Raw>_N
+                                                                                                                                                 <"show"
+                                                                                                                                                  Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                                                                        "tool"
+                                                                                                                                                                        GHC.Base.String
+                                                                                                                                                                      Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                                                                           '[Htmls.HTMLBlaze]
+                                                                                                                                                                                           Models.Tool)>_N
+                                                                                                                                                 <Control.Monad.Trans.Except.ExceptT
+                                                                                                                                                    Servant.Server.Internal.ServantErr.ServantErr
+                                                                                                                                                    GHC.Types.IO>_N))))_R
                                                                                                 (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:<|>m[0]
-                                                                                                               <"show"
-                                                                                                                Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                                                                                      "tool"
-                                                                                                                                      GHC.Base.String
-                                                                                                                                    Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                                         '[Htmls.HTMLBlaze]
-                                                                                                                                                         Models.Tool)>_N
+                                                                                                               <("show"
+                                                                                                                 Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                                       "tool"
+                                                                                                                                       GHC.Base.String
+                                                                                                                                     Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                                          '[Htmls.HTMLBlaze]
+                                                                                                                                                          Models.Tool))
+                                                                                                                Servant.API.Alternative.:<|> Servant.API.Raw.Raw>_N
                                                                                                                <"gif"
                                                                                                                 Servant.API.Sub.:> (Servant.API.Capture.Capture
                                                                                                                                       "tool"
                                                                                                                                       GHC.Base.String
                                                                                                                                     Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                                         '[Api.GIFAnim]
+                                                                                                                                                         '[Api.GIFAnim
+                                                                                                                                                             10]
                                                                                                                                                          [Codec.Picture.Types.Image
                                                                                                                                                             Codec.Picture.Types.PixelRGB8])>_N
                                                                                                                <Control.Monad.Trans.Except.ExceptT
@@ -1311,16 +1439,18 @@ eb6f72df2110eb88464b60ee63463ffb
                                                                                                      "tool"
                                                                                                      GHC.Base.String
                                                                                                    Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                        '[Api.GIFAnim]
+                                                                                                                        '[Api.GIFAnim
+                                                                                                                            10]
                                                                                                                         [Codec.Picture.Types.Image
                                                                                                                            Codec.Picture.Types.PixelRGB8]))
-                                                                              Servant.API.Alternative.:<|> ("show"
-                                                                                                            Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                                                                                  "tool"
-                                                                                                                                  GHC.Base.String
-                                                                                                                                Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                                     '[Htmls.HTMLBlaze]
-                                                                                                                                                     Models.Tool))>_N
+                                                                              Servant.API.Alternative.:<|> (("show"
+                                                                                                             Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                                   "tool"
+                                                                                                                                   GHC.Base.String
+                                                                                                                                 Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                                      '[Htmls.HTMLBlaze]
+                                                                                                                                                      Models.Tool))
+                                                                                                            Servant.API.Alternative.:<|> Servant.API.Raw.Raw)>_N
                                                                              <"image"
                                                                               Servant.API.Sub.:> (Servant.API.Capture.Capture
                                                                                                     "tool"
@@ -1345,16 +1475,18 @@ eb6f72df2110eb88464b60ee63463ffb
                                                                                                  "tool"
                                                                                                  GHC.Base.String
                                                                                                Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                    '[Api.GIFAnim]
+                                                                                                                    '[Api.GIFAnim
+                                                                                                                        10]
                                                                                                                     [Codec.Picture.Types.Image
                                                                                                                        Codec.Picture.Types.PixelRGB8]))
-                                                                          Servant.API.Alternative.:<|> ("show"
-                                                                                                        Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                                                                              "tool"
-                                                                                                                              GHC.Base.String
-                                                                                                                            Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                                 '[Htmls.HTMLBlaze]
-                                                                                                                                                 Models.Tool)))>_N
+                                                                          Servant.API.Alternative.:<|> (("show"
+                                                                                                         Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                               "tool"
+                                                                                                                               GHC.Base.String
+                                                                                                                             Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                                  '[Htmls.HTMLBlaze]
+                                                                                                                                                  Models.Tool))
+                                                                                                        Servant.API.Alternative.:<|> Servant.API.Raw.Raw))>_N
                                            <"postImg"
                                             Servant.API.Sub.:> (Servant.API.Capture.Capture
                                                                   "true/false" GHC.Types.Bool
@@ -1368,16 +1500,16 @@ eb6f72df2110eb88464b60ee63463ffb
                                            <Control.Monad.Trans.Except.ExceptT
                                               Servant.Server.Internal.ServantErr.ServantErr
                                               GHC.Types.IO>_N)))) }))
-                   ipv2 } }) -}
-dc8443598ac29d27cb2fe9ac8bbaa6dd
+                   ipv4 } }) -}
+c010a01ef50f24e2f304f2e5977b2bf1
   imagApp10 ::
     Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ (Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8)
-                        Lib.imagApp11 of ds1 { (#,#) ipv ipv1 ->
-                 ipv1 }) -}
-9c1e9155da7c50ef82cb33c46e67e654
+                        Lib.imagApp11 of ds1 { (#,#) ipv2 ipv3 ->
+                 ipv3 }) -}
+dd7153b1f117e05d78b952a3d0390f21
   imagApp11 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -1388,11 +1520,11 @@ dc8443598ac29d27cb2fe9ac8bbaa6dd
                  case GHC.Prim.newPinnedByteArray#
                         @ GHC.Prim.RealWorld
                         270000#
-                        s1 of ds { (#,#) ipv ipv1 ->
+                        s1 of ds { (#,#) ipv2 ipv3 ->
                  let {
-                   ipv2 :: GHC.Prim.Addr#
+                   ipv4 :: GHC.Prim.Addr#
                    = GHC.Prim.byteArrayContents#
-                       ipv1
+                       ipv3
                          `cast`
                        (UnsafeCo representational (GHC.Prim.MutableByteArray#
                                                      GHC.Prim.RealWorld) GHC.Prim.ByteArray#)
@@ -1405,19 +1537,19 @@ dc8443598ac29d27cb2fe9ac8bbaa6dd
                                                                                                                            GHC.Prim.RealWorld
                                                                                                                       -> (# GHC.Prim.State#
                                                                                                                               GHC.Prim.RealWorld #)}
-                        ipv2
+                        ipv4
                         0#
                         270000##
                         0##
-                        ipv of wild { Unit# ds8 ->
+                        ipv2 of wild { Unit# ds8 ->
                  let {
-                   ipv3 :: GHC.ForeignPtr.ForeignPtrContents
-                   = GHC.ForeignPtr.PlainPtr ipv1
+                   ipv5 :: GHC.ForeignPtr.ForeignPtrContents
+                   = GHC.ForeignPtr.PlainPtr ipv3
                  } in
                  case GHC.Prim.touch#
                         @ 'GHC.Types.PtrRepLifted
                         @ GHC.ForeignPtr.ForeignPtrContents
-                        ipv3
+                        ipv5
                         ds8 of s' { DEFAULT ->
                  letrec {
                    $wlineGenerator :: GHC.Types.Int
@@ -1448,36 +1580,36 @@ dc8443598ac29d27cb2fe9ac8bbaa6dd
                                 GHC.Types.False
                                 -> case GHC.Prim.writeWord8OffAddr#
                                           @ GHC.Prim.RealWorld
-                                          ipv2
+                                          ipv4
                                           ww3
                                           0##
                                           w2 of s2 { DEFAULT ->
                                    case GHC.Prim.touch#
                                           @ 'GHC.Types.PtrRepLifted
                                           @ GHC.ForeignPtr.ForeignPtrContents
-                                          ipv3
+                                          ipv5
                                           s2 of s'1 { DEFAULT ->
                                    case GHC.Prim.writeWord8OffAddr#
                                           @ GHC.Prim.RealWorld
-                                          ipv2
+                                          ipv4
                                           (GHC.Prim.+# ww3 1#)
                                           200##
                                           s'1 of s4 { DEFAULT ->
                                    case GHC.Prim.touch#
                                           @ 'GHC.Types.PtrRepLifted
                                           @ GHC.ForeignPtr.ForeignPtrContents
-                                          ipv3
+                                          ipv5
                                           s4 of s'2 { DEFAULT ->
                                    case GHC.Prim.writeWord8OffAddr#
                                           @ GHC.Prim.RealWorld
-                                          ipv2
+                                          ipv4
                                           (GHC.Prim.+# ww3 2#)
                                           0##
                                           s'2 of s5 { DEFAULT ->
                                    case GHC.Prim.touch#
                                           @ 'GHC.Types.PtrRepLifted
                                           @ GHC.ForeignPtr.ForeignPtrContents
-                                          ipv3
+                                          ipv5
                                           s5 of s'3 { DEFAULT ->
                                    $wcolumn
                                      (GHC.Prim.+# ww3 3#)
@@ -1489,8 +1621,8 @@ dc8443598ac29d27cb2fe9ac8bbaa6dd
                           $wcolumn ww2 0# w1 }
                        GHC.Types.True -> (# w1, GHC.Tuple.() #) }
                  } in
-                 case $wlineGenerator Lib.imagApp7 0# s' of ds1 { (#,#) ipv4 ipv5 ->
-                 (# ipv4,
+                 case $wlineGenerator Lib.imagApp7 0# s' of ds1 { (#,#) ipv6 ipv7 ->
+                 (# ipv6,
                     Codec.Picture.Types.Image
                       @ Codec.Picture.Types.PixelRGB8
                       300#
@@ -1499,12 +1631,12 @@ dc8443598ac29d27cb2fe9ac8bbaa6dd
                          @ (Codec.Picture.Types.PixelBaseComponent
                               Codec.Picture.Types.PixelRGB8)
                          270000#
-                         ipv2
-                         ipv3) #) } } } }) -}
-f5e47cf3c542a0219b2d6754a01c67d6
+                         ipv4
+                         ipv5) #) } } } }) -}
+a77a66635b16d5f3f238d03ea7b68eab
   imagApp2 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 8080#) -}
-61082c27e13a059751c4943f8429f52c
+3251866766205b2001c125ccfa55c817
   imagApp3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -1516,20 +1648,20 @@ f5e47cf3c542a0219b2d6754a01c67d6
                         @ Codec.Picture.Types.DynamicImage
                         @ GHC.Prim.RealWorld
                         Lib.imagApp4
-                        s1# of ds { (#,#) ipv ipv1 ->
-                 (# ipv,
-                    GHC.Conc.Sync.TVar @ Codec.Picture.Types.DynamicImage ipv1 #) }) -}
-749445627ba274874366366321cd427b
+                        s1# of ds { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    GHC.Conc.Sync.TVar @ Codec.Picture.Types.DynamicImage ipv3 #) }) -}
+aaec9928c6ef621ecbd4450eae459f44
   imagApp4 :: Codec.Picture.Types.DynamicImage
   {- Unfolding: (Codec.Picture.Types.ImageRGB8 Lib.imagApp5) -}
-35295770a242198f9a795b6941d05fec
+5c5a7e62df663c215e85fb0de4dc2e8b
   imagApp5 :: Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ (Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8)
-                        Lib.imagApp6 of ds1 { (#,#) ipv ipv1 ->
-                 ipv1 }) -}
-f4fdde2a782b4f3a5bfd6c37168981fd
+                        Lib.imagApp6 of ds1 { (#,#) ipv2 ipv3 ->
+                 ipv3 }) -}
+8120f4d4510671b3a71e3c6dc3db4006
   imagApp6 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -1540,11 +1672,11 @@ f4fdde2a782b4f3a5bfd6c37168981fd
                  case GHC.Prim.newPinnedByteArray#
                         @ GHC.Prim.RealWorld
                         270000#
-                        s1 of ds { (#,#) ipv ipv1 ->
+                        s1 of ds { (#,#) ipv2 ipv3 ->
                  let {
-                   ipv2 :: GHC.Prim.Addr#
+                   ipv4 :: GHC.Prim.Addr#
                    = GHC.Prim.byteArrayContents#
-                       ipv1
+                       ipv3
                          `cast`
                        (UnsafeCo representational (GHC.Prim.MutableByteArray#
                                                      GHC.Prim.RealWorld) GHC.Prim.ByteArray#)
@@ -1557,19 +1689,19 @@ f4fdde2a782b4f3a5bfd6c37168981fd
                                                                                                                            GHC.Prim.RealWorld
                                                                                                                       -> (# GHC.Prim.State#
                                                                                                                               GHC.Prim.RealWorld #)}
-                        ipv2
+                        ipv4
                         0#
                         270000##
                         0##
-                        ipv of wild { Unit# ds8 ->
+                        ipv2 of wild { Unit# ds8 ->
                  let {
-                   ipv3 :: GHC.ForeignPtr.ForeignPtrContents
-                   = GHC.ForeignPtr.PlainPtr ipv1
+                   ipv5 :: GHC.ForeignPtr.ForeignPtrContents
+                   = GHC.ForeignPtr.PlainPtr ipv3
                  } in
                  case GHC.Prim.touch#
                         @ 'GHC.Types.PtrRepLifted
                         @ GHC.ForeignPtr.ForeignPtrContents
-                        ipv3
+                        ipv5
                         ds8 of s' { DEFAULT ->
                  letrec {
                    $wlineGenerator :: GHC.Types.Int
@@ -1600,36 +1732,36 @@ f4fdde2a782b4f3a5bfd6c37168981fd
                                 GHC.Types.False
                                 -> case GHC.Prim.writeWord8OffAddr#
                                           @ GHC.Prim.RealWorld
-                                          ipv2
+                                          ipv4
                                           ww3
                                           0##
                                           w2 of s2 { DEFAULT ->
                                    case GHC.Prim.touch#
                                           @ 'GHC.Types.PtrRepLifted
                                           @ GHC.ForeignPtr.ForeignPtrContents
-                                          ipv3
+                                          ipv5
                                           s2 of s'1 { DEFAULT ->
                                    case GHC.Prim.writeWord8OffAddr#
                                           @ GHC.Prim.RealWorld
-                                          ipv2
+                                          ipv4
                                           (GHC.Prim.+# ww3 1#)
                                           0##
                                           s'1 of s4 { DEFAULT ->
                                    case GHC.Prim.touch#
                                           @ 'GHC.Types.PtrRepLifted
                                           @ GHC.ForeignPtr.ForeignPtrContents
-                                          ipv3
+                                          ipv5
                                           s4 of s'2 { DEFAULT ->
                                    case GHC.Prim.writeWord8OffAddr#
                                           @ GHC.Prim.RealWorld
-                                          ipv2
+                                          ipv4
                                           (GHC.Prim.+# ww3 2#)
                                           0##
                                           s'2 of s5 { DEFAULT ->
                                    case GHC.Prim.touch#
                                           @ 'GHC.Types.PtrRepLifted
                                           @ GHC.ForeignPtr.ForeignPtrContents
-                                          ipv3
+                                          ipv5
                                           s5 of s'3 { DEFAULT ->
                                    $wcolumn
                                      (GHC.Prim.+# ww3 3#)
@@ -1641,8 +1773,8 @@ f4fdde2a782b4f3a5bfd6c37168981fd
                           $wcolumn ww2 0# w1 }
                        GHC.Types.True -> (# w1, GHC.Tuple.() #) }
                  } in
-                 case $wlineGenerator Lib.imagApp7 0# s' of ds1 { (#,#) ipv4 ipv5 ->
-                 (# ipv4,
+                 case $wlineGenerator Lib.imagApp7 0# s' of ds1 { (#,#) ipv6 ipv7 ->
+                 (# ipv6,
                     Codec.Picture.Types.Image
                       @ Codec.Picture.Types.PixelRGB8
                       300#
@@ -1651,12 +1783,12 @@ f4fdde2a782b4f3a5bfd6c37168981fd
                          @ (Codec.Picture.Types.PixelBaseComponent
                               Codec.Picture.Types.PixelRGB8)
                          270000#
-                         ipv2
-                         ipv3) #) } } } }) -}
-99f4b581cb047590fc92df2bfd19003e
+                         ipv4
+                         ipv5) #) } } } }) -}
+5a281d371be7b3d6d033f44fa712041f
   imagApp7 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
-9e991d01e22c5c5c1fc9b56e1359a175
+40821a9193c9baa364ffe70950afe1ab
   imagApp8 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -1668,13 +1800,13 @@ f4fdde2a782b4f3a5bfd6c37168981fd
                         @ Codec.Picture.Types.DynamicImage
                         @ GHC.Prim.RealWorld
                         Lib.imagApp9
-                        s1# of ds { (#,#) ipv ipv1 ->
-                 (# ipv,
-                    GHC.Conc.Sync.TVar @ Codec.Picture.Types.DynamicImage ipv1 #) }) -}
-afc39719e6718c4d7212d357658e08db
+                        s1# of ds { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    GHC.Conc.Sync.TVar @ Codec.Picture.Types.DynamicImage ipv3 #) }) -}
+2b5005a42db5f8741fb22d3ef497e985
   imagApp9 :: Codec.Picture.Types.DynamicImage
   {- Unfolding: (Codec.Picture.Types.ImageRGB8 Lib.imagApp10) -}
-1a2def9b863a6c0e9a38574c0654ee86
+8400f01b61f133a3ecfa40efc775acd4
   zipSrv ::
     GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage
     -> GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage
@@ -1787,7 +1919,8 @@ afc39719e6718c4d7212d357658e08db
                                                                                                                        <Network.HTTP.Types.Method.StdMethod>_N
                                                                                                                        <[Codec.Picture.Types.Image
                                                                                                                            Codec.Picture.Types.PixelRGB8]>_N
-                                                                                                                       <'[Api.GIFAnim]>_N
+                                                                                                                       <'[Api.GIFAnim
+                                                                                                                            10]>_N
                                                                                                                        <200>_N
                                                                                                                        <'Network.HTTP.Types.Method.GET>_N
                                                                                                                        <Control.Monad.Trans.Except.ExceptT
@@ -1801,7 +1934,8 @@ afc39719e6718c4d7212d357658e08db
                                                                                                                        <Servant.API.Verbs.Verb
                                                                                                                           'Network.HTTP.Types.Method.GET
                                                                                                                           200
-                                                                                                                          '[Api.GIFAnim]
+                                                                                                                          '[Api.GIFAnim
+                                                                                                                              10]
                                                                                                                           [Codec.Picture.Types.Image
                                                                                                                              Codec.Picture.Types.PixelRGB8]>_N
                                                                                                                        <Control.Monad.Trans.Except.ExceptT
@@ -1813,7 +1947,8 @@ afc39719e6718c4d7212d357658e08db
                                                                                                                           "tool"
                                                                                                                           GHC.Base.String
                                                                                                                         Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                             '[Api.GIFAnim]
+                                                                                                                                             '[Api.GIFAnim
+                                                                                                                                                 10]
                                                                                                                                              [Codec.Picture.Types.Image
                                                                                                                                                 Codec.Picture.Types.PixelRGB8]>_N
                                                                                                                        <"gif">_N
@@ -1821,55 +1956,75 @@ afc39719e6718c4d7212d357658e08db
                                                                                                                           Servant.Server.Internal.ServantErr.ServantErr
                                                                                                                           GHC.Types.IO>_N))))
                                                                                                Servant.API.Alternative.:<|> Trans
-                                                                                                                                (<[GHC.Types.Char]>_R
-                                                                                                                                 ->_R Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
-                                                                                                                                                    <Network.HTTP.Types.Method.StdMethod>_N
-                                                                                                                                                    <Models.Tool>_N
-                                                                                                                                                    <'[Htmls.HTMLBlaze]>_N
-                                                                                                                                                    <200>_N
-                                                                                                                                                    <'Network.HTTP.Types.Method.GET>_N
-                                                                                                                                                    <Control.Monad.Trans.Except.ExceptT
-                                                                                                                                                       Servant.Server.Internal.ServantErr.ServantErr
-                                                                                                                                                       GHC.Types.IO>_N)))
                                                                                                                                 (Trans
-                                                                                                                                     (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m11[0]
-                                                                                                                                                    <*>_N
-                                                                                                                                                    <[GHC.Types.Char]>_N
-                                                                                                                                                    <"tool">_N
-                                                                                                                                                    <Servant.API.Verbs.Verb
-                                                                                                                                                       'Network.HTTP.Types.Method.GET
-                                                                                                                                                       200
-                                                                                                                                                       '[Htmls.HTMLBlaze]
-                                                                                                                                                       Models.Tool>_N
-                                                                                                                                                    <Control.Monad.Trans.Except.ExceptT
-                                                                                                                                                       Servant.Server.Internal.ServantErr.ServantErr
-                                                                                                                                                       GHC.Types.IO>_N)))
-                                                                                                                                     (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
-                                                                                                                                                    <*>_N
-                                                                                                                                                    <Servant.API.Capture.Capture
-                                                                                                                                                       "tool"
-                                                                                                                                                       GHC.Base.String
-                                                                                                                                                     Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                                                          '[Htmls.HTMLBlaze]
-                                                                                                                                                                          Models.Tool>_N
-                                                                                                                                                    <"show">_N
-                                                                                                                                                    <Control.Monad.Trans.Except.ExceptT
-                                                                                                                                                       Servant.Server.Internal.ServantErr.ServantErr
-                                                                                                                                                       GHC.Types.IO>_N)))))_R
+                                                                                                                                     (<[GHC.Types.Char]>_R
+                                                                                                                                      ->_R Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
+                                                                                                                                                         <Network.HTTP.Types.Method.StdMethod>_N
+                                                                                                                                                         <Models.Tool>_N
+                                                                                                                                                         <'[Htmls.HTMLBlaze]>_N
+                                                                                                                                                         <200>_N
+                                                                                                                                                         <'Network.HTTP.Types.Method.GET>_N
+                                                                                                                                                         <Control.Monad.Trans.Except.ExceptT
+                                                                                                                                                            Servant.Server.Internal.ServantErr.ServantErr
+                                                                                                                                                            GHC.Types.IO>_N)))
+                                                                                                                                     (Trans
+                                                                                                                                          (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m11[0]
+                                                                                                                                                         <*>_N
+                                                                                                                                                         <[GHC.Types.Char]>_N
+                                                                                                                                                         <"tool">_N
+                                                                                                                                                         <Servant.API.Verbs.Verb
+                                                                                                                                                            'Network.HTTP.Types.Method.GET
+                                                                                                                                                            200
+                                                                                                                                                            '[Htmls.HTMLBlaze]
+                                                                                                                                                            Models.Tool>_N
+                                                                                                                                                         <Control.Monad.Trans.Except.ExceptT
+                                                                                                                                                            Servant.Server.Internal.ServantErr.ServantErr
+                                                                                                                                                            GHC.Types.IO>_N)))
+                                                                                                                                          (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
+                                                                                                                                                         <*>_N
+                                                                                                                                                         <Servant.API.Capture.Capture
+                                                                                                                                                            "tool"
+                                                                                                                                                            GHC.Base.String
+                                                                                                                                                          Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                                                               '[Htmls.HTMLBlaze]
+                                                                                                                                                                               Models.Tool>_N
+                                                                                                                                                         <"show">_N
+                                                                                                                                                         <Control.Monad.Trans.Except.ExceptT
+                                                                                                                                                            Servant.Server.Internal.ServantErr.ServantErr
+                                                                                                                                                            GHC.Types.IO>_N))))
+                                                                                                                                 Servant.API.Alternative.:<|> <Servant.Server.Internal.ServerT
+                                                                                                                                                                 Servant.API.Raw.Raw
+                                                                                                                                                                 (Control.Monad.Trans.Except.ExceptT
+                                                                                                                                                                    Servant.Server.Internal.ServantErr.ServantErr
+                                                                                                                                                                    GHC.Types.IO)>_R)_R
+                                                                                                                                (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:<|>m[0]
+                                                                                                                                               <Servant.API.Raw.Raw>_N
+                                                                                                                                               <"show"
+                                                                                                                                                Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                                                                      "tool"
+                                                                                                                                                                      GHC.Base.String
+                                                                                                                                                                    Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                                                                         '[Htmls.HTMLBlaze]
+                                                                                                                                                                                         Models.Tool)>_N
+                                                                                                                                               <Control.Monad.Trans.Except.ExceptT
+                                                                                                                                                  Servant.Server.Internal.ServantErr.ServantErr
+                                                                                                                                                  GHC.Types.IO>_N))))_R
                                                                                               (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:<|>m[0]
-                                                                                                             <"show"
-                                                                                                              Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                                                                                    "tool"
-                                                                                                                                    GHC.Base.String
-                                                                                                                                  Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                                       '[Htmls.HTMLBlaze]
-                                                                                                                                                       Models.Tool)>_N
+                                                                                                             <("show"
+                                                                                                               Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                                     "tool"
+                                                                                                                                     GHC.Base.String
+                                                                                                                                   Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                                        '[Htmls.HTMLBlaze]
+                                                                                                                                                        Models.Tool))
+                                                                                                              Servant.API.Alternative.:<|> Servant.API.Raw.Raw>_N
                                                                                                              <"gif"
                                                                                                               Servant.API.Sub.:> (Servant.API.Capture.Capture
                                                                                                                                     "tool"
                                                                                                                                     GHC.Base.String
                                                                                                                                   Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                                       '[Api.GIFAnim]
+                                                                                                                                                       '[Api.GIFAnim
+                                                                                                                                                           10]
                                                                                                                                                        [Codec.Picture.Types.Image
                                                                                                                                                           Codec.Picture.Types.PixelRGB8])>_N
                                                                                                              <Control.Monad.Trans.Except.ExceptT
@@ -1881,16 +2036,18 @@ afc39719e6718c4d7212d357658e08db
                                                                                                    "tool"
                                                                                                    GHC.Base.String
                                                                                                  Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                      '[Api.GIFAnim]
+                                                                                                                      '[Api.GIFAnim
+                                                                                                                          10]
                                                                                                                       [Codec.Picture.Types.Image
                                                                                                                          Codec.Picture.Types.PixelRGB8]))
-                                                                            Servant.API.Alternative.:<|> ("show"
-                                                                                                          Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                                                                                "tool"
-                                                                                                                                GHC.Base.String
-                                                                                                                              Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                                   '[Htmls.HTMLBlaze]
-                                                                                                                                                   Models.Tool))>_N
+                                                                            Servant.API.Alternative.:<|> (("show"
+                                                                                                           Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                                 "tool"
+                                                                                                                                 GHC.Base.String
+                                                                                                                               Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                                    '[Htmls.HTMLBlaze]
+                                                                                                                                                    Models.Tool))
+                                                                                                          Servant.API.Alternative.:<|> Servant.API.Raw.Raw)>_N
                                                                            <"image"
                                                                             Servant.API.Sub.:> (Servant.API.Capture.Capture
                                                                                                   "tool"
@@ -1915,16 +2072,18 @@ afc39719e6718c4d7212d357658e08db
                                                                                                "tool"
                                                                                                GHC.Base.String
                                                                                              Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                  '[Api.GIFAnim]
+                                                                                                                  '[Api.GIFAnim
+                                                                                                                      10]
                                                                                                                   [Codec.Picture.Types.Image
                                                                                                                      Codec.Picture.Types.PixelRGB8]))
-                                                                        Servant.API.Alternative.:<|> ("show"
-                                                                                                      Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                                                                            "tool"
-                                                                                                                            GHC.Base.String
-                                                                                                                          Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                               '[Htmls.HTMLBlaze]
-                                                                                                                                               Models.Tool)))>_N
+                                                                        Servant.API.Alternative.:<|> (("show"
+                                                                                                       Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                             "tool"
+                                                                                                                             GHC.Base.String
+                                                                                                                           Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                                '[Htmls.HTMLBlaze]
+                                                                                                                                                Models.Tool))
+                                                                                                      Servant.API.Alternative.:<|> Servant.API.Raw.Raw))>_N
                                          <"postImg"
                                           Servant.API.Sub.:> (Servant.API.Capture.Capture
                                                                 "true/false" GHC.Types.Bool
@@ -1938,7 +2097,7 @@ afc39719e6718c4d7212d357658e08db
                                          <Control.Monad.Trans.Except.ExceptT
                                             Servant.Server.Internal.ServantErr.ServantErr
                                             GHC.Types.IO>_N)))) -}
-37b64137d9cdb0f61779fda74f1fa59a
+81e062958f29c5f4d25e39cadda19cf5
   zipSrv1 ::
     GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage
     -> GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage
@@ -1959,11 +2118,13 @@ afc39719e6718c4d7212d357658e08db
                                                                          GHC.Types.IO
                                                                          [Codec.Picture.Types.Image
                                                                             Codec.Picture.Types.PixelRGB8])
-                                                                   Servant.API.Alternative.:<|> (GHC.Base.String
-                                                                                                 -> Control.Monad.Trans.Except.ExceptT
-                                                                                                      Servant.Server.Internal.ServantErr.ServantErr
-                                                                                                      GHC.Types.IO
-                                                                                                      Models.Tool)))
+                                                                   Servant.API.Alternative.:<|> ((GHC.Base.String
+                                                                                                  -> Control.Monad.Trans.Except.ExceptT
+                                                                                                       Servant.Server.Internal.ServantErr.ServantErr
+                                                                                                       GHC.Types.IO
+                                                                                                       Models.Tool)
+                                                                                                 Servant.API.Alternative.:<|> Servant.Server.Internal.Server
+                                                                                                                                Servant.API.Raw.Raw)))
   {- Arity: 2, Strictness: <L,U(U)><L,U(U)>m, Inline: INLINE[0],
      Unfolding: InlineRule (2, True, False)
                 (\ (w :: GHC.Conc.Sync.TVar Codec.Picture.Types.DynamicImage)
@@ -1987,13 +2148,33 @@ afc39719e6718c4d7212d357658e08db
                                                           GHC.Types.IO
                                                           [Codec.Picture.Types.Image
                                                              Codec.Picture.Types.PixelRGB8])
-                                                    Servant.API.Alternative.:<|> (GHC.Base.String
-                                                                                  -> Control.Monad.Trans.Except.ExceptT
-                                                                                       Servant.Server.Internal.ServantErr.ServantErr
-                                                                                       GHC.Types.IO
-                                                                                       Models.Tool)))
+                                                    Servant.API.Alternative.:<|> ((GHC.Base.String
+                                                                                   -> Control.Monad.Trans.Except.ExceptT
+                                                                                        Servant.Server.Internal.ServantErr.ServantErr
+                                                                                        GHC.Types.IO
+                                                                                        Models.Tool)
+                                                                                  Servant.API.Alternative.:<|> Servant.Server.Internal.Server
+                                                                                                                 Servant.API.Raw.Raw)))
                    ww1
                    ww2 }) -}
+"SPEC/Lib $fAllCTRender:a @ (GIFAnim 10) @ '[] @ [Image PixelRGB8]" [ALWAYS] forall ($dAllMimeRender :: Servant.API.ContentTypes.AllMimeRender
+                                                                                                          '[Api.GIFAnim
+                                                                                                              10]
+                                                                                                          [Codec.Picture.Types.Image
+                                                                                                             Codec.Picture.Types.PixelRGB8])
+                                                                                    ($dAllMime :: Servant.API.ContentTypes.AllMime
+                                                                                                    '[])
+                                                                                    ($dAccept :: Servant.API.ContentTypes.Accept
+                                                                                                   (Api.GIFAnim
+                                                                                                      10))
+  Servant.API.ContentTypes.$fAllCTRender:a @ (Api.GIFAnim 10)
+                                           @ '[]
+                                           @ [Codec.Picture.Types.Image
+                                                Codec.Picture.Types.PixelRGB8]
+                                           $dAccept
+                                           $dAllMime
+                                           $dAllMimeRender
+  = Lib.$s$fAllCTRender:a11
 "SPEC/Lib $fAllCTRender:a @ (JPEG 100) @ '[] @ DynamicImage" [ALWAYS] forall ($dAllMimeRender :: Servant.API.ContentTypes.AllMimeRender
                                                                                                    '[Servant.JuicyPixels.JPEG
                                                                                                        100]
@@ -2011,22 +2192,6 @@ afc39719e6718c4d7212d357658e08db
                                            $dAllMime
                                            $dAllMimeRender
   = Lib.$s$fAllCTRender:a
-"SPEC/Lib $fAllCTRender:a @ GIFAnim @ '[] @ [Image PixelRGB8]" [ALWAYS] forall ($dAllMimeRender :: Servant.API.ContentTypes.AllMimeRender
-                                                                                                     '[Api.GIFAnim]
-                                                                                                     [Codec.Picture.Types.Image
-                                                                                                        Codec.Picture.Types.PixelRGB8])
-                                                                               ($dAllMime :: Servant.API.ContentTypes.AllMime
-                                                                                               '[])
-                                                                               ($dAccept :: Servant.API.ContentTypes.Accept
-                                                                                              Api.GIFAnim)
-  Servant.API.ContentTypes.$fAllCTRender:a @ Api.GIFAnim
-                                           @ '[]
-                                           @ [Codec.Picture.Types.Image
-                                                Codec.Picture.Types.PixelRGB8]
-                                           $dAccept
-                                           $dAllMime
-                                           $dAllMimeRender
-  = Lib.$s$fAllCTRender:a15
 "SPEC/Lib $fAllCTRender:a @ HTMLBlaze @ '[] @ Tool" [ALWAYS] forall ($dAllMimeRender :: Servant.API.ContentTypes.AllMimeRender
                                                                                           '[Htmls.HTMLBlaze]
                                                                                           Models.Tool)
@@ -2040,7 +2205,7 @@ afc39719e6718c4d7212d357658e08db
                                            $dAccept
                                            $dAllMime
                                            $dAllMimeRender
-  = Lib.$s$fAllCTRender:a17
+  = Lib.$s$fAllCTRender:a22
 "SPEC/Lib $fAllCTRender:a @ JSON @ '[] @ Bool" [ALWAYS] forall ($dAllMimeRender :: Servant.API.ContentTypes.AllMimeRender
                                                                                      '[Servant.API.ContentTypes.JSON]
                                                                                      GHC.Types.Bool)
@@ -2054,7 +2219,17 @@ afc39719e6718c4d7212d357658e08db
                                            $dAccept
                                            $dAllMime
                                            $dAllMimeRender
-  = Lib.$s$fAllCTRender:a11
+  = Lib.$s$fAllCTRender:a18
+"SPEC/Lib $fAllMimeRender:a0 @ (GIFAnim 10) @ [Image PixelRGB8]" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
+                                                                                                    (Api.GIFAnim
+                                                                                                       10)
+                                                                                                    [Codec.Picture.Types.Image
+                                                                                                       Codec.Picture.Types.PixelRGB8])
+  Servant.API.ContentTypes.$fAllMimeRender:a0 @ (Api.GIFAnim 10)
+                                              @ [Codec.Picture.Types.Image
+                                                   Codec.Picture.Types.PixelRGB8]
+                                              $dMimeRender
+  = Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a1
 "SPEC/Lib $fAllMimeRender:a0 @ (JPEG 100) @ DynamicImage" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
                                                                                              (Servant.JuicyPixels.JPEG
                                                                                                 100)
@@ -2064,15 +2239,6 @@ afc39719e6718c4d7212d357658e08db
                                               @ Codec.Picture.Types.DynamicImage
                                               $dMimeRender
   = Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a0
-"SPEC/Lib $fAllMimeRender:a0 @ GIFAnim @ [Image PixelRGB8]" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
-                                                                                               Api.GIFAnim
-                                                                                               [Codec.Picture.Types.Image
-                                                                                                  Codec.Picture.Types.PixelRGB8])
-  Servant.API.ContentTypes.$fAllMimeRender:a0 @ Api.GIFAnim
-                                              @ [Codec.Picture.Types.Image
-                                                   Codec.Picture.Types.PixelRGB8]
-                                              $dMimeRender
-  = Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a2
 "SPEC/Lib $fAllMimeRender:a0 @ HTMLBlaze @ Tool" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
                                                                                     Htmls.HTMLBlaze
                                                                                     Models.Tool)
@@ -2086,13 +2252,15 @@ afc39719e6718c4d7212d357658e08db
   Servant.API.ContentTypes.$fAllMimeRender:a0 @ Servant.API.ContentTypes.JSON
                                               @ GHC.Types.Bool
                                               $dMimeRender
-  = Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a1
-"SPEC/Lib $fAllMimeRender:a0_$callMimeRender @ GIFAnim @ [Image
-                                                           PixelRGB8]" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
-                                                                                                                                                                          Api.GIFAnim
-                                                                                                                                                                          [Codec.Picture.Types.Image
-                                                                                                                                                                             Codec.Picture.Types.PixelRGB8])
-  Servant.API.ContentTypes.$fAllMimeRender:a0_$callMimeRender @ Api.GIFAnim
+  = Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a2
+"SPEC/Lib $fAllMimeRender:a0_$callMimeRender @ (GIFAnim 10) @ [Image
+                                                                PixelRGB8]" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
+                                                                                                                                                                                    (Api.GIFAnim
+                                                                                                                                                                                       10)
+                                                                                                                                                                                    [Codec.Picture.Types.Image
+                                                                                                                                                                                       Codec.Picture.Types.PixelRGB8])
+  Servant.API.ContentTypes.$fAllMimeRender:a0_$callMimeRender @ (Api.GIFAnim
+                                                                   10)
                                                               @ [Codec.Picture.Types.Image
                                                                    Codec.Picture.Types.PixelRGB8]
                                                               $dMimeRender
@@ -2111,6 +2279,11 @@ afc39719e6718c4d7212d357658e08db
                                                $dMimeUnrender
                                                $dAllMimeUnrender
   = Lib.$s$fAllMimeUnrender:a
+"SPEC/Lib $fMimeRenderTYPEGIFAnim[] @ 10" [ALWAYS] forall ($d~ :: 10
+                                                                  GHC.TypeLits.<= 10)
+                                                          ($dKnownNat1 :: GHC.TypeLits.KnownNat 10)
+  Api.$fMimeRenderTYPEGIFAnim[] @ 10 $dKnownNat1 $d~
+  = Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEGIFAnim[]
 "SPEC/Lib $fMimeRenderTYPEHTMLBlazea @ Tool" [ALWAYS] forall ($dToMarkup :: Text.Blaze.ToMarkup
                                                                               Models.Tool)
   Htmls.$fMimeRenderTYPEHTMLBlazea @ Models.Tool $dToMarkup

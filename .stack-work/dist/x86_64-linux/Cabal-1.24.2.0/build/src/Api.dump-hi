@@ -1,13 +1,13 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-09 23:50:51.762557 UTC
+2017-07-04 19:27:50.824007 UTC
 
-interface picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Api 8002
-  interface hash: c5650637d3e5827d88df3dc0aa89845b
-  ABI hash: a77364eb5bd6d4657c49fc01d22ac574
-  export-list hash: 1c7021d10c0b328ec4d502193d57f4ac
+interface picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf:Api 8002
+  interface hash: 89ec3a37d38d57c726a1a12161799ee9
+  ABI hash: cec13e727da71c433fe3c19aad96d2b9
+  export-list hash: c1ce43ad452a44a0fd00d3408a502629
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
-  flag hash: 5ab7cd1858fe57c96f59dbd442901678
+  flag hash: cb37e631bc4c684e53d2fda28c8fcb7e
   sig of: Nothing
   used TH splices: False
   where
@@ -69,7 +69,7 @@ orphans: attoparsec-0.13.1.0@attoparsec-0.13.1.0-1ABl8gBrvGSCXKXEElG6rU:Data.Att
          binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
          bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
          hashable-1.2.6.0@hashable-1.2.6.0-3EXxoqeEgbfAKr6aGkye6x:Data.Hashable.Generic
-         picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Htmls
+         picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf:Htmls
          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
@@ -103,7 +103,7 @@ family instance modules: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOs
                          ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
                          http-api-data-0.3.5@http-api-data-0.3.5-I8V2cgXR5W924Ax42O3A11:Web.Internal.FormUrlEncoded
                          network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF:Network.URI
-                         picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk:Models
+                         picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf:Models
                          pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
                          pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
                          primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH:Control.Monad.Primitive
@@ -133,37 +133,39 @@ import  -/  base-4.9.1.0:Data.Either 20b09ef8d0a5b74fdec011c40c1587f5
 import  -/  base-4.9.1.0:Data.Proxy d7f87a37cf7ec5ca87c59c8d2859031f
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
 import  -/  base-4.9.1.0:GHC.TypeLits 93e12de936472fe3136ec0d1e30a3bd9
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Lazy 208431757121593b5ca64b062df0cfbd
 import  -/  http-media-0.6.4@http-media-0.6.4-Ic2rsgpbcUZCv89ocBCZpr:Network.HTTP.Media 07625d65eebeff997f1e9bc032ba3b6e
 import  -/  http-media-0.6.4@http-media-0.6.4-Ic2rsgpbcUZCv89ocBCZpr:Network.HTTP.Media.MediaType d33bfddaa1306ad267f9a6689258b69b
-import  -/  Htmls aa0035ee828be950ec0a64c28b4fe3d2
-  exports: 67d6274d56ce8eb3c41abc47b0b45b11
-  HTMLBlaze dcf0c3556f1dc5d5f3110238bb6e4e98
-import  -/  Models d801f338584b61c18b182f9aac54bd61
-  exports: b83cc7622d83dd136fe94f56bd460b59
-  Tool e2c5ed9d7ef0f45260c6cb7d3697c389
+import  -/  Htmls c8f882b4e9492955dcce536e246ffd85
+  exports: 3aa197b1619ffdb8f2e6e00c837ee2cb
+  HTMLBlaze 71e9b6ef84f7601188f085ac6a4a2310
+import  -/  Models 5992fa304552c7c8ef828c4d5dfbaa4c
+  exports: ed66af611eab7c3185e2115f774dae78
+  Tool 55cf370781b39a8a4ed28483475a4bde
 import  -/  servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API ea4c313cfea87bcfbf12f5ad55ca0674
 import  -/  servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API.Alternative 23b24c34dda253c03c99ee6490f6a518
 import  -/  servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API.Capture 2a727c94fad9a3319e7ee886e834a4f3
 import  -/  servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API.ContentTypes f46c3af563d8e4f630ae29c1d96b30a9
+import  -/  servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API.Raw 818230447654833d886254fb5ea6ba37
 import  -/  servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API.ReqBody 5dd1533175f08974194e0cdd6857e55c
 import  -/  servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API.Sub d0e5e51568655ac1054371be0600b169
 import  -/  servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API.Verbs 87a2450d8afc747bc7c80e87c25d47b8
 import  -/  servant-JuicyPixels-0.3.0.2@servant-JuicyPixels-0.3.0.2-KFDh0ZSrRqdHyQZspaSYy6:Servant.JuicyPixels 8b5d4bad3818d21fd79b30ab2960a0f1
 import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text 9ba4693a108b74a0b1eb8f7d38f1abee
-42bb92e057519b23b52b87c397ccef5e
-  $fAcceptTYPEGIFAnim :: Servant.API.ContentTypes.Accept Api.GIFAnim
+fa58714819a4a1511b9d8cf68f90e15f
+  $fAccept(->)GIFAnim :: Servant.API.ContentTypes.Accept Api.GIFAnim
   DFunId
   {- Arity: 1, Strictness: <L,A>, Inline: INLINE (sat-args=0),
      Unfolding: InlineRule (0, False, True)
-                Api.$fAcceptTYPEGIFAnim_$ccontentType
+                Api.$fAccept(->)GIFAnim_$ccontentType
                   `cast`
                 (Sym (Servant.API.ContentTypes.N:Accept[0]
-                          <*>_N <Api.GIFAnim>_N)) -}
-90e891e01c11a4faf651774fcfa85dc1
-  $fAcceptTYPEGIFAnim1 ::
+                          <GHC.Types.Nat -> *>_N <Api.GIFAnim>_N)) -}
+03f130d5304256f29ccc249b9541c28c
+  $fAccept(->)GIFAnim1 ::
     Network.HTTP.Media.MediaType.Internal.MediaType
   {- Unfolding: (case GHC.Prim.newMutVar#
                         @ GHC.ForeignPtr.Finalizers
@@ -205,112 +207,175 @@ import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text 9ba4693a1
                    ww11
                    ww12
                    ww13 } } } }) -}
-42bb92e057519b23b52b87c397ccef5e
-  $fAcceptTYPEGIFAnim_$ccontentType ::
+fa58714819a4a1511b9d8cf68f90e15f
+  $fAccept(->)GIFAnim_$ccontentType ::
     Data.Proxy.Proxy Api.GIFAnim
     -> Network.HTTP.Media.MediaType.Internal.MediaType
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (1, True, True)
                 (\ (ds :: Data.Proxy.Proxy Api.GIFAnim) ->
-                 Api.$fAcceptTYPEGIFAnim1) -}
-42bb92e057519b23b52b87c397ccef5e
+                 Api.$fAccept(->)GIFAnim1) -}
+fa58714819a4a1511b9d8cf68f90e15f
+  $fAcceptTYPEGIFAnim ::
+    (GHC.TypeLits.KnownNat delay, delay GHC.TypeLits.<= 10) =>
+    Servant.API.ContentTypes.Accept (Api.GIFAnim delay)
+  DFunId
+  {- Arity: 3, Strictness: <L,A><S(S),1*U(1*U)><L,A>,
+     Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (2, False, True)
+                Api.$fAcceptTYPEGIFAnim_$ccontentType
+                  `cast`
+                (forall (delay :: <GHC.Types.Nat>_N).
+                 <GHC.TypeLits.KnownNat delay>_R
+                 ->_R <delay GHC.TypeLits.<= 10>_R
+                 ->_R Sym (Servant.API.ContentTypes.N:Accept[0]
+                               <*>_N <Api.GIFAnim delay>_N)) -}
+fa58714819a4a1511b9d8cf68f90e15f
+  $fAcceptTYPEGIFAnim_$ccontentType ::
+    (GHC.TypeLits.KnownNat delay, delay GHC.TypeLits.<= 10) =>
+    Data.Proxy.Proxy (Api.GIFAnim delay)
+    -> Network.HTTP.Media.MediaType.Internal.MediaType
+  {- Arity: 3, Strictness: <L,A><S(S),1*U(1*U)><L,A>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ (delay :: GHC.Types.Nat)
+                   ($dKnownNat :: GHC.TypeLits.KnownNat delay)
+                   ($d~ :: delay GHC.TypeLits.<= 10)
+                   (eta :: Data.Proxy.Proxy (Api.GIFAnim delay)) ->
+                 case GHC.Types.HEq_sc
+                        @ GHC.Types.Bool
+                        @ GHC.Types.Bool
+                        @ (delay GHC.TypeLits.<=? 10)
+                        @ 'GHC.Types.True
+                        $d~
+                          `cast`
+                        (Data.Type.Equality.N:~[0] <GHC.Types.Bool>_N <delay
+                                                                       GHC.TypeLits.<=? 10>_N <'GHC.Types.True>_N) of cobox0 { DEFAULT ->
+                 Api.$fAccept(->)GIFAnim1 }) -}
+fa58714819a4a1511b9d8cf68f90e15f
   $fMimeRenderTYPEGIFAnim[] ::
+    (GHC.TypeLits.KnownNat delay, delay GHC.TypeLits.<= 10) =>
     Servant.API.ContentTypes.MimeRender
-      Api.GIFAnim
+      (Api.GIFAnim delay)
       [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
   DFunId
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
+  {- Arity: 2, Strictness: <L,1*U><L,U(U)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ (delay :: GHC.Types.Nat)
+                      ($dKnownNat :: GHC.TypeLits.KnownNat delay)
+                      ($d~ :: delay GHC.TypeLits.<= 10).
                   @ *
-                  @ Api.GIFAnim
+                  @ (Api.GIFAnim delay)
                   @ [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
-                  Api.$fAcceptTYPEGIFAnim_$ccontentType
-                    `cast`
-                  (Sym (Servant.API.ContentTypes.N:Accept[0] <*>_N <Api.GIFAnim>_N))
-                  Api.$fMimeRenderTYPEGIFAnim[]_$cmimeRender -}
-a9ab4ac09660332ca77613d6b7e72c78
-  $fMimeRenderTYPEGIFAnim[]1 :: GHC.Stack.Types.CallStack
-  {- Strictness: m2,
-     Unfolding: (GHC.Stack.Types.PushCallStack
-                   Api.$fMimeRenderTYPEGIFAnim[]9
-                   Api.$fMimeRenderTYPEGIFAnim[]2
-                   GHC.Stack.Types.EmptyCallStack) -}
-a0384ba9ec400d0f0ce30c8a5dba3464
-  $fMimeRenderTYPEGIFAnim[]10 :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3#) -}
-d4bba79b29bbb77924eb49b2ec5b8b95
-  $fMimeRenderTYPEGIFAnim[]2 :: GHC.Stack.Types.SrcLoc
-  {- Strictness: m,
-     Unfolding: (GHC.Stack.Types.SrcLoc
-                   Api.$fMimeRenderTYPEGIFAnim[]8
-                   Api.$fMimeRenderTYPEGIFAnim[]7
-                   Api.$fMimeRenderTYPEGIFAnim[]6
-                   Api.$fMimeRenderTYPEGIFAnim[]5
-                   Api.$fMimeRenderTYPEGIFAnim[]4
-                   Api.$fMimeRenderTYPEGIFAnim[]5
-                   Api.$fMimeRenderTYPEGIFAnim[]3) -}
-956a17cd2cf802afaca08dccca87c8a8
-  $fMimeRenderTYPEGIFAnim[]3 :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 32#) -}
-cdddeed09867e8de5d55755dd631b076
-  $fMimeRenderTYPEGIFAnim[]4 :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 27#) -}
-daa71a4e2d1ec941bbc9815955db277f
-  $fMimeRenderTYPEGIFAnim[]5 :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 28#) -}
-77c6852fbb4e10f5798e6a3d1e24f3b3
-  $fMimeRenderTYPEGIFAnim[]6 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "src/Api.hs"#) -}
-f1c0393af9345c3e602367a88834998f
-  $fMimeRenderTYPEGIFAnim[]7 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Api"#) -}
-2fc6bb2a2417f49dc4dfc99898e7b301
-  $fMimeRenderTYPEGIFAnim[]8 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString#
-                   "picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk"#) -}
-5381c6ac86c3a83c2e61c9457e4bfbb5
-  $fMimeRenderTYPEGIFAnim[]9 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "error"#) -}
-42bb92e057519b23b52b87c397ccef5e
+                  (Api.$fMimeRenderTYPEGIFAnim[]_$cp1MimeRender
+                     @ delay
+                     $dKnownNat
+                     $d~)
+                  (Api.$fMimeRenderTYPEGIFAnim[]_$cmimeRender
+                     @ delay
+                     $dKnownNat
+                     $d~) -}
+61975fb2c2aadd182e03830c90d3e83c
+  $fMimeRenderTYPEGIFAnim[]1 ::
+    [GHC.Types.Char] -> Data.ByteString.Lazy.Internal.ByteString
+  {- Arity: 1, Strictness: <L,U>x -}
+fa58714819a4a1511b9d8cf68f90e15f
+  $fMimeRenderTYPEGIFAnim[]2 ::
+    (GHC.TypeLits.KnownNat delay, delay GHC.TypeLits.<= 10) =>
+    Data.Proxy.Proxy (Api.GIFAnim delay)
+    -> Network.HTTP.Media.MediaType.Internal.MediaType
+  {- Arity: 3, Strictness: <L,A><S(S),U(U)><L,A>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ (delay :: GHC.Types.Nat)
+                   ($dKnownNat :: GHC.TypeLits.KnownNat delay)
+                   ($d~ :: delay GHC.TypeLits.<= 10)
+                   (eta :: Data.Proxy.Proxy (Api.GIFAnim delay)) ->
+                 case GHC.Types.HEq_sc
+                        @ GHC.Types.Bool
+                        @ GHC.Types.Bool
+                        @ (delay GHC.TypeLits.<=? 10)
+                        @ 'GHC.Types.True
+                        $d~
+                          `cast`
+                        (Data.Type.Equality.N:~[0] <GHC.Types.Bool>_N <delay
+                                                                       GHC.TypeLits.<=? 10>_N <'GHC.Types.True>_N) of cobox0 { DEFAULT ->
+                 case GHC.Types.HEq_sc
+                        @ GHC.Types.Bool
+                        @ GHC.Types.Bool
+                        @ (delay GHC.TypeLits.<=? 10)
+                        @ 'GHC.Types.True
+                        $d~
+                          `cast`
+                        (Data.Type.Equality.N:~[0] <GHC.Types.Bool>_N <delay
+                                                                       GHC.TypeLits.<=? 10>_N <'GHC.Types.True>_N) of cobox1 { DEFAULT ->
+                 Api.$fAccept(->)GIFAnim1 } }) -}
+fa58714819a4a1511b9d8cf68f90e15f
   $fMimeRenderTYPEGIFAnim[]_$cmimeRender ::
-    Data.Proxy.Proxy Api.GIFAnim
+    (GHC.TypeLits.KnownNat delay, delay GHC.TypeLits.<= 10) =>
+    Data.Proxy.Proxy (Api.GIFAnim delay)
     -> [Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8]
     -> Data.ByteString.Lazy.Internal.ByteString
-  {- Arity: 2, Strictness: <L,A><S,1*U>,
-     Unfolding: InlineRule (2, True, False)
-                (\ (ds :: Data.Proxy.Proxy Api.GIFAnim)
+  {- Arity: 2, Strictness: <L,1*U><S(S),1*U(1*U)>,
+     Unfolding: (\ @ (delay :: GHC.Types.Nat)
+                   ($dKnownNat :: GHC.TypeLits.KnownNat delay)
+                   ($d~ :: delay GHC.TypeLits.<= 10) ->
+                 case GHC.Types.HEq_sc
+                        @ GHC.Types.Bool
+                        @ GHC.Types.Bool
+                        @ (delay GHC.TypeLits.<=? 10)
+                        @ 'GHC.Types.True
+                        $d~
+                          `cast`
+                        (Data.Type.Equality.N:~[0] <GHC.Types.Bool>_N <delay
+                                                                       GHC.TypeLits.<=? 10>_N <'GHC.Types.True>_N) of cobox0 { DEFAULT ->
+                 let {
+                   g :: Codec.Picture.Gif.GifDelay
+                   = case GHC.Integer.Type.integerToInt
+                            $dKnownNat
+                              `cast`
+                            (Trans
+                                 (GHC.TypeLits.N:KnownNat[0] <delay>_N)
+                                 (GHC.TypeLits.N:SNat[0] <delay>_P)) of wild { DEFAULT ->
+                     GHC.Types.I# wild }
+                 } in
+                 \ (ds :: Data.Proxy.Proxy (Api.GIFAnim delay))
                    (eta :: [Codec.Picture.Types.Image
                               Codec.Picture.Types.PixelRGB8]) ->
                  case Codec.Picture.encodeGifAnimation
-                        Api.$fMimeRenderTYPEGIFAnim[]10
+                        g
                         Codec.Picture.Gif.LoopingForever
                         eta of wild {
-                   Data.Either.Left x
-                   -> GHC.Err.error
-                        @ 'GHC.Types.PtrRepLifted
-                        @ Data.ByteString.Lazy.Internal.ByteString
-                        Api.$fMimeRenderTYPEGIFAnim[]1
-                          `cast`
-                        (Sym (GHC.Classes.N:IP[0]
-                                  <"callStack">_N <GHC.Stack.Types.CallStack>_N))
-                        x
-                   Data.Either.Right y -> y }) -}
-42bb92e057519b23b52b87c397ccef5e
-  $fMimeUnrenderTYPEGIFAnimDynamicImage ::
+                   Data.Either.Left x -> Api.$fMimeRenderTYPEGIFAnim[]1 x
+                   Data.Either.Right y -> y } }) -}
+fa58714819a4a1511b9d8cf68f90e15f
+  $fMimeRenderTYPEGIFAnim[]_$cp1MimeRender ::
+    (GHC.TypeLits.KnownNat delay, delay GHC.TypeLits.<= 10) =>
+    Servant.API.ContentTypes.Accept (Api.GIFAnim delay)
+  {- Arity: 3, Strictness: <L,A><S(S),U(U)><L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Api.$fMimeRenderTYPEGIFAnim[]2
+                  `cast`
+                (forall (delay :: <GHC.Types.Nat>_N).
+                 <GHC.TypeLits.KnownNat delay>_R
+                 ->_R <delay GHC.TypeLits.<= 10>_R
+                 ->_R Sym (Servant.API.ContentTypes.N:Accept[0]
+                               <*>_N <Api.GIFAnim delay>_N)) -}
+fa58714819a4a1511b9d8cf68f90e15f
+  $fMimeUnrender(->)GIFAnimDynamicImage ::
     Servant.API.ContentTypes.MimeUnrender
       Api.GIFAnim Codec.Picture.Types.DynamicImage
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
-                  @ *
+                  @ (GHC.Types.Nat -> *)
                   @ Api.GIFAnim
                   @ Codec.Picture.Types.DynamicImage
-                  Api.$fAcceptTYPEGIFAnim_$ccontentType
+                  Api.$fAccept(->)GIFAnim_$ccontentType
                     `cast`
-                  (Sym (Servant.API.ContentTypes.N:Accept[0] <*>_N <Api.GIFAnim>_N))
-                  Api.$fMimeUnrenderTYPEGIFAnimDynamicImage_$cmimeUnrender -}
-1b8aff256f8cbb7ea301337072a72946
-  $fMimeUnrenderTYPEGIFAnimDynamicImage1 ::
+                  (Sym (Servant.API.ContentTypes.N:Accept[0]
+                            <GHC.Types.Nat -> *>_N <Api.GIFAnim>_N))
+                  Api.$fMimeUnrender(->)GIFAnimDynamicImage_$cmimeUnrender -}
+d381c9de167a2e0bd87f1f16ba619848
+  $fMimeUnrender(->)GIFAnimDynamicImage1 ::
     Data.ByteString.Lazy.Internal.ByteString
     -> Data.Either.Either
          GHC.Base.String Codec.Picture.Types.DynamicImage
@@ -318,8 +383,8 @@ f1c0393af9345c3e602367a88834998f
      Unfolding: InlineRule (1, True, False)
                 (\ (x :: Data.ByteString.Lazy.Internal.ByteString) ->
                  Codec.Picture.Gif.decodeGif (Data.ByteString.Lazy.toStrict x)) -}
-42bb92e057519b23b52b87c397ccef5e
-  $fMimeUnrenderTYPEGIFAnimDynamicImage_$cmimeUnrender ::
+fa58714819a4a1511b9d8cf68f90e15f
+  $fMimeUnrender(->)GIFAnimDynamicImage_$cmimeUnrender ::
     Data.Proxy.Proxy Api.GIFAnim
     -> Data.ByteString.Lazy.Internal.ByteString
     -> Data.Either.Either
@@ -328,35 +393,36 @@ f1c0393af9345c3e602367a88834998f
      Unfolding: InlineRule (1, True, True)
                 (\ (ds :: Data.Proxy.Proxy Api.GIFAnim)
                    (eta :: Data.ByteString.Lazy.Internal.ByteString) ->
-                 Api.$fMimeUnrenderTYPEGIFAnimDynamicImage1 eta) -}
-02c9c844775f25263c1247305a253814
+                 Api.$fMimeUnrender(->)GIFAnimDynamicImage1 eta) -}
+74f27bfadfbfb63684a15e08daac2da8
   $tcGIFAnim :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   25433807422227596##
-                   2995138607048571286##
+                   10976501648575010234##
+                   17778061987098577854##
                    Api.$trModule
                    Api.$tcGIFAnim1) -}
-2e115a086c3c65217fe97c4414478cd8
+54f16f03b57036a3e1839669821436a2
   $tcGIFAnim1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "GIFAnim"#) -}
-6127c6de33cc6512a68cf85b31519610
+e18f338d7d6383febeb4864dcf1b8bbb
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module Api.$trModule2 Api.$trModule1) -}
-3a3d29738ffbc5827774572568c336fe
+af22920facf3f29fe2048120650205ac
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Api"#) -}
-68abc9dc9b0b6f7cc8f4b0cd2323c1a1
+2362da0fda7fb1d945b40f657595fb43
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "picFun-0.1.0.0-JNPOSgLeq7jJoAtQCvQXmk"#) -}
-42bb92e057519b23b52b87c397ccef5e
-  data GIFAnim
-bc9b6d19bab89ac785117c4e15bcb22e
+                   "picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf"#) -}
+fa58714819a4a1511b9d8cf68f90e15f
+  type role GIFAnim phantom
+  data GIFAnim (delay :: GHC.Types.Nat)
+aaa395ca62f141a1913875c4dcb4b3a8
   type ImageAPI =
     ("postImg"
      Servant.API.Sub.:> (Servant.API.Capture.Capture
@@ -379,29 +445,33 @@ bc9b6d19bab89ac785117c4e15bcb22e
                                                                                        "tool"
                                                                                        GHC.Base.String
                                                                                      Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                          '[Api.GIFAnim]
+                                                                                                          '[Api.GIFAnim
+                                                                                                              10]
                                                                                                           [Codec.Picture.Types.Image
                                                                                                              Codec.Picture.Types.PixelRGB8]))
-                                                                Servant.API.Alternative.:<|> ("show"
-                                                                                              Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                                                                    "tool"
-                                                                                                                    GHC.Base.String
-                                                                                                                  Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                                       '[Htmls.HTMLBlaze]
-                                                                                                                                       Models.Tool))))
-1b64c9f2fb76b3c05f081b30e33e0a1d
+                                                                Servant.API.Alternative.:<|> (("show"
+                                                                                               Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                     "tool"
+                                                                                                                     GHC.Base.String
+                                                                                                                   Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                        '[Htmls.HTMLBlaze]
+                                                                                                                                        Models.Tool))
+                                                                                              Servant.API.Alternative.:<|> Servant.API.Raw.Raw)))
+d3a21f35e20458b9da28fdea66834d67
   imageApi :: Data.Proxy.Proxy Api.ImageAPI
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.Proxy.Proxy @ * @ Api.ImageAPI) -}
+instance Servant.API.ContentTypes.Accept [(->), Api.GIFAnim]
+  = Api.$fAccept(->)GIFAnim
 instance Servant.API.ContentTypes.Accept [TYPE, Api.GIFAnim]
   = Api.$fAcceptTYPEGIFAnim
 instance Servant.API.ContentTypes.MimeRender [TYPE, Api.GIFAnim,
                                               []]
   = Api.$fMimeRenderTYPEGIFAnim[]
-instance Servant.API.ContentTypes.MimeUnrender [TYPE, Api.GIFAnim,
+instance Servant.API.ContentTypes.MimeUnrender [(->), Api.GIFAnim,
                                                 Codec.Picture.Types.DynamicImage]
-  = Api.$fMimeUnrenderTYPEGIFAnimDynamicImage
+  = Api.$fMimeUnrender(->)GIFAnimDynamicImage
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:
