@@ -1,7 +1,60 @@
 canvas = document.getElementById('theImage');
 context = canvas.getContext('2d');
 img = new Image();
+img.onload = function () {
+
+    /// set size proportional to screen
+    canvas.height = screen.height * 0.75;
+    canvas.width = screen.width * 0.9;
+
+    img.width = canvas.width;
+    img.height = canvas.height;
+    context.drawImage(img, 0, 0, img.width, img.height);
+
+    /// step 2 - resize 50% of step 1
+    //octx.drawImage(oc, 0, 0, oc.width * 0.5, oc.height * 0.5);
+
+    /// step 3, resize to final size
+    //octx.drawImage(oc, 0, 0, oc.width * 0.5, oc.height * 0.5,
+    //0, 0, canvas.width, canvas.height);
+}
 img.src = '../image/Draw?d=' + Date.now();
+showPic = function() {
+    //img.src = '../image/Draw?d=' + Date.now();
+    //resizeCanvas();
+    console.log("redrawing imag");
+    context.drawImage(img, 0, 0);
+}
+handlePic = function(f) {
+    var oReq = new XMLHttpRequest();
+    oReq.onreadystatechange = function() {
+        if (oReq.readyState == 4 && oReq.status == 200) showPic();
+    };
+    oReq.open('POST', '../postImg/True', true);
+    oReq.setRequestHeader('Content-Type', 'image/jpeg');
+    console.log("sending imag");
+    oReq.send(f);
+};
+handlePic2 = function(f,b) {
+    var oReq = new XMLHttpRequest();
+    oReq.onreadystatechange = function() {
+        if (oReq.readyState == 4 && oReq.status == 200) showPic2();
+    };
+    oReq.open('POST', '../postImg/' + b, true);
+    oReq.setRequestHeader('Content-Type', 'image/jpeg');
+    console.log("sending imag");
+    oReq.send(f);
+};
+picUpdate = function() {
+    canvas.toBlob(function(f) {
+        handlePic(f);
+	img.src = '../image/Draw?d=' + Date.now();
+    }, 'image/jpeg', 1);
+    console.log("saving imag");
+};
+
+//functions for drawing
+
 drawing = function() {
     var cnvs = document.getElementById('theImage');
     var ctx = cnvs.getContext('2d');
@@ -48,10 +101,10 @@ function handleStart(evt) {
 	ongoingTouches.push(copyTouch(touches[i]));
 	var color = colorForTouch(touches[i]);
 	ctx.beginPath();
-	ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
+	//ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
 	ctx.fillStyle = color;
 	ctx.fill();
-	log("touchstart:" + i + ".");
+	console.log("touchstart:" + i + ".");
     }
 }
 function handleEnd(evt) {
@@ -71,10 +124,10 @@ function handleEnd(evt) {
 	    ctx.beginPath();
 	    ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
 	    ctx.lineTo(touches[i].pageX, touches[i].pageY);
-	    ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8);  // and a square at the end
+	    // ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8);  // and a square at the end
 	    ongoingTouches.splice(idx, 1);  // remove it; we're done
 	} else {
-	    log("can't figure out which touch to end");
+	    console.log("can't figure out which touch to end");
 	}
     }
 }
@@ -100,9 +153,9 @@ function handleMove(evt) {
 	    ctx.stroke();
 
 	    ongoingTouches.splice(idx, 1, copyTouch(touches[i]));  // swap in the new touch record
-	    log(".");
+	    console.log(".");
 	} else {
-	    log("can't figure out which touch to continue");
+	    console.log("can't figure out which touch to continue");
 	}
     }
 }

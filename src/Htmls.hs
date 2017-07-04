@@ -31,17 +31,18 @@ instance MimeRender HTMLBlaze Html where
 instance ToMarkup Tool where
   toMarkup Draw = docTypeHtml $ do
     H.head $ do
+      H.style $ "html, body {width: 100%;height: 100%;margin: 0px;border: 0;overflow: hidden; /*  Disable scrollbars */display: block;  /* No floating content on sides */}"
       link ! A.rel "stylesheet" ! A.href "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
       meta ! A.name "viewport" ! A.content "width=device-width, initial-scale=1"
     body $ do
       H.p ! A.style "text-align: center" $ toHtml ("Draw something on an image or nothing with some friends. Yay!" :: String)
-      H.div ! A.class_ "container" $ H.canvas ! A.onload "showPic()" ! A.id "theImage" $ ""
+      H.div ! A.class_ "container" $ H.canvas ! A.id "theImage" $ ""
       H.div ! A.class_ "container" $ do
-        H.div ! A.class_ "col-md-8 col-lg-4" $ H.input ! A.class_ "btn btn-default" ! A.type_ "button" ! A.onclick "picUpdate()" ! A.value "Update This Img"
-        H.div ! A.class_ "col-md-8 col-lg-4" $ H.input ! A.class_ "btn btn-default" ! A.type_ "button" ! A.onclick "showPic()" ! A.value "Show Current Img"
-        H.div ! A.class_ "col-md-12 col-lg 4" $  H.input ! A.class_ "btn btn-default" !  A.type_ "file" ! A.accept "image/jpeg" ! A.onchange "handlePic(this.files[0])"
+        H.div ! A.class_ "col-sm-6 col-md-4 col-lg-4" $ H.input ! A.class_ "btn btn-default" ! A.type_ "button" ! A.onclick "picUpdate()" ! A.value "Update This Img"
+        H.div ! A.class_ "col-sm-6 col-md-4 col-lg-4" $ H.input ! A.class_ "btn btn-default" ! A.type_ "button" ! A.onclick "showPic()" ! A.value "Show Current Img"
+        H.div ! A.class_ "col-sm-12 col-md-4 col-lg 4" $  H.input ! A.class_ "btn btn-default" !  A.type_ "file" ! A.accept "image/jpeg" ! A.onchange "handlePic(this.files[0])"
       script ! A.type_ "text/javascript" ! A.src "../canvas.js" $ ""
-      script ! A.type_ "text/javascript" ! A.src "../loading.js" $ ""
+      --script ! A.type_ "text/javascript" ! A.src "../loading.js" $ ""
 
   toMarkup t = docTypeHtml $ do
     H.head $ do
@@ -52,9 +53,9 @@ instance ToMarkup Tool where
       H.div ! A.class_ "container" $ do
         H.canvas ! A.id "theImage" $ ""
       H.div ! A.class_ "container" $ do
-        H.div ! A.class_ "col-md-6 col-lg-4" $ H.input ! A.class_ "btn btn-default" ! A.type_ "file" ! A.accept "image/jpeg" ! A.onchange "handlePic2(this.files[0],'True')"
-        H.div ! A.class_ "col-md-6 col-lg-4" $ H.input ! A.class_ "btn btn-default" ! A.type_ "file" ! A.accept "image/jpeg" ! A.onchange "handlePic2(this.files[0],'False')"    
-        H.div ! A.class_ "col-md-8 col-lg-4" $ H.input ! A.class_ "btn btn-default" ! A.type_ "button" ! A.onclick "picUpdate2()" ! A.value "Combine!"
+        H.div ! A.class_ "col-sm-6 col-md-6 col-lg-4" $ H.input ! A.class_ "btn btn-default" ! A.type_ "file" ! A.accept "image/jpeg" ! A.onchange "handlePic2(this.files[0],'True')"
+        H.div ! A.class_ "col-sm-6 col-md-6 col-lg-4" $ H.input ! A.class_ "btn btn-default" ! A.type_ "file" ! A.accept "image/jpeg" ! A.onchange "handlePic2(this.files[0],'False')"    
+        H.div ! A.class_ "col-sm-12 col-md-8 col-lg-4" $ H.input ! A.class_ "btn btn-default" ! A.type_ "button" ! A.onclick "picUpdate2()" ! A.value "Combine!"
       script ! A.type_ "text/javascript" ! A.src "../loading.js" $ ""
       script $ "picUpdate2 = function() { img.src ='" <> l <> "?d=' + Date.now(); showPic(); };"
         where
