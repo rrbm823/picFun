@@ -1,0 +1,35 @@
+name:                picFunFE
+version:             0.1.0.0
+synopsis:            First miso app
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      .
+  exposed-modules:     CanvasBS, Store, View, Model, Action
+  build-depends:       base >= 4.7 && < 5
+                     , bytestring
+                     , containers >= 0.5.6.2
+                     , comonad
+                     , data-memocombinators
+                     , ghcjs-base >= 0.2.0.0
+                     , lens
+                     , miso >= 0.7.2.0
+                     , text >= 1.2.2.1
+                     , transformers >= 0.4.2.0
+
+executable app
+  main-is:             Main.hs
+  build-depends:       base
+                     , bytestring
+                     , comonad
+                     , containers >= 0.5.6.2
+                     , data-memocombinators
+                     , ghcjs-base >= 0.2.0.0
+                     , lens
+                     , miso  >= 0.7.2.0
+                     , picFunFE
+                     , text >= 1.2.2.1
+                     , transformers >= 0.4.2.0
+  default-language:    Haskell2010
