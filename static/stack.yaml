@@ -6,7 +6,8 @@ packages:
  - '.'
 extra-deps:
  - miso-0.7.2.0
-
+ - grid-7.8.9
+ 
 setup-info:
   ghcjs:
     source:

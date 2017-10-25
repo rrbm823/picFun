@@ -4,18 +4,18 @@ code size summary per package:
 5R7qBir9vLD2YBMv6osUKS:  3620
 8aAO95uZbv12pXJ9mRH58D:  4803
 DfJYcaJyxRaLB7IVEln9q2:  1117
-GI7h8wpwzL05sDNIrYmF0l:  113080
+GI7h8wpwzL05sDNIrYmF0l:  113415
 IwZTMSe3Ivv9yhoBZv26Oz:  308
 aeson_JVzbBMTMmQ32nxHUK3Dk9p:33279
-base:                    552360
+base:                    554422
 bytes_96M8oqQTVIe6bIZr9qhhuC:2730
-conta_3UVKjic2MoqF92jHhg7Ur8:117478
+conta_3UVKjic2MoqF92jHhg7Ur8:134211
 deeps_6zNFUGyDFQ59UU8BCTkqk0:850
-ghc-prim:                23519
+ghc-prim:                24505
 ghcjs_7b01A0aGNCoHSoxWaQfJsm:35324
 ghcjs_9jpamHTyFf8CL10DbS4jxv:10248
 integer-gmp:             30897
-main:                    154987
+main:                    179909
 scien_7RWav52ZEb8LpSeINhjuJE:5755
 text_AoFu0I23s11C5sDmOoIAPZ:18768
 trans_EziP6JoSSK398q9vuXpnAA:3523
@@ -45,10 +45,10 @@ GI7h8wpwzL05sDNIrYmF0l
     Miso.Event.Decoder:                 7334
     Miso.Event.Types:                   21478
     Miso.FFI:                           10147
-    Miso.Html.Element:                  1996
+    Miso.Html.Element:                  1990
     Miso.Html.Event:                    652
     Miso.Html.Internal:                 25297
-    Miso.Html.Property:                 1669
+    Miso.Html.Property:                 2010
     Miso.String:                        99
     Miso.Subscription.Keyboard:         16703
     Miso.Subscription.Mouse:            2768
@@ -71,6 +71,7 @@ base
     Data.Bits:                          7702
     Data.Either:                        397
     Data.Functor.Identity:              1125
+    Data.Maybe:                         722
     Data.Monoid:                        734
     Data.Typeable:                      885
     Data.Typeable.Internal:             1418
@@ -107,7 +108,7 @@ base
     GHC.IO.Handle.Text:                 15761
     GHC.IO.Handle.Types:                3834
     GHC.Int:                            802
-    GHC.List:                           5232
+    GHC.List:                           6471
     GHC.MVar:                           336
     GHC.Num:                            3347
     GHC.Ptr:                            188
@@ -115,7 +116,7 @@ base
     GHC.Real:                           23529
     GHC.ST:                             186
     GHC.STRef:                          194
-    GHC.Show:                           14022
+    GHC.Show:                           14123
     GHC.Storable:                       1084
     GHC.TopHandler:                     13541
     GHC.Word:                           2607
@@ -129,7 +130,7 @@ bytes_96M8oqQTVIe6bIZr9qhhuC
     Data.ByteString.Internal:           2730
 
 conta_3UVKjic2MoqF92jHhg7Ur8
-    Data.Map.Base:                      53499
+    Data.Map.Base:                      70232
     Data.Sequence:                      36861
     Data.Set.Base:                      27118
 
@@ -138,7 +139,7 @@ deeps_6zNFUGyDFQ59UU8BCTkqk0
 
 ghc-prim
     GHC.CString:                        4537
-    GHC.Classes:                        16818
+    GHC.Classes:                        17804
     GHC.IntWord64:                      146
     GHC.Tuple:                          802
     GHC.Types:                          1216
@@ -164,12 +165,12 @@ integer-gmp
     GHC.Integer.Type:                   30564
 
 main
-    Action:                             24285
+    Action:                             37428
     CanvasBS:                           16624
     Main:                               1416
-    Model:                              34242
-    Store:                              19970
-    View:                               58450
+    Model:                              37091
+    Store:                              20112
+    View:                               67238
 
 scien_7RWav52ZEb8LpSeINhjuJE
     Data.Scientific:                    5755
@@ -192,5 +193,5 @@ vecto_DeaUpJs6ZtbBhz15yBYLWJ
 
 
 
-packed metadata: 227204
+packed metadata: 234099
 
