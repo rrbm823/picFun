@@ -8,17 +8,21 @@ import Foreign.Ptr (Ptr)
 import GHCJS.Types (JSVal)
 import JavaScript.Web.Canvas
 import GHC.Word
+import Data.Monoid 
 import qualified Data.ByteString as B
+import qualified Data.Sequence as S
 import qualified Data.JSString as J
 import qualified Data.ByteString.Unsafe as B (unsafeUseAsCString)
 
-foreign import javascript unsafe "var pixels = new Uint8ClampedArray($4.u8, $2); console.log(pixels); $1.putImageData(new ImageData(pixels, $2, $3), 0, 0);"
+foreign import javascript unsafe "var pixels = new Uint8ClampedArray($4.u8, $2); $1.putImageData(new ImageData(pixels, $2, $3), 0, 0);"
   blitByteString :: forall a . Context -> Int -> Int -> Ptr a -> IO ()
 
---toNumbBS :: [JSString] -> B.ByteString
+toNumbBS :: [J.JSString] -> B.ByteString
 toNumbBS = B.pack . concat . drop 1 . fmap ( (flip mappend ([255])) . (\s -> read ("[" `mappend` s `mappend` "]") :: [GHC.Word.Word8]) . J.unpack . J.init . J.drop 4 )
 
--- let draw :: ByteImageRgba -> IO ()
+seqToNumbBS :: S.Seq J.JSString -> B.ByteString
+seqToNumbBS = B.pack . foldl (<>) mempty  . S.drop 1 . fmap ( (flip mappend ([255])) . (\s -> read ("[" `mappend` s `mappend` "]") :: [GHC.Word.Word8]) . J.unpack . J.init . J.drop 4 )
+
 draw canvasJS (width, height, pixelByteString) =
   B.unsafeUseAsCString pixelByteString $ \ ptr ->
   blitByteString canvasJS width height ptr

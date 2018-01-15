@@ -8,6 +8,7 @@ module Htmls where
 import Control.Monad
 import Data.Monoid
 import qualified Data.Text as T
+import Graphics.Svg.Core (Element)
 import Text.Blaze.Html5 as H
 import Text.Blaze.Html5.Attributes as A
 import Text.Blaze.Html.Renderer.Utf8
@@ -28,6 +29,21 @@ instance ToMarkup a => MimeRender HTMLBlaze a where
 instance MimeRender HTMLBlaze Html where
     mimeRender _ = renderHtml
 
+data SVGFrontend = SVGFrontend
+    
+instance ToMarkup SVGFrontend where
+  toMarkup _ = docTypeHtml $ do
+    H.head $ do
+      link ! A.rel "stylesheet" ! A.href "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      meta ! A.name "viewport" ! A.content "width=device-width, initial-scale=1"
+    body $ do
+      H.p ! A.style "text-align: center" $ toHtml ("Create a diagram" :: String)
+      H.div ! A.class_ "container" $ do
+        H.img ! A.src "SVG/30" ! A.id "theImage" ! A.height "250px" ! A.width "250px"
+      H.div ! A.class_ "container" $ do
+        H.label ! A.for "example-number-input" ! A.class_ "col-2 col-form-label" $ "Number"
+        H.div ! A.class_ "col-sm-12 col-md-8 col-lg-4" $ H.input ! A.class_ "form-control" ! A.type_ "number" ! A.value "42" ! A.onchange "(function(n) { var im = document.getElementById('theImage'); im.setAttribute('src', 'SVG/' + n); })(this.value)"
+    
 instance ToMarkup Tool where
   toMarkup Draw = docTypeHtml $ do
     H.head $ do

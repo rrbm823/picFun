@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-19 01:29:22.42449 UTC
+2018-01-07 16:38:33.51602 UTC
 
-interface picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf:Pixels 8002
-  interface hash: 9b8f2249d3d95c23933dce48ced2659d
-  ABI hash: 219a079f4f81a8a6d27c3273aebd6b68
-  export-list hash: 43e442eda0600fa3db68945090dd545d
-  orphan hash: ce53c9e63d5e2b0bf381e8d644df08a2
+interface picFun-0.1.0.0-fnBZLECtUoD0q3S6USYHa:Pixels 8002
+  interface hash: 57a47e0854576f6273b6f28202b956d0
+  ABI hash: 221e31ea0c7c4c01578a655dd4ae5f3b
+  export-list hash: 7487dbf10d70e0ab4b5fe6a2755b2357
+  orphan hash: 1034073d14d9ece7827f5a206c0c1a15
   flag hash: 57a8dfdafafb2317c20beeda1ec65e79
   sig of: Nothing
   used TH splices: False
@@ -136,7 +136,7 @@ family instance modules: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOs
                          http-api-data-0.3.5@http-api-data-0.3.5-I8V2cgXR5W924Ax42O3A11:Web.Internal.FormUrlEncoded
                          microlens-0.4.8.0@microlens-0.4.8.0-5PXN9DedWooJg6UJ24ter0:Lens.Micro.Internal
                          network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF:Network.URI
-                         picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf:Grid
+                         picFun-0.1.0.0-fnBZLECtUoD0q3S6USYHa:Grid
                          pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
                          pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
                          primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH:Control.Monad.Primitive
@@ -181,31 +181,31 @@ import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Lazy 2084317
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 import  -/  monad-loops-0.4.3@monad-loops-0.4.3-ERCN4ZKCeeS5SRhwqXsLBP:Control.Monad.Loops ad022bdb333a393f3f9a27eb832d57a5
-import  -/  Grid 85ec5b5fa5fab608cc62bdc528881fc7
-  exports: 5190942d9045c953161ee292a9165b1d
+import  -/  Grid 073ab1caf851c0950b127294c7b2dd4d
+  exports: c09e4e8cbdbffe86c22967bd16df0542
 import  -/  servant-JuicyPixels-0.3.0.2@servant-JuicyPixels-0.3.0.2-KFDh0ZSrRqdHyQZspaSYy6:Servant.JuicyPixels 8b5d4bad3818d21fd79b30ab2960a0f1
 import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Storable 6efee64e1486b549434fd0e1352e7839
-20c201c458d5755530ca8a274866ffe0
+56a31fccfd970c6a3b27e91dfc856e17
   $s!_$slength ::
     Data.Vector.Storable.Vector GHC.Types.Float -> GHC.Types.Int
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(U,A,A)>m,
      Inline: [NEVER] -}
-42d66e10cc297637e4603d56333b1c81
+608279b7cde3f229a139ae0bca31a217
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    Pixels.$trModule2
                    Pixels.$trModule1) -}
-bf31c2b8e4d86fc5ded83cc01d6f3317
+75270b4d294d0263842ae02aecd487f3
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Pixels"#) -}
-2b3336301317a6ae259f4d7590524d64
+e33cbd86f84db0500d7023811d3c35ec
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf"#) -}
-1c0d25974e4b7245bc94c7ad0a5a60d3
+                   "picFun-0.1.0.0-fnBZLECtUoD0q3S6USYHa"#) -}
+b6d5f019e9c546fa5c6ac8fe6b53125b
   $w$sframe ::
     GHC.Prim.Int#
     -> GHC.Types.Int
@@ -264,7 +264,7 @@ bf31c2b8e4d86fc5ded83cc01d6f3317
                       go ww4 } } }
                    GHC.Types.True
                    -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int) } }) -}
-ad6c88529272d78f615152534c236610
+954c1d01662990da96f2cb004a3423ee
   $wcheckerboard ::
     Codec.Picture.Types.Pixel px =>
     GHC.Prim.Int#
@@ -280,7 +280,7 @@ ad6c88529272d78f615152534c236610
           Codec.Picture.Types.Image px #)
   {- Arity: 8,
      Strictness: <L,U(U,A,A,A,A,A,C(U(U)),A,A,A,C(C1(C1(U))),A,C(C1(C1(C1(C1(U))))),A,A,C(C1(C1(C1(U)))))><L,U><L,U><L,U><L,U><L,U><L,U> -}
-c1f60c0d46846305574e84d65bfa7414
+fa44b2d47c15b90251223a5383a10571
   $wcropImage ::
     Codec.Picture.Types.Pixel a =>
     GHC.Prim.Int#
@@ -293,7 +293,7 @@ c1f60c0d46846305574e84d65bfa7414
   {- Arity: 6,
      Strictness: <L,U(1*U,A,A,A,A,A,1*C1(U(U)),A,A,A,C(C1(C1(U))),A,A,A,A,C(C1(C1(C1(U)))))><S,U><S,U><S,U><L,U><L,U>,
      Inline: [0] -}
-20d6df8b406ccc4f3adb85738072ea48
+609f649532f55d1ba34d72485201a4af
   $wcropImageOffset ::
     Codec.Picture.Types.Pixel a =>
     GHC.Prim.Int#
@@ -305,7 +305,7 @@ c1f60c0d46846305574e84d65bfa7414
   {- Arity: 6,
      Strictness: <S(SLLLLLC(S(S))LLLLLLLLL),U(1*U,A,A,A,A,A,1*C1(U(U)),A,A,A,C(C1(C1(U))),A,A,A,A,C(C1(C1(C1(U)))))><S,U><S,U><L,U(U)><L,U(U)><L,U>,
      Inline: [0] -}
-031b505b42c4bf591c4b263357d28e2e
+2b46a71cbc2d1634a04bbb22a102f059
   $we_dist :: GHC.Num.Num a => a -> a -> a -> a -> a
   {- Arity: 5, HasNoCafRefs,
      Strictness: <S(C(C(S))LLLLLL),U(1*C1(C1(U)),C(C1(U)),C(C1(U)),A,A,A,A)><L,U><L,U><L,U><L,U>,
@@ -325,7 +325,7 @@ c1f60c0d46846305574e84d65bfa7414
                       w
                       (GHC.Num.- @ a w ww1 ww3)
                       (GHC.Num.- @ a w ww1 ww3))) -}
-c32276b955d31dc46f7ed445f7f6cf42
+ec4e56d82c2e71a3492eb4653d8e5441
   $we_dist_int ::
     GHC.Num.Num t => GHC.Types.Int -> GHC.Types.Int -> t -> t -> t
   {- Arity: 5, HasNoCafRefs,
@@ -362,7 +362,7 @@ c32276b955d31dc46f7ed445f7f6cf42
                       w
                       (GHC.Num.- @ t w y2 ww3)
                       (GHC.Num.- @ t w y2 ww3))) -}
-8c21bc1b03039d91d35c05185cc27bff
+6e31661f5f925bea3b1df58d05c0d1dc
   $wimageInImage ::
     Codec.Picture.Types.Pixel a =>
     GHC.Prim.Int#
@@ -379,12 +379,12 @@ c32276b955d31dc46f7ed445f7f6cf42
   {- Arity: 8,
      Strictness: <L,U(U,A,A,A,A,A,C(U(U)),A,A,A,C(C1(C1(U))),A,C(C1(C1(C1(C1(U))))),A,A,C(C1(C1(C1(U)))))><S,U><L,U><L,U(U,U,U)><S,U><L,U><L,U(U,U,U)><S,U>,
      Inline: [0] -}
-bbcfeeb3da0faa31d284a929593260b5
+b126de5f1f44f1b60967372d222f5768
   $winterpolateSinc ::
     Data.Vector.Storable.Vector GHC.Types.Float
     -> GHC.Prim.Float# -> GHC.Prim.Float# -> GHC.Prim.Float#
   {- Arity: 3, Strictness: <L,U(U,U,U)><S,U><S,U>, Inline: [0] -}
-f2c363a86a9a997a275913d29a2fcaa4
+e894efabdf63442253adcfbb384f03b9
   $wmakeFrame ::
     Codec.Picture.Types.Pixel a =>
     GHC.Prim.Int#
@@ -494,7 +494,7 @@ f2c363a86a9a997a275913d29a2fcaa4
                    `cast`
                  (GHC.Types.N:IO[0] <Codec.Picture.Types.Image a>_R)
                    ipv2 } } }) -}
-f785abb9685c767990a163fe86ce7b20
+6b26ef27da1e7bfc2ccb9b235e8c351b
   $wmutateImage ::
     Codec.Picture.Types.Pixel px =>
     GHC.Prim.Int#
@@ -587,7 +587,7 @@ f785abb9685c767990a163fe86ce7b20
                    `cast`
                  (GHC.Types.N:IO[0] <Codec.Picture.Types.Image px>_R)
                    ipv2 } } }) -}
-b93d828ea8252eb7ae0ca866ffb23373
+10c3c6c4410e574decbeb315d8b14f31
   $wsincWindow2d ::
     (GHC.Classes.Ord t, GHC.Float.Floating t) => t -> t -> t -> t
   {- Arity: 5, HasNoCafRefs,
@@ -604,7 +604,7 @@ b93d828ea8252eb7ae0ca866ffb23373
                    (GHC.Real.$p1Fractional @ t (GHC.Float.$p1Floating @ t w1))
                    (Pixels.sincWindow @ t w1 w w2 ww)
                    (Pixels.sincWindow @ t w1 w w2 ww1)) -}
-3a44f0ba3b507d07d200d4b437b47980
+eda1ae046334de48a0cea4bfde7f0511
   $wspiral_part ::
     (GHC.Classes.Ord t, GHC.Float.Floating t) =>
     [(t, t)]
@@ -659,7 +659,7 @@ b93d828ea8252eb7ae0ca866ffb23373
                       : x ds1
                       -> case x of ww2 { (,) ww3 ww4 ->
                          Pixels.$we_dist_int @ t $dNum Pixels.g2 Pixels.g2 ww3 ww4 } })) -}
-2a34691e70db4b00688890c42282c28d
+72256c9377598350bbbe6d0e8af1af42
   $wsprlImages ::
     Codec.Picture.Types.Pixel a =>
     GHC.Types.Float
@@ -676,7 +676,7 @@ b93d828ea8252eb7ae0ca866ffb23373
           Codec.Picture.Types.Image a #)
   {- Arity: 9,
      Strictness: <L,U(U,A,A,A,A,A,C(U(U)),A,A,A,C(C1(C1(U))),A,C(C1(C1(C1(C1(U))))),A,A,C(C1(C1(C1(U)))))><L,U(U)><L,U><L,U><L,U><L,U><L,U><L,U> -}
-832a1715621e92da1f16ba40a254746b
+064d1b7888b627075f6aa27271ff36d9
   $wtoCart :: GHC.Float.Floating t => t -> t -> (# t, t #)
   {- Arity: 3, HasNoCafRefs,
      Strictness: <L,U(1*U,A,A,A,A,A,A,1*C1(U),1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U><L,U>,
@@ -693,13 +693,13 @@ b93d828ea8252eb7ae0ca866ffb23373
                  } in
                  (# GHC.Num.* @ t $dNum1 ww (GHC.Float.cos @ t w ww1),
                     GHC.Num.* @ t $dNum1 ww (GHC.Float.sin @ t w ww1) #)) -}
-bfb50041bed331cf5a48312b6368ebcd
+8cd66f4653a0ec3ae36867131f6daf25
   $wtoPolar ::
     (GHC.Classes.Ord t, GHC.Float.Floating t) => t -> t -> (# t, t #)
   {- Arity: 4,
      Strictness: <L,U(1*U,A,C(C1(U)),A,C(C1(U)),1*C1(C1(U)),A,A)><L,U(U,1*U,A,A,1*C1(U),A,A,A,A,A,A,A,1*C1(U),A,A,A,A,A,A,A,A,A,A)><L,U><L,U>,
      Inline: [0] -}
-d03db0612d965726921d5e262e3b3dc5
+c0017e1014b256300d6a51fc52735eed
   $wtoPolarPos ::
     (GHC.Float.Floating t, GHC.Classes.Ord t) => (t, t) -> (# t, t #)
   {- Arity: 3,
@@ -741,7 +741,7 @@ d03db0612d965726921d5e262e3b3dc5
                               $dNum1
                               (GHC.Num.fromInteger @ t $dNum1 Pixels.toPolarPos1)
                               (GHC.Float.pi @ t w)) #) }) -}
-9f1dc20d804e776f1d7e76e2db5e7085
+78fd6733f0789683dc17f947f23a249b
   $wzipImages ::
     Codec.Picture.Types.Pixel a =>
     GHC.Types.Int
@@ -758,7 +758,7 @@ d03db0612d965726921d5e262e3b3dc5
           Codec.Picture.Types.Image a #)
   {- Arity: 9,
      Strictness: <L,U(U,A,A,A,A,A,C(U(U)),A,A,A,C(C1(C1(U))),A,C(C1(C1(C1(C1(U))))),A,A,C(C1(C1(C1(U)))))><L,U(U)><L,U><L,U><L,U><L,U><L,U><L,U> -}
-3450ddf6ffa43310dd4719608e1e7181
+06b2d325a5eb33bd4c23e209af91a264
   b ::
     GHC.IO.FilePath
     -> GHC.Types.IO
@@ -770,7 +770,7 @@ d03db0612d965726921d5e262e3b3dc5
                 (<GHC.IO.FilePath>_R
                  ->_R Sym (GHC.Types.N:IO[0]
                                <Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8>_R)) -}
-0fb9a0dcfd8df42db2a36870f22d2ddc
+eaafd6d2e131da9dfdcfb479e2ad55f4
   b1 ::
     GHC.IO.FilePath
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -785,7 +785,7 @@ d03db0612d965726921d5e262e3b3dc5
                    Data.Either.Left ds -> (# ipv, Pixels.g #)
                    Data.Either.Right i
                    -> (# ipv, Codec.Picture.convertRGB8 i #) } }) -}
-afd0bc14c1200765deb48e2c9dbde010
+79fb959749f6d429e9a4cf2624bdd2ff
   brightnessRGB8 ::
     GHC.Types.Int
     -> Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
@@ -815,7 +815,7 @@ afd0bc14c1200765deb48e2c9dbde010
                    ww5
                    ww6
                    ww7 } }) -}
-098bdd2ce69f5f47ea264241d4df530c
+b1d67fbccbbb4190cda36788e7a2e858
   checkerboard ::
     Codec.Picture.Types.Pixel px =>
     Codec.Picture.Types.Image px
@@ -834,7 +834,7 @@ afd0bc14c1200765deb48e2c9dbde010
                  (Pixels.$wcheckerboard @ px w ww1 ww2 ww3 ww5 ww6 ww7)
                    `cast`
                  (Sym (GHC.Types.N:IO[0] <Codec.Picture.Types.Image px>_R)) } }) -}
-3e13742de10b047fa3ba4f63bbf97ced
+c18baaede8b9fd4c093ad48a8a321b1d
   cropImage ::
     Codec.Picture.Types.Pixel a =>
     GHC.Types.Int
@@ -854,7 +854,7 @@ afd0bc14c1200765deb48e2c9dbde010
                  case w2 of ww2 { GHC.Types.I# ww3 ->
                  case w3 of ww4 { Codec.Picture.Types.Image ww5 ww6 ww7 ->
                  Pixels.$wcropImage @ a w ww1 ww3 ww5 ww6 ww7 } } }) -}
-b6af15230069b481d7f38330dedd4555
+1ebe48017464d10e9eacc1fd15567b7f
   cropImageOffset ::
     Codec.Picture.Types.Pixel a =>
     GHC.Types.Int
@@ -877,14 +877,14 @@ b6af15230069b481d7f38330dedd4555
                  case w1 of ww { GHC.Types.I# ww1 ->
                  case w2 of ww2 { GHC.Types.I# ww3 ->
                  Pixels.$wcropImageOffset @ a w ww1 ww3 w3 w4 w5 } }) -}
-4a6fcbf88bb775db4277208854592edf
+541aa78f2bd73700fbf352910c132bc6
   dynCrop ::
     GHC.Types.Int
     -> GHC.Types.Int
     -> Codec.Picture.Types.DynamicImage
     -> Codec.Picture.Types.DynamicImage
   {- Arity: 3, Strictness: <L,1*U(U)><L,U(U)><S,1*U> -}
-82c39af47a77070f9ecf4ec352d11b7a
+05b59d5d4c310c9aae4af7451428467e
   e_dist :: GHC.Num.Num a => (a, a) -> (a, a) -> a
   {- Arity: 3, HasNoCafRefs,
      Strictness: <S(C(C(S))LLLLLL),U(1*C1(C1(U)),C(C1(U)),C(C1(U)),A,A,A,A)><S,1*U(U,U)><S,1*U(U,U)>,
@@ -894,7 +894,7 @@ b6af15230069b481d7f38330dedd4555
                  case w1 of ww { (,) ww1 ww2 ->
                  case w2 of ww3 { (,) ww4 ww5 ->
                  Pixels.$we_dist @ a w ww1 ww2 ww4 ww5 } }) -}
-4f1026e66c356082449c41b452b5f2d8
+e851d2e6f48faf6d1755f432b9c69188
   e_dist_int ::
     GHC.Num.Num t => (GHC.Types.Int, GHC.Types.Int) -> (t, t) -> t
   {- Arity: 3, HasNoCafRefs,
@@ -908,7 +908,7 @@ b6af15230069b481d7f38330dedd4555
                  case w1 of ww { (,) ww1 ww2 ->
                  case w2 of ww3 { (,) ww4 ww5 ->
                  Pixels.$we_dist_int @ t w ww1 ww2 ww4 ww5 } }) -}
-e6c84dba552996e7487eda0259ffae8a
+92b5e66c6f8a13223c9b347d17d310ce
   f_spiral_n :: GHC.Float.Floating t => [t] -> [(t, t)]
   {- Arity: 2, HasNoCafRefs,
      Strictness: <L,U(1*U,A,A,A,C(U),A,A,C(U),C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,1*U>,
@@ -950,14 +950,14 @@ e6c84dba552996e7487eda0259ffae8a
                             (go ys) }
                  } in
                  go eta) -}
-0d0eed501db2cc2cc58b88fe330cad84
+706acbdede762c0258aab257a2ab6620
   f_spiral_n1 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (1) -}
-02cb952f36c7f7c331a8d8202c0f41a3
+b1af97a1fc0419588ad895dc95c80ddd
   f_spiral_n_go ::
     [GHC.Types.Float] -> [(GHC.Types.Float, GHC.Types.Float)]
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
-d65f2f893ddd7ca0487b32d2c9628d4e
+7113f4bf0ab1408f286cfaa9e06e2893
   f_spiral_p :: GHC.Float.Floating t => [t] -> [(t, t)]
   {- Arity: 2, HasNoCafRefs,
      Strictness: <L,U(1*U,A,A,A,C(U),A,A,C(U),C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,1*U>,
@@ -995,24 +995,24 @@ d65f2f893ddd7ca0487b32d2c9628d4e
                             (go ys) }
                  } in
                  go eta) -}
-f920a72ce5f054389879f6231936f68b
+82ef8aaaa14686a5bae2ea479aebb114
   f_spiral_p_go ::
     [GHC.Types.Float] -> [(GHC.Types.Float, GHC.Types.Float)]
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
-abcab8c76ad1c0d2439514e8d3f0f3f9
+d76d08e775d815df73b26732f4a1769a
   frame ::
     (GHC.Real.Integral t1, GHC.Real.Integral t) =>
     t1 -> t -> t1 -> t -> [(t1, t)]
   {- Arity: 6, HasNoCafRefs,
      Strictness: <S(LS(LLLLLLC(C(S))L)LLLLLLL),U(1*U,1*U(A,A,A,A,A,A,1*C1(C1(U)),A),A,A,1*C1(C1(U)),A,A,A,A)><L,U(1*U,1*U(A,A,A,A,A,A,1*C1(C1(U)),A),A,A,1*C1(C1(U)),A,A,A,A)><L,U><L,U><L,U><L,U> -}
-c915cad4550508cd6394b484a0d0fed8
+637e1976b02e6eae41f61c2b250f02f2
   g :: Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ (Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8)
                         Pixels.g1 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-432fc61a5f7fe39c5f27237baa2b1c78
+8e33caeb6f4c8bb302c2ca49e1bed7af
   g1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -1136,17 +1136,17 @@ c915cad4550508cd6394b484a0d0fed8
                          3000000#
                          ipv2
                          ipv3) #) } } } }) -}
-c45c6d229b2d1731d12c98ff5085068a
+dc8a4c9a0e741c533de2f1109e424e6d
   g2 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 0#) -}
-fbbf3a1d6edb8e15f450a86a79e3f3d6
+17f1039ffd932097fe8cf86932f32a15
   h :: Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ (Codec.Picture.Types.Image Codec.Picture.Types.PixelRGB8)
                         Pixels.h1 of ds1 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-7fecac1ddfd0af644c7a9cee9f3abfc0
+99656717a2bc7a545fe1031b99463a96
   h1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -1270,7 +1270,7 @@ fbbf3a1d6edb8e15f450a86a79e3f3d6
                          3000000#
                          ipv2
                          ipv3) #) } } } }) -}
-09eb29c72a9aaa63704bbd9906f43170
+b2651eeb9b1c5a79813557dea5e61fec
   headMaybe :: [a] -> GHC.Base.Maybe a
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -1278,7 +1278,7 @@ fbbf3a1d6edb8e15f450a86a79e3f3d6
                  case ds of wild {
                    [] -> GHC.Base.Nothing @ a
                    : ipv ipv1 -> GHC.Base.Just @ a ipv }) -}
-30a1fd0877a29cdf51404a22acb1627c
+f7f9fbf7bed815b68cdd29632d18dd18
   imageInImage ::
     Codec.Picture.Types.Pixel a =>
     Codec.Picture.Types.Image a
@@ -1294,7 +1294,7 @@ fbbf3a1d6edb8e15f450a86a79e3f3d6
                  ->_R <Codec.Picture.Types.Image a>_R
                  ->_R <Codec.Picture.Types.Image a>_R
                  ->_R Sym (GHC.Types.N:IO[0] <Codec.Picture.Types.Image a>_R)) -}
-a674ef9938b226c273747051656e203a
+60c1db21bfde187e9befebc97c588ace
   imageInImage1 ::
     Codec.Picture.Types.Pixel a =>
     Codec.Picture.Types.Image a
@@ -1314,14 +1314,14 @@ a674ef9938b226c273747051656e203a
                  case w1 of ww { Codec.Picture.Types.Image ww1 ww2 ww3 ->
                  case w2 of ww4 { Codec.Picture.Types.Image ww5 ww6 ww7 ->
                  Pixels.$wimageInImage @ a w ww1 ww2 ww3 ww5 ww6 ww7 w3 } }) -}
-8246ef132699b92fa68dbcfc4628f738
+d21f59d4112500257871044cb3764662
   inf :: (a -> GHC.Types.Bool) -> [a] -> GHC.Base.Maybe a
   {- Arity: 2, Strictness: <L,C(U)><S,1*U>,
      Unfolding: InlineRule (2, True, False)
                 (\ @ a (b2 :: a -> GHC.Types.Bool) (as :: [a]) ->
                  case GHC.List.$wspan @ a b2 as of ww { (#,#) ww1 ww2 ->
                  Pixels.lastMaybe @ a ww1 }) -}
-cea29e195319df06ded021c48c695f34
+5cdb3f61cf9c78f505b98943ff1def2f
   interpolateSinc ::
     Data.Vector.Storable.Vector GHC.Types.Float
     -> GHC.Types.Float -> GHC.Types.Float -> GHC.Types.Float
@@ -1335,7 +1335,7 @@ cea29e195319df06ded021c48c695f34
                  case w2 of ww2 { GHC.Types.F# ww3 ->
                  case Pixels.$winterpolateSinc w ww1 ww3 of ww4 { DEFAULT ->
                  GHC.Types.F# ww4 } } }) -}
-918c450420f94b993bbde40ba19dd504
+e06aa3cac88f1bc3d6128acbab4b1ae8
   lastMaybe :: [a] -> GHC.Base.Maybe a
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: (\ @ a (ds :: [a]) ->
@@ -1345,10 +1345,10 @@ cea29e195319df06ded021c48c695f34
                    -> GHC.Base.Just
                         @ a
                         (Pixels.lastMaybe1 @ a wild (GHC.List.lastError @ a)) }) -}
-245cd2c961b2070998b3c1652b4a7dff
+0386a8c652998723a48dbae5f91f1546
   lastMaybe1 :: [a] -> a -> a
   {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U> -}
-443c5b2bc224c0d4cc91180b1c8a6e89
+5f2954a5ca23828e8f64763fb6eeacec
   makeFrame ::
     Codec.Picture.Types.Pixel a =>
     Codec.Picture.Types.Image a
@@ -1366,7 +1366,7 @@ cea29e195319df06ded021c48c695f34
                  ->_R <Codec.Picture.Types.Image a>_R
                  ->_R <[(GHC.Types.Int, GHC.Types.Int)]>_R
                  ->_R Sym (GHC.Types.N:IO[0] <Codec.Picture.Types.Image a>_R)) -}
-a088bc5bc3ed517b8ff1d28f7fbaeb40
+02665f233d7c07edc8d99fd2cd189a5d
   makeFrame1 ::
     Codec.Picture.Types.Pixel a =>
     Codec.Picture.Types.Image a
@@ -1387,7 +1387,7 @@ a088bc5bc3ed517b8ff1d28f7fbaeb40
                    (w4 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case w1 of ww { Codec.Picture.Types.Image ww1 ww2 ww3 ->
                  Pixels.$wmakeFrame @ a w ww1 ww2 ww3 w2 w3 w4 }) -}
-81c8d76308a3816476ab8eece78c9422
+1f367270686df727bee90ee2a57e0bff
   mkIndices ::
     (GHC.Num.Num a1, GHC.Enum.Enum a1, GHC.Real.RealFrac a) =>
     a1 -> a -> [a1]
@@ -1433,7 +1433,7 @@ a088bc5bc3ed517b8ff1d28f7fbaeb40
                             GHC.Real.$fIntegralInteger
                             x))
                       a2)) -}
-388c8b39cd1c22e4beee12b6a977f8f2
+5ffadac9881ab6210eafbba6dfc8195a
   modB :: GHC.Real.Integral a => a -> a -> GHC.Types.Bool
   {- Arity: 3, HasNoCafRefs,
      Strictness: <S(SLLLLLLLL),U(1*U,A,A,A,A,1*C1(C1(U)),A,A,A)><L,U><L,U>,
@@ -1452,10 +1452,10 @@ a088bc5bc3ed517b8ff1d28f7fbaeb40
                       @ a
                       (GHC.Real.$p1Real @ a $dReal)
                       Pixels.modB1)) -}
-b29783e2b5c6f9cc38e6da9398c11f0d
+c33d328a1ac9462a5b5202d1cc3bd214
   modB1 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (0) -}
-7cd0715c63d51624fd62bcac0cac9d9c
+86d308a8cefc5350afa3d41c75264c4e
   mutateImage ::
     Codec.Picture.Types.Pixel px =>
     Codec.Picture.Types.Image px
@@ -1473,7 +1473,7 @@ b29783e2b5c6f9cc38e6da9398c11f0d
                  ->_R <Codec.Picture.Types.Image px>_R
                  ->_R <[(GHC.Types.Int, GHC.Types.Int)]>_R
                  ->_R Sym (GHC.Types.N:IO[0] <Codec.Picture.Types.Image px>_R)) -}
-3038657f2659c3923c3f4800abd76a6a
+6d1c797cecd6224fd60e6f9880afc5e7
   mutateImage1 ::
     Codec.Picture.Types.Pixel px =>
     Codec.Picture.Types.Image px
@@ -1494,7 +1494,7 @@ b29783e2b5c6f9cc38e6da9398c11f0d
                    (w4 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case w1 of ww { Codec.Picture.Types.Image ww1 ww2 ww3 ->
                  Pixels.$wmutateImage @ px w ww1 ww2 ww3 w2 w3 w4 }) -}
-e3e4e6cb80caf71ad5bddc0931d1c5b2
+7f8c19a0c689a9425a9131d339e03f55
   r_spiral_n :: GHC.Float.Floating t => [t] -> [(t, t)]
   {- Arity: 2, HasNoCafRefs,
      Strictness: <L,U(1*U,A,A,A,C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,1*U>,
@@ -1527,7 +1527,7 @@ e3e4e6cb80caf71ad5bddc0931d1c5b2
                             (go ys) }
                  } in
                  go eta) -}
-04c6b5c448c2784d55c631661c5c1fba
+3280eb793f2282d1e6eb106289692a67
   r_spiral_p :: GHC.Float.Floating t => [t] -> [(t, t)]
   {- Arity: 2, HasNoCafRefs,
      Strictness: <L,U(1*U,A,A,A,C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,1*U>,
@@ -1556,12 +1556,12 @@ e3e4e6cb80caf71ad5bddc0931d1c5b2
                             (go ys) }
                  } in
                  go eta) -}
-601f2269d5cc10ed94f21e4fe6426be6
+285aae3550dad1a8d6c282b39274dc4e
   sincWindow ::
     (GHC.Float.Floating t, GHC.Classes.Ord t) => t -> t -> t
   {- Arity: 4, HasNoCafRefs,
      Strictness: <S(SLLLLLLLLLLLLLLLLLLLLLL),U(1*U,U,A,A,A,A,A,C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S(S(C(C(S))L)LLLLLLL),U(1*U(1*C1(C1(U)),A),A,A,1*C1(C1(U)),A,A,A,A)><L,U><L,U> -}
-45d0c7692098979a6549ffbe714a0018
+a87a9f08efbfa0cfa234f2f0a13774d5
   sincWindow2d ::
     (GHC.Classes.Ord t, GHC.Float.Floating t) => t -> (t, t) -> t
   {- Arity: 4, HasNoCafRefs,
@@ -1575,13 +1575,13 @@ e3e4e6cb80caf71ad5bddc0931d1c5b2
                    (w3 :: (t, t)) ->
                  case w3 of ww { (,) ww1 ww2 ->
                  Pixels.$wsincWindow2d @ t w w1 w2 ww1 ww2 }) -}
-23f74596666338c01b5087b18518e9ac
+4ce2f9c7413eef2e60744dd4b1855810
   spiral_check ::
     (GHC.Enum.Enum t, GHC.Classes.Ord t, GHC.Float.Floating t) =>
     (t, t) -> GHC.Types.Bool
   {- Arity: 4,
      Strictness: <L,U(A,A,A,A,A,C(C1(U)),A,A)><S(LLC(C(S))LLLLL),U(U,A,C(C1(U)),A,C(C1(U)),C(C1(U)),A,A)><L,U(U,U,A,A,U,A,A,A,A,A,A,A,C(U),A,A,A,A,A,A,A,A,A,A)><L,1*U(U,U)> -}
-2b9fdab92fac3dae365c7b7b508248c3
+6a400d3ad6451de00c0a664687cad252
   spiral_part ::
     (GHC.Classes.Ord t, GHC.Float.Floating t) =>
     [(t, t)]
@@ -1598,7 +1598,7 @@ e3e4e6cb80caf71ad5bddc0931d1c5b2
                    (w4 :: (GHC.Types.Int, GHC.Types.Int)) ->
                  case w4 of ww { (,) ww1 ww2 ->
                  Pixels.$wspiral_part @ t w w1 w2 w3 ww1 ww2 }) -}
-ea38a3d0a5c30f42a3c036336a0b792b
+5c923c7dd663d97d82a5e878df28d853
   sprlImages ::
     Codec.Picture.Types.Pixel a =>
     GHC.Types.Float
@@ -1619,7 +1619,7 @@ ea38a3d0a5c30f42a3c036336a0b792b
                  (Pixels.$wsprlImages @ a w w1 ww1 ww2 ww3 ww5 ww6 ww7)
                    `cast`
                  (Sym (GHC.Types.N:IO[0] <Codec.Picture.Types.Image a>_R)) } }) -}
-5c620a11c4ed55c67c04ad8bff38f747
+6c9765176c3d8b982d699908005c9aad
   sup :: (a -> GHC.Types.Bool) -> [a] -> GHC.Base.Maybe a
   {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U>,
      Unfolding: InlineRule (2, True, False)
@@ -1628,7 +1628,7 @@ ea38a3d0a5c30f42a3c036336a0b792b
                  case ww2 of wild {
                    [] -> GHC.Base.Nothing @ a
                    : ipv ipv1 -> GHC.Base.Just @ a ipv } }) -}
-4d4e18660916ad533554506bc1b0f89c
+e8ed7de4d1a5968452711e6b653e0b05
   toCart :: GHC.Float.Floating t => (t, t) -> (t, t)
   {- Arity: 2, HasNoCafRefs,
      Strictness: <L,U(1*U,A,A,A,A,A,A,1*C1(U),1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,1*U(U,U)>m,
@@ -1638,7 +1638,7 @@ ea38a3d0a5c30f42a3c036336a0b792b
                  case w1 of ww { (,) ww1 ww2 ->
                  case Pixels.$wtoCart @ t w ww1 ww2 of ww3 { (#,#) ww4 ww5 ->
                  (ww4, ww5) } }) -}
-f176da9d5899acfa422f4f8310f473a7
+cc1749427b4c32dfb2c4376092543ddc
   toPolar ::
     (GHC.Classes.Ord t, GHC.Float.Floating t) => (t, t) -> (t, t)
   {- Arity: 3,
@@ -1652,7 +1652,7 @@ f176da9d5899acfa422f4f8310f473a7
                  case w2 of ww { (,) ww1 ww2 ->
                  case Pixels.$wtoPolar @ t w w1 ww1 ww2 of ww3 { (#,#) ww4 ww5 ->
                  (ww4, ww5) } }) -}
-a7588300ecc51fa0f274a24c553cd43b
+9d7a98c8a492267a35739c81a1f35e03
   toPolarPos ::
     (GHC.Float.Floating t, GHC.Classes.Ord t) => (t, t) -> (t, t)
   {- Arity: 3,
@@ -1665,10 +1665,10 @@ a7588300ecc51fa0f274a24c553cd43b
                    (w2 :: (t, t)) ->
                  case Pixels.$wtoPolarPos @ t w w1 w2 of ww { (#,#) ww1 ww2 ->
                  (ww1, ww2) }) -}
-52cf919af089f86e0f389a7e4c33c109
+c7662128bc335fde276306c49af7332b
   toPolarPos1 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (2) -}
-abe7f842c1defd430aeaad43f72d9b56
+c9642cfd9bbe48e9b89ceb6266aa7fdf
   zipImages ::
     Codec.Picture.Types.Pixel a =>
     GHC.Types.Int

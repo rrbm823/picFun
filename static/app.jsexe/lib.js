@@ -1765,53 +1765,6 @@ function h$rand() {
    synchronized with ISO/IEC 10646:2014, plus Amendment 1 (published
    2015-05-15).  */
 /* We do not support C11 <threads.h>.  */
-function h$get_current_timezone_seconds(t, pdst_v, pdst_o, pname_v, pname_o) {
-    var d = new Date(t * 1000);
-    var now = new Date();
-    var jan = new Date(now.getFullYear(),0,1);
-    var jul = new Date(now.getFullYear(),6,1);
-    var stdOff = Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
-    var isDst = d.getTimezoneOffset() < stdOff;
-    var tzo = d.getTimezoneOffset();
-    pdst_v.dv.setInt32(pdst_o, isDst ? 1 : 0, true);
-    if(!pname_v.arr) pname_v.arr = [];
-    var offstr = tzo < 0 ? ('+' + (tzo/-60)) : ('' + (tzo/-60));
-    pname_v.arr[pname_o] = [h$encodeUtf8("UTC" + offstr), 0];
-    return (-60*tzo)|0;
-}
-/* Copyright (C) 1991-2016 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-/* This header is separate from features.h so that the compiler can
-   include it implicitly at the start of every compilation.  It must
-   not itself include <features.h> or any other header that includes
-   <features.h> because the implicit include comes before any feature
-   test macros that may be defined in a source file before it first
-   explicitly includes a system header.  GCC knows the name of this
-   header in order to preinclude it.  */
-/* glibc's intent is to support the IEC 559 math functionality, real
-   and complex.  If the GCC (4.9 and later) predefined macros
-   specifying compiler intent are available, use them to determine
-   whether the overall intent is to support these features; otherwise,
-   presume an older compiler has intent to support these features and
-   define these macros by default.  */
-/* wchar_t uses Unicode 8.0.0.  Version 8.0 of the Unicode Standard is
-   synchronized with ISO/IEC 10646:2014, plus Amendment 1 (published
-   2015-05-15).  */
-/* We do not support C11 <threads.h>.  */
 // values defined in Gen2.ClosureInfo
 // thread status
 /*
@@ -2085,6 +2038,53 @@ function h$hashable_getRandomBytes(dest_d, dest_o, len) {
     }
   }
   return len;
+}
+/* Copyright (C) 1991-2016 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+/* This header is separate from features.h so that the compiler can
+   include it implicitly at the start of every compilation.  It must
+   not itself include <features.h> or any other header that includes
+   <features.h> because the implicit include comes before any feature
+   test macros that may be defined in a source file before it first
+   explicitly includes a system header.  GCC knows the name of this
+   header in order to preinclude it.  */
+/* glibc's intent is to support the IEC 559 math functionality, real
+   and complex.  If the GCC (4.9 and later) predefined macros
+   specifying compiler intent are available, use them to determine
+   whether the overall intent is to support these features; otherwise,
+   presume an older compiler has intent to support these features and
+   define these macros by default.  */
+/* wchar_t uses Unicode 8.0.0.  Version 8.0 of the Unicode Standard is
+   synchronized with ISO/IEC 10646:2014, plus Amendment 1 (published
+   2015-05-15).  */
+/* We do not support C11 <threads.h>.  */
+function h$get_current_timezone_seconds(t, pdst_v, pdst_o, pname_v, pname_o) {
+    var d = new Date(t * 1000);
+    var now = new Date();
+    var jan = new Date(now.getFullYear(),0,1);
+    var jul = new Date(now.getFullYear(),6,1);
+    var stdOff = Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+    var isDst = d.getTimezoneOffset() < stdOff;
+    var tzo = d.getTimezoneOffset();
+    pdst_v.dv.setInt32(pdst_o, isDst ? 1 : 0, true);
+    if(!pname_v.arr) pname_v.arr = [];
+    var offstr = tzo < 0 ? ('+' + (tzo/-60)) : ('' + (tzo/-60));
+    pname_v.arr[pname_o] = [h$encodeUtf8("UTC" + offstr), 0];
+    return (-60*tzo)|0;
 }
 /* Copyright (C) 1991-2016 Free Software Foundation, Inc.
    This file is part of the GNU C Library.

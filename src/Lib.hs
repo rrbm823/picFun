@@ -1,4 +1,6 @@
+{-# LANGUAGE OverloadedStrings #-}
 module Lib where
+
 import Servant
 import Servant.API
 import Network.Wai.Handler.Warp
@@ -8,6 +10,8 @@ import Pixels
 import Models
 import Htmls
 import Api
+import Automata
+import Data.ByteString as B (readFile)
 import Control.Concurrent.STM
 import Control.Monad
 import Control.Monad.Trans
@@ -18,8 +22,14 @@ imagApp = do
   right <- atomically $ newTVar $ ImageRGB8 $ generateImage (const.const $ PixelRGB8 0 0 0) 300 300
   run 8080 $ serve imageApi (zipSrv left right)
 
+svgApp :: IO ()
+svgApp = run 8081 $ serve svgApi $
+  serveSvg :<|> return SVGFrontend :<|> serveDirectory "static" where
+  serveSvg n = liftIO $ do
+    return $ svg . grid . map (window n 0) . take n . loop (rule 110) $ Store (==0) (0 :: Int)
+
 zipSrv :: TVar DynamicImage -> TVar DynamicImage -> Server ImageAPI
-zipSrv i1 i2 = postImg :<|> display :<|> gif :<|> (return . read) :<|> serveDirectory "static"
+zipSrv i1 i2 = postImg :<|> image :<|> gif :<|> (return . read) :<|> serveDirectory "static"
   where
     postImg e p
       | e = liftIO $ do
@@ -52,7 +62,7 @@ zipSrv i1 i2 = postImg :<|> display :<|> gif :<|> (return . read) :<|> serveDire
          leftImg <- readTVarIO i1
          rightImg <- readTVarIO i2
          mapM (\n -> zipImages n (convertRGB8 leftImg) (convertRGB8 rightImg)) [2..10]
-    display r = case read r of
+    image r = case read r of
        Draw -> liftIO $ do
          img <- readTVarIO i1
          return $ ImageRGB8 $ convertRGB8 img
@@ -76,4 +86,11 @@ zipSrv i1 i2 = postImg :<|> display :<|> gif :<|> (return . read) :<|> serveDire
          rightImg <- readTVarIO i2
          imgResult <- checkerboard (convertRGB8 leftImg) (convertRGB8 rightImg) 
          return $ ImageRGB8 imgResult
-       
+       First -> liftIO $ do
+         leftImg <- readTVarIO i1
+         r <- readPng "static/image/spectrum.png"
+         case r of
+           (Right j) -> return j
+           (Left l) -> return leftImg
+         
+                                                                   

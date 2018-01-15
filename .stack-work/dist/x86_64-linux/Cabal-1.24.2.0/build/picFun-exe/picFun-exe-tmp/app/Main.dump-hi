@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-04 19:27:54.135946 UTC
+2017-12-12 20:53:12.259088 UTC
 
 interface main@main:Main 8002
-  interface hash: 1b0b215c52dceefd40fa8621b0fe970d
-  ABI hash: d601ee9d4fbc06443aa2be8c0133aa11
-  export-list hash: e75652cc55706d6721bd7b19037304cd
+  interface hash: 70fb7cc53d7574fd80eb5ae1352cff2f
+  ABI hash: 838fc7807b2a06cdf06592a46e57437c
+  export-list hash: f18be78601ac3bfae1ba9a6206f68bdb
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 2f09387325aab7617e6b60fcceee4574
   sig of: Nothing
@@ -15,7 +15,12 @@ exports:
   Main.main
 module dependencies:
 package dependencies: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed
+                      StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
+                      active-0.2.0.12@active-0.2.0.12-LIUvQTxfcogEdmLDeSVRgx
+                      adjunctions-4.3@adjunctions-4.3-7bX590WM0JqI4H9GMcNEBq
                       aeson-1.0.2.1@aeson-1.0.2.1-CYngHPh1vosBJovY7C9thn
+                      aeson-compat-0.3.6@aeson-compat-0.3.6-DYfUayWbN711Ronmt9RZLB
+                      ansi-terminal-0.6.2.3@ansi-terminal-0.6.2.3-4HPxin1iv6RAndS8lH3nzo
                       appar-0.1.4@appar-0.1.4-DGWHHt2WRn9FI49prcwO9
                       array-0.5.1.1@array-0.5.1.1
                       async-2.1.1@async-2.1.1-4n6HEMPJR2eJK0JpvCfuPK
@@ -23,21 +28,61 @@ package dependencies: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMK
                       auto-update-0.1.4@auto-update-0.1.4-EmUvNdmhEju51bHrtaEMpz
                       base-4.9.1.0
                       base-compat-0.9.2@base-compat-0.9.2-6QxKnlgzGYzLT4ZO71q1el
+                      base-orphans-0.5.4@base-orphans-0.5.4-ABoxiBf7nXc7Qqh66CgYc9
                       base64-bytestring-1.0.0.1@base64-bytestring-1.0.0.1-4O9TExPPz6eI82Yj7L4SIj
+                      bifunctors-5.4.1@bifunctors-5.4.1-LZeQTL0Uaws6v2aJY5STuc
                       binary-0.8.3.0@binary-0.8.3.0
                       blaze-builder-0.4.0.2@blaze-builder-0.4.0.2-CGB8BvrFgghHy5bLy0SFOg
                       blaze-html-0.8.1.3@blaze-html-0.8.1.3-4x5sR7CihaZBuBa398ibiy
                       blaze-markup-0.7.1.1@blaze-markup-0.7.1.1-7tIWNv8iALFJhJ4kVxNmNT
+                      blaze-svg-0.3.6.1@blaze-svg-0.3.6.1-1ShFTZ3k1YAGqqn0ZvA87r
+                      byteable-0.1.1@byteable-0.1.1-2lU1pexQSLj1KbNO17UifQ
                       byteorder-1.0.4@byteorder-1.0.4-9NlNHkBVdo7F1prFVKrkcH
+                      bytes-0.15.2@bytes-0.15.2-J6e0HT3ZKN3EOVxwvfzlkz
                       bytestring-0.10.8.1@bytestring-0.10.8.1
                       case-insensitive-1.2.0.8@case-insensitive-1.2.0.8-336s2tfPdxOEPgnLH8r0bz
+                      cereal-0.5.4.0@cereal-0.5.4.0-BsAGxfp8yAs3CiRo2E875e
+                      cipher-aes-0.2.11@cipher-aes-0.2.11-14OkZqkxQFLGRuDjhymyTm
+                      clientsession-0.9.1.2@clientsession-0.9.1.2-DnDysTjL0iID1ZCEg6sZkO
+                      colour-2.3.3@colour-2.3.3-7zspnmhVLMd3uThUzy60rY
                       comonad-5@comonad-5-BYydH82fZIS1vK4HJ9v9HH
+                      conduit-1.2.9@conduit-1.2.9-KyEH1gT2SFlFXLffDx2XOT
+                      conduit-extra-1.1.15@conduit-extra-1.1.15-2s02KiEMgMD42mpmSnWhf
                       containers-0.5.7.1@containers-0.5.7.1
+                      contravariant-1.4@contravariant-1.4-3UCY3arLvoG71jrGOYoc39
+                      cookie-0.4.2.1@cookie-0.4.2.1-K68NuFIZ07nEstxwB6c3aL
+                      cprng-aes-0.6.1@cprng-aes-0.6.1-2UfEQeumzqm4XCy4MsCr8L
+                      crypto-api-0.13.2@crypto-api-0.13.2-IETueZuD8kB6D6D3e0Qo1q
+                      crypto-cipher-types-0.0.9@crypto-cipher-types-0.0.9-9joBbxAELWrdcF21htday
+                      crypto-random-0.0.9@crypto-random-0.0.9-9CANfq4cTFQ82sqz85SiIf
                       cryptonite-0.21@cryptonite-0.21-Er8yd96TMUKJhhoyDY0pav
-                      deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.3.0.0@directory-1.3.0.0
+                      css-text-0.1.2.2@css-text-0.1.2.2-2Sz8fK2Q5V5AHJ4hVm7R2R
+                      data-default-0.7.1.1@data-default-0.7.1.1-7EGYJX2YWqWJRbPFUHNoCr
+                      data-default-class-0.1.2.0@data-default-class-0.1.2.0-GsXqKN6o1X9jr0fF5qCVD
+                      data-default-instances-containers-0.0.1@data-default-instances-containers-0.0.1-bob6IQGdJq92c061H46zK
+                      data-default-instances-dlist-0.0.1@data-default-instances-dlist-0.0.1-FKnZBeovJMk4M89wQxDhjl
+                      data-default-instances-old-locale-0.0.1@data-default-instances-old-locale-0.0.1-9zaGDEmgOixKkmLylWdN5l
+                      data-inttrie-0.1.2@data-inttrie-0.1.2-LwMrrR1qHVOJfuoxOFd7lf
+                      data-memocombinators-0.5.1@data-memocombinators-0.5.1-7Cm5blFlrBsIAp5LANmGFG
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      deepseq-generics-0.2.0.0@deepseq-generics-0.2.0.0-IjS8Jfo7YCzLKpV8N96gbz
+                      diagrams-core-1.4@diagrams-core-1.4-42vQFuc0By4CoNwN6zRmni
+                      diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe
+                      diagrams-solve-0.1.0.1@diagrams-solve-0.1.0.1-8z1vvS2NCi1DIyzPhWywoe
+                      diagrams-svg-1.4.1@diagrams-svg-1.4.1-Gh1dVhlsGXSLFboeM8DKb6
+                      directory-1.3.0.0@directory-1.3.0.0
+                      distributive-0.5.2@distributive-0.5.2-JCgfTXNR3ywAyV7fFWIBI5
                       dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD
+                      dual-tree-0.2.0.9@dual-tree-0.2.0.9-77DOBinMbQULdkjnCFy9nh
+                      easy-file-0.2.1@easy-file-0.2.1-rguMBNaECxLikt4CCDx0D
+                      email-validate-2.2.0@email-validate-2.2.0-AVTz24EEV7w81y0O8yKmqP
+                      entropy-0.3.7@entropy-0.3.7-GVoReSVE1cZ4Y1pKgzhBYO
+                      exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U
+                      fast-logger-2.4.10@fast-logger-2.4.10-AASpkRsupvWAQEpNM5DQI
                       file-embed-0.0.10@file-embed-0.0.10-KWMmUDaNSRP7AxWSEHlrrK
                       filepath-1.4.1.1@filepath-1.4.1.1
+                      fingertree-0.1.1.0@fingertree-0.1.1.0-Aiaf912zjZGHvH3XyjxrYA
+                      free-4.12.4@free-4.12.4-C89MffdE5zK8lCuYhh5BJR
                       ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
                       hashable-1.2.6.0@hashable-1.2.6.0-3EXxoqeEgbfAKr6aGkye6x
                       http-api-data-0.3.5@http-api-data-0.3.5-I8V2cgXR5W924Ax42O3A11
@@ -46,39 +91,74 @@ package dependencies: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMK
                       http-types-0.9.1@http-types-0.9.1-5rMGX8lemrMDaQeDulF4OF
                       http2-1.6.3@http2-1.6.3-82OptI2A5ESI6RhudSAT6 integer-gmp-1.0.0.1
                       integer-logarithms-1.0.1@integer-logarithms-1.0.1-IEHCuEd5sG4JjSjlx7m5JF
+                      intervals-0.7.2@intervals-0.7.2-3vzSDbz3biR3JT8ePCbYOq
                       iproute-1.7.1@iproute-1.7.1-4HULutk0xITKNjI1pwYrD4
+                      kan-extensions-5.0.1@kan-extensions-5.0.1-GfRgigRS3IhJiXd1UYYFjj
+                      lens-4.15.1@lens-4.15.1-2bPnjHpJoHy2zLogJCwNGD
+                      lifted-base-0.2.3.10@lifted-base-0.2.3.10-BoEavBFIcriDza63doCjS2
+                      linear-1.20.5@linear-1.20.5-IovriE16Vxn5YB3yT2GhdN
                       memory-0.14.2@memory-0.14.2-CfVX41PhmpJKBOUPv4ybaa
                       microlens-0.4.8.0@microlens-0.4.8.0-5PXN9DedWooJg6UJ24ter0
                       microlens-th-0.4.1.1@microlens-th-0.4.1.1-26cEGwGOrIB7ilX0jLiOT0
                       mime-types-0.1.0.7@mime-types-0.1.0.7-31dnC2ifQ9r5TApUZagLPk
                       mmorph-1.0.9@mmorph-1.0.9-5bASEvmIkr5CpdAYXwPsn0
+                      monad-control-1.0.1.0@monad-control-1.0.1.0-LQwQ0Hi5p0oAccTfTzbfD5
+                      monad-logger-0.3.21@monad-logger-0.3.21-9yXyPWx9Jz4596efE1fw2y
                       monad-loops-0.4.3@monad-loops-0.4.3-ERCN4ZKCeeS5SRhwqXsLBP
+                      monoid-extras-0.4.2@monoid-extras-0.4.2-FSDbh4HlcS1IMd5dMmDGS8
                       mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      mwc-random-0.13.5.0@mwc-random-0.13.5.0-Dp3Ri46ZxJuCFZWIowNqha
                       network-2.6.3.1@network-2.6.3.1-ABFtZSq90Z9BfMXNiqgBoe
                       network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF
+                      newtype-0.2@newtype-0.2-CoUG4lREtI4Hba8CNmzidy
+                      old-locale-1.0.0.7@old-locale-1.0.0.7-KGBP1BSKxH5GCm0LnZP04j
+                      old-time-1.1.0.3@old-time-1.1.0.3-KWRsMSdY26c2L27Y9n9cyq
                       parsec-3.1.11@parsec-3.1.11-113irVHGgd88sRnywByDNw
-                      picFun-0.1.0.0@picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf
+                      path-pieces-0.2.1@path-pieces-0.2.1-7jYjtDsNHN0JfYriIYgB3j
+                      persistent-2.6.1@persistent-2.6.1-GCqRbV0F9PFItKhycxO3RQ
+                      persistent-template-2.5.2@persistent-template-2.5.2-GlIknTopcEE7861NMMrkro
+                      picFun-0.1.0.0@picFun-0.1.0.0-fnBZLECtUoD0q3S6USYHa
+                      prelude-extras-0.4.0.3@prelude-extras-0.4.0.3-BhL9U5k7NtGJn1itwIHt2Y
                       pretty-1.1.3.3@pretty-1.1.3.3
                       primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH
+                      process-1.4.3.0@process-1.4.3.0
+                      profunctors-5.2@profunctors-5.2-E83rhkBRsJE8oBXYAZAqjZ
                       psqueues-0.2.2.3@psqueues-0.2.2.3-9nDehYbroydEusqdFJopTa
                       random-1.1@random-1.1-9tceXaeYIMZ4JrKq20Egog
+                      reflection-2.1.2@reflection-2.1.2-Bem12O1xFGSHr4C2Hyu1c4
+                      resource-pool-0.2.3.2@resource-pool-0.2.3.2-1AOSrWwsk6kGNVrZRdikMV
+                      resourcet-1.1.9@resourcet-1.1.9-Ej57FoSD8NQLck5u9CwWz8
+                      safe-0.3.14@safe-0.3.14-GsbXn9D9F3BDazVNcErzdQ
                       scientific-0.3.4.10@scientific-0.3.4.10-70WEAestTPg2u2sFCYJUhG
+                      securemem-0.1.9@securemem-0.1.9-HdXC2eutB7OIZ5NMkP1qeY
+                      semigroupoids-5.1@semigroupoids-5.1-IViIK2AEZZs10fiaW8ySWi
                       servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq
                       servant-JuicyPixels-0.3.0.2@servant-JuicyPixels-0.3.0.2-KFDh0ZSrRqdHyQZspaSYy6
                       servant-server-0.9.1.1@servant-server-0.9.1.1-FQ1NWT7Wr2yC5f3jkCvAai
+                      shakespeare-2.0.12.1@shakespeare-2.0.12.1-IZS5k0Q14kp5N4txkqSqTQ
+                      silently-1.2.5@silently-1.2.5-HsbqnAAyIOA8viZ4Sccs0a
                       simple-sendfile-0.2.25@simple-sendfile-0.2.25-JJ9zm1wZxYIARxlVa3oQgs
+                      skein-1.0.9.4@skein-1.0.9.4-1r9hT02ZzU5HeQ9SvXvQV
                       stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      stm-chans-3.0.0.4@stm-chans-3.0.0.4-JX6Y7GVvdkg3BduVhEnPWu
                       streaming-commons-0.1.17@streaming-commons-0.1.17-Ec7F62APEFzLqTOvsWpyBa
                       string-conversions-0.4.0.1@string-conversions-0.4.0.1-5bhARACLQyXG4DLNegoSj4
+                      stringsearch-0.3.6.6@stringsearch-0.3.6.6-2soGORichTR6reHVhDqKip
+                      svg-builder-0.1.0.2@svg-builder-0.1.0.2-Blfiw5KrhOtGQnbQwRjlw8
                       tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt
+                      tagsoup-0.14.1@tagsoup-0.14.1-6d5jSu6VuYIIoyQixz5L7u
                       template-haskell-2.11.1.0
                       text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
                       th-lift-0.7.6@th-lift-0.7.6-BJcuQtn7dnPzL4YOk4wps
                       th-lift-instances-0.1.11@th-lift-instances-0.1.11-C7WWQYsyhhMpc6laO6Bed
                       time-1.6.0.1@time-1.6.0.1
                       time-locale-compat-0.1.1.3@time-locale-compat-0.1.1.3-KZ1jqNx8uhlHjmuPPj6V1Y
-                      transformers-0.5.2.0@transformers-0.5.2.0 unix-2.7.2.1@unix-2.7.2.1
+                      transformers-0.5.2.0@transformers-0.5.2.0
+                      transformers-base-0.4.4@transformers-base-0.4.4-GKSs0LKukAL8ymq2naFmrH
+                      transformers-compat-0.5.1.4@transformers-compat-0.5.1.4-IuFogs8HAVUJBWVNMhtssu
+                      unix-2.7.2.1@unix-2.7.2.1
                       unix-compat-0.4.3.1@unix-compat-0.4.3.1-Ausmw6d7KIwA7sl52mzqxC
+                      unix-time-0.3.7@unix-time-0.3.7-EhnEKT4D7hJajV74Sk5BE
                       unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-1XEErQCPPPc2SEtcHHNx9o
                       uri-bytestring-0.2.3.1@uri-bytestring-0.2.3.1-6LL9CpgznmMIcIWZQ2UZ46
                       utf8-string-1.0.1.1@utf8-string-1.0.1.1-1DpjxLeTvGg7ttZZojxJR5
@@ -87,17 +167,45 @@ package dependencies: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMK
                       vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG
                       wai-3.2.1.1@wai-3.2.1.1-9yigkTgtHNLHh2mXrnIXo
                       wai-app-static-3.1.6.1@wai-app-static-3.1.6.1-2hcSbp6yMAsGQQTfre28LP
+                      wai-extra-3.0.19.1@wai-extra-3.0.19.1-9XBN7FJgfjR1h8W0NHEgxI
+                      wai-logger-2.3.0@wai-logger-2.3.0-EmqSsXAxh1KDHwlT09r5vy
                       warp-3.2.11.1@warp-3.2.11.1-DxTaqp5mZpf71E3TnvlUWY
                       word8-0.1.2@word8-0.1.2-9WDPGCTpW7JJnsiAQavtd1
+                      xss-sanitize-0.3.5.7@xss-sanitize-0.3.5.7-tLba8nFjkFJYZsoIePdWF
+                      yesod-1.4.5@yesod-1.4.5-5WyMIdlwl1eJ3eNDzVTv2A
+                      yesod-core-1.4.32@yesod-core-1.4.32-6HthMZNCl0sEMRz6GJ4QO1
+                      yesod-form-1.4.11@yesod-form-1.4.11-FjpdrFwuo8mBufMslynG1v
+                      yesod-persistent-1.4.2@yesod-persistent-1.4.2-F7OBxBEVUn07SCOytG32dX
                       zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp
-orphans: attoparsec-0.13.1.0@attoparsec-0.13.1.0-1ABl8gBrvGSCXKXEElG6rU:Data.Attoparsec.ByteString.Char8
+orphans: active-0.2.0.12@active-0.2.0.12-LIUvQTxfcogEdmLDeSVRgx:Data.Active
+         attoparsec-0.13.1.0@attoparsec-0.13.1.0-1ABl8gBrvGSCXKXEElG6rU:Data.Attoparsec.ByteString.Char8
          attoparsec-0.13.1.0@attoparsec-0.13.1.0-1ABl8gBrvGSCXKXEElG6rU:Data.Attoparsec.Text.Internal
          base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
          binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
          bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         colour-2.3.3@colour-2.3.3-7zspnmhVLMd3uThUzy60rY:Data.Colour
+         crypto-api-0.13.2@crypto-api-0.13.2-IETueZuD8kB6D6D3e0Qo1q:Crypto.Classes
+         data-default-instances-containers-0.0.1@data-default-instances-containers-0.0.1-bob6IQGdJq92c061H46zK:Data.Default.Instances.Containers
+         data-default-instances-dlist-0.0.1@data-default-instances-dlist-0.0.1-FKnZBeovJMk4M89wQxDhjl:Data.Default.Instances.DList
+         data-default-instances-old-locale-0.0.1@data-default-instances-old-locale-0.0.1-9zaGDEmgOixKkmLylWdN5l:Data.Default.Instances.OldLocale
+         diagrams-core-1.4@diagrams-core-1.4-42vQFuc0By4CoNwN6zRmni:Diagrams.Core.Points
+         diagrams-core-1.4@diagrams-core-1.4-42vQFuc0By4CoNwN6zRmni:Diagrams.Core.Types
+         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.Animation.Active
+         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.ThreeD.Types
+         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.Trail
+         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.TwoD.Path
+         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.TwoD.Segment
+         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.TwoD.Types
          hashable-1.2.6.0@hashable-1.2.6.0-3EXxoqeEgbfAKr6aGkye6x:Data.Hashable.Generic
+         linear-1.20.5@linear-1.20.5-IovriE16Vxn5YB3yT2GhdN:Linear.Instances
+         monoid-extras-0.4.2@monoid-extras-0.4.2-FSDbh4HlcS1IMd5dMmDGS8:Data.Monoid.MList
          network-2.6.3.1@network-2.6.3.1-ABFtZSq90Z9BfMXNiqgBoe:Network.Socket
-         picFun-0.1.0.0@picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf:Htmls
+         persistent-2.6.1@persistent-2.6.1-GCqRbV0F9PFItKhycxO3RQ:Database.Persist.Sql.Orphan.PersistQuery
+         persistent-2.6.1@persistent-2.6.1-GCqRbV0F9PFItKhycxO3RQ:Database.Persist.Sql.Orphan.PersistStore
+         persistent-2.6.1@persistent-2.6.1-GCqRbV0F9PFItKhycxO3RQ:Database.Persist.Sql.Orphan.PersistUnique
+         persistent-template-2.5.2@persistent-template-2.5.2-GlIknTopcEE7861NMMrkro:Database.Persist.TH
+         picFun-0.1.0.0@picFun-0.1.0.0-fnBZLECtUoD0q3S6USYHa:Htmls
+         reflection-2.1.2@reflection-2.1.2-Bem12O1xFGSHr4C2Hyu1c4:Data.Reflection
          stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
@@ -108,11 +216,14 @@ orphans: attoparsec-0.13.1.0@attoparsec-0.13.1.0-1ABl8gBrvGSCXKXEElG6rU:Data.Att
          time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
          time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
          transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         unix-time-0.3.7@unix-time-0.3.7-EhnEKT4D7hJajV74Sk5BE:Data.UnixTime.Diff
          vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Fusion.Bundle
          vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed
 family instance modules: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.Picture.Tga
                          JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.Picture.Tiff
                          JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.Picture.Types
+                         active-0.2.0.12@active-0.2.0.12-LIUvQTxfcogEdmLDeSVRgx:Data.Active
+                         adjunctions-4.3@adjunctions-4.3-7bX590WM0JqI4H9GMcNEBq:Data.Functor.Rep
                          attoparsec-0.13.1.0@attoparsec-0.13.1.0-1ABl8gBrvGSCXKXEElG6rU:Data.Attoparsec.Internal.Types
                          base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
                          base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
@@ -123,29 +234,103 @@ family instance modules: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOs
                          base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
                          base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
                          base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         bifunctors-5.4.1@bifunctors-5.4.1-LZeQTL0Uaws6v2aJY5STuc:Data.Bifunctor.Biff
+                         bifunctors-5.4.1@bifunctors-5.4.1-LZeQTL0Uaws6v2aJY5STuc:Data.Bifunctor.Clown
+                         bifunctors-5.4.1@bifunctors-5.4.1-LZeQTL0Uaws6v2aJY5STuc:Data.Bifunctor.Flip
+                         bifunctors-5.4.1@bifunctors-5.4.1-LZeQTL0Uaws6v2aJY5STuc:Data.Bifunctor.Join
+                         bifunctors-5.4.1@bifunctors-5.4.1-LZeQTL0Uaws6v2aJY5STuc:Data.Bifunctor.Joker
+                         bifunctors-5.4.1@bifunctors-5.4.1-LZeQTL0Uaws6v2aJY5STuc:Data.Bifunctor.Product
+                         bifunctors-5.4.1@bifunctors-5.4.1-LZeQTL0Uaws6v2aJY5STuc:Data.Bifunctor.Sum
+                         bifunctors-5.4.1@bifunctors-5.4.1-LZeQTL0Uaws6v2aJY5STuc:Data.Bifunctor.Tannen
+                         bifunctors-5.4.1@bifunctors-5.4.1-LZeQTL0Uaws6v2aJY5STuc:Data.Bifunctor.Wrapped
+                         bytes-0.15.2@bytes-0.15.2-J6e0HT3ZKN3EOVxwvfzlkz:Data.Bytes.Get
+                         bytes-0.15.2@bytes-0.15.2-J6e0HT3ZKN3EOVxwvfzlkz:Data.Bytes.Signed
+                         bytes-0.15.2@bytes-0.15.2-J6e0HT3ZKN3EOVxwvfzlkz:Data.Bytes.VarInt
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
                          containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         diagrams-core-1.4@diagrams-core-1.4-42vQFuc0By4CoNwN6zRmni:Diagrams.Core.Envelope
+                         diagrams-core-1.4@diagrams-core-1.4-42vQFuc0By4CoNwN6zRmni:Diagrams.Core.Measure
+                         diagrams-core-1.4@diagrams-core-1.4-42vQFuc0By4CoNwN6zRmni:Diagrams.Core.Names
+                         diagrams-core-1.4@diagrams-core-1.4-42vQFuc0By4CoNwN6zRmni:Diagrams.Core.Points
+                         diagrams-core-1.4@diagrams-core-1.4-42vQFuc0By4CoNwN6zRmni:Diagrams.Core.Query
+                         diagrams-core-1.4@diagrams-core-1.4-42vQFuc0By4CoNwN6zRmni:Diagrams.Core.Style
+                         diagrams-core-1.4@diagrams-core-1.4-42vQFuc0By4CoNwN6zRmni:Diagrams.Core.Trace
+                         diagrams-core-1.4@diagrams-core-1.4-42vQFuc0By4CoNwN6zRmni:Diagrams.Core.Transform
+                         diagrams-core-1.4@diagrams-core-1.4-42vQFuc0By4CoNwN6zRmni:Diagrams.Core.Types
+                         diagrams-core-1.4@diagrams-core-1.4-42vQFuc0By4CoNwN6zRmni:Diagrams.Core.V
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.Angle
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.Animation.Active
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.BoundingBox
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.Coordinates
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.Direction
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.Located
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.Path
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.Segment
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.Size
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.Tangent
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.ThreeD.Camera
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.ThreeD.Light
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.ThreeD.Shapes
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.ThreeD.Types
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.Trail
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.TwoD.Attributes
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.TwoD.Image
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.TwoD.Path
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.TwoD.Segment.Bernstein
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.TwoD.Text
+                         diagrams-lib-1.4.0.1@diagrams-lib-1.4.0.1-42nDOEYJqjnHeRONDrlIEe:Diagrams.TwoD.Types
+                         diagrams-svg-1.4.1@diagrams-svg-1.4.1-Gh1dVhlsGXSLFboeM8DKb6:Diagrams.Backend.SVG
                          dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD:Data.DList
+                         email-validate-2.2.0@email-validate-2.2.0-AVTz24EEV7w81y0O8yKmqP:Text.Email.Parser
                          ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
                          http-api-data-0.3.5@http-api-data-0.3.5-I8V2cgXR5W924Ax42O3A11:Web.Internal.FormUrlEncoded
+                         intervals-0.7.2@intervals-0.7.2-3vzSDbz3biR3JT8ePCbYOq:Numeric.Interval.Kaucher
                          iproute-1.7.1@iproute-1.7.1-4HULutk0xITKNjI1pwYrD4:Data.IP.Addr
                          iproute-1.7.1@iproute-1.7.1-4HULutk0xITKNjI1pwYrD4:Data.IP.Range
+                         kan-extensions-5.0.1@kan-extensions-5.0.1-GfRgigRS3IhJiXd1UYYFjj:Data.Functor.Day
+                         kan-extensions-5.0.1@kan-extensions-5.0.1-GfRgigRS3IhJiXd1UYYFjj:Data.Functor.Yoneda
+                         lens-4.15.1@lens-4.15.1-2bPnjHpJoHy2zLogJCwNGD:Control.Lens.At
+                         lens-4.15.1@lens-4.15.1-2bPnjHpJoHy2zLogJCwNGD:Control.Lens.Internal.Indexed
+                         lens-4.15.1@lens-4.15.1-2bPnjHpJoHy2zLogJCwNGD:Control.Lens.Reified
+                         lens-4.15.1@lens-4.15.1-2bPnjHpJoHy2zLogJCwNGD:Control.Lens.Tuple
+                         lens-4.15.1@lens-4.15.1-2bPnjHpJoHy2zLogJCwNGD:Control.Lens.Wrapped
+                         lens-4.15.1@lens-4.15.1-2bPnjHpJoHy2zLogJCwNGD:Control.Lens.Zoom
+                         linear-1.20.5@linear-1.20.5-IovriE16Vxn5YB3yT2GhdN:Linear.Affine
+                         linear-1.20.5@linear-1.20.5-IovriE16Vxn5YB3yT2GhdN:Linear.Plucker
+                         linear-1.20.5@linear-1.20.5-IovriE16Vxn5YB3yT2GhdN:Linear.Quaternion
+                         linear-1.20.5@linear-1.20.5-IovriE16Vxn5YB3yT2GhdN:Linear.V
+                         linear-1.20.5@linear-1.20.5-IovriE16Vxn5YB3yT2GhdN:Linear.V0
+                         linear-1.20.5@linear-1.20.5-IovriE16Vxn5YB3yT2GhdN:Linear.V1
+                         linear-1.20.5@linear-1.20.5-IovriE16Vxn5YB3yT2GhdN:Linear.V2
+                         linear-1.20.5@linear-1.20.5-IovriE16Vxn5YB3yT2GhdN:Linear.V3
+                         linear-1.20.5@linear-1.20.5-IovriE16Vxn5YB3yT2GhdN:Linear.V4
                          microlens-0.4.8.0@microlens-0.4.8.0-5PXN9DedWooJg6UJ24ter0:Lens.Micro.Internal
+                         monad-control-1.0.1.0@monad-control-1.0.1.0-LQwQ0Hi5p0oAccTfTzbfD5:Control.Monad.Trans.Control
+                         monad-logger-0.3.21@monad-logger-0.3.21-9yXyPWx9Jz4596efE1fw2y:Control.Monad.Logger
+                         mwc-random-0.13.5.0@mwc-random-0.13.5.0-Dp3Ri46ZxJuCFZWIowNqha:System.Random.MWC
                          network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF:Network.URI
-                         picFun-0.1.0.0@picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf:Grid
-                         picFun-0.1.0.0@picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf:Models
+                         persistent-2.6.1@persistent-2.6.1-GCqRbV0F9PFItKhycxO3RQ:Database.Persist.Class.PersistConfig
+                         persistent-2.6.1@persistent-2.6.1-GCqRbV0F9PFItKhycxO3RQ:Database.Persist.Sql.Orphan.PersistStore
+                         persistent-2.6.1@persistent-2.6.1-GCqRbV0F9PFItKhycxO3RQ:Database.Persist.Sql.Types.Internal
+                         picFun-0.1.0.0@picFun-0.1.0.0-fnBZLECtUoD0q3S6USYHa:Automata
+                         picFun-0.1.0.0@picFun-0.1.0.0-fnBZLECtUoD0q3S6USYHa:Grid
+                         picFun-0.1.0.0@picFun-0.1.0.0-fnBZLECtUoD0q3S6USYHa:Models
                          pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
                          pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
                          primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH:Control.Monad.Primitive
+                         profunctors-5.2@profunctors-5.2-E83rhkBRsJE8oBXYAZAqjZ:Data.Profunctor.Rep
+                         resourcet-1.1.9@resourcet-1.1.9-Ej57FoSD8NQLck5u9CwWz8:Control.Monad.Trans.Resource.Internal
                          servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API.ContentTypes
                          servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API.IsSecure
                          servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.API.Verbs
                          servant-0.9.1.1@servant-0.9.1.1-kVuyd51zvkQL9yX4P4Nq:Servant.Utils.Links
                          servant-server-0.9.1.1@servant-server-0.9.1.1-FQ1NWT7Wr2yC5f3jkCvAai:Servant.Server.Internal
                          servant-server-0.9.1.1@servant-server-0.9.1.1-FQ1NWT7Wr2yC5f3jkCvAai:Servant.Server.Internal.BasicAuth
+                         shakespeare-2.0.12.1@shakespeare-2.0.12.1-IZS5k0Q14kp5N4txkqSqTQ:Text.Css
+                         shakespeare-2.0.12.1@shakespeare-2.0.12.1-IZS5k0Q14kp5N4txkqSqTQ:Text.Shakespeare
                          tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt:Data.Tagged
                          template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
                          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
@@ -160,10 +345,14 @@ family instance modules: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOs
                          vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Storable
                          vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed
                          vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed.Base
+                         yesod-core-1.4.32@yesod-core-1.4.32-6HthMZNCl0sEMRz6GJ4QO1:Yesod.Core.Class.Handler
+                         yesod-core-1.4.32@yesod-core-1.4.32-6HthMZNCl0sEMRz6GJ4QO1:Yesod.Core.Internal.LiteApp
+                         yesod-core-1.4.32@yesod-core-1.4.32-6HthMZNCl0sEMRz6GJ4QO1:Yesod.Core.Types
                          zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.Zlib.Stream
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
-import  -/  picFun-0.1.0.0@picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf:Lib 59ad9d3daa1122c0e26082ff62d73b61
+import  -/  picFun-0.1.0.0@picFun-0.1.0.0-fnBZLECtUoD0q3S6USYHa:Automata e9c6095c283d7f84a480003cb3260177
+import  -/  picFun-0.1.0.0@picFun-0.1.0.0-fnBZLECtUoD0q3S6USYHa:Lib ec97af7468d225c3711d055650e78e9b
 d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -176,19 +365,19 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-d77b3dd22f38f926dcc4815d932af652
+edb8431bb39bf3c54410c5d709bd206e
   main :: GHC.Types.IO ()
-  {- Arity: 1, Strictness: <S,U>,
+  {- Arity: 1,
      Unfolding: InlineRule (0, True, True)
-                Lib.imagApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-e61d39e59ee7e707be134b23ed44f439
+                Automata.main'1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+e389cf48a827bd7c70446b7f2dc87f97
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
      Unfolding: (GHC.TopHandler.runMainIO1
                    @ ()
-                   Lib.imagApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+                   Automata.main'1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

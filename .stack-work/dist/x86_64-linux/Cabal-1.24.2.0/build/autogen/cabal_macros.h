@@ -49,6 +49,13 @@
   (major1) == 0 && (major2) <  7 || \
   (major1) == 0 && (major2) == 7 && (minor) <= 1)
 
+/* package blaze-svg-0.3.6.1 */
+#define VERSION_blaze_svg "0.3.6.1"
+#define MIN_VERSION_blaze_svg(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  3 || \
+  (major1) == 0 && (major2) == 3 && (minor) <= 6)
+
 /* package bytestring-0.10.8.1 */
 #define VERSION_bytestring "0.10.8.1"
 #define MIN_VERSION_bytestring(major1,major2,minor) (\
@@ -70,6 +77,27 @@
   (major1) == 0 && (major2) <  5 || \
   (major1) == 0 && (major2) == 5 && (minor) <= 7)
 
+/* package data-memocombinators-0.5.1 */
+#define VERSION_data_memocombinators "0.5.1"
+#define MIN_VERSION_data_memocombinators(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  5 || \
+  (major1) == 0 && (major2) == 5 && (minor) <= 1)
+
+/* package diagrams-lib-1.4.0.1 */
+#define VERSION_diagrams_lib "1.4.0.1"
+#define MIN_VERSION_diagrams_lib(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  4 || \
+  (major1) == 1 && (major2) == 4 && (minor) <= 0)
+
+/* package diagrams-svg-1.4.1 */
+#define VERSION_diagrams_svg "1.4.1"
+#define MIN_VERSION_diagrams_svg(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  4 || \
+  (major1) == 1 && (major2) == 4 && (minor) <= 1)
+
 /* package directory-1.3.0.0 */
 #define VERSION_directory "1.3.0.0"
 #define MIN_VERSION_directory(major1,major2,minor) (\
@@ -83,6 +111,13 @@
   (major1) <  0 || \
   (major1) == 0 && (major2) <  6 || \
   (major1) == 0 && (major2) == 6 && (minor) <= 4)
+
+/* package lens-4.15.1 */
+#define VERSION_lens "4.15.1"
+#define MIN_VERSION_lens(major1,major2,minor) (\
+  (major1) <  4 || \
+  (major1) == 4 && (major2) <  15 || \
+  (major1) == 4 && (major2) == 15 && (minor) <= 1)
 
 /* package microlens-0.4.8.0 */
 #define VERSION_microlens "0.4.8.0"
@@ -154,6 +189,13 @@
   (major1) == 2 && (major2) <  4 || \
   (major1) == 2 && (major2) == 4 && (minor) <= 4)
 
+/* package svg-builder-0.1.0.2 */
+#define VERSION_svg_builder "0.1.0.2"
+#define MIN_VERSION_svg_builder(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  1 || \
+  (major1) == 0 && (major2) == 1 && (minor) <= 0)
+
 /* package text-1.2.2.1 */
 #define VERSION_text "1.2.2.1"
 #define MIN_VERSION_text(major1,major2,minor) (\
@@ -181,6 +223,13 @@
   (major1) <  3 || \
   (major1) == 3 && (major2) <  2 || \
   (major1) == 3 && (major2) == 2 && (minor) <= 11)
+
+/* package yesod-1.4.5 */
+#define VERSION_yesod "1.4.5"
+#define MIN_VERSION_yesod(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  4 || \
+  (major1) == 1 && (major2) == 4 && (minor) <= 5)
 
 /* tool gcc-5.4.0 */
 #define TOOL_VERSION_gcc "5.4.0"
@@ -238,7 +287,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf"
+#define CURRENT_COMPONENT_ID "picFun-0.1.0.0-fnBZLECtUoD0q3S6USYHa"
 
-#define CURRENT_PACKAGE_KEY "picFun-0.1.0.0-HoOlrcFQZ6zLB3TVOgtkf"
+#define CURRENT_PACKAGE_KEY "picFun-0.1.0.0-fnBZLECtUoD0q3S6USYHa"
 
