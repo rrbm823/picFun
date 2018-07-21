@@ -4138,11 +4138,9 @@ function diffProps (cProps, nProps, node, isSvg) {
     if (isSvg) {
       if (c === "href")
   node.setAttributeNS("http://www.w3.org/1999/xlink", "href", newProp);
-      else if (c === "className" || c === "class")
-  node.setAttributeNS("http://www.w3.org/1999/xlink", "class", newProp);
       else
   node.setAttribute(c, newProp);
-     } else if (c in node) {
+     } else if (c in node && !(c === "list" || c === "form")) {
   node[c] = newProp;
       } else {
         node.setAttribute(c, newProp);
@@ -4157,11 +4155,9 @@ function diffProps (cProps, nProps, node, isSvg) {
    if (isSvg) {
      if (n === "href")
         node.setAttributeNS("http://www.w3.org/1999/xlink", "href", newProp);
-     else if (n === "className" || n === "class")
-        node.setAttributeNS("http://www.w3.org/1999/xlink", "class", newProp);
      else
         node.setAttribute(n, newProp);
-   } else if (n in node) {
+   } else if (n in node && !(n === "list" || n === "form")) {
       node[n] = nProps[n];
    } else {
       node.setAttribute(n, newProp);
@@ -4437,12 +4433,12 @@ function lis(a) {
    2015-05-15).  */
 /* We do not support C11 <threads.h>.  */
 /* event delegation algorithm */
-function delegate(events, getVTree) {
+function delegate(mountPointElement, events, getVTree) {
     for (var event in events) {
- document.body.addEventListener(events[event][0], function(e) {
+ mountPointElement.addEventListener(events[event][0], function(e) {
             delegateEvent ( e
                           , getVTree()
-                          , buildTargetToBody(document.body, e.target)
+                          , buildTargetToElement(mountPointElement, e.target)
                           , []
                           );
       }, events[event][1]);
@@ -4467,20 +4463,24 @@ function delegateEvent (event, obj, stack, parentStack) {
     /* stack.length == 1 */
     else {
  if (obj.domRef === stack[0]) {
-          if (obj.events[event.type]) {
-       var eventObj = obj.events[event.type],
-    options = eventObj.options;
-              if (options.preventDefault) event.preventDefault();
-          eventObj.runEvent(event);
-     if (!options.stopPropagation)
+     var eventObj = obj.events[event.type];
+     if (eventObj) {
+  var options = eventObj.options;
+  if (options.preventDefault)
+      event.preventDefault();
+  eventObj.runEvent(event);
+  if (!options.stopPropagation)
       propogateWhileAble (parentStack, event);
-          }
+     } else {
+   /* still propagate to parent handlers even if event not defined */
+    propogateWhileAble (parentStack, event);
+       }
  }
     }
 }
-function buildTargetToBody (body, target) {
+function buildTargetToElement (element, target) {
     var stack = [];
-    while (body !== target) {
+    while (element !== target) {
       stack.unshift (target);
       target = target.parentNode;
     }

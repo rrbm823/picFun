@@ -1,38 +1,56 @@
 code size summary per package:
 
-3e5zEbdIrqd4jD8Lm45COQ:  12548
 5R7qBir9vLD2YBMv6osUKS:  3620
+5mjpZR7E0lJ11826Io70iT:  133193
 8aAO95uZbv12pXJ9mRH58D:  4803
 DQhfdTHT2kk7P6LobhBQCq:  658
 DfJYcaJyxRaLB7IVEln9q2:  1117
 GB9FWCG5RyPLWNHwHXtxsC:  326
-GI7h8wpwzL05sDNIrYmF0l:  113415
-IwZTMSe3Ivv9yhoBZv26Oz:  522
+Gm3DcwSuiMWJO89TulH9T1:  780
+IwZTMSe3Ivv9yhoBZv26Oz:  737
+L9DNYpQqFEEG6Irhz79OYV:  5023
 aeson_JVzbBMTMmQ32nxHUK3Dk9p:33279
-base:                    596985
-bytes_96M8oqQTVIe6bIZr9qhhuC:2746
-conta_3UVKjic2MoqF92jHhg7Ur8:1106728
+base:                    652207
+bytes_96M8oqQTVIe6bIZr9qhhuC:3361
+conta_3UVKjic2MoqF92jHhg7Ur8:1158667
 deeps_6zNFUGyDFQ59UU8BCTkqk0:856
-ghc-prim:                24959
-ghcjs_7b01A0aGNCoHSoxWaQfJsm:35324
+ghc-prim:                37781
+ghcjs_7b01A0aGNCoHSoxWaQfJsm:41012
 ghcjs_9jpamHTyFf8CL10DbS4jxv:10248
 integer-gmp:             31037
-main:                    598629
-primi_CRhbMv8kA5dFpZOCD0QPrI:2397
+main:                    507395
+primi_CRhbMv8kA5dFpZOCD0QPrI:2461
 scien_7RWav52ZEb8LpSeINhjuJE:5755
 text_AoFu0I23s11C5sDmOoIAPZ:18768
 trans_EziP6JoSSK398q9vuXpnAA:3559
 unord_6zDVf5UGzMbGMOWP8CT2TB:3875
-vecto_DeaUpJs6ZtbBhz15yBYLWJ:82821
+vecto_DeaUpJs6ZtbBhz15yBYLWJ:98330
 
 
 code size per module:
 
-3e5zEbdIrqd4jD8Lm45COQ
-    Control.Concurrent.BoundedChan:     12548
-
 5R7qBir9vLD2YBMv6osUKS
     Data.IntTrie:                       3620
+
+5mjpZR7E0lJ11826Io70iT
+    Miso:                               17806
+    Miso.Delegate:                      1245
+    Miso.Diff:                          2611
+    Miso.Effect:                        977
+    Miso.Event.Decoder:                 7738
+    Miso.Event.Types:                   21748
+    Miso.FFI:                           10610
+    Miso.Html.Element:                  4290
+    Miso.Html.Event:                    1752
+    Miso.Html.Internal:                 26475
+    Miso.Html.Property:                 5244
+    Miso.String:                        102
+    Miso.Subscription.Keyboard:         20302
+    Miso.Subscription.Mouse:            3192
+    Miso.Svg.Attribute:                 4511
+    Miso.Svg.Element:                   3364
+    Miso.Svg.Event:                     933
+    Miso.Types:                         293
 
 8aAO95uZbv12pXJ9mRH58D
     Data.MemoCombinators:               4803
@@ -47,27 +65,14 @@ DfJYcaJyxRaLB7IVEln9q2
 GB9FWCG5RyPLWNHwHXtxsC
     Data.Distributive:                  326
 
-GI7h8wpwzL05sDNIrYmF0l
-    Miso:                               18015
-    Miso.Concurrent:                    1669
-    Miso.Delegate:                      1045
-    Miso.Effect:                        266
-    Miso.Event.Decoder:                 7334
-    Miso.Event.Types:                   21478
-    Miso.FFI:                           10147
-    Miso.Html.Element:                  1990
-    Miso.Html.Event:                    652
-    Miso.Html.Internal:                 25297
-    Miso.Html.Property:                 2010
-    Miso.String:                        99
-    Miso.Subscription.Keyboard:         16703
-    Miso.Subscription.Mouse:            2768
-    Miso.Svg.Attribute:                 2313
-    Miso.Svg.Element:                   1308
-    Miso.Svg.Event:                     321
+Gm3DcwSuiMWJO89TulH9T1
+    Lens.Micro:                         780
 
 IwZTMSe3Ivv9yhoBZv26Oz
-    Control.Comonad:                    522
+    Control.Comonad:                    737
+
+L9DNYpQqFEEG6Irhz79OYV
+    Safe:                               5023
 
 aeson_JVzbBMTMmQ32nxHUK3Dk9p
     Data.Aeson.Types.Class:             2637
@@ -77,13 +82,15 @@ aeson_JVzbBMTMmQ32nxHUK3Dk9p
 base
     Control.Applicative:                2629
     Control.Exception.Base:             8890
-    Control.Monad:                      672
     Data.Bits:                          7748
     Data.Either:                        397
-    Data.Foldable:                      5587
+    Data.Foldable:                      18171
+    Data.Function:                      86
+    Data.Functor:                       108
     Data.Functor.Identity:              1129
-    Data.Monoid:                        6369
-    Data.OldList:                       3751
+    Data.Maybe:                         1068
+    Data.Monoid:                        6477
+    Data.OldList:                       5702
     Data.Tuple:                         338
     Data.Typeable:                      889
     Data.Typeable.Internal:             1422
@@ -92,8 +99,8 @@ base
     Foreign.Marshal.Alloc:              375
     Foreign.Marshal.Array:              2052
     Foreign.Storable:                   2700
-    GHC.Arr:                            12859
-    GHC.Base:                           9446
+    GHC.Arr:                            5653
+    GHC.Base:                           10749
     GHC.Char:                           724
     GHC.Conc.Sync:                      7900
     GHC.Enum:                           10136
@@ -119,31 +126,33 @@ base
     GHC.IO.Handle.Internals:            35193
     GHC.IO.Handle.Text:                 15882
     GHC.IO.Handle.Types:                3846
+    GHC.IORef:                          166
     GHC.Int:                            806
-    GHC.List:                           8652
-    GHC.MVar:                           336
+    GHC.List:                           21999
+    GHC.MVar:                           1147
     GHC.Num:                            3377
     GHC.Ptr:                            188
-    GHC.Read:                           14222
+    GHC.Read:                           19662
     GHC.Real:                           23704
     GHC.ST:                             4902
     GHC.STRef:                          194
-    GHC.Show:                           16214
+    GHC.Show:                           25544
     GHC.Storable:                       1094
     GHC.TopHandler:                     13710
-    GHC.Word:                           2625
+    GHC.Word:                           3144
     System.Posix.Internals:             16226
-    Text.ParserCombinators.ReadP:       25831
-    Text.ParserCombinators.ReadPrec:    147
-    Text.Read:                          1004
-    Text.Read.Lex:                      70727
+    Text.ParserCombinators.ReadP:       27943
+    Text.ParserCombinators.ReadPrec:    5479
+    Text.Read:                          2819
+    Text.Read.Lex:                      77747
 
 bytes_96M8oqQTVIe6bIZr9qhhuC
-    Data.ByteString.Internal:           2746
+    Data.ByteString:                    183
+    Data.ByteString.Internal:           3178
 
 conta_3UVKjic2MoqF92jHhg7Ur8
-    Data.Map.Base:                      65507
-    Data.Sequence:                      1014103
+    Data.Map.Base:                      91262
+    Data.Sequence:                      1040287
     Data.Set.Base:                      27118
 
 deeps_6zNFUGyDFQ59UU8BCTkqk0
@@ -151,22 +160,22 @@ deeps_6zNFUGyDFQ59UU8BCTkqk0
 
 ghc-prim
     GHC.CString:                        4537
-    GHC.Classes:                        18258
+    GHC.Classes:                        31080
     GHC.IntWord64:                      146
     GHC.Tuple:                          802
     GHC.Types:                          1216
 
 ghcjs_7b01A0aGNCoHSoxWaQfJsm
-    Data.JSString:                      9959
-    Data.JSString.Internal.Fusion.Common:2119
-    Data.JSString.Internal.Fusion.Types:1680
-    Data.JSString.Internal.Type:        242
+    Data.JSString:                      23373
+    Data.JSString.Internal.Type:        484
+    GHCJS.Foreign.Callback:             1053
     GHCJS.Foreign.Internal:             362
     GHCJS.Internal.Types:               231
-    GHCJS.Marshal:                      18509
-    GHCJS.Marshal.Internal:             870
-    GHCJS.Marshal.Pure:                 386
+    GHCJS.Marshal:                      10745
+    GHCJS.Marshal.Internal:             1087
+    GHCJS.Marshal.Pure:                 850
     JavaScript.Web.AnimationFrame:      966
+    JavaScript.Web.Canvas:              1861
 
 ghcjs_9jpamHTyFf8CL10DbS4jxv
     GHCJS.Prim:                         5816
@@ -177,16 +186,17 @@ integer-gmp
     GHC.Integer.Type:                   30704
 
 main
-    Action:                             189880
-    CanvasBS:                           28968
-    Grid:                               245139
-    Main:                               1416
-    Model:                              45172
+    Action:                             106837
+    CanvasBS:                           18752
+    Foreign:                            9254
+    Grid:                               256202
+    Main:                               632
+    Model:                              25154
     Store:                              20112
-    View:                               67942
+    View:                               70452
 
 primi_CRhbMv8kA5dFpZOCD0QPrI
-    Control.Monad.Primitive:            1049
+    Control.Monad.Primitive:            1113
     Data.Primitive.Array:               1348
 
 scien_7RWav52ZEb8LpSeINhjuJE
@@ -205,20 +215,21 @@ unord_6zDVf5UGzMbGMOWP8CT2TB
     Data.HashMap.Base:                  3654
 
 vecto_DeaUpJs6ZtbBhz15yBYLWJ
-    Data.Vector:                        15745
+    Data.Vector:                        16810
     Data.Vector.Fusion.Bundle:          303
     Data.Vector.Fusion.Bundle.Monadic:  4306
-    Data.Vector.Fusion.Bundle.Size:     350
+    Data.Vector.Fusion.Bundle.Size:     1267
     Data.Vector.Fusion.Stream.Monadic:  852
     Data.Vector.Fusion.Util:            4425
-    Data.Vector.Generic:                8875
+    Data.Vector.Generic:                13657
     Data.Vector.Generic.Base:           1541
-    Data.Vector.Generic.Mutable.Base:   2167
+    Data.Vector.Generic.Mutable:        7322
+    Data.Vector.Generic.Mutable.Base:   2416
     Data.Vector.Generic.New:            317
     Data.Vector.Internal.Check:         5930
-    Data.Vector.Mutable:                38010
+    Data.Vector.Mutable:                39184
 
 
 
-packed metadata: 385549
+packed metadata: 418741
 

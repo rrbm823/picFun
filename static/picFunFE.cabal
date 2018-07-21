@@ -7,7 +7,7 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      .
-  exposed-modules:     CanvasBS, Store, Grid, View, Model, Action
+  exposed-modules:     CanvasBS, Foreign, Grid, View, Model, Action
   build-depends:       adjunctions >= 4.3
                      , base >= 4.7 && < 5
                      , bytestring
@@ -17,11 +17,13 @@ library
                      , distributive >= 0.5.0.2
                      , free >= 4.12.4
                      , ghcjs-base >= 0.2.0.0
-                     , grid >= 7.8.9
-                     , lens
+                     --, jsaddle >= 0.9.5.0
+                     --, grid >= 7.8.9
+                     --, lens
                      , microlens-platform
                      , microlens-th >= 0.4.1.0
                      , miso >= 0.7.2.0
+                     , safe
                      , semigroups >= 0.18.2
                      , text >= 1.2.2.1
                      , transformers >= 0.4.2.0
@@ -39,7 +41,7 @@ executable app
                      , distributive >= 0.5.0.2
                      , free >= 4.12.4
                      , ghcjs-base >= 0.2.0.0
-                     , grid == 7.8.9
+                     --, grid == 7.8.9
                      , lens
                      , semigroups >= 0.18.2
                      --, microlens >= 0.4.8.0
@@ -47,6 +49,7 @@ executable app
                      , microlens-th >= 0.4.1.0
                      , miso  >= 0.7.2.0
                      , picFunFE
+                     , safe
                      , text >= 1.2.2.1
                      , transformers >= 0.4.2.0
                      , ttrie >= 0.1.2.1

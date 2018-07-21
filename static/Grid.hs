@@ -23,7 +23,7 @@ import Data.Distributive
 import qualified Data.Functor.Rep as R
 
 import qualified Data.Vector as V
-import qualified Data.Vector.Mutable as V hiding (length, null)
+import Data.Vector.Mutable (IOVector)
 import qualified Data.Sequence as S
 
 import Lens.Micro.TH
@@ -31,6 +31,7 @@ import Lens.Micro.Platform
 import Data.List
 import Data.Ord
 import Data.Maybe (fromMaybe)
+import Data.Monoid
 
 
 data Y a = Y { _yl :: S.Seq a
@@ -58,7 +59,7 @@ newtype VY a = VY { _unvy :: V (Y a) } deriving (Eq,Show)
 
 makeLenses ''VY
 
-data M a = M { _ml :: V.IOVector a
+data M a = M { _ml :: IOVector a
              , _mc :: Maybe a
              , _mi :: Int
              }
@@ -81,7 +82,7 @@ class Zipper z where
   shift :: Direction z -> z a -> z a
 
   -- | Retrieve current cursor value
-  cursor :: z a -> a
+  cursor :: z a -> Maybe a
 
   -- | Retrieve current index value
   index :: z a -> Index z
@@ -94,7 +95,7 @@ class Zipper z where
 
   -- | Destruct a list into a mapping with indices
   toMap :: (Comonad z) => z a -> [(Index z, a)]
-  toMap = toList . extend ((,) <$> index <*> cursor)
+  toMap = toList . extend ((,) <$> index <*> extract)
 
   -- | Construct zipper from mapping (provide default value so this is always safe, no bottoms)
   fromMap :: Ord (Index z) => a -> [(Index z, a)] -> z a
@@ -111,8 +112,7 @@ class Zipper z where
   update :: a -> Index z -> z a -> z a
   update = adjust . const
 
-  -- | Normalize @Index z@ value with respect to modular boundaries
-  normalize :: z a -> (Index z) -> (Index z)
+  resize :: a -> z a -> (Index z) -> z a
 
   -- | Get size (maximum of @Index z@).
   size :: z a -> (Index z)
@@ -126,11 +126,13 @@ class Zipper z where
 instance Zipper Y where
   type Index Y = Int
   data Direction Y = YL | YR deriving (Eq, Show)
-  cursor y = case _yc y of
-    Nothing -> error "cursor not on grid"
-    Just j -> j
+  cursor = _yc
   index = _yi
-  normalize v = (`mod` (size v))
+  resize a y@(Y l c i) n = let s = size y in
+    case compare s n of
+      LT -> Y (l <> S.replicate (n - s) a) c i
+      GT -> uncurry (Y (S.take n l)) $ if i < n then (c,i) else (Just a,n) 
+      EQ -> y 
   size (Y l _ _) = S.length l 
   (!) (Y l c _) k = l `S.index` k
   adjust f k y@(Y l c i) = case l ?! k of
@@ -150,7 +152,7 @@ instance Functor Y where
   fmap f (Y l c i) = Y (fmap f l) (fmap f c) i
 
 instance Comonad Y where
-  extract = cursor
+  extract = maybe (error "cursor not on grid") id . _yc 
   duplicate y = Y (S.fromFunction (size y - 1) fn) (Just y) ( y ^. yi )
     where fn k = compose (k + 1) ( shift YL ) y
 
@@ -161,11 +163,8 @@ instance Zipper V where
   type Index V = Int
   data Direction V = VL | VR deriving (Eq, Show)
 
-  cursor v = case _vc v of
-    Nothing -> error "cursor not on grid"
-    Just j -> j
+  cursor = _vc
   index = _vi
-  normalize v = (`mod` (size v))
   size (V l _ _) = V.length l + 1
   (!) v k = (_vl v) V.! k
   adjust f k v@(V l c i) = case l V.!? k of
@@ -176,11 +175,9 @@ instance Zipper V where
     | otherwise       = map ((V.!) l) [0, V.length l - 1]
   toList (V l c i) = V.toList l
   fromMap _ [] = error "Zipper must have length greater than zero."
-  fromMap a m = V (V.fromList ys) (Just $ iToa 0) 0
-    where ys = map iToa rng
-          iToa i = fromMaybe a $ lookup i m
-          l    = maximum . (0:) $ map fst m
-          rng  = if l == 0 then [] else [l,(l-1)..1]
+  fromMap a m = V (V.fromList vs) (Just . snd $ minimumBy (comparing fst) m) 0
+    where vs = fmap snd m
+          
   shift d v@(V l c i)
     | V.null l = v 
     | d == VL   = V l (l V.!? (i - 1) ) (i-1)
@@ -192,16 +189,20 @@ instance Functor V where
 instance Zipper VY where
   type Index VY = (Int, Int)
   data Direction VY = VN | VE | VS | VW deriving (Eq, Show)
-  cursor vy = cursor $  maybe (error "cursor not on grid") id $ _vc $ _unvy vy
+  cursor vy = cursor =<< (_vc $ _unvy vy)
   adjust f (a, b) vy@(VY v@(V l c r)) = case l V.!? a of
     Nothing  -> vy
     (Just p) -> let
       yc =  adjust f b p in
       shift VN $ shift VS $ VY $ v { _vl = V.update l (V.fromList [(a,yc)]) } 
   (!) z (x, y) = (_unvy z) ! x ! y
-  normalize z (x,y) = (nx, ny)
-    where nx = x `mod` z ^. to size ^. _1
-          ny = y `mod` z ^. to size ^. _2
+  resize a ( VY (v@(V l c i))) (n,m) = let s = length l
+                                           nullRow = (Y (S.replicate m a) (Just a) 0)
+                                           comparison = case compare s n of
+                                             LT -> uncurry (V (V.take n l)) $ if i < n then (c,i) else (Just nullRow , n) 
+                                             GT -> V (l <> V.replicate (n-s) nullRow) c i
+                                             EQ -> v
+                                       in VY $ fmap (\yrow -> resize a yrow m) comparison
   size z = (x, y)
     where x = z ^. unvy ^. to size
           y = maximum $ size <$> z ^. unvy ^. vl
@@ -213,19 +214,16 @@ instance Zipper VY where
   shift VN = (& unvy %~ fmap (shift YR))
   shift VS = (& unvy %~ fmap (shift YL))
   fromMap _ [] = error "Zipper must have length greater than zero."
-  fromMap a m  = VY $ V (V.fromList cs) (Just $ iToc 0) 0
-    where cs        = map iToc rc
-          iToc i    = fromMap a . insDef . map (& _1 %~ snd) $ filter ((==i) . fst . fst) m
-          l         = maximum . (0:) $ map (fst . fst) m
-          h         = maximum . (0:) $ map (snd . fst) m
-          rc        = if l == 0 then [] else [l,(l-1)..1]
-          insDef xs = if h `elem` (map fst xs) then xs else (h,a) : xs
+  fromMap a m  =  VY $ V (V.fromList cs) (Just $ head cs) 0
+    where cs        = fmap (fromMap a) $ (fmap.fmap) (& _1 %~ snd) g 
+          g         = groupBy (\a b -> (fst $ fst a) == (fst $ fst b)) m
+          l         = length m
 
 instance Zipper YY where
   type Index YY = (Int, Int)
   data Direction YY = YN | YE | YS | YW deriving (Eq, Show)
 
-  cursor y = cursor $ maybe (error "cursor not on grid") id $ _yc $ _unyy y
+  cursor y = cursor =<< (_yc $ _unyy y)
   toList = foldl (++) [] . fmap toList . _yl . _unyy
   adjust f (a, b) yy@(YY y@(Y l c r)) = case l ?! a of
     Nothing  -> yy
@@ -233,9 +231,13 @@ instance Zipper YY where
       yc =  adjust f b p in
       shift YN $ shift YS $ YY $ y { _yl = S.update a yc l }
   (!) z (x, y) = (_unyy z) ! x ! y
-  normalize z (x,y) = (nx, ny)
-    where nx = x `mod` z ^. to size ^. _1
-          ny = y `mod` z ^. to size ^. _2
+  resize a ( YY (v@(Y l c i))) (n,m) = let s = length l
+                                           nullRow = (Y (S.replicate m a) (Just a) 0)
+                                           comparison = case compare n s of
+                                             LT -> uncurry (Y (S.take n l)) $ if i < n then (c,i) else (Just nullRow , n) 
+                                             GT -> Y (l <> S.replicate (n-s) nullRow) c i
+                                             EQ -> v
+                                       in YY $ fmap (\yrow -> resize a yrow m) comparison
   size z = (x, y)
     where x = z ^. unyy ^. to size
           y = maximum $ size <$> z ^. unyy ^. yl
@@ -266,7 +268,7 @@ instance Functor YY where
   fmap f = YY . (fmap . fmap) f . _unyy
 
 instance Comonad YY where
-  extract = cursor
+  extract = maybe (error "cursor not on grid")  id . cursor
   duplicate z = YY $ Y
     (fromF (xT - 1) mkCol) (Just $ Y (fromF (yT - 1) ( mkRow z)) (Just z) y) x
     where
